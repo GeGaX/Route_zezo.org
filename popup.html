@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body style="height:auto;width:719px;">
+<table border="1" align="center">
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th title="Timezone">TZ</th>
+        <th title="Time To Waypoint">TTW</th>
+        <th title="Distance To Waypoint">DTW</th>
+        <th title="Distance To Go">DTG</th>
+        <th title="True Wind Direction">TWD</th>
+        <th title="True Wind Speed">TWS</th>
+        <th title="True Wind Angle">TWA</th>
+        <th title="Bearing To Waypoint - Heading">BTW</th>
+        <th>Sail</th>
+        <th title="Speed Through Water - Boat speed">STW</th>
+        <th title="Average True Wind Angle">ATWA</th>
+        <th title="Average Bearing To Waypoint">ABTW</th>
+    </tr>
+    </thead>
+    <tbody id="pointsTable" align="center">
+    </tbody>
+</table>
+<br>
+<div style="float:left;">
+    <input type="checkbox" id="localtime" tabindex="-1">
+    <label>Local Time</label>
+</div>
+<div style="float:right";>
+    <label>Version</label>
+    <label id="version"></label>
+</div>
+<!--
+<div style="margin:0 auto;text-align: center;">
+    <input type="button" value=".GPX" onclick="file_gpx()" tabindex="-1">
+</div>
+-->
+</body>
+<script src="popup.js"></script>
+</html>
