@@ -1,0 +1,25 @@
+body {
+    height: auto;
+    width: 719px;
+}
+
+#localtimeDiv {
+    float: left;
+    position: fixed;
+    top: 10px;
+    width: 0;
+    word-wrap: normal;
+}
+
+#versionDiv {
+    float: right;
+}
+
+#gpxDiv {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#gpxOutput {
+    width:100%;
+}

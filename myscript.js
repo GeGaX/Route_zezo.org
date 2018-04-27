@@ -2,11 +2,47 @@
 
 const pattern = /updi\(event,'([0-9]{4}-[0-9]{2}-[0-9]{2}) ([0-9]{2}:[0-9]{2}) ([A-Z]{3,4}).*(T[+-]{1}.*?[0-9]{1,}:[0-9]{2}).*<br>Distances:.*?([0-9]{1,}\.[0-9]{1,}nm)\/([0-9]{1,}\.[0-9]{1,}nm)<br><b>Wind:<\/b> ([0-9]*?.*) (.*? kt).*\(<b>TWA(.*?)<\/b>\)<br><b>Heading:<\/b>(.*?)<b>Sail:<\/b>(.*?)<br><b>Boat Speed:<\/b>(.*?)'/g
 const points = [];
+
+/**
+ * Calculate latitude using the scale of the display and the css left property
+ * @param left
+ * @param scale
+ * @returns {number}
+ */
+function getLatitude(left, scale) {
+    return 90 - ((left + 2)/scale);
+}
+
+/**
+ * Calculate longitude using the scale of the display and the css top property
+ * @param top
+ * @param scale
+ * @returns {number}
+ */
+function getLongitude(top,scale){
+    if(((top +2 / scale) <= 180)){
+        return (top + 2) / scale;
+    } else {
+        return ((top  + 2) / scale)-360
+    }
+}
+
 try {
-    Array.prototype.slice.call(document.getElementsByTagName("img")).forEach(function (element) {
-        var event = element.getAttribute("onmouseover");
+    let textContent = document.getElementsByTagName("script")[1].textContent;
+    let scale = /var scale = ([0-9]+)/.exec(textContent)[1];
+
+    let layer = document.getElementById("dot_layer");
+    Array.prototype.slice.call(layer.getElementsByTagName("img")).forEach(function (element) {
+        let event = element.getAttribute("onmouseover");
         if (event !== null) {
-            var match = pattern.exec(event);
+
+            // Get the two css properties used to calculate both longitude and latitude
+            let style = element.getAttribute("style");
+            let cssProperties = style.split(";");
+            let left = cssProperties[1].split(":")[1].replace("px","").replace("-","");
+            let top =  cssProperties[2].split(":")[1].replace("px","").replace("-","");
+
+            let match = pattern.exec(event);
 
             const date = match[1];
             const time = match[2];
@@ -22,6 +58,8 @@ try {
             const stw = match[12];
 		   
             points.push({
+                longitude : getLongitude(top,scale),
+                latitude : getLatitude(left,scale),
                 date : date,
                 time : time,
                 timezone : timezone,

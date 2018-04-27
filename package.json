@@ -1,0 +1,17 @@
+{
+  "name": "RouteZezo",
+  "description": "Extract route for MultiRaces",
+  "dependencies": {
+    "browserify": "^16.0.0",
+    "global": "^4.3.2",
+    "npm-watch": "^0.3.0",
+    "xmlbuilder": "^9.0.7"
+  },
+  "watch": {
+    "bundle": "popup.js"
+  },
+  "scripts": {
+    "bundle": "browserify popup.js -o bundle.js",
+    "watch": "npm-watch"
+  }
+}

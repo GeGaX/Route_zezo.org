@@ -1,9 +1,10 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
-<body style="height:auto;width:719px;">
+<body>
 <table border="1" align="center">
     <thead>
     <tr>
@@ -27,19 +28,18 @@
     </tbody>
 </table>
 <br>
-<div style="float:left;">
+<div id="localtimeDiv">
     <input type="checkbox" id="localtime" tabindex="-1">
     <label>Local Time</label>
 </div>
-<div style="float:right";>
+<div id="versionDiv">
     <label>Version</label>
     <label id="version"></label>
 </div>
-<!--
-<div style="margin:0 auto;text-align: center;">
-    <input type="button" value=".GPX" onclick="file_gpx()" tabindex="-1">
+<div id="gpxDiv">
+    <input type="button" id="gpxExport" value=".GPX">
 </div>
--->
+<textarea id="gpxOutput" readonly></textarea>
 </body>
-<script src="popup.js"></script>
+<script src="bundle.js"></script>
 </html>
