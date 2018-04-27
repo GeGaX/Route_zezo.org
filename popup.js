@@ -1,3 +1,8 @@
+/**
+ * Used to build the GPX output
+ */
+const builder = require('xmlbuilder');
+
 var background = chrome.extension.getBackgroundPage();
 var twaList = [];
 var btwList = [];
@@ -292,6 +297,23 @@ var displayLocal = function () {
 };
 
 document.getElementById("localtime").addEventListener("change", displayLocal);
+var exportGpx = function (){
+    let xml = builder.create('gpx', {'version': '1.0'});
+    xml.ele('name','Route Zezo');
+    xml.ele('desc','Generated from route Zezo extension');
+    for (point of points) {
+        console.log(point);
+        if (point.latitude !== undefined && point.longitude !== undefined) {
+            xml.ele('wpt', {lat: point.latitude, lon: point.longitude})
+        }
+    }
+    let xmlString = xml.end({pretty: true});
+    let gpxOutput = document.getElementById("gpxOutput");
+    gpxOutput.innerText = '';
+    gpxOutput.innerText = xmlString;
+    console.log(xmlString);
+};
+document.getElementById("gpxExport").addEventListener("click", exportGpx);
 
 chrome.storage.local.get("localTime", function (result) {
     if (result.localTime === true) {
