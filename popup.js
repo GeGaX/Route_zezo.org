@@ -298,13 +298,24 @@ var displayLocal = function () {
 
 document.getElementById("localtime").addEventListener("change", displayLocal);
 var exportGpx = function (){
-    let xml = builder.create('gpx', {'version': '1.0'});
+    let xml = builder.create('gpx');
+    xml.att('version','1.0');
+    xml.att('xmlns','http://www.topografix.com/GPX/1/1');
+    xml.att('xmlns:xsi','http://www.w3.org/2001/XMLSchema-instance');
+    xml.att('xsi:schemaLocation','http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd');
+    xml.att('creator','Route Zezo');
+
     xml.ele('name','Route Zezo');
+
     xml.ele('desc','Generated from route Zezo extension');
+
+    let route = xml.ele('rte');
     for (point of points) {
         console.log(point);
         if (point.latitude !== undefined && point.longitude !== undefined) {
-            xml.ele('wpt', {lat: point.latitude, lon: point.longitude})
+            let routePoint = route.ele('rtept ', {lat: point.latitude, lon: point.longitude});
+            routePoint.ele('time',point.date+' '+point.time)
+            routePoint.ele('name',point.ttw)
         }
     }
     let xmlString = xml.end({pretty: true});

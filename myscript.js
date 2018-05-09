@@ -5,26 +5,31 @@ const points = [];
 
 /**
  * Calculate latitude using the scale of the display and the css left property
- * @param left
- * @param scale
- * @returns {number}
- */
-function getLatitude(left, scale) {
-    return 90 - ((left + 2)/scale);
-}
-
-/**
- * Calculate longitude using the scale of the display and the css top property
  * @param top
  * @param scale
  * @returns {number}
  */
-function getLongitude(top,scale){
-    if(((top +2 / scale) <= 180)){
-        return (top + 2) / scale;
+function getLatitude(top, scale) {
+    let result = 90 - ((top + 2)/scale);
+    console.log('Calcul latitude '+top+' '+scale+' = '+result);
+    return result;
+}
+
+/**
+ * Calculate longitude using the scale of the display and the css top property
+ * @param left
+ * @param scale
+ * @returns {number}
+ */
+function getLongitude(left,scale){
+    let result;
+    if(((left +2 / scale) <= 180)){
+        result = (left + 2) / scale;
     } else {
-        return ((top  + 2) / scale)-360
+        result = ((left  + 2) / scale)-360;
     }
+    console.log('Calcul longitude '+left+' '+scale+' = '+result);
+    return result;
 }
 
 try {
@@ -39,8 +44,8 @@ try {
             // Get the two css properties used to calculate both longitude and latitude
             let style = element.getAttribute("style");
             let cssProperties = style.split(";");
-            let left = cssProperties[1].split(":")[1].replace("px","").replace("-","");
-            let top =  cssProperties[2].split(":")[1].replace("px","").replace("-","");
+            let left = cssProperties[1].split(":")[1].replace("px","");
+            let top =  cssProperties[2].split(":")[1].replace("px","");
 
             let match = pattern.exec(event);
 
@@ -58,8 +63,8 @@ try {
             const stw = match[12];
 		   
             points.push({
-                longitude : getLongitude(top,scale),
-                latitude : getLatitude(left,scale),
+                longitude : getLongitude(left,scale),
+                latitude : getLatitude(top,scale),
                 date : date,
                 time : time,
                 timezone : timezone,
