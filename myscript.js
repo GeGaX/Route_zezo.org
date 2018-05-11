@@ -36,6 +36,8 @@ try {
     let textContent = document.getElementsByTagName("script")[1].textContent;
     let scale = /var scale = ([0-9]+)/.exec(textContent)[1];
 
+
+
     let layer = document.getElementById("dot_layer");
     Array.prototype.slice.call(layer.getElementsByTagName("img")).forEach(function (element) {
         let event = element.getAttribute("onmouseover");
@@ -44,8 +46,8 @@ try {
             // Get the two css properties used to calculate both longitude and latitude
             let style = element.getAttribute("style");
             let cssProperties = style.split(";");
-            let left = cssProperties[1].split(":")[1].replace("px","");
-            let top =  cssProperties[2].split(":")[1].replace("px","");
+            let left = parseInt(cssProperties[1].split(":")[1].replace("px",""),10);
+            let top =  parseInt(cssProperties[2].split(":")[1].replace("px",""),10);
 
             let match = pattern.exec(event);
 
@@ -61,8 +63,11 @@ try {
             const btw = match[10];
             const sail = match[11];
             const stw = match[12];
-		   
+
+            let raceTitle = document.title;
+
             points.push({
+                raceTitle : raceTitle,
                 longitude : getLongitude(left,scale),
                 latitude : getLatitude(top,scale),
                 date : date,
