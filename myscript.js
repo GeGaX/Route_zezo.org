@@ -10,9 +10,7 @@ const points = [];
  * @returns {number}
  */
 function getLatitude(top, scale) {
-    let result = 90 - ((top + 2)/scale);
-    console.log('Calcul latitude '+top+' '+scale+' = '+result);
-    return result;
+    return 90 - ((top + 2) / scale);
 }
 
 /**
@@ -21,22 +19,17 @@ function getLatitude(top, scale) {
  * @param scale
  * @returns {number}
  */
-function getLongitude(left,scale){
-    let result;
-    if(((left +2 / scale) <= 180)){
-        result = (left + 2) / scale;
+function getLongitude(left, scale){
+    if ((left + 2 / scale) <= 180) {
+        return (left + 2) / scale;
     } else {
-        result = ((left  + 2) / scale)-360;
+        return ((left  + 2) / scale) - 360;
     }
-    console.log('Calcul longitude '+left+' '+scale+' = '+result);
-    return result;
 }
 
 try {
     let textContent = document.getElementsByTagName("script")[1].textContent;
     let scale = /var scale = ([0-9]+)/.exec(textContent)[1];
-
-
 
     let layer = document.getElementById("dot_layer");
     Array.prototype.slice.call(layer.getElementsByTagName("img")).forEach(function (element) {
@@ -64,12 +57,12 @@ try {
             const sail = match[11];
             const stw = match[12];
 
-            let raceTitle = document.title;
+            let race = document.title;
 
             points.push({
-                raceTitle : raceTitle,
-                longitude : getLongitude(left,scale),
-                latitude : getLatitude(top,scale),
+                race : race,
+                longitude : getLongitude(left, scale),
+                latitude : getLatitude(top, scale),
                 date : date,
                 time : time,
                 timezone : timezone,
@@ -82,7 +75,7 @@ try {
                 btw : btw,
                 sail : sail,
                 stw : stw
-           });
+            });
             pattern.lastIndex = 0;
         }
     });

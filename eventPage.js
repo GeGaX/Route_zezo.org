@@ -9,14 +9,14 @@ chrome.runtime.onMessage.addListener(
 
 function checkForValidUrl(tabId, changeInfo, tabInfo) {
     if (tabInfo.url.match(/.*zezo.org.*chart.pl.*/)) {
-	    currentTab = tabId;
+        currentTab = tabId;
         chrome.pageAction.show(tabId);
     }
 }
 
 chrome.tabs.onActivated.addListener(function (activeInfo) {
     chrome.tabs.get(activeInfo.tabId, function (tab) {
-	    checkForValidUrl(activeInfo.tabId, null, tab);
+        checkForValidUrl(activeInfo.tabId, null, tab);
     });
 });
 

@@ -1,45 +1,50 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="popup.css">
-</head>
-<body>
-<table border="1" align="center">
-    <thead>
-    <tr>
-        <th>Date</th>
-        <th>Time</th>
-        <th title="Timezone">TZ</th>
-        <th title="Time To Waypoint">TTW</th>
-        <th title="Distance To Waypoint">DTW</th>
-        <th title="Distance To Go">DTG</th>
-        <th title="True Wind Direction">TWD</th>
-        <th title="True Wind Speed">TWS</th>
-        <th title="True Wind Angle">TWA</th>
-        <th title="Bearing To Waypoint - Heading">BTW</th>
-        <th>Sail</th>
-        <th title="Speed Through Water - Boat speed">STW</th>
-        <th title="Average True Wind Angle">ATWA</th>
-        <th title="Average Bearing To Waypoint">ABTW</th>
-    </tr>
-    </thead>
-    <tbody id="pointsTable" align="center">
-    </tbody>
-</table>
-<br>
-<div id="localtimeDiv">
-    <input type="checkbox" id="localtime" tabindex="-1">
-    <label>Local Time</label>
-</div>
-<div id="versionDiv">
-    <label>Version</label>
-    <label id="version"></label>
-</div>
-<div id="gpxDiv">
-    <input type="button" id="gpxExport" value=".GPX">
-</div>
-<textarea id="gpxOutput" readonly></textarea>
-</body>
-<script src="bundle.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="popup.css">
+    </head>
+    <body>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th title="Timezone">TZ</th>
+                        <th>Position</th>
+                        <th title="Time To Waypoint">TTW</th>
+                        <th title="Distance To Waypoint">DTW</th>
+                        <th title="Distance To Go">DTG</th>
+                        <th title="True Wind Direction">TWD</th>
+                        <th title="True Wind Speed">TWS</th>
+                        <th title="True Wind Angle">TWA</th>
+                        <th title="Bearing To Waypoint - Heading">BTW</th>
+                        <th>Sail</th>
+                        <th title="Speed Through Water - Boat speed">STW</th>
+                        <th title="Average True Wind Angle">ATWA</th>
+                        <th title="Average Bearing To Waypoint">ABTW</th>
+                    </tr>
+                </thead>
+                <tbody id="pointsTable" align="center">
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div id="localtimeDiv">
+            <input type="checkbox" id="localtime" tabindex="-1">
+            <label>Local Time</label>
+        </div>
+        <div id="versionDiv">
+            <label>Version</label>
+            <label id="version"></label>
+        </div>
+        <div id="gpxDiv">
+            <input type="button" id="gpxExport" value=".GPX" tabindex="-1">
+        </div>
+        <br>
+        <textarea id="gpxOutput" readonly tabindex="-1">...::: Click on GPX button for generate file :::...
+Select All | Copy selection | Paste on your text editor | Save the file with the .gpx extension</textarea>
+    </body>
+    <script src="bundle.js"></script>
 </html>
