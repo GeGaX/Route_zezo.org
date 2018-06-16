@@ -3,6 +3,8 @@
  */
 const builder = require('xmlbuilder');
 
+const { DateTime } = require('luxon');
+
 var background = chrome.extension.getBackgroundPage();
 var twaList = [];
 var btwList = [];
@@ -278,10 +280,16 @@ function displayTable(localTime) {
             createCell(element.time, row);
             createCell(ceZ, row);
         } else if (localTime && element.timezone === "UTC") {
-            var localDTZ = UtcToLocal(element.date, element.time, element.timezone);
-            createCell(localDTZ[0], row);
-            createCell(localDTZ[1], row);
-            createCell(localDTZ[2], row);
+            let year = parseInt(element.date.split("-")[0]);
+            let month = parseInt(element.date.split("-")[1]);
+            let day = parseInt(element.date.split("-")[2]);
+            let hour = parseInt(element.time.split(":")[0]);
+            let minute = parseInt(element.time.split(":")[1]);
+            let utcDateTime = DateTime.utc(year,month,day,hour,minute);
+            let localDateTime = utcDateTime.setZone('local');
+            createCell(localDateTime.toFormat('yyyy-LL-dd'), row);
+            createCell(localDateTime.toFormat('HH:mm'), row);
+            createCell('UTC'+localDateTime.toFormat('Z'), row);
         } else {
             createCell(element.date, row);
             createCell(element.time, row);
