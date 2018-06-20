@@ -274,17 +274,19 @@ function displayTable(localTime) {
     points.forEach(function (element) {
         var row = document.createElement("tr");
         document.getElementById("pointsTable").appendChild(row);
+        let year = parseInt(element.date.split("-")[0]);
+        let month = parseInt(element.date.split("-")[1]);
+        let day = parseInt(element.date.split("-")[2]);
+        let hour = parseInt(element.time.split(":")[0]);
+        let minute = parseInt(element.time.split(":")[1]);
+
         if ((localTime && element.timezone === "CET") || (localTime && element.timezone === "CEST")) {
-            var ceZ = getTimeZone(element.timezone);
-            createCell(element.date, row);
-            createCell(element.time, row);
-            createCell(ceZ, row);
+            let cetOrCestDateTime = DateTime.local(year,month,day,hour,minute).setZone(getTimeZone(element.timezone),{keepLocalTime: true});
+            let localDateTime = cetOrCestDateTime.toLocal();
+            createCell(localDateTime.toFormat('yyyy-LL-dd'), row);
+            createCell(localDateTime.toFormat('HH:mm'), row);
+            createCell('UTC'+localDateTime.toFormat('Z'), row);
         } else if (localTime && element.timezone === "UTC") {
-            let year = parseInt(element.date.split("-")[0]);
-            let month = parseInt(element.date.split("-")[1]);
-            let day = parseInt(element.date.split("-")[2]);
-            let hour = parseInt(element.time.split(":")[0]);
-            let minute = parseInt(element.time.split(":")[1]);
             let utcDateTime = DateTime.utc(year,month,day,hour,minute);
             let localDateTime = utcDateTime.setZone('local');
             createCell(localDateTime.toFormat('yyyy-LL-dd'), row);
