@@ -4,7 +4,7 @@ const pattern = /updi\(event,'([0-9]{4}-[0-9]{2}-[0-9]{2}) ([0-9]{2}:[0-9]{2}) (
 const points = [];
 
 /**
- * Calculate latitude using the scale of the display and the css left property
+ * Calculate latitude using the scale of the display and the css top property
  * @param top
  * @param scale
  * @returns {number}
@@ -14,13 +14,13 @@ function getLatitude(top, scale) {
 }
 
 /**
- * Calculate longitude using the scale of the display and the css top property
+ * Calculate longitude using the scale of the display and the css left property
  * @param left
  * @param scale
  * @returns {number}
  */
-function getLongitude(left, scale){
-    if ((left + 2 / scale) <= 180) {
+function getLongitude(left, scale) {
+    if (((left + 2 / scale) >= -180) || ((left + 2 / scale) <= 180)) {
         return (left + 2) / scale;
     } else {
         return ((left  + 2) / scale) - 360;
@@ -28,9 +28,8 @@ function getLongitude(left, scale){
 }
 
 try {
-    let textContent = document.getElementsByTagName("script")[1].textContent;
-    let scale = /var scale = ([0-9]+)/.exec(textContent)[1];
-
+    let textContent = document.scripts[1].textContent;
+    let scale = /var scale = ([0-9]{1,3})/.exec(textContent)[1];
     let layer = document.getElementById("dot_layer");
     Array.prototype.slice.call(layer.getElementsByTagName("img")).forEach(function (element) {
         let event = element.getAttribute("onmouseover");
@@ -41,7 +40,7 @@ try {
             let cssProperties = style.split(";");
             let left = parseInt(cssProperties[1].split(":")[1].replace("px",""),10);
             let top =  parseInt(cssProperties[2].split(":")[1].replace("px",""),10);
-
+            
             let match = pattern.exec(event);
 
             const date = match[1];

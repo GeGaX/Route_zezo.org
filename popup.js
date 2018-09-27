@@ -2,10 +2,10 @@
  * Used to build the GPX output
  */
 const builder = require('xmlbuilder');
-
-const { DateTime } = require('luxon');
+const moment = require('moment-timezone');
 
 var background = chrome.extension.getBackgroundPage();
+
 var twaList = [];
 var btwList = [];
 var ttwLast = "T+ 0:00";
@@ -16,11 +16,6 @@ function createCell(value, row) {
     var cell = document.createElement("td");
     cell.innerHTML = value;
     row.appendChild(cell);
-}
-
-function positionStyling(value, cell) {
-    cell.align = "left";
-    cell.innerHTML = value;
 }
 
 function ttwStyling(value, cell) {
@@ -129,6 +124,20 @@ function createCellWithCustomStyling2(value1, value2, row, customStyling) {
     row.appendChild(cell);
 }
 
+function space(value) {
+    if (value < 10) {
+        value = " " + value;
+    }
+    return value;
+}
+
+function zero(value) {
+    if (value < 10) {
+        value = "0" + value;
+    }
+    return value;
+}
+
 function dmsConv(latitude, longitude) {
     var latAbs = Math.abs(latitude);
     var latDeg = Math.trunc(latAbs);
@@ -149,20 +158,20 @@ function atwaCalc(twaList) {
     const
     twaData = twaList;
     Math.radians = function (degrees) {
-        return degrees * Math.PI / 180.0;
+        return degrees * Math.PI / 180;
     },
         Math.degrees = function (radians) {
-        return radians * 180.0 / Math.PI;
+        return radians * 180 / Math.PI;
     };
 
     let
     arX = [],
         arY = [],
-        somX = 0.0,
-        somY = 0.0,
-        avgX = 0.0,
-        avgY = 0.0,
-        atwa = 0.0;
+        somX = 0,
+        somY = 0,
+        avgX = 0,
+        avgY = 0,
+        atwa = 0;
 
     for (const [i, angle] of twaData.entries()) {
         arX[i] = Math.cos(Math.radians(angle));
@@ -190,20 +199,20 @@ function abtwCalc(btwList) {
     const
     btwData = btwList;
     Math.radians = function (degrees) {
-        return degrees * Math.PI / 180.0;
+        return degrees * Math.PI / 180;
     },
         Math.degrees = function (radians) {
-        return radians * 180.0 / Math.PI;
+        return radians * 180 / Math.PI;
     };
 
     let
     arX = [],
         arY = [],
-        somX = 0.0,
-        somY = 0.0,
-        avgX = 0.0,
-        avgY = 0.0,
-        abtw = 0.0;
+        somX = 0,
+        somY = 0,
+        avgX = 0,
+        avgY = 0,
+        abtw = 0;
 
     for (const [i, angle] of btwData.entries()) {
         arX[i] = Math.cos(Math.radians(angle));
@@ -233,22 +242,17 @@ function reinitializeDisplay() {
     document.getElementById("pointsTable").innerHTML = "";
 }
 
-function UtcToLocal(date, time) {
-    var utcYear = date.split("-")[0];
-    var utcMonth = (date.split("-")[1]) - 1;
-    var utcDay = date.split("-")[2];
-    var utcHour = time.split(":")[0];
-    var utcMinutes = time.split(":")[1];
-    var dateUtc = Date.UTC(utcYear, utcMonth, utcDay, utcHour, utcMinutes, 0, 0);
+function TzToLocal(date, time, timezone) {
+    var tzGuess = moment.tz.guess();
 
-    var localDate = new Date(dateUtc);
-    var year = localDate.getFullYear();
-    var month = ("0" + (localDate.getMonth() + 1)).slice(-2);
-    var day = ("0" + localDate.getDate()).slice(-2);
-    var hours = ("0" + localDate.getHours()).slice(-2);
-    var minutes = ("0" + localDate.getMinutes()).slice(-2);
+    if ((timezone === "CET") || (timezone === "CEST")) {
+        var CetOrCestToUtc = moment.tz(date + " " + time, "Europe/Paris").utc();
+        var localDateTz = moment.utc(CetOrCestToUtc).tz(tzGuess);
+    } else if (timezone === "UTC") {
+        var localDateTz = moment.utc(date + " " + time).tz(tzGuess);
+    }
 
-    var offset = -localDate.getTimezoneOffset();
+    var offset = localDateTz.utcOffset();
     var absOffset = Math.abs(offset);
     var sign = (offset > 0) ? "+" : "-";
     var hoursOffset = Math.trunc(absOffset / 60);
@@ -256,49 +260,28 @@ function UtcToLocal(date, time) {
     var minutesOffset = absOffset % 60;
     var HoursMinutesOffset = (minutesOffset === 0) ? MinutesHoursOffset : sign + hoursOffset + ":" + minutesOffset;
 
-    var formattedDate = year + "-" + month + "-" + day;
-    var formattedTime = hours + ":" + minutes;
-    var formattedTimeZone = "UTC" + HoursMinutesOffset;
-    return [formattedDate, formattedTime, formattedTimeZone];
-}
-
-function getTimeZone(timezone) {
-    if (timezone === "CET") {
-        return "UTC+1";
-    } else if (timezone === "CEST") {
-        return "UTC+2";
-    }
+    var formatDate = localDateTz.format('YYYY-MM-DD');
+    var formatTime = localDateTz.format('HH:mm');
+    var formatTimeZone = "UTC" + HoursMinutesOffset;
+    return [formatDate, formatTime, formatTimeZone];
 }
 
 function displayTable(localTime) {
     points.forEach(function (element) {
         var row = document.createElement("tr");
         document.getElementById("pointsTable").appendChild(row);
-        let year = parseInt(element.date.split("-")[0]);
-        let month = parseInt(element.date.split("-")[1]);
-        let day = parseInt(element.date.split("-")[2]);
-        let hour = parseInt(element.time.split(":")[0]);
-        let minute = parseInt(element.time.split(":")[1]);
-
-        if ((localTime && element.timezone === "CET") || (localTime && element.timezone === "CEST")) {
-            let cetOrCestDateTime = DateTime.local(year,month,day,hour,minute).setZone(getTimeZone(element.timezone),{keepLocalTime: true});
-            let localDateTime = cetOrCestDateTime.toLocal();
-            createCell(localDateTime.toFormat('yyyy-LL-dd'), row);
-            createCell(localDateTime.toFormat('HH:mm'), row);
-            createCell('UTC'+localDateTime.toFormat('Z'), row);
-        } else if (localTime && element.timezone === "UTC") {
-            let utcDateTime = DateTime.utc(year,month,day,hour,minute);
-            let localDateTime = utcDateTime.setZone('local');
-            createCell(localDateTime.toFormat('yyyy-LL-dd'), row);
-            createCell(localDateTime.toFormat('HH:mm'), row);
-            createCell('UTC'+localDateTime.toFormat('Z'), row);
+        if (localTime) {
+            var localTZ = TzToLocal(element.date, element.time, element.timezone);
+            createCell(localTZ[0], row);
+            createCell(localTZ[1], row);
+            createCell(localTZ[2], row);
         } else {
             createCell(element.date, row);
             createCell(element.time, row);
             createCell(element.timezone, row);
         }
         var position = dmsConv(element.latitude, element.longitude);
-        createCellWithCustomStyling(position, row, positionStyling);
+        createCell(position, row);
         createCellWithCustomStyling(element.ttw, row, ttwStyling);
         createCellWithCustomStyling(element.dtw, row, dtwStyling);
         createCellWithCustomStyling(element.dtg, row, dtgStyling);
@@ -313,6 +296,10 @@ function displayTable(localTime) {
         var manifest = chrome.runtime.getManifest();
         document.getElementById("version").innerHTML = manifest.version;
     });
+    // on CLONE le contenu dans "pointsTable2" :
+	if( document.getElementById("pointsTable2") != null && document.getElementById("pointsTable2") != 'undefined' ) {
+		document.getElementById("pointsTable2").innerHTML = document.getElementById("pointsTable").innerHTML;
+	}
 }
 
 var displayLocal = function () {
@@ -338,13 +325,12 @@ var exportGpx = function () {
     let route = xml.ele('rte');
     route.ele('name', 'RZ ' + points[0].race);
     for (point of points) {
-        console.log(point);
         if (point.latitude !== undefined && point.longitude !== undefined) {
             let routePoint = route.ele('rtept', {lat: point.latitude, lon: point.longitude});
             if ((point.timezone === "CET") || (point.timezone === "CEST")) {
-                routePoint.ele('time', new Date(point.date + "T" + point.time).toISOString());
+                routePoint.ele('time', moment.tz(point.date + " " + point.time, "Europe/Paris").toISOString());
             } else if (point.timezone === "UTC") {
-                routePoint.ele('time', (point.date + "T" + point.time + ":00.000Z"));
+                routePoint.ele('time', moment.utc(point.date + " " + point.time).toISOString());
             }
             routePoint.ele('name', point.ttw);
         }
@@ -353,7 +339,6 @@ var exportGpx = function () {
     let gpxOutput = document.getElementById("gpxOutput");
     gpxOutput.innerText = "";
     gpxOutput.innerText = xmlString;
-    console.log(xmlString);
 };
 document.getElementById("gpxExport").addEventListener("click", exportGpx);
 
@@ -367,20 +352,6 @@ chrome.storage.local.get("localTime", function (result) {
 });
 reinitializeDisplay();
 var points = background.points[background.currentTab];
-
-function space(value) {
-    if (value < 10) {
-        value = " " + value;
-    }
-    return value;
-}
-
-function zero(value) {
-    if (value < 10) {
-        value = "0" + value;
-    }
-    return value;
-}
 
 function genIteNext(ttwCurr) {
     var ttwCurr = ttwCurr.match(/.*?([0-9]{1,3}):([0-9]{2})/);
