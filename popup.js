@@ -1,6 +1,6 @@
-/**
- * Used to build the GPX output
- */
+/************
+ * popup.js *
+ ************/
 const builder = require('xmlbuilder');
 const moment = require('moment-timezone');
 
@@ -296,7 +296,7 @@ function displayTable(localTime) {
         var manifest = chrome.runtime.getManifest();
         document.getElementById("version").innerHTML = manifest.version;
     });
-    // on CLONE le contenu dans "pointsTable2" :
+    // we clone the content in "pointsTable2"
 	if( document.getElementById("pointsTable2") != null && document.getElementById("pointsTable2") != 'undefined' ) {
 		document.getElementById("pointsTable2").innerHTML = document.getElementById("pointsTable").innerHTML;
 	}

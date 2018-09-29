@@ -3,22 +3,10 @@
 const pattern = /updi\(event,'([0-9]{4}-[0-9]{2}-[0-9]{2}) ([0-9]{2}:[0-9]{2}) ([A-Z]{3,4}).*(T[+-]{1}.*?[0-9]{1,}:[0-9]{2}).*<br>Distances:.*?([0-9]{1,}\.[0-9]{1,}nm)\/([0-9]{1,}\.[0-9]{1,}nm)<br><b>Wind:<\/b> ([0-9]*?.*) (.*? kt).*\(<b>TWA(.*?)<\/b>\)<br><b>Heading:<\/b>(.*?)<b>Sail:<\/b>(.*?)<br><b>Boat Speed:<\/b>(.*?)'/g
 const points = [];
 
-/**
- * Calculate latitude using the scale of the display and the css top property
- * @param top
- * @param scale
- * @returns {number}
- */
 function getLatitude(top, scale) {
     return 90 - ((top + 2) / scale);
 }
 
-/**
- * Calculate longitude using the scale of the display and the css left property
- * @param left
- * @param scale
- * @returns {number}
- */
 function getLongitude(left, scale) {
     if (((left + 2 / scale) >= -180) || ((left + 2 / scale) <= 180)) {
         return (left + 2) / scale;
@@ -28,14 +16,18 @@ function getLongitude(left, scale) {
 }
 
 try {
-    let textContent = document.scripts[1].textContent;
-    let scale = /var scale = ([0-9]{1,3})/.exec(textContent)[1];
+    let scale;
+    for (const script of document.scripts) {
+        if(script.textContent.includes("var scale")) {
+            scale = /var scale = ([0-9]{1,3})/.exec(script.textContent)[1];
+            break;
+        }
+    }
     let layer = document.getElementById("dot_layer");
     Array.prototype.slice.call(layer.getElementsByTagName("img")).forEach(function (element) {
         let event = element.getAttribute("onmouseover");
         if (event !== null) {
 
-            // Get the two css properties used to calculate both longitude and latitude
             let style = element.getAttribute("style");
             let cssProperties = style.split(";");
             let left = parseInt(cssProperties[1].split(":")[1].replace("px",""),10);
