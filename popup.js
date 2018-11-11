@@ -1,16 +1,15 @@
 /************
  * popup.js *
  ************/
-const builder = require('xmlbuilder');
-const moment = require('moment-timezone');
+const builder = require('xmlbuilder'),
+    moment = require('moment-timezone');
 
-var background = chrome.extension.getBackgroundPage();
-
-var twaList = [];
-var btwList = [];
-var ttwLast = "T+ 0:00";
-var twaLast = undefined;
-var btwLast = undefined;
+var background = chrome.extension.getBackgroundPage(),
+    twaList = [],
+    btwList = [],
+    ttwLast = "T+ 0:00",
+    twaLast = undefined,
+    btwLast = undefined;
 
 function createCell(value, row) {
     var cell = document.createElement("td");
@@ -34,8 +33,8 @@ function dtgStyling(value, cell) {
 }
 
 function twsStyling(value1, value2, cell) {
-    var tws_foil = value1.replace(" kt", "");
-    var twa_bd = value2.replace("\u00B0", "");
+    var tws_foil = value1.replace(" kt", ""),
+        twa_bd = value2.replace("\u00B0", "");
     if (tws_foil >= 11.1 && tws_foil <= 39.9 && Math.abs(twa_bd) >= 71 && Math.abs(twa_bd) <= 169) {
         cell.style.backgroundColor = "black";
         cell.style.color = "white";
@@ -60,7 +59,6 @@ function btwStyling(value, cell) {
 
 function sailStyling(value, cell) {
     switch (value.trim()) {
-            // Upwind sail
         case "Jib":
             cell.style.backgroundColor = "#FFD479";
             break;
@@ -70,7 +68,6 @@ function sailStyling(value, cell) {
         case "Stay":
             cell.style.backgroundColor = "#D4FB79";
             break;
-            // Downwind sail
         case "Spi":
             cell.style.backgroundColor = "#76D6FF";
             break;
@@ -80,7 +77,6 @@ function sailStyling(value, cell) {
         case "HG":
             cell.style.backgroundColor = "#D783FF";
             break;
-            // Reaching sail
         case "C0":
             cell.style.backgroundColor = "#FF7E79";
             break;
@@ -139,98 +135,88 @@ function zero(value) {
 }
 
 function dmsConv(latitude, longitude) {
-    var latAbs = Math.abs(latitude);
-    var latDeg = Math.trunc(latAbs);
-    var latMin = Math.trunc((latAbs - latDeg) * 60);
-    var latSec = Math.trunc((((latAbs - latDeg) * 60) - latMin ) * 60);
-    var latCard = (latitude >= 0) ? "N" : "S";
-
-    var lonAbs = Math.abs(longitude);
-    var lonDeg = Math.trunc(lonAbs);
-    var lonMin = Math.trunc((lonAbs - lonDeg) * 60);
-    var lonSec = Math.trunc((((lonAbs - lonDeg) * 60) - lonMin ) * 60);
-    var lonCard = (longitude >= 0) ? "E" : "W";
-
+    var latAbs = Math.abs(latitude),
+        latDeg = Math.trunc(latAbs),
+        latMin = Math.trunc((latAbs - latDeg) * 60),
+        latSec = Math.trunc((((latAbs - latDeg) * 60) - latMin) * 60),
+        latCard = (latitude >= 0) ? "N" : "S",
+        lonAbs = Math.abs(longitude),
+        lonDeg = Math.trunc(lonAbs),
+        lonMin = Math.trunc((lonAbs - lonDeg) * 60),
+        lonSec = Math.trunc((((lonAbs - lonDeg) * 60) - lonMin) * 60),
+        lonCard = (longitude >= 0) ? "E" : "W";
     return zero(latDeg) + "\u00B0" + zero(latMin) + "\u0027" + zero(latSec) + "\u0022" + latCard + " - " + zero(lonDeg) + "\u00B0" + zero(lonMin) + "\u0027" + zero(lonSec) + "\u0022" + lonCard;
 }
 
 function atwaCalc(twaList) {
-    const
-    twaData = twaList;
-    Math.radians = function (degrees) {
-        return degrees * Math.PI / 180;
-    },
+    const twaData = twaList;
+        Math.radians = function (degrees) {
+            return degrees * Math.PI / 180;
+        },
         Math.degrees = function (radians) {
-        return radians * 180 / Math.PI;
-    };
-
-    let
-    arX = [],
+            return radians * 180 / Math.PI;
+        };
+    let arX = [],
         arY = [],
         somX = 0,
         somY = 0,
         avgX = 0,
         avgY = 0,
         atwa = 0;
-
     for (const [i, angle] of twaData.entries()) {
         arX[i] = Math.cos(Math.radians(angle));
         arY[i] = Math.sin(Math.radians(angle));
     }
-
     for (const value of arX) {
         somX += value;
     }
     avgX = somX / arX.length;
-
     for (const value of arY) {
         somY += value;
     }
     avgY = somY / arY.length;
-
     atwa = Math.round(Math.degrees(Math.atan2(avgY, avgX)));
-    if (isNaN (atwa)) {
+    /*
+    atwa = Math.round(Math.degrees(Math.atan2(avgY, avgX)) * 10) / 10;
+    */
+    if (isNaN(atwa)) {
         atwa = "-";
     }
-    return atwa ;
+    return atwa;
 }
 
 function abtwCalc(btwList) {
-    const
-    btwData = btwList;
-    Math.radians = function (degrees) {
-        return degrees * Math.PI / 180;
-    },
+    const btwData = btwList;
+        Math.radians = function (degrees) {
+            return degrees * Math.PI / 180;
+        },
         Math.degrees = function (radians) {
-        return radians * 180 / Math.PI;
-    };
-
-    let
-    arX = [],
+            return radians * 180 / Math.PI;
+        };
+    let arX = [],
         arY = [],
         somX = 0,
         somY = 0,
         avgX = 0,
         avgY = 0,
         abtw = 0;
-
     for (const [i, angle] of btwData.entries()) {
         arX[i] = Math.cos(Math.radians(angle));
         arY[i] = Math.sin(Math.radians(angle));
     }
-
     for (const value of arX) {
         somX += value;
     }
     avgX = somX / arX.length;
-
     for (const value of arY) {
         somY += value;
     }
     avgY = somY / arY.length;
-
     abtw = Math.round(Math.degrees(Math.atan2(avgY, avgX)));
-    if (isNaN (abtw)) {
+    /*
+    abtw = Math.round(Math.degrees(Math.atan2(avgY, avgX)) * 10) / 10;
+    */
+    if (isNaN(abtw)) {
         abtw = "-";
     } else if (abtw < 0) {
         abtw += 360;
@@ -244,25 +230,22 @@ function reinitializeDisplay() {
 
 function TzToLocal(date, time, timezone) {
     var tzGuess = moment.tz.guess();
-
     if ((timezone === "CET") || (timezone === "CEST")) {
-        var CetOrCestToUtc = moment.tz(date + " " + time, "Europe/Paris").utc();
-        var localDateTz = moment.utc(CetOrCestToUtc).tz(tzGuess);
+        var CetOrCestToUtc = moment.tz(date + " " + time, "Europe/Paris").utc(),
+            localDateTz = moment.utc(CetOrCestToUtc).tz(tzGuess);
     } else if (timezone === "UTC") {
         var localDateTz = moment.utc(date + " " + time).tz(tzGuess);
     }
-
-    var offset = localDateTz.utcOffset();
-    var absOffset = Math.abs(offset);
-    var sign = (offset > 0) ? "+" : "-";
-    var hoursOffset = Math.trunc(absOffset / 60);
-    var MinutesHoursOffset = (hoursOffset === 0) ? "\u00b1" + "0" : sign + hoursOffset;
-    var minutesOffset = absOffset % 60;
-    var HoursMinutesOffset = (minutesOffset === 0) ? MinutesHoursOffset : sign + hoursOffset + ":" + minutesOffset;
-
-    var formatDate = localDateTz.format('YYYY-MM-DD');
-    var formatTime = localDateTz.format('HH:mm');
-    var formatTimeZone = "UTC" + HoursMinutesOffset;
+    var offset = localDateTz.utcOffset(),
+        absOffset = Math.abs(offset),
+        sign = (offset > 0) ? "+" : "-",
+        hoursOffset = Math.trunc(absOffset / 60),
+        MinutesHoursOffset = (hoursOffset === 0) ? "\u00b1" + "0" : sign + hoursOffset,
+        minutesOffset = absOffset % 60,
+        HoursMinutesOffset = (minutesOffset === 0) ? MinutesHoursOffset : sign + hoursOffset + ":" + minutesOffset,
+        formatDate = localDateTz.format('YYYY-MM-DD'),
+        formatTime = localDateTz.format('HH:mm'),
+        formatTimeZone = "UTC" + HoursMinutesOffset;
     return [formatDate, formatTime, formatTimeZone];
 }
 
@@ -296,37 +279,42 @@ function displayTable(localTime) {
         var manifest = chrome.runtime.getManifest();
         document.getElementById("version").innerHTML = manifest.version;
     });
-    // we clone the content in "pointsTable2"
-	if( document.getElementById("pointsTable2") != null && document.getElementById("pointsTable2") != 'undefined' ) {
-		document.getElementById("pointsTable2").innerHTML = document.getElementById("pointsTable").innerHTML;
-	}
+    if (document.getElementById("pointsTable2") != null && document.getElementById("pointsTable2") != 'undefined') {
+        document.getElementById("pointsTable2").innerHTML = document.getElementById("pointsTable").innerHTML;
+    }
 }
 
 var displayLocal = function () {
     reinitializeDisplay();
     if (document.getElementById("localtime").checked) {
-        chrome.storage.local.set({"localTime" : true});
+        chrome.storage.local.set({
+            "localTime": true
+        });
         displayTable(true);
     } else {
-        chrome.storage.local.set({"localTime" : false});
+        chrome.storage.local.set({
+            "localTime": false
+        });
         displayTable(false);
     }
 };
-
 document.getElementById("localtime").addEventListener("change", displayLocal);
+
 var exportGpx = function () {
     let xml = builder.create('gpx');
-    xml.att('xmlns','http://www.topografix.com/GPX/1/1');
-    xml.att('xmlns:xsi','http://www.w3.org/2001/XMLSchema-instance');
-    xml.att('xsi:schemaLocation','http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd');
-    xml.att('version','1.0');
-    xml.att('creator','Route Zezo.org');
-
+    xml.att('xmlns', 'http://www.topografix.com/GPX/1/1'),
+        ('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance'),
+        ('xsi:schemaLocation', 'http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd'),
+        ('version', '1.0'),
+        ('creator', 'Route Zezo.org');
     let route = xml.ele('rte');
     route.ele('name', 'RZ ' + points[0].race);
     for (point of points) {
         if (point.latitude !== undefined && point.longitude !== undefined) {
-            let routePoint = route.ele('rtept', {lat: point.latitude, lon: point.longitude});
+            let routePoint = route.ele('rtept', {
+                lat: point.latitude,
+                lon: point.longitude
+            });
             if ((point.timezone === "CET") || (point.timezone === "CEST")) {
                 routePoint.ele('time', moment.tz(point.date + " " + point.time, "Europe/Paris").toISOString());
             } else if (point.timezone === "UTC") {
@@ -335,8 +323,10 @@ var exportGpx = function () {
             routePoint.ele('name', point.ttw);
         }
     }
-    let xmlString = xml.end({pretty: true});
-    let gpxOutput = document.getElementById("gpxOutput");
+    let xmlString = xml.end({
+            pretty: true
+        }),
+        gpxOutput = document.getElementById("gpxOutput");
     gpxOutput.innerText = "";
     gpxOutput.innerText = xmlString;
 };
@@ -354,10 +344,10 @@ reinitializeDisplay();
 var points = background.points[background.currentTab];
 
 function genIteNext(ttwCurr) {
-    var ttwCurr = ttwCurr.match(/.*?([0-9]{1,3}):([0-9]{2})/);
-    var ttwHours = parseInt(ttwCurr[1], 10);
-    var ttwMinutes = parseInt(ttwCurr[2], 10);
-    var ttwNext = [];
+    var ttwCurr = ttwCurr.match(/.*?([0-9]{1,3}):([0-9]{2})/),
+        ttwHours = parseInt(ttwCurr[1], 10),
+        ttwMinutes = parseInt(ttwCurr[2], 10),
+        ttwNext = [];
     if (ttwMinutes + 10 < 60) {
         ttwNext = "T+" + space(ttwHours) + ":" + zero(ttwMinutes + 10);
     } else {
@@ -370,8 +360,8 @@ for (var i = 0; i < points.length; i++) {
     points[i].atwa = atwaCalc(twaList);
     points[i].abtw = abtwCalc(btwList);
     while (points[i].ttw !== ttwLast) {
-        twaList.push(parseInt(twaLast,10));
-        btwList.push(parseInt(btwLast,10));
+        twaList.push(parseInt(twaLast, 10));
+        btwList.push(parseInt(btwLast, 10));
         ttwLast = genIteNext(ttwLast);
     }
     twaLast = parseInt(points[i].twa, 10);

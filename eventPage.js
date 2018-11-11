@@ -1,5 +1,5 @@
-var points = [];
-var currentTab;
+var points = [],
+    currentTab;
 
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {

@@ -1,7 +1,33 @@
-(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-module.exports={
-	"version": "2018e",
-	"zones": [
+(function () {
+    function r(e, n, t) {
+        function o(i, f) {
+            if (!n[i]) {
+                if (!e[i]) {
+                    var c = "function" == typeof require && require;
+                    if (!f && c) return c(i, !0);
+                    if (u) return u(i, !0);
+                    var a = new Error("Cannot find module '" + i + "'");
+                    throw a.code = "MODULE_NOT_FOUND", a
+                }
+                var p = n[i] = {
+                    exports: {}
+                };
+                e[i][0].call(p.exports, function (r) {
+                    var n = e[i][1][r];
+                    return o(n || r)
+                }, p, p.exports, r, e, n, t)
+            }
+            return n[i].exports
+        }
+        for (var u = "function" == typeof require && require, i = 0; i < t.length; i++) o(t[i]);
+        return o
+    }
+    return r
+})()({
+    1: [function (require, module, exports) {
+        module.exports = {
+            "version": "2018e",
+            "zones": [
 		"Africa/Abidjan|LMT GMT|g.8 0|01|-2ldXH.Q|48e5",
 		"Africa/Accra|LMT GMT +0020|.Q 0 -k|012121212121212121212121212121212121212121212121|-26BbX.8 6tzX.8 MnE 1BAk MnE 1BAk MnE 1BAk MnE 1C0k MnE 1BAk MnE 1BAk MnE 1BAk MnE 1C0k MnE 1BAk MnE 1BAk MnE 1BAk MnE 1C0k MnE 1BAk MnE 1BAk MnE 1BAk MnE 1C0k MnE 1BAk MnE 1BAk MnE 1BAk MnE 1C0k MnE 1BAk MnE 1BAk MnE|41e5",
 		"Africa/Nairobi|LMT EAT +0230 +0245|-2r.g -30 -2u -2J|01231|-1F3Cr.g 3Dzr.g okMu MFXJ|47e5",
@@ -379,7 +405,7 @@ module.exports={
 		"PST8PDT|PST PDT PWT PPT|80 70 70 70|010102301010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010|-261q0 1nX0 11B0 1nX0 SgN0 8x10 iy0 QwN0 1cL0 1cN0 1cL0 1cN0 1cL0 1cN0 1cL0 1cN0 1fz0 1cN0 1cL0 1cN0 1cL0 s10 1Vz0 LB0 1BX0 1cN0 1fz0 1a10 1fz0 1cN0 1cL0 1cN0 1cL0 1cN0 1cL0 1cN0 1cL0 1cN0 1fz0 1a10 1fz0 1cN0 1cL0 1cN0 1cL0 1cN0 1cL0 14p0 1lb0 14p0 1nX0 11B0 1nX0 11B0 1nX0 14p0 1lb0 14p0 1lb0 14p0 1nX0 11B0 1nX0 11B0 1nX0 14p0 1lb0 14p0 1lb0 14p0 1lb0 14p0 1nX0 11B0 1nX0 11B0 1nX0 14p0 1lb0 14p0 1lb0 14p0 1nX0 11B0 1nX0 11B0 1nX0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0",
 		"WET|WET WEST|0 -10|010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010|hDB0 1a00 1fA0 1cM0 1cM0 1cM0 1fA0 1a00 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1fA0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1fA0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1fA0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00"
 	],
-	"links": [
+            "links": [
 		"Africa/Abidjan|Africa/Bamako",
 		"Africa/Abidjan|Africa/Banjul",
 		"Africa/Abidjan|Africa/Conakry",
@@ -597,2793 +623,2828 @@ module.exports={
 		"Pacific/Tarawa|Pacific/Wake",
 		"Pacific/Tarawa|Pacific/Wallis"
 	]
-}
-},{}],2:[function(require,module,exports){
-var moment = module.exports = require("./moment-timezone");
-moment.tz.load(require('./data/packed/latest.json'));
-
-},{"./data/packed/latest.json":1,"./moment-timezone":3}],3:[function(require,module,exports){
-//! moment-timezone.js
-//! version : 0.5.21
-//! Copyright (c) JS Foundation and other contributors
-//! license : MIT
-//! github.com/moment/moment-timezone
-
-(function (root, factory) {
-	"use strict";
-
-	/*global define*/
-	if (typeof module === 'object' && module.exports) {
-		module.exports = factory(require('moment')); // Node
-	} else if (typeof define === 'function' && define.amd) {
-		define(['moment'], factory);                 // AMD
-	} else {
-		factory(root.moment);                        // Browser
-	}
-}(this, function (moment) {
-	"use strict";
-
-	// Do not load moment-timezone a second time.
-	// if (moment.tz !== undefined) {
-	// 	logError('Moment Timezone ' + moment.tz.version + ' was already loaded ' + (moment.tz.dataVersion ? 'with data from ' : 'without any data') + moment.tz.dataVersion);
-	// 	return moment;
-	// }
-
-	var VERSION = "0.5.21",
-		zones = {},
-		links = {},
-		names = {},
-		guesses = {},
-		cachedGuess;
-
-	if (!moment || typeof moment.version !== 'string') {
-		logError('Moment Timezone requires Moment.js. See https://momentjs.com/timezone/docs/#/use-it/browser/');
-	}
-
-	var momentVersion = moment.version.split('.'),
-		major = +momentVersion[0],
-		minor = +momentVersion[1];
-
-	// Moment.js version check
-	if (major < 2 || (major === 2 && minor < 6)) {
-		logError('Moment Timezone requires Moment.js >= 2.6.0. You are using Moment.js ' + moment.version + '. See momentjs.com');
-	}
-
-	/************************************
-		Unpacking
-	************************************/
-
-	function charCodeToInt(charCode) {
-		if (charCode > 96) {
-			return charCode - 87;
-		} else if (charCode > 64) {
-			return charCode - 29;
-		}
-		return charCode - 48;
-	}
-
-	function unpackBase60(string) {
-		var i = 0,
-			parts = string.split('.'),
-			whole = parts[0],
-			fractional = parts[1] || '',
-			multiplier = 1,
-			num,
-			out = 0,
-			sign = 1;
-
-		// handle negative numbers
-		if (string.charCodeAt(0) === 45) {
-			i = 1;
-			sign = -1;
-		}
-
-		// handle digits before the decimal
-		for (i; i < whole.length; i++) {
-			num = charCodeToInt(whole.charCodeAt(i));
-			out = 60 * out + num;
-		}
-
-		// handle digits after the decimal
-		for (i = 0; i < fractional.length; i++) {
-			multiplier = multiplier / 60;
-			num = charCodeToInt(fractional.charCodeAt(i));
-			out += num * multiplier;
-		}
-
-		return out * sign;
-	}
-
-	function arrayToInt (array) {
-		for (var i = 0; i < array.length; i++) {
-			array[i] = unpackBase60(array[i]);
-		}
-	}
-
-	function intToUntil (array, length) {
-		for (var i = 0; i < length; i++) {
-			array[i] = Math.round((array[i - 1] || 0) + (array[i] * 60000)); // minutes to milliseconds
-		}
-
-		array[length - 1] = Infinity;
-	}
-
-	function mapIndices (source, indices) {
-		var out = [], i;
-
-		for (i = 0; i < indices.length; i++) {
-			out[i] = source[indices[i]];
-		}
-
-		return out;
-	}
-
-	function unpack (string) {
-		var data = string.split('|'),
-			offsets = data[2].split(' '),
-			indices = data[3].split(''),
-			untils  = data[4].split(' ');
-
-		arrayToInt(offsets);
-		arrayToInt(indices);
-		arrayToInt(untils);
-
-		intToUntil(untils, indices.length);
-
-		return {
-			name       : data[0],
-			abbrs      : mapIndices(data[1].split(' '), indices),
-			offsets    : mapIndices(offsets, indices),
-			untils     : untils,
-			population : data[5] | 0
-		};
-	}
-
-	/************************************
-		Zone object
-	************************************/
-
-	function Zone (packedString) {
-		if (packedString) {
-			this._set(unpack(packedString));
-		}
-	}
-
-	Zone.prototype = {
-		_set : function (unpacked) {
-			this.name       = unpacked.name;
-			this.abbrs      = unpacked.abbrs;
-			this.untils     = unpacked.untils;
-			this.offsets    = unpacked.offsets;
-			this.population = unpacked.population;
-		},
-
-		_index : function (timestamp) {
-			var target = +timestamp,
-				untils = this.untils,
-				i;
-
-			for (i = 0; i < untils.length; i++) {
-				if (target < untils[i]) {
-					return i;
-				}
-			}
-		},
-
-		parse : function (timestamp) {
-			var target  = +timestamp,
-				offsets = this.offsets,
-				untils  = this.untils,
-				max     = untils.length - 1,
-				offset, offsetNext, offsetPrev, i;
-
-			for (i = 0; i < max; i++) {
-				offset     = offsets[i];
-				offsetNext = offsets[i + 1];
-				offsetPrev = offsets[i ? i - 1 : i];
-
-				if (offset < offsetNext && tz.moveAmbiguousForward) {
-					offset = offsetNext;
-				} else if (offset > offsetPrev && tz.moveInvalidForward) {
-					offset = offsetPrev;
-				}
-
-				if (target < untils[i] - (offset * 60000)) {
-					return offsets[i];
-				}
-			}
-
-			return offsets[max];
-		},
-
-		abbr : function (mom) {
-			return this.abbrs[this._index(mom)];
-		},
-
-		offset : function (mom) {
-			logError("zone.offset has been deprecated in favor of zone.utcOffset");
-			return this.offsets[this._index(mom)];
-		},
-
-		utcOffset : function (mom) {
-			return this.offsets[this._index(mom)];
-		}
-	};
-
-	/************************************
-		Current Timezone
-	************************************/
-
-	function OffsetAt(at) {
-		var timeString = at.toTimeString();
-		var abbr = timeString.match(/\([a-z ]+\)/i);
-		if (abbr && abbr[0]) {
-			// 17:56:31 GMT-0600 (CST)
-			// 17:56:31 GMT-0600 (Central Standard Time)
-			abbr = abbr[0].match(/[A-Z]/g);
-			abbr = abbr ? abbr.join('') : undefined;
-		} else {
-			// 17:56:31 CST
-			// 17:56:31 GMT+0800 (台北標準時間)
-			abbr = timeString.match(/[A-Z]{3,5}/g);
-			abbr = abbr ? abbr[0] : undefined;
-		}
-
-		if (abbr === 'GMT') {
-			abbr = undefined;
-		}
-
-		this.at = +at;
-		this.abbr = abbr;
-		this.offset = at.getTimezoneOffset();
-	}
-
-	function ZoneScore(zone) {
-		this.zone = zone;
-		this.offsetScore = 0;
-		this.abbrScore = 0;
-	}
-
-	ZoneScore.prototype.scoreOffsetAt = function (offsetAt) {
-		this.offsetScore += Math.abs(this.zone.utcOffset(offsetAt.at) - offsetAt.offset);
-		if (this.zone.abbr(offsetAt.at).replace(/[^A-Z]/g, '') !== offsetAt.abbr) {
-			this.abbrScore++;
-		}
-	};
-
-	function findChange(low, high) {
-		var mid, diff;
-
-		while ((diff = ((high.at - low.at) / 12e4 | 0) * 6e4)) {
-			mid = new OffsetAt(new Date(low.at + diff));
-			if (mid.offset === low.offset) {
-				low = mid;
-			} else {
-				high = mid;
-			}
-		}
-
-		return low;
-	}
-
-	function userOffsets() {
-		var startYear = new Date().getFullYear() - 2,
-			last = new OffsetAt(new Date(startYear, 0, 1)),
-			offsets = [last],
-			change, next, i;
-
-		for (i = 1; i < 48; i++) {
-			next = new OffsetAt(new Date(startYear, i, 1));
-			if (next.offset !== last.offset) {
-				change = findChange(last, next);
-				offsets.push(change);
-				offsets.push(new OffsetAt(new Date(change.at + 6e4)));
-			}
-			last = next;
-		}
-
-		for (i = 0; i < 4; i++) {
-			offsets.push(new OffsetAt(new Date(startYear + i, 0, 1)));
-			offsets.push(new OffsetAt(new Date(startYear + i, 6, 1)));
-		}
-
-		return offsets;
-	}
-
-	function sortZoneScores (a, b) {
-		if (a.offsetScore !== b.offsetScore) {
-			return a.offsetScore - b.offsetScore;
-		}
-		if (a.abbrScore !== b.abbrScore) {
-			return a.abbrScore - b.abbrScore;
-		}
-		return b.zone.population - a.zone.population;
-	}
-
-	function addToGuesses (name, offsets) {
-		var i, offset;
-		arrayToInt(offsets);
-		for (i = 0; i < offsets.length; i++) {
-			offset = offsets[i];
-			guesses[offset] = guesses[offset] || {};
-			guesses[offset][name] = true;
-		}
-	}
-
-	function guessesForUserOffsets (offsets) {
-		var offsetsLength = offsets.length,
-			filteredGuesses = {},
-			out = [],
-			i, j, guessesOffset;
-
-		for (i = 0; i < offsetsLength; i++) {
-			guessesOffset = guesses[offsets[i].offset] || {};
-			for (j in guessesOffset) {
-				if (guessesOffset.hasOwnProperty(j)) {
-					filteredGuesses[j] = true;
-				}
-			}
-		}
-
-		for (i in filteredGuesses) {
-			if (filteredGuesses.hasOwnProperty(i)) {
-				out.push(names[i]);
-			}
-		}
-
-		return out;
-	}
-
-	function rebuildGuess () {
-
-		// use Intl API when available and returning valid time zone
-		try {
-			var intlName = Intl.DateTimeFormat().resolvedOptions().timeZone;
-			if (intlName && intlName.length > 3) {
-				var name = names[normalizeName(intlName)];
-				if (name) {
-					return name;
-				}
-				logError("Moment Timezone found " + intlName + " from the Intl api, but did not have that data loaded.");
-			}
-		} catch (e) {
-			// Intl unavailable, fall back to manual guessing.
-		}
-
-		var offsets = userOffsets(),
-			offsetsLength = offsets.length,
-			guesses = guessesForUserOffsets(offsets),
-			zoneScores = [],
-			zoneScore, i, j;
-
-		for (i = 0; i < guesses.length; i++) {
-			zoneScore = new ZoneScore(getZone(guesses[i]), offsetsLength);
-			for (j = 0; j < offsetsLength; j++) {
-				zoneScore.scoreOffsetAt(offsets[j]);
-			}
-			zoneScores.push(zoneScore);
-		}
-
-		zoneScores.sort(sortZoneScores);
-
-		return zoneScores.length > 0 ? zoneScores[0].zone.name : undefined;
-	}
-
-	function guess (ignoreCache) {
-		if (!cachedGuess || ignoreCache) {
-			cachedGuess = rebuildGuess();
-		}
-		return cachedGuess;
-	}
-
-	/************************************
-		Global Methods
-	************************************/
-
-	function normalizeName (name) {
-		return (name || '').toLowerCase().replace(/\//g, '_');
-	}
-
-	function addZone (packed) {
-		var i, name, split, normalized;
-
-		if (typeof packed === "string") {
-			packed = [packed];
-		}
-
-		for (i = 0; i < packed.length; i++) {
-			split = packed[i].split('|');
-			name = split[0];
-			normalized = normalizeName(name);
-			zones[normalized] = packed[i];
-			names[normalized] = name;
-			addToGuesses(normalized, split[2].split(' '));
-		}
-	}
-
-	function getZone (name, caller) {
-		
-		name = normalizeName(name);
-
-		var zone = zones[name];
-		var link;
-
-		if (zone instanceof Zone) {
-			return zone;
-		}
-
-		if (typeof zone === 'string') {
-			zone = new Zone(zone);
-			zones[name] = zone;
-			return zone;
-		}
-
-		// Pass getZone to prevent recursion more than 1 level deep
-		if (links[name] && caller !== getZone && (link = getZone(links[name], getZone))) {
-			zone = zones[name] = new Zone();
-			zone._set(link);
-			zone.name = names[name];
-			return zone;
-		}
-
-		return null;
-	}
-
-	function getNames () {
-		var i, out = [];
-
-		for (i in names) {
-			if (names.hasOwnProperty(i) && (zones[i] || zones[links[i]]) && names[i]) {
-				out.push(names[i]);
-			}
-		}
-
-		return out.sort();
-	}
-
-	function addLink (aliases) {
-		var i, alias, normal0, normal1;
-
-		if (typeof aliases === "string") {
-			aliases = [aliases];
-		}
-
-		for (i = 0; i < aliases.length; i++) {
-			alias = aliases[i].split('|');
-
-			normal0 = normalizeName(alias[0]);
-			normal1 = normalizeName(alias[1]);
-
-			links[normal0] = normal1;
-			names[normal0] = alias[0];
-
-			links[normal1] = normal0;
-			names[normal1] = alias[1];
-		}
-	}
-
-	function loadData (data) {
-		addZone(data.zones);
-		addLink(data.links);
-		tz.dataVersion = data.version;
-	}
-
-	function zoneExists (name) {
-		if (!zoneExists.didShowError) {
-			zoneExists.didShowError = true;
-				logError("moment.tz.zoneExists('" + name + "') has been deprecated in favor of !moment.tz.zone('" + name + "')");
-		}
-		return !!getZone(name);
-	}
-
-	function needsOffset (m) {
-		var isUnixTimestamp = (m._f === 'X' || m._f === 'x');
-		return !!(m._a && (m._tzm === undefined) && !isUnixTimestamp);
-	}
-
-	function logError (message) {
-		if (typeof console !== 'undefined' && typeof console.error === 'function') {
-			console.error(message);
-		}
-	}
-
-	/************************************
-		moment.tz namespace
-	************************************/
-
-	function tz (input) {
-		var args = Array.prototype.slice.call(arguments, 0, -1),
-			name = arguments[arguments.length - 1],
-			zone = getZone(name),
-			out  = moment.utc.apply(null, args);
-
-		if (zone && !moment.isMoment(input) && needsOffset(out)) {
-			out.add(zone.parse(out), 'minutes');
-		}
-
-		out.tz(name);
-
-		return out;
-	}
-
-	tz.version      = VERSION;
-	tz.dataVersion  = '';
-	tz._zones       = zones;
-	tz._links       = links;
-	tz._names       = names;
-	tz.add          = addZone;
-	tz.link         = addLink;
-	tz.load         = loadData;
-	tz.zone         = getZone;
-	tz.zoneExists   = zoneExists; // deprecated in 0.1.0
-	tz.guess        = guess;
-	tz.names        = getNames;
-	tz.Zone         = Zone;
-	tz.unpack       = unpack;
-	tz.unpackBase60 = unpackBase60;
-	tz.needsOffset  = needsOffset;
-	tz.moveInvalidForward   = true;
-	tz.moveAmbiguousForward = false;
-
-	/************************************
-		Interface with Moment.js
-	************************************/
-
-	var fn = moment.fn;
-
-	moment.tz = tz;
-
-	moment.defaultZone = null;
-
-	moment.updateOffset = function (mom, keepTime) {
-		var zone = moment.defaultZone,
-			offset;
-
-		if (mom._z === undefined) {
-			if (zone && needsOffset(mom) && !mom._isUTC) {
-				mom._d = moment.utc(mom._a)._d;
-				mom.utc().add(zone.parse(mom), 'minutes');
-			}
-			mom._z = zone;
-		}
-		if (mom._z) {
-			offset = mom._z.utcOffset(mom);
-			if (Math.abs(offset) < 16) {
-				offset = offset / 60;
-			}
-			if (mom.utcOffset !== undefined) {
-				mom.utcOffset(-offset, keepTime);
-			} else {
-				mom.zone(offset, keepTime);
-			}
-		}
-	};
-
-	fn.tz = function (name, keepTime) {
-		if (name) {
-			if (typeof name !== 'string') {
-				throw new Error('Time zone name must be a string, got ' + name + ' [' + typeof name + ']');
-			}
-			this._z = getZone(name);
-			if (this._z) {
-				moment.updateOffset(this, keepTime);
-			} else {
-				logError("Moment Timezone has no data for " + name + ". See http://momentjs.com/timezone/docs/#/data-loading/.");
-			}
-			return this;
-		}
-		if (this._z) { return this._z.name; }
-	};
-
-	function abbrWrap (old) {
-		return function () {
-			if (this._z) { return this._z.abbr(this); }
-			return old.call(this);
-		};
-	}
-
-	function resetZoneWrap (old) {
-		return function () {
-			this._z = null;
-			return old.apply(this, arguments);
-		};
-	}
-
-	fn.zoneName = abbrWrap(fn.zoneName);
-	fn.zoneAbbr = abbrWrap(fn.zoneAbbr);
-	fn.utc      = resetZoneWrap(fn.utc);
-
-	moment.tz.setDefault = function(name) {
-		if (major < 2 || (major === 2 && minor < 9)) {
-			logError('Moment Timezone setDefault() requires Moment.js >= 2.9.0. You are using Moment.js ' + moment.version + '.');
-		}
-		moment.defaultZone = name ? getZone(name) : null;
-		return moment;
-	};
-
-	// Cloning a moment should include the _z property.
-	var momentProperties = moment.momentProperties;
-	if (Object.prototype.toString.call(momentProperties) === '[object Array]') {
-		// moment 2.8.1+
-		momentProperties.push('_z');
-		momentProperties.push('_a');
-	} else if (momentProperties) {
-		// moment 2.7.0
-		momentProperties._z = null;
-	}
-
-	// INJECT DATA
-
-	return moment;
-}));
-
-},{"moment":4}],4:[function(require,module,exports){
-//! moment.js
-
-;(function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-    typeof define === 'function' && define.amd ? define(factory) :
-    global.moment = factory()
-}(this, (function () { 'use strict';
-
-    var hookCallback;
-
-    function hooks () {
-        return hookCallback.apply(null, arguments);
-    }
-
-    // This is done to register the method called with moment()
-    // without creating circular dependencies.
-    function setHookCallback (callback) {
-        hookCallback = callback;
-    }
-
-    function isArray(input) {
-        return input instanceof Array || Object.prototype.toString.call(input) === '[object Array]';
-    }
-
-    function isObject(input) {
-        // IE8 will treat undefined and null as object if it wasn't for
-        // input != null
-        return input != null && Object.prototype.toString.call(input) === '[object Object]';
-    }
-
-    function isObjectEmpty(obj) {
-        if (Object.getOwnPropertyNames) {
-            return (Object.getOwnPropertyNames(obj).length === 0);
-        } else {
-            var k;
-            for (k in obj) {
-                if (obj.hasOwnProperty(k)) {
-                    return false;
+        }
+}, {}],
+    2: [function (require, module, exports) {
+        var moment = module.exports = require("./moment-timezone");
+        moment.tz.load(require('./data/packed/latest.json'));
+
+}, {
+        "./data/packed/latest.json": 1,
+        "./moment-timezone": 3
+    }],
+    3: [function (require, module, exports) {
+        //! moment-timezone.js
+        //! version : 0.5.20
+        //! Copyright (c) JS Foundation and other contributors
+        //! license : MIT
+        //! github.com/moment/moment-timezone
+
+        (function (root, factory) {
+            "use strict";
+
+            /*global define*/
+            if (typeof module === 'object' && module.exports) {
+                module.exports = factory(require('moment')); // Node
+            } else if (typeof define === 'function' && define.amd) {
+                define(['moment'], factory); // AMD
+            } else {
+                factory(root.moment); // Browser
+            }
+        }(this, function (moment) {
+            "use strict";
+
+            // Do not load moment-timezone a second time.
+            // if (moment.tz !== undefined) {
+            // 	logError('Moment Timezone ' + moment.tz.version + ' was already loaded ' + (moment.tz.dataVersion ? 'with data from ' : 'without any data') + moment.tz.dataVersion);
+            // 	return moment;
+            // }
+
+            var VERSION = "0.5.20",
+                zones = {},
+                links = {},
+                names = {},
+                guesses = {},
+                cachedGuess;
+
+            if (!moment || typeof moment.version !== 'string') {
+                logError('Moment Timezone requires Moment.js. See https://momentjs.com/timezone/docs/#/use-it/browser/');
+            }
+
+            var momentVersion = moment.version.split('.'),
+                major = +momentVersion[0],
+                minor = +momentVersion[1];
+
+            // Moment.js version check
+            if (major < 2 || (major === 2 && minor < 6)) {
+                logError('Moment Timezone requires Moment.js >= 2.6.0. You are using Moment.js ' + moment.version + '. See momentjs.com');
+            }
+
+            /************************************
+            	Unpacking
+            ************************************/
+
+            function charCodeToInt(charCode) {
+                if (charCode > 96) {
+                    return charCode - 87;
+                } else if (charCode > 64) {
+                    return charCode - 29;
+                }
+                return charCode - 48;
+            }
+
+            function unpackBase60(string) {
+                var i = 0,
+                    parts = string.split('.'),
+                    whole = parts[0],
+                    fractional = parts[1] || '',
+                    multiplier = 1,
+                    num,
+                    out = 0,
+                    sign = 1;
+
+                // handle negative numbers
+                if (string.charCodeAt(0) === 45) {
+                    i = 1;
+                    sign = -1;
+                }
+
+                // handle digits before the decimal
+                for (i; i < whole.length; i++) {
+                    num = charCodeToInt(whole.charCodeAt(i));
+                    out = 60 * out + num;
+                }
+
+                // handle digits after the decimal
+                for (i = 0; i < fractional.length; i++) {
+                    multiplier = multiplier / 60;
+                    num = charCodeToInt(fractional.charCodeAt(i));
+                    out += num * multiplier;
+                }
+
+                return out * sign;
+            }
+
+            function arrayToInt(array) {
+                for (var i = 0; i < array.length; i++) {
+                    array[i] = unpackBase60(array[i]);
                 }
             }
-            return true;
-        }
-    }
 
-    function isUndefined(input) {
-        return input === void 0;
-    }
+            function intToUntil(array, length) {
+                for (var i = 0; i < length; i++) {
+                    array[i] = Math.round((array[i - 1] || 0) + (array[i] * 60000)); // minutes to milliseconds
+                }
 
-    function isNumber(input) {
-        return typeof input === 'number' || Object.prototype.toString.call(input) === '[object Number]';
-    }
-
-    function isDate(input) {
-        return input instanceof Date || Object.prototype.toString.call(input) === '[object Date]';
-    }
-
-    function map(arr, fn) {
-        var res = [], i;
-        for (i = 0; i < arr.length; ++i) {
-            res.push(fn(arr[i], i));
-        }
-        return res;
-    }
-
-    function hasOwnProp(a, b) {
-        return Object.prototype.hasOwnProperty.call(a, b);
-    }
-
-    function extend(a, b) {
-        for (var i in b) {
-            if (hasOwnProp(b, i)) {
-                a[i] = b[i];
+                array[length - 1] = Infinity;
             }
-        }
 
-        if (hasOwnProp(b, 'toString')) {
-            a.toString = b.toString;
-        }
+            function mapIndices(source, indices) {
+                var out = [],
+                    i;
 
-        if (hasOwnProp(b, 'valueOf')) {
-            a.valueOf = b.valueOf;
-        }
+                for (i = 0; i < indices.length; i++) {
+                    out[i] = source[indices[i]];
+                }
 
-        return a;
-    }
+                return out;
+            }
 
-    function createUTC (input, format, locale, strict) {
-        return createLocalOrUTC(input, format, locale, strict, true).utc();
-    }
+            function unpack(string) {
+                var data = string.split('|'),
+                    offsets = data[2].split(' '),
+                    indices = data[3].split(''),
+                    untils = data[4].split(' ');
 
-    function defaultParsingFlags() {
-        // We need to deep clone this object.
-        return {
-            empty           : false,
-            unusedTokens    : [],
-            unusedInput     : [],
-            overflow        : -2,
-            charsLeftOver   : 0,
-            nullInput       : false,
-            invalidMonth    : null,
-            invalidFormat   : false,
-            userInvalidated : false,
-            iso             : false,
-            parsedDateParts : [],
-            meridiem        : null,
-            rfc2822         : false,
-            weekdayMismatch : false
-        };
-    }
+                arrayToInt(offsets);
+                arrayToInt(indices);
+                arrayToInt(untils);
 
-    function getParsingFlags(m) {
-        if (m._pf == null) {
-            m._pf = defaultParsingFlags();
-        }
-        return m._pf;
-    }
+                intToUntil(untils, indices.length);
 
-    var some;
-    if (Array.prototype.some) {
-        some = Array.prototype.some;
-    } else {
-        some = function (fun) {
-            var t = Object(this);
-            var len = t.length >>> 0;
+                return {
+                    name: data[0],
+                    abbrs: mapIndices(data[1].split(' '), indices),
+                    offsets: mapIndices(offsets, indices),
+                    untils: untils,
+                    population: data[5] | 0
+                };
+            }
 
-            for (var i = 0; i < len; i++) {
-                if (i in t && fun.call(this, t[i], i, t)) {
+            /************************************
+            	Zone object
+            ************************************/
+
+            function Zone(packedString) {
+                if (packedString) {
+                    this._set(unpack(packedString));
+                }
+            }
+
+            Zone.prototype = {
+                _set: function (unpacked) {
+                    this.name = unpacked.name;
+                    this.abbrs = unpacked.abbrs;
+                    this.untils = unpacked.untils;
+                    this.offsets = unpacked.offsets;
+                    this.population = unpacked.population;
+                },
+
+                _index: function (timestamp) {
+                    var target = +timestamp,
+                        untils = this.untils,
+                        i;
+
+                    for (i = 0; i < untils.length; i++) {
+                        if (target < untils[i]) {
+                            return i;
+                        }
+                    }
+                },
+
+                parse: function (timestamp) {
+                    var target = +timestamp,
+                        offsets = this.offsets,
+                        untils = this.untils,
+                        max = untils.length - 1,
+                        offset, offsetNext, offsetPrev, i;
+
+                    for (i = 0; i < max; i++) {
+                        offset = offsets[i];
+                        offsetNext = offsets[i + 1];
+                        offsetPrev = offsets[i ? i - 1 : i];
+
+                        if (offset < offsetNext && tz.moveAmbiguousForward) {
+                            offset = offsetNext;
+                        } else if (offset > offsetPrev && tz.moveInvalidForward) {
+                            offset = offsetPrev;
+                        }
+
+                        if (target < untils[i] - (offset * 60000)) {
+                            return offsets[i];
+                        }
+                    }
+
+                    return offsets[max];
+                },
+
+                abbr: function (mom) {
+                    return this.abbrs[this._index(mom)];
+                },
+
+                offset: function (mom) {
+                    logError("zone.offset has been deprecated in favor of zone.utcOffset");
+                    return this.offsets[this._index(mom)];
+                },
+
+                utcOffset: function (mom) {
+                    return this.offsets[this._index(mom)];
+                }
+            };
+
+            /************************************
+            	Current Timezone
+            ************************************/
+
+            function OffsetAt(at) {
+                var timeString = at.toTimeString();
+                var abbr = timeString.match(/\([a-z ]+\)/i);
+                if (abbr && abbr[0]) {
+                    // 17:56:31 GMT-0600 (CST)
+                    // 17:56:31 GMT-0600 (Central Standard Time)
+                    abbr = abbr[0].match(/[A-Z]/g);
+                    abbr = abbr ? abbr.join('') : undefined;
+                } else {
+                    // 17:56:31 CST
+                    // 17:56:31 GMT+0800 (台北標準時間)
+                    abbr = timeString.match(/[A-Z]{3,5}/g);
+                    abbr = abbr ? abbr[0] : undefined;
+                }
+
+                if (abbr === 'GMT') {
+                    abbr = undefined;
+                }
+
+                this.at = +at;
+                this.abbr = abbr;
+                this.offset = at.getTimezoneOffset();
+            }
+
+            function ZoneScore(zone) {
+                this.zone = zone;
+                this.offsetScore = 0;
+                this.abbrScore = 0;
+            }
+
+            ZoneScore.prototype.scoreOffsetAt = function (offsetAt) {
+                this.offsetScore += Math.abs(this.zone.utcOffset(offsetAt.at) - offsetAt.offset);
+                if (this.zone.abbr(offsetAt.at).replace(/[^A-Z]/g, '') !== offsetAt.abbr) {
+                    this.abbrScore++;
+                }
+            };
+
+            function findChange(low, high) {
+                var mid, diff;
+
+                while ((diff = ((high.at - low.at) / 12e4 | 0) * 6e4)) {
+                    mid = new OffsetAt(new Date(low.at + diff));
+                    if (mid.offset === low.offset) {
+                        low = mid;
+                    } else {
+                        high = mid;
+                    }
+                }
+
+                return low;
+            }
+
+            function userOffsets() {
+                var startYear = new Date().getFullYear() - 2,
+                    last = new OffsetAt(new Date(startYear, 0, 1)),
+                    offsets = [last],
+                    change, next, i;
+
+                for (i = 1; i < 48; i++) {
+                    next = new OffsetAt(new Date(startYear, i, 1));
+                    if (next.offset !== last.offset) {
+                        change = findChange(last, next);
+                        offsets.push(change);
+                        offsets.push(new OffsetAt(new Date(change.at + 6e4)));
+                    }
+                    last = next;
+                }
+
+                for (i = 0; i < 4; i++) {
+                    offsets.push(new OffsetAt(new Date(startYear + i, 0, 1)));
+                    offsets.push(new OffsetAt(new Date(startYear + i, 6, 1)));
+                }
+
+                return offsets;
+            }
+
+            function sortZoneScores(a, b) {
+                if (a.offsetScore !== b.offsetScore) {
+                    return a.offsetScore - b.offsetScore;
+                }
+                if (a.abbrScore !== b.abbrScore) {
+                    return a.abbrScore - b.abbrScore;
+                }
+                return b.zone.population - a.zone.population;
+            }
+
+            function addToGuesses(name, offsets) {
+                var i, offset;
+                arrayToInt(offsets);
+                for (i = 0; i < offsets.length; i++) {
+                    offset = offsets[i];
+                    guesses[offset] = guesses[offset] || {};
+                    guesses[offset][name] = true;
+                }
+            }
+
+            function guessesForUserOffsets(offsets) {
+                var offsetsLength = offsets.length,
+                    filteredGuesses = {},
+                    out = [],
+                    i, j, guessesOffset;
+
+                for (i = 0; i < offsetsLength; i++) {
+                    guessesOffset = guesses[offsets[i].offset] || {};
+                    for (j in guessesOffset) {
+                        if (guessesOffset.hasOwnProperty(j)) {
+                            filteredGuesses[j] = true;
+                        }
+                    }
+                }
+
+                for (i in filteredGuesses) {
+                    if (filteredGuesses.hasOwnProperty(i)) {
+                        out.push(names[i]);
+                    }
+                }
+
+                return out;
+            }
+
+            function rebuildGuess() {
+
+                // use Intl API when available and returning valid time zone
+                try {
+                    var intlName = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                    if (intlName && intlName.length > 3) {
+                        var name = names[normalizeName(intlName)];
+                        if (name) {
+                            return name;
+                        }
+                        logError("Moment Timezone found " + intlName + " from the Intl api, but did not have that data loaded.");
+                    }
+                } catch (e) {
+                    // Intl unavailable, fall back to manual guessing.
+                }
+
+                var offsets = userOffsets(),
+                    offsetsLength = offsets.length,
+                    guesses = guessesForUserOffsets(offsets),
+                    zoneScores = [],
+                    zoneScore, i, j;
+
+                for (i = 0; i < guesses.length; i++) {
+                    zoneScore = new ZoneScore(getZone(guesses[i]), offsetsLength);
+                    for (j = 0; j < offsetsLength; j++) {
+                        zoneScore.scoreOffsetAt(offsets[j]);
+                    }
+                    zoneScores.push(zoneScore);
+                }
+
+                zoneScores.sort(sortZoneScores);
+
+                return zoneScores.length > 0 ? zoneScores[0].zone.name : undefined;
+            }
+
+            function guess(ignoreCache) {
+                if (!cachedGuess || ignoreCache) {
+                    cachedGuess = rebuildGuess();
+                }
+                return cachedGuess;
+            }
+
+            /************************************
+            	Global Methods
+            ************************************/
+
+            function normalizeName(name) {
+                return (name || '').toLowerCase().replace(/\//g, '_');
+            }
+
+            function addZone(packed) {
+                var i, name, split, normalized;
+
+                if (typeof packed === "string") {
+                    packed = [packed];
+                }
+
+                for (i = 0; i < packed.length; i++) {
+                    split = packed[i].split('|');
+                    name = split[0];
+                    normalized = normalizeName(name);
+                    zones[normalized] = packed[i];
+                    names[normalized] = name;
+                    addToGuesses(normalized, split[2].split(' '));
+                }
+            }
+
+            function getZone(name, caller) {
+                if (typeof name !== 'string') {
+                    throw new Error('Time zone name must be a string, got ' + name + ' [' + typeof name + ']');
+                }
+
+                name = normalizeName(name);
+
+                var zone = zones[name];
+                var link;
+
+                if (zone instanceof Zone) {
+                    return zone;
+                }
+
+                if (typeof zone === 'string') {
+                    zone = new Zone(zone);
+                    zones[name] = zone;
+                    return zone;
+                }
+
+                // Pass getZone to prevent recursion more than 1 level deep
+                if (links[name] && caller !== getZone && (link = getZone(links[name], getZone))) {
+                    zone = zones[name] = new Zone();
+                    zone._set(link);
+                    zone.name = names[name];
+                    return zone;
+                }
+
+                return null;
+            }
+
+            function getNames() {
+                var i, out = [];
+
+                for (i in names) {
+                    if (names.hasOwnProperty(i) && (zones[i] || zones[links[i]]) && names[i]) {
+                        out.push(names[i]);
+                    }
+                }
+
+                return out.sort();
+            }
+
+            function addLink(aliases) {
+                var i, alias, normal0, normal1;
+
+                if (typeof aliases === "string") {
+                    aliases = [aliases];
+                }
+
+                for (i = 0; i < aliases.length; i++) {
+                    alias = aliases[i].split('|');
+
+                    normal0 = normalizeName(alias[0]);
+                    normal1 = normalizeName(alias[1]);
+
+                    links[normal0] = normal1;
+                    names[normal0] = alias[0];
+
+                    links[normal1] = normal0;
+                    names[normal1] = alias[1];
+                }
+            }
+
+            function loadData(data) {
+                addZone(data.zones);
+                addLink(data.links);
+                tz.dataVersion = data.version;
+            }
+
+            function zoneExists(name) {
+                if (!zoneExists.didShowError) {
+                    zoneExists.didShowError = true;
+                    logError("moment.tz.zoneExists('" + name + "') has been deprecated in favor of !moment.tz.zone('" + name + "')");
+                }
+                return !!getZone(name);
+            }
+
+            function needsOffset(m) {
+                var isUnixTimestamp = (m._f === 'X' || m._f === 'x');
+                return !!(m._a && (m._tzm === undefined) && !isUnixTimestamp);
+            }
+
+            function logError(message) {
+                if (typeof console !== 'undefined' && typeof console.error === 'function') {
+                    console.error(message);
+                }
+            }
+
+            /************************************
+            	moment.tz namespace
+            ************************************/
+
+            function tz(input) {
+                var args = Array.prototype.slice.call(arguments, 0, -1),
+                    name = arguments[arguments.length - 1],
+                    zone = getZone(name),
+                    out = moment.utc.apply(null, args);
+
+                if (zone && !moment.isMoment(input) && needsOffset(out)) {
+                    out.add(zone.parse(out), 'minutes');
+                }
+
+                out.tz(name);
+
+                return out;
+            }
+
+            tz.version = VERSION;
+            tz.dataVersion = '';
+            tz._zones = zones;
+            tz._links = links;
+            tz._names = names;
+            tz.add = addZone;
+            tz.link = addLink;
+            tz.load = loadData;
+            tz.zone = getZone;
+            tz.zoneExists = zoneExists; // deprecated in 0.1.0
+            tz.guess = guess;
+            tz.names = getNames;
+            tz.Zone = Zone;
+            tz.unpack = unpack;
+            tz.unpackBase60 = unpackBase60;
+            tz.needsOffset = needsOffset;
+            tz.moveInvalidForward = true;
+            tz.moveAmbiguousForward = false;
+
+            /************************************
+            	Interface with Moment.js
+            ************************************/
+
+            var fn = moment.fn;
+
+            moment.tz = tz;
+
+            moment.defaultZone = null;
+
+            moment.updateOffset = function (mom, keepTime) {
+                var zone = moment.defaultZone,
+                    offset;
+
+                if (mom._z === undefined) {
+                    if (zone && needsOffset(mom) && !mom._isUTC) {
+                        mom._d = moment.utc(mom._a)._d;
+                        mom.utc().add(zone.parse(mom), 'minutes');
+                    }
+                    mom._z = zone;
+                }
+                if (mom._z) {
+                    offset = mom._z.utcOffset(mom);
+                    if (Math.abs(offset) < 16) {
+                        offset = offset / 60;
+                    }
+                    if (mom.utcOffset !== undefined) {
+                        mom.utcOffset(-offset, keepTime);
+                    } else {
+                        mom.zone(offset, keepTime);
+                    }
+                }
+            };
+
+            fn.tz = function (name, keepTime) {
+                if (name) {
+                    this._z = getZone(name);
+                    if (this._z) {
+                        moment.updateOffset(this, keepTime);
+                    } else {
+                        logError("Moment Timezone has no data for " + name + ". See http://momentjs.com/timezone/docs/#/data-loading/.");
+                    }
+                    return this;
+                }
+                if (this._z) {
+                    return this._z.name;
+                }
+            };
+
+            function abbrWrap(old) {
+                return function () {
+                    if (this._z) {
+                        return this._z.abbr(this);
+                    }
+                    return old.call(this);
+                };
+            }
+
+            function resetZoneWrap(old) {
+                return function () {
+                    this._z = null;
+                    return old.apply(this, arguments);
+                };
+            }
+
+            fn.zoneName = abbrWrap(fn.zoneName);
+            fn.zoneAbbr = abbrWrap(fn.zoneAbbr);
+            fn.utc = resetZoneWrap(fn.utc);
+
+            moment.tz.setDefault = function (name) {
+                if (major < 2 || (major === 2 && minor < 9)) {
+                    logError('Moment Timezone setDefault() requires Moment.js >= 2.9.0. You are using Moment.js ' + moment.version + '.');
+                }
+                moment.defaultZone = name ? getZone(name) : null;
+                return moment;
+            };
+
+            // Cloning a moment should include the _z property.
+            var momentProperties = moment.momentProperties;
+            if (Object.prototype.toString.call(momentProperties) === '[object Array]') {
+                // moment 2.8.1+
+                momentProperties.push('_z');
+                momentProperties.push('_a');
+            } else if (momentProperties) {
+                // moment 2.7.0
+                momentProperties._z = null;
+            }
+
+            // INJECT DATA
+
+            return moment;
+        }));
+
+}, {
+        "moment": 4
+    }],
+    4: [function (require, module, exports) {
+        //! moment.js
+
+        ;
+        (function (global, factory) {
+            typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+                typeof define === 'function' && define.amd ? define(factory) :
+                global.moment = factory()
+        }(this, (function () {
+            'use strict';
+
+            var hookCallback;
+
+            function hooks() {
+                return hookCallback.apply(null, arguments);
+            }
+
+            // This is done to register the method called with moment()
+            // without creating circular dependencies.
+            function setHookCallback(callback) {
+                hookCallback = callback;
+            }
+
+            function isArray(input) {
+                return input instanceof Array || Object.prototype.toString.call(input) === '[object Array]';
+            }
+
+            function isObject(input) {
+                // IE8 will treat undefined and null as object if it wasn't for
+                // input != null
+                return input != null && Object.prototype.toString.call(input) === '[object Object]';
+            }
+
+            function isObjectEmpty(obj) {
+                if (Object.getOwnPropertyNames) {
+                    return (Object.getOwnPropertyNames(obj).length === 0);
+                } else {
+                    var k;
+                    for (k in obj) {
+                        if (obj.hasOwnProperty(k)) {
+                            return false;
+                        }
+                    }
                     return true;
                 }
             }
 
-            return false;
-        };
-    }
-
-    function isValid(m) {
-        if (m._isValid == null) {
-            var flags = getParsingFlags(m);
-            var parsedParts = some.call(flags.parsedDateParts, function (i) {
-                return i != null;
-            });
-            var isNowValid = !isNaN(m._d.getTime()) &&
-                flags.overflow < 0 &&
-                !flags.empty &&
-                !flags.invalidMonth &&
-                !flags.invalidWeekday &&
-                !flags.weekdayMismatch &&
-                !flags.nullInput &&
-                !flags.invalidFormat &&
-                !flags.userInvalidated &&
-                (!flags.meridiem || (flags.meridiem && parsedParts));
-
-            if (m._strict) {
-                isNowValid = isNowValid &&
-                    flags.charsLeftOver === 0 &&
-                    flags.unusedTokens.length === 0 &&
-                    flags.bigHour === undefined;
+            function isUndefined(input) {
+                return input === void 0;
             }
 
-            if (Object.isFrozen == null || !Object.isFrozen(m)) {
-                m._isValid = isNowValid;
+            function isNumber(input) {
+                return typeof input === 'number' || Object.prototype.toString.call(input) === '[object Number]';
             }
-            else {
-                return isNowValid;
+
+            function isDate(input) {
+                return input instanceof Date || Object.prototype.toString.call(input) === '[object Date]';
             }
-        }
-        return m._isValid;
-    }
 
-    function createInvalid (flags) {
-        var m = createUTC(NaN);
-        if (flags != null) {
-            extend(getParsingFlags(m), flags);
-        }
-        else {
-            getParsingFlags(m).userInvalidated = true;
-        }
-
-        return m;
-    }
-
-    // Plugins that add properties should also add the key here (null value),
-    // so we can properly clone ourselves.
-    var momentProperties = hooks.momentProperties = [];
-
-    function copyConfig(to, from) {
-        var i, prop, val;
-
-        if (!isUndefined(from._isAMomentObject)) {
-            to._isAMomentObject = from._isAMomentObject;
-        }
-        if (!isUndefined(from._i)) {
-            to._i = from._i;
-        }
-        if (!isUndefined(from._f)) {
-            to._f = from._f;
-        }
-        if (!isUndefined(from._l)) {
-            to._l = from._l;
-        }
-        if (!isUndefined(from._strict)) {
-            to._strict = from._strict;
-        }
-        if (!isUndefined(from._tzm)) {
-            to._tzm = from._tzm;
-        }
-        if (!isUndefined(from._isUTC)) {
-            to._isUTC = from._isUTC;
-        }
-        if (!isUndefined(from._offset)) {
-            to._offset = from._offset;
-        }
-        if (!isUndefined(from._pf)) {
-            to._pf = getParsingFlags(from);
-        }
-        if (!isUndefined(from._locale)) {
-            to._locale = from._locale;
-        }
-
-        if (momentProperties.length > 0) {
-            for (i = 0; i < momentProperties.length; i++) {
-                prop = momentProperties[i];
-                val = from[prop];
-                if (!isUndefined(val)) {
-                    to[prop] = val;
+            function map(arr, fn) {
+                var res = [],
+                    i;
+                for (i = 0; i < arr.length; ++i) {
+                    res.push(fn(arr[i], i));
                 }
-            }
-        }
-
-        return to;
-    }
-
-    var updateInProgress = false;
-
-    // Moment prototype object
-    function Moment(config) {
-        copyConfig(this, config);
-        this._d = new Date(config._d != null ? config._d.getTime() : NaN);
-        if (!this.isValid()) {
-            this._d = new Date(NaN);
-        }
-        // Prevent infinite loop in case updateOffset creates new moment
-        // objects.
-        if (updateInProgress === false) {
-            updateInProgress = true;
-            hooks.updateOffset(this);
-            updateInProgress = false;
-        }
-    }
-
-    function isMoment (obj) {
-        return obj instanceof Moment || (obj != null && obj._isAMomentObject != null);
-    }
-
-    function absFloor (number) {
-        if (number < 0) {
-            // -0 -> 0
-            return Math.ceil(number) || 0;
-        } else {
-            return Math.floor(number);
-        }
-    }
-
-    function toInt(argumentForCoercion) {
-        var coercedNumber = +argumentForCoercion,
-            value = 0;
-
-        if (coercedNumber !== 0 && isFinite(coercedNumber)) {
-            value = absFloor(coercedNumber);
-        }
-
-        return value;
-    }
-
-    // compare two arrays, return the number of differences
-    function compareArrays(array1, array2, dontConvert) {
-        var len = Math.min(array1.length, array2.length),
-            lengthDiff = Math.abs(array1.length - array2.length),
-            diffs = 0,
-            i;
-        for (i = 0; i < len; i++) {
-            if ((dontConvert && array1[i] !== array2[i]) ||
-                (!dontConvert && toInt(array1[i]) !== toInt(array2[i]))) {
-                diffs++;
-            }
-        }
-        return diffs + lengthDiff;
-    }
-
-    function warn(msg) {
-        if (hooks.suppressDeprecationWarnings === false &&
-                (typeof console !==  'undefined') && console.warn) {
-            console.warn('Deprecation warning: ' + msg);
-        }
-    }
-
-    function deprecate(msg, fn) {
-        var firstTime = true;
-
-        return extend(function () {
-            if (hooks.deprecationHandler != null) {
-                hooks.deprecationHandler(null, msg);
-            }
-            if (firstTime) {
-                var args = [];
-                var arg;
-                for (var i = 0; i < arguments.length; i++) {
-                    arg = '';
-                    if (typeof arguments[i] === 'object') {
-                        arg += '\n[' + i + '] ';
-                        for (var key in arguments[0]) {
-                            arg += key + ': ' + arguments[0][key] + ', ';
-                        }
-                        arg = arg.slice(0, -2); // Remove trailing comma and space
-                    } else {
-                        arg = arguments[i];
-                    }
-                    args.push(arg);
-                }
-                warn(msg + '\nArguments: ' + Array.prototype.slice.call(args).join('') + '\n' + (new Error()).stack);
-                firstTime = false;
-            }
-            return fn.apply(this, arguments);
-        }, fn);
-    }
-
-    var deprecations = {};
-
-    function deprecateSimple(name, msg) {
-        if (hooks.deprecationHandler != null) {
-            hooks.deprecationHandler(name, msg);
-        }
-        if (!deprecations[name]) {
-            warn(msg);
-            deprecations[name] = true;
-        }
-    }
-
-    hooks.suppressDeprecationWarnings = false;
-    hooks.deprecationHandler = null;
-
-    function isFunction(input) {
-        return input instanceof Function || Object.prototype.toString.call(input) === '[object Function]';
-    }
-
-    function set (config) {
-        var prop, i;
-        for (i in config) {
-            prop = config[i];
-            if (isFunction(prop)) {
-                this[i] = prop;
-            } else {
-                this['_' + i] = prop;
-            }
-        }
-        this._config = config;
-        // Lenient ordinal parsing accepts just a number in addition to
-        // number + (possibly) stuff coming from _dayOfMonthOrdinalParse.
-        // TODO: Remove "ordinalParse" fallback in next major release.
-        this._dayOfMonthOrdinalParseLenient = new RegExp(
-            (this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) +
-                '|' + (/\d{1,2}/).source);
-    }
-
-    function mergeConfigs(parentConfig, childConfig) {
-        var res = extend({}, parentConfig), prop;
-        for (prop in childConfig) {
-            if (hasOwnProp(childConfig, prop)) {
-                if (isObject(parentConfig[prop]) && isObject(childConfig[prop])) {
-                    res[prop] = {};
-                    extend(res[prop], parentConfig[prop]);
-                    extend(res[prop], childConfig[prop]);
-                } else if (childConfig[prop] != null) {
-                    res[prop] = childConfig[prop];
-                } else {
-                    delete res[prop];
-                }
-            }
-        }
-        for (prop in parentConfig) {
-            if (hasOwnProp(parentConfig, prop) &&
-                    !hasOwnProp(childConfig, prop) &&
-                    isObject(parentConfig[prop])) {
-                // make sure changes to properties don't modify parent config
-                res[prop] = extend({}, res[prop]);
-            }
-        }
-        return res;
-    }
-
-    function Locale(config) {
-        if (config != null) {
-            this.set(config);
-        }
-    }
-
-    var keys;
-
-    if (Object.keys) {
-        keys = Object.keys;
-    } else {
-        keys = function (obj) {
-            var i, res = [];
-            for (i in obj) {
-                if (hasOwnProp(obj, i)) {
-                    res.push(i);
-                }
-            }
-            return res;
-        };
-    }
-
-    var defaultCalendar = {
-        sameDay : '[Today at] LT',
-        nextDay : '[Tomorrow at] LT',
-        nextWeek : 'dddd [at] LT',
-        lastDay : '[Yesterday at] LT',
-        lastWeek : '[Last] dddd [at] LT',
-        sameElse : 'L'
-    };
-
-    function calendar (key, mom, now) {
-        var output = this._calendar[key] || this._calendar['sameElse'];
-        return isFunction(output) ? output.call(mom, now) : output;
-    }
-
-    var defaultLongDateFormat = {
-        LTS  : 'h:mm:ss A',
-        LT   : 'h:mm A',
-        L    : 'MM/DD/YYYY',
-        LL   : 'MMMM D, YYYY',
-        LLL  : 'MMMM D, YYYY h:mm A',
-        LLLL : 'dddd, MMMM D, YYYY h:mm A'
-    };
-
-    function longDateFormat (key) {
-        var format = this._longDateFormat[key],
-            formatUpper = this._longDateFormat[key.toUpperCase()];
-
-        if (format || !formatUpper) {
-            return format;
-        }
-
-        this._longDateFormat[key] = formatUpper.replace(/MMMM|MM|DD|dddd/g, function (val) {
-            return val.slice(1);
-        });
-
-        return this._longDateFormat[key];
-    }
-
-    var defaultInvalidDate = 'Invalid date';
-
-    function invalidDate () {
-        return this._invalidDate;
-    }
-
-    var defaultOrdinal = '%d';
-    var defaultDayOfMonthOrdinalParse = /\d{1,2}/;
-
-    function ordinal (number) {
-        return this._ordinal.replace('%d', number);
-    }
-
-    var defaultRelativeTime = {
-        future : 'in %s',
-        past   : '%s ago',
-        s  : 'a few seconds',
-        ss : '%d seconds',
-        m  : 'a minute',
-        mm : '%d minutes',
-        h  : 'an hour',
-        hh : '%d hours',
-        d  : 'a day',
-        dd : '%d days',
-        M  : 'a month',
-        MM : '%d months',
-        y  : 'a year',
-        yy : '%d years'
-    };
-
-    function relativeTime (number, withoutSuffix, string, isFuture) {
-        var output = this._relativeTime[string];
-        return (isFunction(output)) ?
-            output(number, withoutSuffix, string, isFuture) :
-            output.replace(/%d/i, number);
-    }
-
-    function pastFuture (diff, output) {
-        var format = this._relativeTime[diff > 0 ? 'future' : 'past'];
-        return isFunction(format) ? format(output) : format.replace(/%s/i, output);
-    }
-
-    var aliases = {};
-
-    function addUnitAlias (unit, shorthand) {
-        var lowerCase = unit.toLowerCase();
-        aliases[lowerCase] = aliases[lowerCase + 's'] = aliases[shorthand] = unit;
-    }
-
-    function normalizeUnits(units) {
-        return typeof units === 'string' ? aliases[units] || aliases[units.toLowerCase()] : undefined;
-    }
-
-    function normalizeObjectUnits(inputObject) {
-        var normalizedInput = {},
-            normalizedProp,
-            prop;
-
-        for (prop in inputObject) {
-            if (hasOwnProp(inputObject, prop)) {
-                normalizedProp = normalizeUnits(prop);
-                if (normalizedProp) {
-                    normalizedInput[normalizedProp] = inputObject[prop];
-                }
-            }
-        }
-
-        return normalizedInput;
-    }
-
-    var priorities = {};
-
-    function addUnitPriority(unit, priority) {
-        priorities[unit] = priority;
-    }
-
-    function getPrioritizedUnits(unitsObj) {
-        var units = [];
-        for (var u in unitsObj) {
-            units.push({unit: u, priority: priorities[u]});
-        }
-        units.sort(function (a, b) {
-            return a.priority - b.priority;
-        });
-        return units;
-    }
-
-    function zeroFill(number, targetLength, forceSign) {
-        var absNumber = '' + Math.abs(number),
-            zerosToFill = targetLength - absNumber.length,
-            sign = number >= 0;
-        return (sign ? (forceSign ? '+' : '') : '-') +
-            Math.pow(10, Math.max(0, zerosToFill)).toString().substr(1) + absNumber;
-    }
-
-    var formattingTokens = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g;
-
-    var localFormattingTokens = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g;
-
-    var formatFunctions = {};
-
-    var formatTokenFunctions = {};
-
-    // token:    'M'
-    // padded:   ['MM', 2]
-    // ordinal:  'Mo'
-    // callback: function () { this.month() + 1 }
-    function addFormatToken (token, padded, ordinal, callback) {
-        var func = callback;
-        if (typeof callback === 'string') {
-            func = function () {
-                return this[callback]();
-            };
-        }
-        if (token) {
-            formatTokenFunctions[token] = func;
-        }
-        if (padded) {
-            formatTokenFunctions[padded[0]] = function () {
-                return zeroFill(func.apply(this, arguments), padded[1], padded[2]);
-            };
-        }
-        if (ordinal) {
-            formatTokenFunctions[ordinal] = function () {
-                return this.localeData().ordinal(func.apply(this, arguments), token);
-            };
-        }
-    }
-
-    function removeFormattingTokens(input) {
-        if (input.match(/\[[\s\S]/)) {
-            return input.replace(/^\[|\]$/g, '');
-        }
-        return input.replace(/\\/g, '');
-    }
-
-    function makeFormatFunction(format) {
-        var array = format.match(formattingTokens), i, length;
-
-        for (i = 0, length = array.length; i < length; i++) {
-            if (formatTokenFunctions[array[i]]) {
-                array[i] = formatTokenFunctions[array[i]];
-            } else {
-                array[i] = removeFormattingTokens(array[i]);
-            }
-        }
-
-        return function (mom) {
-            var output = '', i;
-            for (i = 0; i < length; i++) {
-                output += isFunction(array[i]) ? array[i].call(mom, format) : array[i];
-            }
-            return output;
-        };
-    }
-
-    // format date using native date object
-    function formatMoment(m, format) {
-        if (!m.isValid()) {
-            return m.localeData().invalidDate();
-        }
-
-        format = expandFormat(format, m.localeData());
-        formatFunctions[format] = formatFunctions[format] || makeFormatFunction(format);
-
-        return formatFunctions[format](m);
-    }
-
-    function expandFormat(format, locale) {
-        var i = 5;
-
-        function replaceLongDateFormatTokens(input) {
-            return locale.longDateFormat(input) || input;
-        }
-
-        localFormattingTokens.lastIndex = 0;
-        while (i >= 0 && localFormattingTokens.test(format)) {
-            format = format.replace(localFormattingTokens, replaceLongDateFormatTokens);
-            localFormattingTokens.lastIndex = 0;
-            i -= 1;
-        }
-
-        return format;
-    }
-
-    var match1         = /\d/;            //       0 - 9
-    var match2         = /\d\d/;          //      00 - 99
-    var match3         = /\d{3}/;         //     000 - 999
-    var match4         = /\d{4}/;         //    0000 - 9999
-    var match6         = /[+-]?\d{6}/;    // -999999 - 999999
-    var match1to2      = /\d\d?/;         //       0 - 99
-    var match3to4      = /\d\d\d\d?/;     //     999 - 9999
-    var match5to6      = /\d\d\d\d\d\d?/; //   99999 - 999999
-    var match1to3      = /\d{1,3}/;       //       0 - 999
-    var match1to4      = /\d{1,4}/;       //       0 - 9999
-    var match1to6      = /[+-]?\d{1,6}/;  // -999999 - 999999
-
-    var matchUnsigned  = /\d+/;           //       0 - inf
-    var matchSigned    = /[+-]?\d+/;      //    -inf - inf
-
-    var matchOffset    = /Z|[+-]\d\d:?\d\d/gi; // +00:00 -00:00 +0000 -0000 or Z
-    var matchShortOffset = /Z|[+-]\d\d(?::?\d\d)?/gi; // +00 -00 +00:00 -00:00 +0000 -0000 or Z
-
-    var matchTimestamp = /[+-]?\d+(\.\d{1,3})?/; // 123456789 123456789.123
-
-    // any word (or two) characters or numbers including two/three word month in arabic.
-    // includes scottish gaelic two word and hyphenated months
-    var matchWord = /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i;
-
-    var regexes = {};
-
-    function addRegexToken (token, regex, strictRegex) {
-        regexes[token] = isFunction(regex) ? regex : function (isStrict, localeData) {
-            return (isStrict && strictRegex) ? strictRegex : regex;
-        };
-    }
-
-    function getParseRegexForToken (token, config) {
-        if (!hasOwnProp(regexes, token)) {
-            return new RegExp(unescapeFormat(token));
-        }
-
-        return regexes[token](config._strict, config._locale);
-    }
-
-    // Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
-    function unescapeFormat(s) {
-        return regexEscape(s.replace('\\', '').replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (matched, p1, p2, p3, p4) {
-            return p1 || p2 || p3 || p4;
-        }));
-    }
-
-    function regexEscape(s) {
-        return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-    }
-
-    var tokens = {};
-
-    function addParseToken (token, callback) {
-        var i, func = callback;
-        if (typeof token === 'string') {
-            token = [token];
-        }
-        if (isNumber(callback)) {
-            func = function (input, array) {
-                array[callback] = toInt(input);
-            };
-        }
-        for (i = 0; i < token.length; i++) {
-            tokens[token[i]] = func;
-        }
-    }
-
-    function addWeekParseToken (token, callback) {
-        addParseToken(token, function (input, array, config, token) {
-            config._w = config._w || {};
-            callback(input, config._w, config, token);
-        });
-    }
-
-    function addTimeToArrayFromToken(token, input, config) {
-        if (input != null && hasOwnProp(tokens, token)) {
-            tokens[token](input, config._a, config, token);
-        }
-    }
-
-    var YEAR = 0;
-    var MONTH = 1;
-    var DATE = 2;
-    var HOUR = 3;
-    var MINUTE = 4;
-    var SECOND = 5;
-    var MILLISECOND = 6;
-    var WEEK = 7;
-    var WEEKDAY = 8;
-
-    // FORMATTING
-
-    addFormatToken('Y', 0, 0, function () {
-        var y = this.year();
-        return y <= 9999 ? '' + y : '+' + y;
-    });
-
-    addFormatToken(0, ['YY', 2], 0, function () {
-        return this.year() % 100;
-    });
-
-    addFormatToken(0, ['YYYY',   4],       0, 'year');
-    addFormatToken(0, ['YYYYY',  5],       0, 'year');
-    addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
-
-    // ALIASES
-
-    addUnitAlias('year', 'y');
-
-    // PRIORITIES
-
-    addUnitPriority('year', 1);
-
-    // PARSING
-
-    addRegexToken('Y',      matchSigned);
-    addRegexToken('YY',     match1to2, match2);
-    addRegexToken('YYYY',   match1to4, match4);
-    addRegexToken('YYYYY',  match1to6, match6);
-    addRegexToken('YYYYYY', match1to6, match6);
-
-    addParseToken(['YYYYY', 'YYYYYY'], YEAR);
-    addParseToken('YYYY', function (input, array) {
-        array[YEAR] = input.length === 2 ? hooks.parseTwoDigitYear(input) : toInt(input);
-    });
-    addParseToken('YY', function (input, array) {
-        array[YEAR] = hooks.parseTwoDigitYear(input);
-    });
-    addParseToken('Y', function (input, array) {
-        array[YEAR] = parseInt(input, 10);
-    });
-
-    // HELPERS
-
-    function daysInYear(year) {
-        return isLeapYear(year) ? 366 : 365;
-    }
-
-    function isLeapYear(year) {
-        return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-    }
-
-    // HOOKS
-
-    hooks.parseTwoDigitYear = function (input) {
-        return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
-    };
-
-    // MOMENTS
-
-    var getSetYear = makeGetSet('FullYear', true);
-
-    function getIsLeapYear () {
-        return isLeapYear(this.year());
-    }
-
-    function makeGetSet (unit, keepTime) {
-        return function (value) {
-            if (value != null) {
-                set$1(this, unit, value);
-                hooks.updateOffset(this, keepTime);
-                return this;
-            } else {
-                return get(this, unit);
-            }
-        };
-    }
-
-    function get (mom, unit) {
-        return mom.isValid() ?
-            mom._d['get' + (mom._isUTC ? 'UTC' : '') + unit]() : NaN;
-    }
-
-    function set$1 (mom, unit, value) {
-        if (mom.isValid() && !isNaN(value)) {
-            if (unit === 'FullYear' && isLeapYear(mom.year()) && mom.month() === 1 && mom.date() === 29) {
-                mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value, mom.month(), daysInMonth(value, mom.month()));
-            }
-            else {
-                mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value);
-            }
-        }
-    }
-
-    // MOMENTS
-
-    function stringGet (units) {
-        units = normalizeUnits(units);
-        if (isFunction(this[units])) {
-            return this[units]();
-        }
-        return this;
-    }
-
-
-    function stringSet (units, value) {
-        if (typeof units === 'object') {
-            units = normalizeObjectUnits(units);
-            var prioritized = getPrioritizedUnits(units);
-            for (var i = 0; i < prioritized.length; i++) {
-                this[prioritized[i].unit](units[prioritized[i].unit]);
-            }
-        } else {
-            units = normalizeUnits(units);
-            if (isFunction(this[units])) {
-                return this[units](value);
-            }
-        }
-        return this;
-    }
-
-    function mod(n, x) {
-        return ((n % x) + x) % x;
-    }
-
-    var indexOf;
-
-    if (Array.prototype.indexOf) {
-        indexOf = Array.prototype.indexOf;
-    } else {
-        indexOf = function (o) {
-            // I know
-            var i;
-            for (i = 0; i < this.length; ++i) {
-                if (this[i] === o) {
-                    return i;
-                }
-            }
-            return -1;
-        };
-    }
-
-    function daysInMonth(year, month) {
-        if (isNaN(year) || isNaN(month)) {
-            return NaN;
-        }
-        var modMonth = mod(month, 12);
-        year += (month - modMonth) / 12;
-        return modMonth === 1 ? (isLeapYear(year) ? 29 : 28) : (31 - modMonth % 7 % 2);
-    }
-
-    // FORMATTING
-
-    addFormatToken('M', ['MM', 2], 'Mo', function () {
-        return this.month() + 1;
-    });
-
-    addFormatToken('MMM', 0, 0, function (format) {
-        return this.localeData().monthsShort(this, format);
-    });
-
-    addFormatToken('MMMM', 0, 0, function (format) {
-        return this.localeData().months(this, format);
-    });
-
-    // ALIASES
-
-    addUnitAlias('month', 'M');
-
-    // PRIORITY
-
-    addUnitPriority('month', 8);
-
-    // PARSING
-
-    addRegexToken('M',    match1to2);
-    addRegexToken('MM',   match1to2, match2);
-    addRegexToken('MMM',  function (isStrict, locale) {
-        return locale.monthsShortRegex(isStrict);
-    });
-    addRegexToken('MMMM', function (isStrict, locale) {
-        return locale.monthsRegex(isStrict);
-    });
-
-    addParseToken(['M', 'MM'], function (input, array) {
-        array[MONTH] = toInt(input) - 1;
-    });
-
-    addParseToken(['MMM', 'MMMM'], function (input, array, config, token) {
-        var month = config._locale.monthsParse(input, token, config._strict);
-        // if we didn't find a month name, mark the date as invalid.
-        if (month != null) {
-            array[MONTH] = month;
-        } else {
-            getParsingFlags(config).invalidMonth = input;
-        }
-    });
-
-    // LOCALES
-
-    var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/;
-    var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
-    function localeMonths (m, format) {
-        if (!m) {
-            return isArray(this._months) ? this._months :
-                this._months['standalone'];
-        }
-        return isArray(this._months) ? this._months[m.month()] :
-            this._months[(this._months.isFormat || MONTHS_IN_FORMAT).test(format) ? 'format' : 'standalone'][m.month()];
-    }
-
-    var defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_');
-    function localeMonthsShort (m, format) {
-        if (!m) {
-            return isArray(this._monthsShort) ? this._monthsShort :
-                this._monthsShort['standalone'];
-        }
-        return isArray(this._monthsShort) ? this._monthsShort[m.month()] :
-            this._monthsShort[MONTHS_IN_FORMAT.test(format) ? 'format' : 'standalone'][m.month()];
-    }
-
-    function handleStrictParse(monthName, format, strict) {
-        var i, ii, mom, llc = monthName.toLocaleLowerCase();
-        if (!this._monthsParse) {
-            // this is not used
-            this._monthsParse = [];
-            this._longMonthsParse = [];
-            this._shortMonthsParse = [];
-            for (i = 0; i < 12; ++i) {
-                mom = createUTC([2000, i]);
-                this._shortMonthsParse[i] = this.monthsShort(mom, '').toLocaleLowerCase();
-                this._longMonthsParse[i] = this.months(mom, '').toLocaleLowerCase();
-            }
-        }
-
-        if (strict) {
-            if (format === 'MMM') {
-                ii = indexOf.call(this._shortMonthsParse, llc);
-                return ii !== -1 ? ii : null;
-            } else {
-                ii = indexOf.call(this._longMonthsParse, llc);
-                return ii !== -1 ? ii : null;
-            }
-        } else {
-            if (format === 'MMM') {
-                ii = indexOf.call(this._shortMonthsParse, llc);
-                if (ii !== -1) {
-                    return ii;
-                }
-                ii = indexOf.call(this._longMonthsParse, llc);
-                return ii !== -1 ? ii : null;
-            } else {
-                ii = indexOf.call(this._longMonthsParse, llc);
-                if (ii !== -1) {
-                    return ii;
-                }
-                ii = indexOf.call(this._shortMonthsParse, llc);
-                return ii !== -1 ? ii : null;
-            }
-        }
-    }
-
-    function localeMonthsParse (monthName, format, strict) {
-        var i, mom, regex;
-
-        if (this._monthsParseExact) {
-            return handleStrictParse.call(this, monthName, format, strict);
-        }
-
-        if (!this._monthsParse) {
-            this._monthsParse = [];
-            this._longMonthsParse = [];
-            this._shortMonthsParse = [];
-        }
-
-        // TODO: add sorting
-        // Sorting makes sure if one month (or abbr) is a prefix of another
-        // see sorting in computeMonthsParse
-        for (i = 0; i < 12; i++) {
-            // make the regex if we don't have it already
-            mom = createUTC([2000, i]);
-            if (strict && !this._longMonthsParse[i]) {
-                this._longMonthsParse[i] = new RegExp('^' + this.months(mom, '').replace('.', '') + '$', 'i');
-                this._shortMonthsParse[i] = new RegExp('^' + this.monthsShort(mom, '').replace('.', '') + '$', 'i');
-            }
-            if (!strict && !this._monthsParse[i]) {
-                regex = '^' + this.months(mom, '') + '|^' + this.monthsShort(mom, '');
-                this._monthsParse[i] = new RegExp(regex.replace('.', ''), 'i');
-            }
-            // test the regex
-            if (strict && format === 'MMMM' && this._longMonthsParse[i].test(monthName)) {
-                return i;
-            } else if (strict && format === 'MMM' && this._shortMonthsParse[i].test(monthName)) {
-                return i;
-            } else if (!strict && this._monthsParse[i].test(monthName)) {
-                return i;
-            }
-        }
-    }
-
-    // MOMENTS
-
-    function setMonth (mom, value) {
-        var dayOfMonth;
-
-        if (!mom.isValid()) {
-            // No op
-            return mom;
-        }
-
-        if (typeof value === 'string') {
-            if (/^\d+$/.test(value)) {
-                value = toInt(value);
-            } else {
-                value = mom.localeData().monthsParse(value);
-                // TODO: Another silent failure?
-                if (!isNumber(value)) {
-                    return mom;
-                }
-            }
-        }
-
-        dayOfMonth = Math.min(mom.date(), daysInMonth(mom.year(), value));
-        mom._d['set' + (mom._isUTC ? 'UTC' : '') + 'Month'](value, dayOfMonth);
-        return mom;
-    }
-
-    function getSetMonth (value) {
-        if (value != null) {
-            setMonth(this, value);
-            hooks.updateOffset(this, true);
-            return this;
-        } else {
-            return get(this, 'Month');
-        }
-    }
-
-    function getDaysInMonth () {
-        return daysInMonth(this.year(), this.month());
-    }
-
-    var defaultMonthsShortRegex = matchWord;
-    function monthsShortRegex (isStrict) {
-        if (this._monthsParseExact) {
-            if (!hasOwnProp(this, '_monthsRegex')) {
-                computeMonthsParse.call(this);
-            }
-            if (isStrict) {
-                return this._monthsShortStrictRegex;
-            } else {
-                return this._monthsShortRegex;
-            }
-        } else {
-            if (!hasOwnProp(this, '_monthsShortRegex')) {
-                this._monthsShortRegex = defaultMonthsShortRegex;
-            }
-            return this._monthsShortStrictRegex && isStrict ?
-                this._monthsShortStrictRegex : this._monthsShortRegex;
-        }
-    }
-
-    var defaultMonthsRegex = matchWord;
-    function monthsRegex (isStrict) {
-        if (this._monthsParseExact) {
-            if (!hasOwnProp(this, '_monthsRegex')) {
-                computeMonthsParse.call(this);
-            }
-            if (isStrict) {
-                return this._monthsStrictRegex;
-            } else {
-                return this._monthsRegex;
-            }
-        } else {
-            if (!hasOwnProp(this, '_monthsRegex')) {
-                this._monthsRegex = defaultMonthsRegex;
-            }
-            return this._monthsStrictRegex && isStrict ?
-                this._monthsStrictRegex : this._monthsRegex;
-        }
-    }
-
-    function computeMonthsParse () {
-        function cmpLenRev(a, b) {
-            return b.length - a.length;
-        }
-
-        var shortPieces = [], longPieces = [], mixedPieces = [],
-            i, mom;
-        for (i = 0; i < 12; i++) {
-            // make the regex if we don't have it already
-            mom = createUTC([2000, i]);
-            shortPieces.push(this.monthsShort(mom, ''));
-            longPieces.push(this.months(mom, ''));
-            mixedPieces.push(this.months(mom, ''));
-            mixedPieces.push(this.monthsShort(mom, ''));
-        }
-        // Sorting makes sure if one month (or abbr) is a prefix of another it
-        // will match the longer piece.
-        shortPieces.sort(cmpLenRev);
-        longPieces.sort(cmpLenRev);
-        mixedPieces.sort(cmpLenRev);
-        for (i = 0; i < 12; i++) {
-            shortPieces[i] = regexEscape(shortPieces[i]);
-            longPieces[i] = regexEscape(longPieces[i]);
-        }
-        for (i = 0; i < 24; i++) {
-            mixedPieces[i] = regexEscape(mixedPieces[i]);
-        }
-
-        this._monthsRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
-        this._monthsShortRegex = this._monthsRegex;
-        this._monthsStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
-        this._monthsShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
-    }
-
-    function createDate (y, m, d, h, M, s, ms) {
-        // can't just apply() to create a date:
-        // https://stackoverflow.com/q/181348
-        var date = new Date(y, m, d, h, M, s, ms);
-
-        // the date constructor remaps years 0-99 to 1900-1999
-        if (y < 100 && y >= 0 && isFinite(date.getFullYear())) {
-            date.setFullYear(y);
-        }
-        return date;
-    }
-
-    function createUTCDate (y) {
-        var date = new Date(Date.UTC.apply(null, arguments));
-
-        // the Date.UTC function remaps years 0-99 to 1900-1999
-        if (y < 100 && y >= 0 && isFinite(date.getUTCFullYear())) {
-            date.setUTCFullYear(y);
-        }
-        return date;
-    }
-
-    // start-of-first-week - start-of-year
-    function firstWeekOffset(year, dow, doy) {
-        var // first-week day -- which january is always in the first week (4 for iso, 1 for other)
-            fwd = 7 + dow - doy,
-            // first-week day local weekday -- which local weekday is fwd
-            fwdlw = (7 + createUTCDate(year, 0, fwd).getUTCDay() - dow) % 7;
-
-        return -fwdlw + fwd - 1;
-    }
-
-    // https://en.wikipedia.org/wiki/ISO_week_date#Calculating_a_date_given_the_year.2C_week_number_and_weekday
-    function dayOfYearFromWeeks(year, week, weekday, dow, doy) {
-        var localWeekday = (7 + weekday - dow) % 7,
-            weekOffset = firstWeekOffset(year, dow, doy),
-            dayOfYear = 1 + 7 * (week - 1) + localWeekday + weekOffset,
-            resYear, resDayOfYear;
-
-        if (dayOfYear <= 0) {
-            resYear = year - 1;
-            resDayOfYear = daysInYear(resYear) + dayOfYear;
-        } else if (dayOfYear > daysInYear(year)) {
-            resYear = year + 1;
-            resDayOfYear = dayOfYear - daysInYear(year);
-        } else {
-            resYear = year;
-            resDayOfYear = dayOfYear;
-        }
-
-        return {
-            year: resYear,
-            dayOfYear: resDayOfYear
-        };
-    }
-
-    function weekOfYear(mom, dow, doy) {
-        var weekOffset = firstWeekOffset(mom.year(), dow, doy),
-            week = Math.floor((mom.dayOfYear() - weekOffset - 1) / 7) + 1,
-            resWeek, resYear;
-
-        if (week < 1) {
-            resYear = mom.year() - 1;
-            resWeek = week + weeksInYear(resYear, dow, doy);
-        } else if (week > weeksInYear(mom.year(), dow, doy)) {
-            resWeek = week - weeksInYear(mom.year(), dow, doy);
-            resYear = mom.year() + 1;
-        } else {
-            resYear = mom.year();
-            resWeek = week;
-        }
-
-        return {
-            week: resWeek,
-            year: resYear
-        };
-    }
-
-    function weeksInYear(year, dow, doy) {
-        var weekOffset = firstWeekOffset(year, dow, doy),
-            weekOffsetNext = firstWeekOffset(year + 1, dow, doy);
-        return (daysInYear(year) - weekOffset + weekOffsetNext) / 7;
-    }
-
-    // FORMATTING
-
-    addFormatToken('w', ['ww', 2], 'wo', 'week');
-    addFormatToken('W', ['WW', 2], 'Wo', 'isoWeek');
-
-    // ALIASES
-
-    addUnitAlias('week', 'w');
-    addUnitAlias('isoWeek', 'W');
-
-    // PRIORITIES
-
-    addUnitPriority('week', 5);
-    addUnitPriority('isoWeek', 5);
-
-    // PARSING
-
-    addRegexToken('w',  match1to2);
-    addRegexToken('ww', match1to2, match2);
-    addRegexToken('W',  match1to2);
-    addRegexToken('WW', match1to2, match2);
-
-    addWeekParseToken(['w', 'ww', 'W', 'WW'], function (input, week, config, token) {
-        week[token.substr(0, 1)] = toInt(input);
-    });
-
-    // HELPERS
-
-    // LOCALES
-
-    function localeWeek (mom) {
-        return weekOfYear(mom, this._week.dow, this._week.doy).week;
-    }
-
-    var defaultLocaleWeek = {
-        dow : 0, // Sunday is the first day of the week.
-        doy : 6  // The week that contains Jan 1st is the first week of the year.
-    };
-
-    function localeFirstDayOfWeek () {
-        return this._week.dow;
-    }
-
-    function localeFirstDayOfYear () {
-        return this._week.doy;
-    }
-
-    // MOMENTS
-
-    function getSetWeek (input) {
-        var week = this.localeData().week(this);
-        return input == null ? week : this.add((input - week) * 7, 'd');
-    }
-
-    function getSetISOWeek (input) {
-        var week = weekOfYear(this, 1, 4).week;
-        return input == null ? week : this.add((input - week) * 7, 'd');
-    }
-
-    // FORMATTING
-
-    addFormatToken('d', 0, 'do', 'day');
-
-    addFormatToken('dd', 0, 0, function (format) {
-        return this.localeData().weekdaysMin(this, format);
-    });
-
-    addFormatToken('ddd', 0, 0, function (format) {
-        return this.localeData().weekdaysShort(this, format);
-    });
-
-    addFormatToken('dddd', 0, 0, function (format) {
-        return this.localeData().weekdays(this, format);
-    });
-
-    addFormatToken('e', 0, 0, 'weekday');
-    addFormatToken('E', 0, 0, 'isoWeekday');
-
-    // ALIASES
-
-    addUnitAlias('day', 'd');
-    addUnitAlias('weekday', 'e');
-    addUnitAlias('isoWeekday', 'E');
-
-    // PRIORITY
-    addUnitPriority('day', 11);
-    addUnitPriority('weekday', 11);
-    addUnitPriority('isoWeekday', 11);
-
-    // PARSING
-
-    addRegexToken('d',    match1to2);
-    addRegexToken('e',    match1to2);
-    addRegexToken('E',    match1to2);
-    addRegexToken('dd',   function (isStrict, locale) {
-        return locale.weekdaysMinRegex(isStrict);
-    });
-    addRegexToken('ddd',   function (isStrict, locale) {
-        return locale.weekdaysShortRegex(isStrict);
-    });
-    addRegexToken('dddd',   function (isStrict, locale) {
-        return locale.weekdaysRegex(isStrict);
-    });
-
-    addWeekParseToken(['dd', 'ddd', 'dddd'], function (input, week, config, token) {
-        var weekday = config._locale.weekdaysParse(input, token, config._strict);
-        // if we didn't get a weekday name, mark the date as invalid
-        if (weekday != null) {
-            week.d = weekday;
-        } else {
-            getParsingFlags(config).invalidWeekday = input;
-        }
-    });
-
-    addWeekParseToken(['d', 'e', 'E'], function (input, week, config, token) {
-        week[token] = toInt(input);
-    });
-
-    // HELPERS
-
-    function parseWeekday(input, locale) {
-        if (typeof input !== 'string') {
-            return input;
-        }
-
-        if (!isNaN(input)) {
-            return parseInt(input, 10);
-        }
-
-        input = locale.weekdaysParse(input);
-        if (typeof input === 'number') {
-            return input;
-        }
-
-        return null;
-    }
-
-    function parseIsoWeekday(input, locale) {
-        if (typeof input === 'string') {
-            return locale.weekdaysParse(input) % 7 || 7;
-        }
-        return isNaN(input) ? null : input;
-    }
-
-    // LOCALES
-
-    var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');
-    function localeWeekdays (m, format) {
-        if (!m) {
-            return isArray(this._weekdays) ? this._weekdays :
-                this._weekdays['standalone'];
-        }
-        return isArray(this._weekdays) ? this._weekdays[m.day()] :
-            this._weekdays[this._weekdays.isFormat.test(format) ? 'format' : 'standalone'][m.day()];
-    }
-
-    var defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_');
-    function localeWeekdaysShort (m) {
-        return (m) ? this._weekdaysShort[m.day()] : this._weekdaysShort;
-    }
-
-    var defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');
-    function localeWeekdaysMin (m) {
-        return (m) ? this._weekdaysMin[m.day()] : this._weekdaysMin;
-    }
-
-    function handleStrictParse$1(weekdayName, format, strict) {
-        var i, ii, mom, llc = weekdayName.toLocaleLowerCase();
-        if (!this._weekdaysParse) {
-            this._weekdaysParse = [];
-            this._shortWeekdaysParse = [];
-            this._minWeekdaysParse = [];
-
-            for (i = 0; i < 7; ++i) {
-                mom = createUTC([2000, 1]).day(i);
-                this._minWeekdaysParse[i] = this.weekdaysMin(mom, '').toLocaleLowerCase();
-                this._shortWeekdaysParse[i] = this.weekdaysShort(mom, '').toLocaleLowerCase();
-                this._weekdaysParse[i] = this.weekdays(mom, '').toLocaleLowerCase();
-            }
-        }
-
-        if (strict) {
-            if (format === 'dddd') {
-                ii = indexOf.call(this._weekdaysParse, llc);
-                return ii !== -1 ? ii : null;
-            } else if (format === 'ddd') {
-                ii = indexOf.call(this._shortWeekdaysParse, llc);
-                return ii !== -1 ? ii : null;
-            } else {
-                ii = indexOf.call(this._minWeekdaysParse, llc);
-                return ii !== -1 ? ii : null;
-            }
-        } else {
-            if (format === 'dddd') {
-                ii = indexOf.call(this._weekdaysParse, llc);
-                if (ii !== -1) {
-                    return ii;
-                }
-                ii = indexOf.call(this._shortWeekdaysParse, llc);
-                if (ii !== -1) {
-                    return ii;
-                }
-                ii = indexOf.call(this._minWeekdaysParse, llc);
-                return ii !== -1 ? ii : null;
-            } else if (format === 'ddd') {
-                ii = indexOf.call(this._shortWeekdaysParse, llc);
-                if (ii !== -1) {
-                    return ii;
-                }
-                ii = indexOf.call(this._weekdaysParse, llc);
-                if (ii !== -1) {
-                    return ii;
-                }
-                ii = indexOf.call(this._minWeekdaysParse, llc);
-                return ii !== -1 ? ii : null;
-            } else {
-                ii = indexOf.call(this._minWeekdaysParse, llc);
-                if (ii !== -1) {
-                    return ii;
-                }
-                ii = indexOf.call(this._weekdaysParse, llc);
-                if (ii !== -1) {
-                    return ii;
-                }
-                ii = indexOf.call(this._shortWeekdaysParse, llc);
-                return ii !== -1 ? ii : null;
-            }
-        }
-    }
-
-    function localeWeekdaysParse (weekdayName, format, strict) {
-        var i, mom, regex;
-
-        if (this._weekdaysParseExact) {
-            return handleStrictParse$1.call(this, weekdayName, format, strict);
-        }
-
-        if (!this._weekdaysParse) {
-            this._weekdaysParse = [];
-            this._minWeekdaysParse = [];
-            this._shortWeekdaysParse = [];
-            this._fullWeekdaysParse = [];
-        }
-
-        for (i = 0; i < 7; i++) {
-            // make the regex if we don't have it already
-
-            mom = createUTC([2000, 1]).day(i);
-            if (strict && !this._fullWeekdaysParse[i]) {
-                this._fullWeekdaysParse[i] = new RegExp('^' + this.weekdays(mom, '').replace('.', '\\.?') + '$', 'i');
-                this._shortWeekdaysParse[i] = new RegExp('^' + this.weekdaysShort(mom, '').replace('.', '\\.?') + '$', 'i');
-                this._minWeekdaysParse[i] = new RegExp('^' + this.weekdaysMin(mom, '').replace('.', '\\.?') + '$', 'i');
-            }
-            if (!this._weekdaysParse[i]) {
-                regex = '^' + this.weekdays(mom, '') + '|^' + this.weekdaysShort(mom, '') + '|^' + this.weekdaysMin(mom, '');
-                this._weekdaysParse[i] = new RegExp(regex.replace('.', ''), 'i');
-            }
-            // test the regex
-            if (strict && format === 'dddd' && this._fullWeekdaysParse[i].test(weekdayName)) {
-                return i;
-            } else if (strict && format === 'ddd' && this._shortWeekdaysParse[i].test(weekdayName)) {
-                return i;
-            } else if (strict && format === 'dd' && this._minWeekdaysParse[i].test(weekdayName)) {
-                return i;
-            } else if (!strict && this._weekdaysParse[i].test(weekdayName)) {
-                return i;
-            }
-        }
-    }
-
-    // MOMENTS
-
-    function getSetDayOfWeek (input) {
-        if (!this.isValid()) {
-            return input != null ? this : NaN;
-        }
-        var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
-        if (input != null) {
-            input = parseWeekday(input, this.localeData());
-            return this.add(input - day, 'd');
-        } else {
-            return day;
-        }
-    }
-
-    function getSetLocaleDayOfWeek (input) {
-        if (!this.isValid()) {
-            return input != null ? this : NaN;
-        }
-        var weekday = (this.day() + 7 - this.localeData()._week.dow) % 7;
-        return input == null ? weekday : this.add(input - weekday, 'd');
-    }
-
-    function getSetISODayOfWeek (input) {
-        if (!this.isValid()) {
-            return input != null ? this : NaN;
-        }
-
-        // behaves the same as moment#day except
-        // as a getter, returns 7 instead of 0 (1-7 range instead of 0-6)
-        // as a setter, sunday should belong to the previous week.
-
-        if (input != null) {
-            var weekday = parseIsoWeekday(input, this.localeData());
-            return this.day(this.day() % 7 ? weekday : weekday - 7);
-        } else {
-            return this.day() || 7;
-        }
-    }
-
-    var defaultWeekdaysRegex = matchWord;
-    function weekdaysRegex (isStrict) {
-        if (this._weekdaysParseExact) {
-            if (!hasOwnProp(this, '_weekdaysRegex')) {
-                computeWeekdaysParse.call(this);
-            }
-            if (isStrict) {
-                return this._weekdaysStrictRegex;
-            } else {
-                return this._weekdaysRegex;
-            }
-        } else {
-            if (!hasOwnProp(this, '_weekdaysRegex')) {
-                this._weekdaysRegex = defaultWeekdaysRegex;
-            }
-            return this._weekdaysStrictRegex && isStrict ?
-                this._weekdaysStrictRegex : this._weekdaysRegex;
-        }
-    }
-
-    var defaultWeekdaysShortRegex = matchWord;
-    function weekdaysShortRegex (isStrict) {
-        if (this._weekdaysParseExact) {
-            if (!hasOwnProp(this, '_weekdaysRegex')) {
-                computeWeekdaysParse.call(this);
-            }
-            if (isStrict) {
-                return this._weekdaysShortStrictRegex;
-            } else {
-                return this._weekdaysShortRegex;
-            }
-        } else {
-            if (!hasOwnProp(this, '_weekdaysShortRegex')) {
-                this._weekdaysShortRegex = defaultWeekdaysShortRegex;
-            }
-            return this._weekdaysShortStrictRegex && isStrict ?
-                this._weekdaysShortStrictRegex : this._weekdaysShortRegex;
-        }
-    }
-
-    var defaultWeekdaysMinRegex = matchWord;
-    function weekdaysMinRegex (isStrict) {
-        if (this._weekdaysParseExact) {
-            if (!hasOwnProp(this, '_weekdaysRegex')) {
-                computeWeekdaysParse.call(this);
-            }
-            if (isStrict) {
-                return this._weekdaysMinStrictRegex;
-            } else {
-                return this._weekdaysMinRegex;
-            }
-        } else {
-            if (!hasOwnProp(this, '_weekdaysMinRegex')) {
-                this._weekdaysMinRegex = defaultWeekdaysMinRegex;
-            }
-            return this._weekdaysMinStrictRegex && isStrict ?
-                this._weekdaysMinStrictRegex : this._weekdaysMinRegex;
-        }
-    }
-
-
-    function computeWeekdaysParse () {
-        function cmpLenRev(a, b) {
-            return b.length - a.length;
-        }
-
-        var minPieces = [], shortPieces = [], longPieces = [], mixedPieces = [],
-            i, mom, minp, shortp, longp;
-        for (i = 0; i < 7; i++) {
-            // make the regex if we don't have it already
-            mom = createUTC([2000, 1]).day(i);
-            minp = this.weekdaysMin(mom, '');
-            shortp = this.weekdaysShort(mom, '');
-            longp = this.weekdays(mom, '');
-            minPieces.push(minp);
-            shortPieces.push(shortp);
-            longPieces.push(longp);
-            mixedPieces.push(minp);
-            mixedPieces.push(shortp);
-            mixedPieces.push(longp);
-        }
-        // Sorting makes sure if one weekday (or abbr) is a prefix of another it
-        // will match the longer piece.
-        minPieces.sort(cmpLenRev);
-        shortPieces.sort(cmpLenRev);
-        longPieces.sort(cmpLenRev);
-        mixedPieces.sort(cmpLenRev);
-        for (i = 0; i < 7; i++) {
-            shortPieces[i] = regexEscape(shortPieces[i]);
-            longPieces[i] = regexEscape(longPieces[i]);
-            mixedPieces[i] = regexEscape(mixedPieces[i]);
-        }
-
-        this._weekdaysRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
-        this._weekdaysShortRegex = this._weekdaysRegex;
-        this._weekdaysMinRegex = this._weekdaysRegex;
-
-        this._weekdaysStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
-        this._weekdaysShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
-        this._weekdaysMinStrictRegex = new RegExp('^(' + minPieces.join('|') + ')', 'i');
-    }
-
-    // FORMATTING
-
-    function hFormat() {
-        return this.hours() % 12 || 12;
-    }
-
-    function kFormat() {
-        return this.hours() || 24;
-    }
-
-    addFormatToken('H', ['HH', 2], 0, 'hour');
-    addFormatToken('h', ['hh', 2], 0, hFormat);
-    addFormatToken('k', ['kk', 2], 0, kFormat);
-
-    addFormatToken('hmm', 0, 0, function () {
-        return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2);
-    });
-
-    addFormatToken('hmmss', 0, 0, function () {
-        return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2) +
-            zeroFill(this.seconds(), 2);
-    });
-
-    addFormatToken('Hmm', 0, 0, function () {
-        return '' + this.hours() + zeroFill(this.minutes(), 2);
-    });
-
-    addFormatToken('Hmmss', 0, 0, function () {
-        return '' + this.hours() + zeroFill(this.minutes(), 2) +
-            zeroFill(this.seconds(), 2);
-    });
-
-    function meridiem (token, lowercase) {
-        addFormatToken(token, 0, 0, function () {
-            return this.localeData().meridiem(this.hours(), this.minutes(), lowercase);
-        });
-    }
-
-    meridiem('a', true);
-    meridiem('A', false);
-
-    // ALIASES
-
-    addUnitAlias('hour', 'h');
-
-    // PRIORITY
-    addUnitPriority('hour', 13);
-
-    // PARSING
-
-    function matchMeridiem (isStrict, locale) {
-        return locale._meridiemParse;
-    }
-
-    addRegexToken('a',  matchMeridiem);
-    addRegexToken('A',  matchMeridiem);
-    addRegexToken('H',  match1to2);
-    addRegexToken('h',  match1to2);
-    addRegexToken('k',  match1to2);
-    addRegexToken('HH', match1to2, match2);
-    addRegexToken('hh', match1to2, match2);
-    addRegexToken('kk', match1to2, match2);
-
-    addRegexToken('hmm', match3to4);
-    addRegexToken('hmmss', match5to6);
-    addRegexToken('Hmm', match3to4);
-    addRegexToken('Hmmss', match5to6);
-
-    addParseToken(['H', 'HH'], HOUR);
-    addParseToken(['k', 'kk'], function (input, array, config) {
-        var kInput = toInt(input);
-        array[HOUR] = kInput === 24 ? 0 : kInput;
-    });
-    addParseToken(['a', 'A'], function (input, array, config) {
-        config._isPm = config._locale.isPM(input);
-        config._meridiem = input;
-    });
-    addParseToken(['h', 'hh'], function (input, array, config) {
-        array[HOUR] = toInt(input);
-        getParsingFlags(config).bigHour = true;
-    });
-    addParseToken('hmm', function (input, array, config) {
-        var pos = input.length - 2;
-        array[HOUR] = toInt(input.substr(0, pos));
-        array[MINUTE] = toInt(input.substr(pos));
-        getParsingFlags(config).bigHour = true;
-    });
-    addParseToken('hmmss', function (input, array, config) {
-        var pos1 = input.length - 4;
-        var pos2 = input.length - 2;
-        array[HOUR] = toInt(input.substr(0, pos1));
-        array[MINUTE] = toInt(input.substr(pos1, 2));
-        array[SECOND] = toInt(input.substr(pos2));
-        getParsingFlags(config).bigHour = true;
-    });
-    addParseToken('Hmm', function (input, array, config) {
-        var pos = input.length - 2;
-        array[HOUR] = toInt(input.substr(0, pos));
-        array[MINUTE] = toInt(input.substr(pos));
-    });
-    addParseToken('Hmmss', function (input, array, config) {
-        var pos1 = input.length - 4;
-        var pos2 = input.length - 2;
-        array[HOUR] = toInt(input.substr(0, pos1));
-        array[MINUTE] = toInt(input.substr(pos1, 2));
-        array[SECOND] = toInt(input.substr(pos2));
-    });
-
-    // LOCALES
-
-    function localeIsPM (input) {
-        // IE8 Quirks Mode & IE7 Standards Mode do not allow accessing strings like arrays
-        // Using charAt should be more compatible.
-        return ((input + '').toLowerCase().charAt(0) === 'p');
-    }
-
-    var defaultLocaleMeridiemParse = /[ap]\.?m?\.?/i;
-    function localeMeridiem (hours, minutes, isLower) {
-        if (hours > 11) {
-            return isLower ? 'pm' : 'PM';
-        } else {
-            return isLower ? 'am' : 'AM';
-        }
-    }
-
-
-    // MOMENTS
-
-    // Setting the hour should keep the time, because the user explicitly
-    // specified which hour they want. So trying to maintain the same hour (in
-    // a new timezone) makes sense. Adding/subtracting hours does not follow
-    // this rule.
-    var getSetHour = makeGetSet('Hours', true);
-
-    var baseConfig = {
-        calendar: defaultCalendar,
-        longDateFormat: defaultLongDateFormat,
-        invalidDate: defaultInvalidDate,
-        ordinal: defaultOrdinal,
-        dayOfMonthOrdinalParse: defaultDayOfMonthOrdinalParse,
-        relativeTime: defaultRelativeTime,
-
-        months: defaultLocaleMonths,
-        monthsShort: defaultLocaleMonthsShort,
-
-        week: defaultLocaleWeek,
-
-        weekdays: defaultLocaleWeekdays,
-        weekdaysMin: defaultLocaleWeekdaysMin,
-        weekdaysShort: defaultLocaleWeekdaysShort,
-
-        meridiemParse: defaultLocaleMeridiemParse
-    };
-
-    // internal storage for locale config files
-    var locales = {};
-    var localeFamilies = {};
-    var globalLocale;
-
-    function normalizeLocale(key) {
-        return key ? key.toLowerCase().replace('_', '-') : key;
-    }
-
-    // pick the locale from the array
-    // try ['en-au', 'en-gb'] as 'en-au', 'en-gb', 'en', as in move through the list trying each
-    // substring from most specific to least, but move to the next array item if it's a more specific variant than the current root
-    function chooseLocale(names) {
-        var i = 0, j, next, locale, split;
-
-        while (i < names.length) {
-            split = normalizeLocale(names[i]).split('-');
-            j = split.length;
-            next = normalizeLocale(names[i + 1]);
-            next = next ? next.split('-') : null;
-            while (j > 0) {
-                locale = loadLocale(split.slice(0, j).join('-'));
-                if (locale) {
-                    return locale;
-                }
-                if (next && next.length >= j && compareArrays(split, next, true) >= j - 1) {
-                    //the next array item is better than a shallower substring of this one
-                    break;
-                }
-                j--;
-            }
-            i++;
-        }
-        return globalLocale;
-    }
-
-    function loadLocale(name) {
-        var oldLocale = null;
-        // TODO: Find a better way to register and load all the locales in Node
-        if (!locales[name] && (typeof module !== 'undefined') &&
-                module && module.exports) {
-            try {
-                oldLocale = globalLocale._abbr;
-                var aliasedRequire = require;
-                aliasedRequire('./locale/' + name);
-                getSetGlobalLocale(oldLocale);
-            } catch (e) {}
-        }
-        return locales[name];
-    }
-
-    // This function will load locale and then set the global locale.  If
-    // no arguments are passed in, it will simply return the current global
-    // locale key.
-    function getSetGlobalLocale (key, values) {
-        var data;
-        if (key) {
-            if (isUndefined(values)) {
-                data = getLocale(key);
-            }
-            else {
-                data = defineLocale(key, values);
+                return res;
             }
 
-            if (data) {
-                // moment.duration._locale = moment._locale = data;
-                globalLocale = data;
+            function hasOwnProp(a, b) {
+                return Object.prototype.hasOwnProperty.call(a, b);
             }
-            else {
-                if ((typeof console !==  'undefined') && console.warn) {
-                    //warn user if arguments are passed but the locale could not be set
-                    console.warn('Locale ' + key +  ' not found. Did you forget to load it?');
-                }
-            }
-        }
 
-        return globalLocale._abbr;
-    }
-
-    function defineLocale (name, config) {
-        if (config !== null) {
-            var locale, parentConfig = baseConfig;
-            config.abbr = name;
-            if (locales[name] != null) {
-                deprecateSimple('defineLocaleOverride',
-                        'use moment.updateLocale(localeName, config) to change ' +
-                        'an existing locale. moment.defineLocale(localeName, ' +
-                        'config) should only be used for creating a new locale ' +
-                        'See http://momentjs.com/guides/#/warnings/define-locale/ for more info.');
-                parentConfig = locales[name]._config;
-            } else if (config.parentLocale != null) {
-                if (locales[config.parentLocale] != null) {
-                    parentConfig = locales[config.parentLocale]._config;
-                } else {
-                    locale = loadLocale(config.parentLocale);
-                    if (locale != null) {
-                        parentConfig = locale._config;
-                    } else {
-                        if (!localeFamilies[config.parentLocale]) {
-                            localeFamilies[config.parentLocale] = [];
-                        }
-                        localeFamilies[config.parentLocale].push({
-                            name: name,
-                            config: config
-                        });
-                        return null;
+            function extend(a, b) {
+                for (var i in b) {
+                    if (hasOwnProp(b, i)) {
+                        a[i] = b[i];
                     }
                 }
-            }
-            locales[name] = new Locale(mergeConfigs(parentConfig, config));
 
-            if (localeFamilies[name]) {
-                localeFamilies[name].forEach(function (x) {
-                    defineLocale(x.name, x.config);
+                if (hasOwnProp(b, 'toString')) {
+                    a.toString = b.toString;
+                }
+
+                if (hasOwnProp(b, 'valueOf')) {
+                    a.valueOf = b.valueOf;
+                }
+
+                return a;
+            }
+
+            function createUTC(input, format, locale, strict) {
+                return createLocalOrUTC(input, format, locale, strict, true).utc();
+            }
+
+            function defaultParsingFlags() {
+                // We need to deep clone this object.
+                return {
+                    empty: false,
+                    unusedTokens: [],
+                    unusedInput: [],
+                    overflow: -2,
+                    charsLeftOver: 0,
+                    nullInput: false,
+                    invalidMonth: null,
+                    invalidFormat: false,
+                    userInvalidated: false,
+                    iso: false,
+                    parsedDateParts: [],
+                    meridiem: null,
+                    rfc2822: false,
+                    weekdayMismatch: false
+                };
+            }
+
+            function getParsingFlags(m) {
+                if (m._pf == null) {
+                    m._pf = defaultParsingFlags();
+                }
+                return m._pf;
+            }
+
+            var some;
+            if (Array.prototype.some) {
+                some = Array.prototype.some;
+            } else {
+                some = function (fun) {
+                    var t = Object(this);
+                    var len = t.length >>> 0;
+
+                    for (var i = 0; i < len; i++) {
+                        if (i in t && fun.call(this, t[i], i, t)) {
+                            return true;
+                        }
+                    }
+
+                    return false;
+                };
+            }
+
+            function isValid(m) {
+                if (m._isValid == null) {
+                    var flags = getParsingFlags(m);
+                    var parsedParts = some.call(flags.parsedDateParts, function (i) {
+                        return i != null;
+                    });
+                    var isNowValid = !isNaN(m._d.getTime()) &&
+                        flags.overflow < 0 &&
+                        !flags.empty &&
+                        !flags.invalidMonth &&
+                        !flags.invalidWeekday &&
+                        !flags.weekdayMismatch &&
+                        !flags.nullInput &&
+                        !flags.invalidFormat &&
+                        !flags.userInvalidated &&
+                        (!flags.meridiem || (flags.meridiem && parsedParts));
+
+                    if (m._strict) {
+                        isNowValid = isNowValid &&
+                            flags.charsLeftOver === 0 &&
+                            flags.unusedTokens.length === 0 &&
+                            flags.bigHour === undefined;
+                    }
+
+                    if (Object.isFrozen == null || !Object.isFrozen(m)) {
+                        m._isValid = isNowValid;
+                    } else {
+                        return isNowValid;
+                    }
+                }
+                return m._isValid;
+            }
+
+            function createInvalid(flags) {
+                var m = createUTC(NaN);
+                if (flags != null) {
+                    extend(getParsingFlags(m), flags);
+                } else {
+                    getParsingFlags(m).userInvalidated = true;
+                }
+
+                return m;
+            }
+
+            // Plugins that add properties should also add the key here (null value),
+            // so we can properly clone ourselves.
+            var momentProperties = hooks.momentProperties = [];
+
+            function copyConfig(to, from) {
+                var i, prop, val;
+
+                if (!isUndefined(from._isAMomentObject)) {
+                    to._isAMomentObject = from._isAMomentObject;
+                }
+                if (!isUndefined(from._i)) {
+                    to._i = from._i;
+                }
+                if (!isUndefined(from._f)) {
+                    to._f = from._f;
+                }
+                if (!isUndefined(from._l)) {
+                    to._l = from._l;
+                }
+                if (!isUndefined(from._strict)) {
+                    to._strict = from._strict;
+                }
+                if (!isUndefined(from._tzm)) {
+                    to._tzm = from._tzm;
+                }
+                if (!isUndefined(from._isUTC)) {
+                    to._isUTC = from._isUTC;
+                }
+                if (!isUndefined(from._offset)) {
+                    to._offset = from._offset;
+                }
+                if (!isUndefined(from._pf)) {
+                    to._pf = getParsingFlags(from);
+                }
+                if (!isUndefined(from._locale)) {
+                    to._locale = from._locale;
+                }
+
+                if (momentProperties.length > 0) {
+                    for (i = 0; i < momentProperties.length; i++) {
+                        prop = momentProperties[i];
+                        val = from[prop];
+                        if (!isUndefined(val)) {
+                            to[prop] = val;
+                        }
+                    }
+                }
+
+                return to;
+            }
+
+            var updateInProgress = false;
+
+            // Moment prototype object
+            function Moment(config) {
+                copyConfig(this, config);
+                this._d = new Date(config._d != null ? config._d.getTime() : NaN);
+                if (!this.isValid()) {
+                    this._d = new Date(NaN);
+                }
+                // Prevent infinite loop in case updateOffset creates new moment
+                // objects.
+                if (updateInProgress === false) {
+                    updateInProgress = true;
+                    hooks.updateOffset(this);
+                    updateInProgress = false;
+                }
+            }
+
+            function isMoment(obj) {
+                return obj instanceof Moment || (obj != null && obj._isAMomentObject != null);
+            }
+
+            function absFloor(number) {
+                if (number < 0) {
+                    // -0 -> 0
+                    return Math.ceil(number) || 0;
+                } else {
+                    return Math.floor(number);
+                }
+            }
+
+            function toInt(argumentForCoercion) {
+                var coercedNumber = +argumentForCoercion,
+                    value = 0;
+
+                if (coercedNumber !== 0 && isFinite(coercedNumber)) {
+                    value = absFloor(coercedNumber);
+                }
+
+                return value;
+            }
+
+            // compare two arrays, return the number of differences
+            function compareArrays(array1, array2, dontConvert) {
+                var len = Math.min(array1.length, array2.length),
+                    lengthDiff = Math.abs(array1.length - array2.length),
+                    diffs = 0,
+                    i;
+                for (i = 0; i < len; i++) {
+                    if ((dontConvert && array1[i] !== array2[i]) ||
+                        (!dontConvert && toInt(array1[i]) !== toInt(array2[i]))) {
+                        diffs++;
+                    }
+                }
+                return diffs + lengthDiff;
+            }
+
+            function warn(msg) {
+                if (hooks.suppressDeprecationWarnings === false &&
+                    (typeof console !== 'undefined') && console.warn) {
+                    console.warn('Deprecation warning: ' + msg);
+                }
+            }
+
+            function deprecate(msg, fn) {
+                var firstTime = true;
+
+                return extend(function () {
+                    if (hooks.deprecationHandler != null) {
+                        hooks.deprecationHandler(null, msg);
+                    }
+                    if (firstTime) {
+                        var args = [];
+                        var arg;
+                        for (var i = 0; i < arguments.length; i++) {
+                            arg = '';
+                            if (typeof arguments[i] === 'object') {
+                                arg += '\n[' + i + '] ';
+                                for (var key in arguments[0]) {
+                                    arg += key + ': ' + arguments[0][key] + ', ';
+                                }
+                                arg = arg.slice(0, -2); // Remove trailing comma and space
+                            } else {
+                                arg = arguments[i];
+                            }
+                            args.push(arg);
+                        }
+                        warn(msg + '\nArguments: ' + Array.prototype.slice.call(args).join('') + '\n' + (new Error()).stack);
+                        firstTime = false;
+                    }
+                    return fn.apply(this, arguments);
+                }, fn);
+            }
+
+            var deprecations = {};
+
+            function deprecateSimple(name, msg) {
+                if (hooks.deprecationHandler != null) {
+                    hooks.deprecationHandler(name, msg);
+                }
+                if (!deprecations[name]) {
+                    warn(msg);
+                    deprecations[name] = true;
+                }
+            }
+
+            hooks.suppressDeprecationWarnings = false;
+            hooks.deprecationHandler = null;
+
+            function isFunction(input) {
+                return input instanceof Function || Object.prototype.toString.call(input) === '[object Function]';
+            }
+
+            function set(config) {
+                var prop, i;
+                for (i in config) {
+                    prop = config[i];
+                    if (isFunction(prop)) {
+                        this[i] = prop;
+                    } else {
+                        this['_' + i] = prop;
+                    }
+                }
+                this._config = config;
+                // Lenient ordinal parsing accepts just a number in addition to
+                // number + (possibly) stuff coming from _dayOfMonthOrdinalParse.
+                // TODO: Remove "ordinalParse" fallback in next major release.
+                this._dayOfMonthOrdinalParseLenient = new RegExp(
+                    (this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) +
+                    '|' + (/\d{1,2}/).source);
+            }
+
+            function mergeConfigs(parentConfig, childConfig) {
+                var res = extend({}, parentConfig),
+                    prop;
+                for (prop in childConfig) {
+                    if (hasOwnProp(childConfig, prop)) {
+                        if (isObject(parentConfig[prop]) && isObject(childConfig[prop])) {
+                            res[prop] = {};
+                            extend(res[prop], parentConfig[prop]);
+                            extend(res[prop], childConfig[prop]);
+                        } else if (childConfig[prop] != null) {
+                            res[prop] = childConfig[prop];
+                        } else {
+                            delete res[prop];
+                        }
+                    }
+                }
+                for (prop in parentConfig) {
+                    if (hasOwnProp(parentConfig, prop) &&
+                        !hasOwnProp(childConfig, prop) &&
+                        isObject(parentConfig[prop])) {
+                        // make sure changes to properties don't modify parent config
+                        res[prop] = extend({}, res[prop]);
+                    }
+                }
+                return res;
+            }
+
+            function Locale(config) {
+                if (config != null) {
+                    this.set(config);
+                }
+            }
+
+            var keys;
+
+            if (Object.keys) {
+                keys = Object.keys;
+            } else {
+                keys = function (obj) {
+                    var i, res = [];
+                    for (i in obj) {
+                        if (hasOwnProp(obj, i)) {
+                            res.push(i);
+                        }
+                    }
+                    return res;
+                };
+            }
+
+            var defaultCalendar = {
+                sameDay: '[Today at] LT',
+                nextDay: '[Tomorrow at] LT',
+                nextWeek: 'dddd [at] LT',
+                lastDay: '[Yesterday at] LT',
+                lastWeek: '[Last] dddd [at] LT',
+                sameElse: 'L'
+            };
+
+            function calendar(key, mom, now) {
+                var output = this._calendar[key] || this._calendar['sameElse'];
+                return isFunction(output) ? output.call(mom, now) : output;
+            }
+
+            var defaultLongDateFormat = {
+                LTS: 'h:mm:ss A',
+                LT: 'h:mm A',
+                L: 'MM/DD/YYYY',
+                LL: 'MMMM D, YYYY',
+                LLL: 'MMMM D, YYYY h:mm A',
+                LLLL: 'dddd, MMMM D, YYYY h:mm A'
+            };
+
+            function longDateFormat(key) {
+                var format = this._longDateFormat[key],
+                    formatUpper = this._longDateFormat[key.toUpperCase()];
+
+                if (format || !formatUpper) {
+                    return format;
+                }
+
+                this._longDateFormat[key] = formatUpper.replace(/MMMM|MM|DD|dddd/g, function (val) {
+                    return val.slice(1);
+                });
+
+                return this._longDateFormat[key];
+            }
+
+            var defaultInvalidDate = 'Invalid date';
+
+            function invalidDate() {
+                return this._invalidDate;
+            }
+
+            var defaultOrdinal = '%d';
+            var defaultDayOfMonthOrdinalParse = /\d{1,2}/;
+
+            function ordinal(number) {
+                return this._ordinal.replace('%d', number);
+            }
+
+            var defaultRelativeTime = {
+                future: 'in %s',
+                past: '%s ago',
+                s: 'a few seconds',
+                ss: '%d seconds',
+                m: 'a minute',
+                mm: '%d minutes',
+                h: 'an hour',
+                hh: '%d hours',
+                d: 'a day',
+                dd: '%d days',
+                M: 'a month',
+                MM: '%d months',
+                y: 'a year',
+                yy: '%d years'
+            };
+
+            function relativeTime(number, withoutSuffix, string, isFuture) {
+                var output = this._relativeTime[string];
+                return (isFunction(output)) ?
+                    output(number, withoutSuffix, string, isFuture) :
+                    output.replace(/%d/i, number);
+            }
+
+            function pastFuture(diff, output) {
+                var format = this._relativeTime[diff > 0 ? 'future' : 'past'];
+                return isFunction(format) ? format(output) : format.replace(/%s/i, output);
+            }
+
+            var aliases = {};
+
+            function addUnitAlias(unit, shorthand) {
+                var lowerCase = unit.toLowerCase();
+                aliases[lowerCase] = aliases[lowerCase + 's'] = aliases[shorthand] = unit;
+            }
+
+            function normalizeUnits(units) {
+                return typeof units === 'string' ? aliases[units] || aliases[units.toLowerCase()] : undefined;
+            }
+
+            function normalizeObjectUnits(inputObject) {
+                var normalizedInput = {},
+                    normalizedProp,
+                    prop;
+
+                for (prop in inputObject) {
+                    if (hasOwnProp(inputObject, prop)) {
+                        normalizedProp = normalizeUnits(prop);
+                        if (normalizedProp) {
+                            normalizedInput[normalizedProp] = inputObject[prop];
+                        }
+                    }
+                }
+
+                return normalizedInput;
+            }
+
+            var priorities = {};
+
+            function addUnitPriority(unit, priority) {
+                priorities[unit] = priority;
+            }
+
+            function getPrioritizedUnits(unitsObj) {
+                var units = [];
+                for (var u in unitsObj) {
+                    units.push({
+                        unit: u,
+                        priority: priorities[u]
+                    });
+                }
+                units.sort(function (a, b) {
+                    return a.priority - b.priority;
+                });
+                return units;
+            }
+
+            function zeroFill(number, targetLength, forceSign) {
+                var absNumber = '' + Math.abs(number),
+                    zerosToFill = targetLength - absNumber.length,
+                    sign = number >= 0;
+                return (sign ? (forceSign ? '+' : '') : '-') +
+                    Math.pow(10, Math.max(0, zerosToFill)).toString().substr(1) + absNumber;
+            }
+
+            var formattingTokens = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g;
+
+            var localFormattingTokens = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g;
+
+            var formatFunctions = {};
+
+            var formatTokenFunctions = {};
+
+            // token:    'M'
+            // padded:   ['MM', 2]
+            // ordinal:  'Mo'
+            // callback: function () { this.month() + 1 }
+            function addFormatToken(token, padded, ordinal, callback) {
+                var func = callback;
+                if (typeof callback === 'string') {
+                    func = function () {
+                        return this[callback]();
+                    };
+                }
+                if (token) {
+                    formatTokenFunctions[token] = func;
+                }
+                if (padded) {
+                    formatTokenFunctions[padded[0]] = function () {
+                        return zeroFill(func.apply(this, arguments), padded[1], padded[2]);
+                    };
+                }
+                if (ordinal) {
+                    formatTokenFunctions[ordinal] = function () {
+                        return this.localeData().ordinal(func.apply(this, arguments), token);
+                    };
+                }
+            }
+
+            function removeFormattingTokens(input) {
+                if (input.match(/\[[\s\S]/)) {
+                    return input.replace(/^\[|\]$/g, '');
+                }
+                return input.replace(/\\/g, '');
+            }
+
+            function makeFormatFunction(format) {
+                var array = format.match(formattingTokens),
+                    i, length;
+
+                for (i = 0, length = array.length; i < length; i++) {
+                    if (formatTokenFunctions[array[i]]) {
+                        array[i] = formatTokenFunctions[array[i]];
+                    } else {
+                        array[i] = removeFormattingTokens(array[i]);
+                    }
+                }
+
+                return function (mom) {
+                    var output = '',
+                        i;
+                    for (i = 0; i < length; i++) {
+                        output += isFunction(array[i]) ? array[i].call(mom, format) : array[i];
+                    }
+                    return output;
+                };
+            }
+
+            // format date using native date object
+            function formatMoment(m, format) {
+                if (!m.isValid()) {
+                    return m.localeData().invalidDate();
+                }
+
+                format = expandFormat(format, m.localeData());
+                formatFunctions[format] = formatFunctions[format] || makeFormatFunction(format);
+
+                return formatFunctions[format](m);
+            }
+
+            function expandFormat(format, locale) {
+                var i = 5;
+
+                function replaceLongDateFormatTokens(input) {
+                    return locale.longDateFormat(input) || input;
+                }
+
+                localFormattingTokens.lastIndex = 0;
+                while (i >= 0 && localFormattingTokens.test(format)) {
+                    format = format.replace(localFormattingTokens, replaceLongDateFormatTokens);
+                    localFormattingTokens.lastIndex = 0;
+                    i -= 1;
+                }
+
+                return format;
+            }
+
+            var match1 = /\d/; //       0 - 9
+            var match2 = /\d\d/; //      00 - 99
+            var match3 = /\d{3}/; //     000 - 999
+            var match4 = /\d{4}/; //    0000 - 9999
+            var match6 = /[+-]?\d{6}/; // -999999 - 999999
+            var match1to2 = /\d\d?/; //       0 - 99
+            var match3to4 = /\d\d\d\d?/; //     999 - 9999
+            var match5to6 = /\d\d\d\d\d\d?/; //   99999 - 999999
+            var match1to3 = /\d{1,3}/; //       0 - 999
+            var match1to4 = /\d{1,4}/; //       0 - 9999
+            var match1to6 = /[+-]?\d{1,6}/; // -999999 - 999999
+
+            var matchUnsigned = /\d+/; //       0 - inf
+            var matchSigned = /[+-]?\d+/; //    -inf - inf
+
+            var matchOffset = /Z|[+-]\d\d:?\d\d/gi; // +00:00 -00:00 +0000 -0000 or Z
+            var matchShortOffset = /Z|[+-]\d\d(?::?\d\d)?/gi; // +00 -00 +00:00 -00:00 +0000 -0000 or Z
+
+            var matchTimestamp = /[+-]?\d+(\.\d{1,3})?/; // 123456789 123456789.123
+
+            // any word (or two) characters or numbers including two/three word month in arabic.
+            // includes scottish gaelic two word and hyphenated months
+            var matchWord = /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i;
+
+            var regexes = {};
+
+            function addRegexToken(token, regex, strictRegex) {
+                regexes[token] = isFunction(regex) ? regex : function (isStrict, localeData) {
+                    return (isStrict && strictRegex) ? strictRegex : regex;
+                };
+            }
+
+            function getParseRegexForToken(token, config) {
+                if (!hasOwnProp(regexes, token)) {
+                    return new RegExp(unescapeFormat(token));
+                }
+
+                return regexes[token](config._strict, config._locale);
+            }
+
+            // Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
+            function unescapeFormat(s) {
+                return regexEscape(s.replace('\\', '').replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (matched, p1, p2, p3, p4) {
+                    return p1 || p2 || p3 || p4;
+                }));
+            }
+
+            function regexEscape(s) {
+                return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+            }
+
+            var tokens = {};
+
+            function addParseToken(token, callback) {
+                var i, func = callback;
+                if (typeof token === 'string') {
+                    token = [token];
+                }
+                if (isNumber(callback)) {
+                    func = function (input, array) {
+                        array[callback] = toInt(input);
+                    };
+                }
+                for (i = 0; i < token.length; i++) {
+                    tokens[token[i]] = func;
+                }
+            }
+
+            function addWeekParseToken(token, callback) {
+                addParseToken(token, function (input, array, config, token) {
+                    config._w = config._w || {};
+                    callback(input, config._w, config, token);
                 });
             }
 
-            // backwards compat for now: also set the locale
-            // make sure we set the locale AFTER all child locales have been
-            // created, so we won't end up with the child locale set.
-            getSetGlobalLocale(name);
-
-
-            return locales[name];
-        } else {
-            // useful for testing
-            delete locales[name];
-            return null;
-        }
-    }
-
-    function updateLocale(name, config) {
-        if (config != null) {
-            var locale, tmpLocale, parentConfig = baseConfig;
-            // MERGE
-            tmpLocale = loadLocale(name);
-            if (tmpLocale != null) {
-                parentConfig = tmpLocale._config;
-            }
-            config = mergeConfigs(parentConfig, config);
-            locale = new Locale(config);
-            locale.parentLocale = locales[name];
-            locales[name] = locale;
-
-            // backwards compat for now: also set the locale
-            getSetGlobalLocale(name);
-        } else {
-            // pass null for config to unupdate, useful for tests
-            if (locales[name] != null) {
-                if (locales[name].parentLocale != null) {
-                    locales[name] = locales[name].parentLocale;
-                } else if (locales[name] != null) {
-                    delete locales[name];
+            function addTimeToArrayFromToken(token, input, config) {
+                if (input != null && hasOwnProp(tokens, token)) {
+                    tokens[token](input, config._a, config, token);
                 }
             }
-        }
-        return locales[name];
-    }
 
-    // returns locale data
-    function getLocale (key) {
-        var locale;
+            var YEAR = 0;
+            var MONTH = 1;
+            var DATE = 2;
+            var HOUR = 3;
+            var MINUTE = 4;
+            var SECOND = 5;
+            var MILLISECOND = 6;
+            var WEEK = 7;
+            var WEEKDAY = 8;
 
-        if (key && key._locale && key._locale._abbr) {
-            key = key._locale._abbr;
-        }
+            // FORMATTING
 
-        if (!key) {
-            return globalLocale;
-        }
+            addFormatToken('Y', 0, 0, function () {
+                var y = this.year();
+                return y <= 9999 ? '' + y : '+' + y;
+            });
 
-        if (!isArray(key)) {
-            //short-circuit everything else
-            locale = loadLocale(key);
-            if (locale) {
-                return locale;
-            }
-            key = [key];
-        }
+            addFormatToken(0, ['YY', 2], 0, function () {
+                return this.year() % 100;
+            });
 
-        return chooseLocale(key);
-    }
+            addFormatToken(0, ['YYYY', 4], 0, 'year');
+            addFormatToken(0, ['YYYYY', 5], 0, 'year');
+            addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
 
-    function listLocales() {
-        return keys(locales);
-    }
+            // ALIASES
 
-    function checkOverflow (m) {
-        var overflow;
-        var a = m._a;
+            addUnitAlias('year', 'y');
 
-        if (a && getParsingFlags(m).overflow === -2) {
-            overflow =
-                a[MONTH]       < 0 || a[MONTH]       > 11  ? MONTH :
-                a[DATE]        < 1 || a[DATE]        > daysInMonth(a[YEAR], a[MONTH]) ? DATE :
-                a[HOUR]        < 0 || a[HOUR]        > 24 || (a[HOUR] === 24 && (a[MINUTE] !== 0 || a[SECOND] !== 0 || a[MILLISECOND] !== 0)) ? HOUR :
-                a[MINUTE]      < 0 || a[MINUTE]      > 59  ? MINUTE :
-                a[SECOND]      < 0 || a[SECOND]      > 59  ? SECOND :
-                a[MILLISECOND] < 0 || a[MILLISECOND] > 999 ? MILLISECOND :
-                -1;
+            // PRIORITIES
 
-            if (getParsingFlags(m)._overflowDayOfYear && (overflow < YEAR || overflow > DATE)) {
-                overflow = DATE;
-            }
-            if (getParsingFlags(m)._overflowWeeks && overflow === -1) {
-                overflow = WEEK;
-            }
-            if (getParsingFlags(m)._overflowWeekday && overflow === -1) {
-                overflow = WEEKDAY;
-            }
+            addUnitPriority('year', 1);
 
-            getParsingFlags(m).overflow = overflow;
-        }
+            // PARSING
 
-        return m;
-    }
+            addRegexToken('Y', matchSigned);
+            addRegexToken('YY', match1to2, match2);
+            addRegexToken('YYYY', match1to4, match4);
+            addRegexToken('YYYYY', match1to6, match6);
+            addRegexToken('YYYYYY', match1to6, match6);
 
-    // Pick the first defined of two or three arguments.
-    function defaults(a, b, c) {
-        if (a != null) {
-            return a;
-        }
-        if (b != null) {
-            return b;
-        }
-        return c;
-    }
+            addParseToken(['YYYYY', 'YYYYYY'], YEAR);
+            addParseToken('YYYY', function (input, array) {
+                array[YEAR] = input.length === 2 ? hooks.parseTwoDigitYear(input) : toInt(input);
+            });
+            addParseToken('YY', function (input, array) {
+                array[YEAR] = hooks.parseTwoDigitYear(input);
+            });
+            addParseToken('Y', function (input, array) {
+                array[YEAR] = parseInt(input, 10);
+            });
 
-    function currentDateArray(config) {
-        // hooks is actually the exported moment object
-        var nowValue = new Date(hooks.now());
-        if (config._useUTC) {
-            return [nowValue.getUTCFullYear(), nowValue.getUTCMonth(), nowValue.getUTCDate()];
-        }
-        return [nowValue.getFullYear(), nowValue.getMonth(), nowValue.getDate()];
-    }
+            // HELPERS
 
-    // convert an array to a date.
-    // the array should mirror the parameters below
-    // note: all values past the year are optional and will default to the lowest possible value.
-    // [year, month, day , hour, minute, second, millisecond]
-    function configFromArray (config) {
-        var i, date, input = [], currentDate, expectedWeekday, yearToUse;
-
-        if (config._d) {
-            return;
-        }
-
-        currentDate = currentDateArray(config);
-
-        //compute day of the year from weeks and weekdays
-        if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
-            dayOfYearFromWeekInfo(config);
-        }
-
-        //if the day of the year is set, figure out what it is
-        if (config._dayOfYear != null) {
-            yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
-
-            if (config._dayOfYear > daysInYear(yearToUse) || config._dayOfYear === 0) {
-                getParsingFlags(config)._overflowDayOfYear = true;
+            function daysInYear(year) {
+                return isLeapYear(year) ? 366 : 365;
             }
 
-            date = createUTCDate(yearToUse, 0, config._dayOfYear);
-            config._a[MONTH] = date.getUTCMonth();
-            config._a[DATE] = date.getUTCDate();
-        }
-
-        // Default to current date.
-        // * if no year, month, day of month are given, default to today
-        // * if day of month is given, default month and year
-        // * if month is given, default only year
-        // * if year is given, don't default anything
-        for (i = 0; i < 3 && config._a[i] == null; ++i) {
-            config._a[i] = input[i] = currentDate[i];
-        }
-
-        // Zero out whatever was not defaulted, including time
-        for (; i < 7; i++) {
-            config._a[i] = input[i] = (config._a[i] == null) ? (i === 2 ? 1 : 0) : config._a[i];
-        }
-
-        // Check for 24:00:00.000
-        if (config._a[HOUR] === 24 &&
-                config._a[MINUTE] === 0 &&
-                config._a[SECOND] === 0 &&
-                config._a[MILLISECOND] === 0) {
-            config._nextDay = true;
-            config._a[HOUR] = 0;
-        }
-
-        config._d = (config._useUTC ? createUTCDate : createDate).apply(null, input);
-        expectedWeekday = config._useUTC ? config._d.getUTCDay() : config._d.getDay();
-
-        // Apply timezone offset from input. The actual utcOffset can be changed
-        // with parseZone.
-        if (config._tzm != null) {
-            config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
-        }
-
-        if (config._nextDay) {
-            config._a[HOUR] = 24;
-        }
-
-        // check for mismatching day of week
-        if (config._w && typeof config._w.d !== 'undefined' && config._w.d !== expectedWeekday) {
-            getParsingFlags(config).weekdayMismatch = true;
-        }
-    }
-
-    function dayOfYearFromWeekInfo(config) {
-        var w, weekYear, week, weekday, dow, doy, temp, weekdayOverflow;
-
-        w = config._w;
-        if (w.GG != null || w.W != null || w.E != null) {
-            dow = 1;
-            doy = 4;
-
-            // TODO: We need to take the current isoWeekYear, but that depends on
-            // how we interpret now (local, utc, fixed offset). So create
-            // a now version of current config (take local/utc/offset flags, and
-            // create now).
-            weekYear = defaults(w.GG, config._a[YEAR], weekOfYear(createLocal(), 1, 4).year);
-            week = defaults(w.W, 1);
-            weekday = defaults(w.E, 1);
-            if (weekday < 1 || weekday > 7) {
-                weekdayOverflow = true;
+            function isLeapYear(year) {
+                return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
             }
-        } else {
-            dow = config._locale._week.dow;
-            doy = config._locale._week.doy;
 
-            var curWeek = weekOfYear(createLocal(), dow, doy);
+            // HOOKS
 
-            weekYear = defaults(w.gg, config._a[YEAR], curWeek.year);
+            hooks.parseTwoDigitYear = function (input) {
+                return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
+            };
 
-            // Default to current week.
-            week = defaults(w.w, curWeek.week);
+            // MOMENTS
 
-            if (w.d != null) {
-                // weekday -- low day numbers are considered next week
-                weekday = w.d;
-                if (weekday < 0 || weekday > 6) {
-                    weekdayOverflow = true;
+            var getSetYear = makeGetSet('FullYear', true);
+
+            function getIsLeapYear() {
+                return isLeapYear(this.year());
+            }
+
+            function makeGetSet(unit, keepTime) {
+                return function (value) {
+                    if (value != null) {
+                        set$1(this, unit, value);
+                        hooks.updateOffset(this, keepTime);
+                        return this;
+                    } else {
+                        return get(this, unit);
+                    }
+                };
+            }
+
+            function get(mom, unit) {
+                return mom.isValid() ?
+                    mom._d['get' + (mom._isUTC ? 'UTC' : '') + unit]() : NaN;
+            }
+
+            function set$1(mom, unit, value) {
+                if (mom.isValid() && !isNaN(value)) {
+                    if (unit === 'FullYear' && isLeapYear(mom.year()) && mom.month() === 1 && mom.date() === 29) {
+                        mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value, mom.month(), daysInMonth(value, mom.month()));
+                    } else {
+                        mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value);
+                    }
                 }
-            } else if (w.e != null) {
-                // local weekday -- counting starts from begining of week
-                weekday = w.e + dow;
-                if (w.e < 0 || w.e > 6) {
-                    weekdayOverflow = true;
+            }
+
+            // MOMENTS
+
+            function stringGet(units) {
+                units = normalizeUnits(units);
+                if (isFunction(this[units])) {
+                    return this[units]();
                 }
+                return this;
+            }
+
+
+            function stringSet(units, value) {
+                if (typeof units === 'object') {
+                    units = normalizeObjectUnits(units);
+                    var prioritized = getPrioritizedUnits(units);
+                    for (var i = 0; i < prioritized.length; i++) {
+                        this[prioritized[i].unit](units[prioritized[i].unit]);
+                    }
+                } else {
+                    units = normalizeUnits(units);
+                    if (isFunction(this[units])) {
+                        return this[units](value);
+                    }
+                }
+                return this;
+            }
+
+            function mod(n, x) {
+                return ((n % x) + x) % x;
+            }
+
+            var indexOf;
+
+            if (Array.prototype.indexOf) {
+                indexOf = Array.prototype.indexOf;
             } else {
-                // default to begining of week
-                weekday = dow;
+                indexOf = function (o) {
+                    // I know
+                    var i;
+                    for (i = 0; i < this.length; ++i) {
+                        if (this[i] === o) {
+                            return i;
+                        }
+                    }
+                    return -1;
+                };
             }
-        }
-        if (week < 1 || week > weeksInYear(weekYear, dow, doy)) {
-            getParsingFlags(config)._overflowWeeks = true;
-        } else if (weekdayOverflow != null) {
-            getParsingFlags(config)._overflowWeekday = true;
-        } else {
-            temp = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy);
-            config._a[YEAR] = temp.year;
-            config._dayOfYear = temp.dayOfYear;
-        }
-    }
 
-    // iso 8601 regex
-    // 0000-00-00 0000-W00 or 0000-W00-0 + T + 00 or 00:00 or 00:00:00 or 00:00:00.000 + +00:00 or +0000 or +00)
-    var extendedIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/;
-    var basicIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/;
+            function daysInMonth(year, month) {
+                if (isNaN(year) || isNaN(month)) {
+                    return NaN;
+                }
+                var modMonth = mod(month, 12);
+                year += (month - modMonth) / 12;
+                return modMonth === 1 ? (isLeapYear(year) ? 29 : 28) : (31 - modMonth % 7 % 2);
+            }
 
-    var tzRegex = /Z|[+-]\d\d(?::?\d\d)?/;
+            // FORMATTING
 
-    var isoDates = [
+            addFormatToken('M', ['MM', 2], 'Mo', function () {
+                return this.month() + 1;
+            });
+
+            addFormatToken('MMM', 0, 0, function (format) {
+                return this.localeData().monthsShort(this, format);
+            });
+
+            addFormatToken('MMMM', 0, 0, function (format) {
+                return this.localeData().months(this, format);
+            });
+
+            // ALIASES
+
+            addUnitAlias('month', 'M');
+
+            // PRIORITY
+
+            addUnitPriority('month', 8);
+
+            // PARSING
+
+            addRegexToken('M', match1to2);
+            addRegexToken('MM', match1to2, match2);
+            addRegexToken('MMM', function (isStrict, locale) {
+                return locale.monthsShortRegex(isStrict);
+            });
+            addRegexToken('MMMM', function (isStrict, locale) {
+                return locale.monthsRegex(isStrict);
+            });
+
+            addParseToken(['M', 'MM'], function (input, array) {
+                array[MONTH] = toInt(input) - 1;
+            });
+
+            addParseToken(['MMM', 'MMMM'], function (input, array, config, token) {
+                var month = config._locale.monthsParse(input, token, config._strict);
+                // if we didn't find a month name, mark the date as invalid.
+                if (month != null) {
+                    array[MONTH] = month;
+                } else {
+                    getParsingFlags(config).invalidMonth = input;
+                }
+            });
+
+            // LOCALES
+
+            var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/;
+            var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
+
+            function localeMonths(m, format) {
+                if (!m) {
+                    return isArray(this._months) ? this._months :
+                        this._months['standalone'];
+                }
+                return isArray(this._months) ? this._months[m.month()] :
+                    this._months[(this._months.isFormat || MONTHS_IN_FORMAT).test(format) ? 'format' : 'standalone'][m.month()];
+            }
+
+            var defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_');
+
+            function localeMonthsShort(m, format) {
+                if (!m) {
+                    return isArray(this._monthsShort) ? this._monthsShort :
+                        this._monthsShort['standalone'];
+                }
+                return isArray(this._monthsShort) ? this._monthsShort[m.month()] :
+                    this._monthsShort[MONTHS_IN_FORMAT.test(format) ? 'format' : 'standalone'][m.month()];
+            }
+
+            function handleStrictParse(monthName, format, strict) {
+                var i, ii, mom, llc = monthName.toLocaleLowerCase();
+                if (!this._monthsParse) {
+                    // this is not used
+                    this._monthsParse = [];
+                    this._longMonthsParse = [];
+                    this._shortMonthsParse = [];
+                    for (i = 0; i < 12; ++i) {
+                        mom = createUTC([2000, i]);
+                        this._shortMonthsParse[i] = this.monthsShort(mom, '').toLocaleLowerCase();
+                        this._longMonthsParse[i] = this.months(mom, '').toLocaleLowerCase();
+                    }
+                }
+
+                if (strict) {
+                    if (format === 'MMM') {
+                        ii = indexOf.call(this._shortMonthsParse, llc);
+                        return ii !== -1 ? ii : null;
+                    } else {
+                        ii = indexOf.call(this._longMonthsParse, llc);
+                        return ii !== -1 ? ii : null;
+                    }
+                } else {
+                    if (format === 'MMM') {
+                        ii = indexOf.call(this._shortMonthsParse, llc);
+                        if (ii !== -1) {
+                            return ii;
+                        }
+                        ii = indexOf.call(this._longMonthsParse, llc);
+                        return ii !== -1 ? ii : null;
+                    } else {
+                        ii = indexOf.call(this._longMonthsParse, llc);
+                        if (ii !== -1) {
+                            return ii;
+                        }
+                        ii = indexOf.call(this._shortMonthsParse, llc);
+                        return ii !== -1 ? ii : null;
+                    }
+                }
+            }
+
+            function localeMonthsParse(monthName, format, strict) {
+                var i, mom, regex;
+
+                if (this._monthsParseExact) {
+                    return handleStrictParse.call(this, monthName, format, strict);
+                }
+
+                if (!this._monthsParse) {
+                    this._monthsParse = [];
+                    this._longMonthsParse = [];
+                    this._shortMonthsParse = [];
+                }
+
+                // TODO: add sorting
+                // Sorting makes sure if one month (or abbr) is a prefix of another
+                // see sorting in computeMonthsParse
+                for (i = 0; i < 12; i++) {
+                    // make the regex if we don't have it already
+                    mom = createUTC([2000, i]);
+                    if (strict && !this._longMonthsParse[i]) {
+                        this._longMonthsParse[i] = new RegExp('^' + this.months(mom, '').replace('.', '') + '$', 'i');
+                        this._shortMonthsParse[i] = new RegExp('^' + this.monthsShort(mom, '').replace('.', '') + '$', 'i');
+                    }
+                    if (!strict && !this._monthsParse[i]) {
+                        regex = '^' + this.months(mom, '') + '|^' + this.monthsShort(mom, '');
+                        this._monthsParse[i] = new RegExp(regex.replace('.', ''), 'i');
+                    }
+                    // test the regex
+                    if (strict && format === 'MMMM' && this._longMonthsParse[i].test(monthName)) {
+                        return i;
+                    } else if (strict && format === 'MMM' && this._shortMonthsParse[i].test(monthName)) {
+                        return i;
+                    } else if (!strict && this._monthsParse[i].test(monthName)) {
+                        return i;
+                    }
+                }
+            }
+
+            // MOMENTS
+
+            function setMonth(mom, value) {
+                var dayOfMonth;
+
+                if (!mom.isValid()) {
+                    // No op
+                    return mom;
+                }
+
+                if (typeof value === 'string') {
+                    if (/^\d+$/.test(value)) {
+                        value = toInt(value);
+                    } else {
+                        value = mom.localeData().monthsParse(value);
+                        // TODO: Another silent failure?
+                        if (!isNumber(value)) {
+                            return mom;
+                        }
+                    }
+                }
+
+                dayOfMonth = Math.min(mom.date(), daysInMonth(mom.year(), value));
+                mom._d['set' + (mom._isUTC ? 'UTC' : '') + 'Month'](value, dayOfMonth);
+                return mom;
+            }
+
+            function getSetMonth(value) {
+                if (value != null) {
+                    setMonth(this, value);
+                    hooks.updateOffset(this, true);
+                    return this;
+                } else {
+                    return get(this, 'Month');
+                }
+            }
+
+            function getDaysInMonth() {
+                return daysInMonth(this.year(), this.month());
+            }
+
+            var defaultMonthsShortRegex = matchWord;
+
+            function monthsShortRegex(isStrict) {
+                if (this._monthsParseExact) {
+                    if (!hasOwnProp(this, '_monthsRegex')) {
+                        computeMonthsParse.call(this);
+                    }
+                    if (isStrict) {
+                        return this._monthsShortStrictRegex;
+                    } else {
+                        return this._monthsShortRegex;
+                    }
+                } else {
+                    if (!hasOwnProp(this, '_monthsShortRegex')) {
+                        this._monthsShortRegex = defaultMonthsShortRegex;
+                    }
+                    return this._monthsShortStrictRegex && isStrict ?
+                        this._monthsShortStrictRegex : this._monthsShortRegex;
+                }
+            }
+
+            var defaultMonthsRegex = matchWord;
+
+            function monthsRegex(isStrict) {
+                if (this._monthsParseExact) {
+                    if (!hasOwnProp(this, '_monthsRegex')) {
+                        computeMonthsParse.call(this);
+                    }
+                    if (isStrict) {
+                        return this._monthsStrictRegex;
+                    } else {
+                        return this._monthsRegex;
+                    }
+                } else {
+                    if (!hasOwnProp(this, '_monthsRegex')) {
+                        this._monthsRegex = defaultMonthsRegex;
+                    }
+                    return this._monthsStrictRegex && isStrict ?
+                        this._monthsStrictRegex : this._monthsRegex;
+                }
+            }
+
+            function computeMonthsParse() {
+                function cmpLenRev(a, b) {
+                    return b.length - a.length;
+                }
+
+                var shortPieces = [],
+                    longPieces = [],
+                    mixedPieces = [],
+                    i, mom;
+                for (i = 0; i < 12; i++) {
+                    // make the regex if we don't have it already
+                    mom = createUTC([2000, i]);
+                    shortPieces.push(this.monthsShort(mom, ''));
+                    longPieces.push(this.months(mom, ''));
+                    mixedPieces.push(this.months(mom, ''));
+                    mixedPieces.push(this.monthsShort(mom, ''));
+                }
+                // Sorting makes sure if one month (or abbr) is a prefix of another it
+                // will match the longer piece.
+                shortPieces.sort(cmpLenRev);
+                longPieces.sort(cmpLenRev);
+                mixedPieces.sort(cmpLenRev);
+                for (i = 0; i < 12; i++) {
+                    shortPieces[i] = regexEscape(shortPieces[i]);
+                    longPieces[i] = regexEscape(longPieces[i]);
+                }
+                for (i = 0; i < 24; i++) {
+                    mixedPieces[i] = regexEscape(mixedPieces[i]);
+                }
+
+                this._monthsRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
+                this._monthsShortRegex = this._monthsRegex;
+                this._monthsStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
+                this._monthsShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
+            }
+
+            function createDate(y, m, d, h, M, s, ms) {
+                // can't just apply() to create a date:
+                // https://stackoverflow.com/q/181348
+                var date = new Date(y, m, d, h, M, s, ms);
+
+                // the date constructor remaps years 0-99 to 1900-1999
+                if (y < 100 && y >= 0 && isFinite(date.getFullYear())) {
+                    date.setFullYear(y);
+                }
+                return date;
+            }
+
+            function createUTCDate(y) {
+                var date = new Date(Date.UTC.apply(null, arguments));
+
+                // the Date.UTC function remaps years 0-99 to 1900-1999
+                if (y < 100 && y >= 0 && isFinite(date.getUTCFullYear())) {
+                    date.setUTCFullYear(y);
+                }
+                return date;
+            }
+
+            // start-of-first-week - start-of-year
+            function firstWeekOffset(year, dow, doy) {
+                var // first-week day -- which january is always in the first week (4 for iso, 1 for other)
+                    fwd = 7 + dow - doy,
+                    // first-week day local weekday -- which local weekday is fwd
+                    fwdlw = (7 + createUTCDate(year, 0, fwd).getUTCDay() - dow) % 7;
+
+                return -fwdlw + fwd - 1;
+            }
+
+            // https://en.wikipedia.org/wiki/ISO_week_date#Calculating_a_date_given_the_year.2C_week_number_and_weekday
+            function dayOfYearFromWeeks(year, week, weekday, dow, doy) {
+                var localWeekday = (7 + weekday - dow) % 7,
+                    weekOffset = firstWeekOffset(year, dow, doy),
+                    dayOfYear = 1 + 7 * (week - 1) + localWeekday + weekOffset,
+                    resYear, resDayOfYear;
+
+                if (dayOfYear <= 0) {
+                    resYear = year - 1;
+                    resDayOfYear = daysInYear(resYear) + dayOfYear;
+                } else if (dayOfYear > daysInYear(year)) {
+                    resYear = year + 1;
+                    resDayOfYear = dayOfYear - daysInYear(year);
+                } else {
+                    resYear = year;
+                    resDayOfYear = dayOfYear;
+                }
+
+                return {
+                    year: resYear,
+                    dayOfYear: resDayOfYear
+                };
+            }
+
+            function weekOfYear(mom, dow, doy) {
+                var weekOffset = firstWeekOffset(mom.year(), dow, doy),
+                    week = Math.floor((mom.dayOfYear() - weekOffset - 1) / 7) + 1,
+                    resWeek, resYear;
+
+                if (week < 1) {
+                    resYear = mom.year() - 1;
+                    resWeek = week + weeksInYear(resYear, dow, doy);
+                } else if (week > weeksInYear(mom.year(), dow, doy)) {
+                    resWeek = week - weeksInYear(mom.year(), dow, doy);
+                    resYear = mom.year() + 1;
+                } else {
+                    resYear = mom.year();
+                    resWeek = week;
+                }
+
+                return {
+                    week: resWeek,
+                    year: resYear
+                };
+            }
+
+            function weeksInYear(year, dow, doy) {
+                var weekOffset = firstWeekOffset(year, dow, doy),
+                    weekOffsetNext = firstWeekOffset(year + 1, dow, doy);
+                return (daysInYear(year) - weekOffset + weekOffsetNext) / 7;
+            }
+
+            // FORMATTING
+
+            addFormatToken('w', ['ww', 2], 'wo', 'week');
+            addFormatToken('W', ['WW', 2], 'Wo', 'isoWeek');
+
+            // ALIASES
+
+            addUnitAlias('week', 'w');
+            addUnitAlias('isoWeek', 'W');
+
+            // PRIORITIES
+
+            addUnitPriority('week', 5);
+            addUnitPriority('isoWeek', 5);
+
+            // PARSING
+
+            addRegexToken('w', match1to2);
+            addRegexToken('ww', match1to2, match2);
+            addRegexToken('W', match1to2);
+            addRegexToken('WW', match1to2, match2);
+
+            addWeekParseToken(['w', 'ww', 'W', 'WW'], function (input, week, config, token) {
+                week[token.substr(0, 1)] = toInt(input);
+            });
+
+            // HELPERS
+
+            // LOCALES
+
+            function localeWeek(mom) {
+                return weekOfYear(mom, this._week.dow, this._week.doy).week;
+            }
+
+            var defaultLocaleWeek = {
+                dow: 0, // Sunday is the first day of the week.
+                doy: 6 // The week that contains Jan 1st is the first week of the year.
+            };
+
+            function localeFirstDayOfWeek() {
+                return this._week.dow;
+            }
+
+            function localeFirstDayOfYear() {
+                return this._week.doy;
+            }
+
+            // MOMENTS
+
+            function getSetWeek(input) {
+                var week = this.localeData().week(this);
+                return input == null ? week : this.add((input - week) * 7, 'd');
+            }
+
+            function getSetISOWeek(input) {
+                var week = weekOfYear(this, 1, 4).week;
+                return input == null ? week : this.add((input - week) * 7, 'd');
+            }
+
+            // FORMATTING
+
+            addFormatToken('d', 0, 'do', 'day');
+
+            addFormatToken('dd', 0, 0, function (format) {
+                return this.localeData().weekdaysMin(this, format);
+            });
+
+            addFormatToken('ddd', 0, 0, function (format) {
+                return this.localeData().weekdaysShort(this, format);
+            });
+
+            addFormatToken('dddd', 0, 0, function (format) {
+                return this.localeData().weekdays(this, format);
+            });
+
+            addFormatToken('e', 0, 0, 'weekday');
+            addFormatToken('E', 0, 0, 'isoWeekday');
+
+            // ALIASES
+
+            addUnitAlias('day', 'd');
+            addUnitAlias('weekday', 'e');
+            addUnitAlias('isoWeekday', 'E');
+
+            // PRIORITY
+            addUnitPriority('day', 11);
+            addUnitPriority('weekday', 11);
+            addUnitPriority('isoWeekday', 11);
+
+            // PARSING
+
+            addRegexToken('d', match1to2);
+            addRegexToken('e', match1to2);
+            addRegexToken('E', match1to2);
+            addRegexToken('dd', function (isStrict, locale) {
+                return locale.weekdaysMinRegex(isStrict);
+            });
+            addRegexToken('ddd', function (isStrict, locale) {
+                return locale.weekdaysShortRegex(isStrict);
+            });
+            addRegexToken('dddd', function (isStrict, locale) {
+                return locale.weekdaysRegex(isStrict);
+            });
+
+            addWeekParseToken(['dd', 'ddd', 'dddd'], function (input, week, config, token) {
+                var weekday = config._locale.weekdaysParse(input, token, config._strict);
+                // if we didn't get a weekday name, mark the date as invalid
+                if (weekday != null) {
+                    week.d = weekday;
+                } else {
+                    getParsingFlags(config).invalidWeekday = input;
+                }
+            });
+
+            addWeekParseToken(['d', 'e', 'E'], function (input, week, config, token) {
+                week[token] = toInt(input);
+            });
+
+            // HELPERS
+
+            function parseWeekday(input, locale) {
+                if (typeof input !== 'string') {
+                    return input;
+                }
+
+                if (!isNaN(input)) {
+                    return parseInt(input, 10);
+                }
+
+                input = locale.weekdaysParse(input);
+                if (typeof input === 'number') {
+                    return input;
+                }
+
+                return null;
+            }
+
+            function parseIsoWeekday(input, locale) {
+                if (typeof input === 'string') {
+                    return locale.weekdaysParse(input) % 7 || 7;
+                }
+                return isNaN(input) ? null : input;
+            }
+
+            // LOCALES
+
+            var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');
+
+            function localeWeekdays(m, format) {
+                if (!m) {
+                    return isArray(this._weekdays) ? this._weekdays :
+                        this._weekdays['standalone'];
+                }
+                return isArray(this._weekdays) ? this._weekdays[m.day()] :
+                    this._weekdays[this._weekdays.isFormat.test(format) ? 'format' : 'standalone'][m.day()];
+            }
+
+            var defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_');
+
+            function localeWeekdaysShort(m) {
+                return (m) ? this._weekdaysShort[m.day()] : this._weekdaysShort;
+            }
+
+            var defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');
+
+            function localeWeekdaysMin(m) {
+                return (m) ? this._weekdaysMin[m.day()] : this._weekdaysMin;
+            }
+
+            function handleStrictParse$1(weekdayName, format, strict) {
+                var i, ii, mom, llc = weekdayName.toLocaleLowerCase();
+                if (!this._weekdaysParse) {
+                    this._weekdaysParse = [];
+                    this._shortWeekdaysParse = [];
+                    this._minWeekdaysParse = [];
+
+                    for (i = 0; i < 7; ++i) {
+                        mom = createUTC([2000, 1]).day(i);
+                        this._minWeekdaysParse[i] = this.weekdaysMin(mom, '').toLocaleLowerCase();
+                        this._shortWeekdaysParse[i] = this.weekdaysShort(mom, '').toLocaleLowerCase();
+                        this._weekdaysParse[i] = this.weekdays(mom, '').toLocaleLowerCase();
+                    }
+                }
+
+                if (strict) {
+                    if (format === 'dddd') {
+                        ii = indexOf.call(this._weekdaysParse, llc);
+                        return ii !== -1 ? ii : null;
+                    } else if (format === 'ddd') {
+                        ii = indexOf.call(this._shortWeekdaysParse, llc);
+                        return ii !== -1 ? ii : null;
+                    } else {
+                        ii = indexOf.call(this._minWeekdaysParse, llc);
+                        return ii !== -1 ? ii : null;
+                    }
+                } else {
+                    if (format === 'dddd') {
+                        ii = indexOf.call(this._weekdaysParse, llc);
+                        if (ii !== -1) {
+                            return ii;
+                        }
+                        ii = indexOf.call(this._shortWeekdaysParse, llc);
+                        if (ii !== -1) {
+                            return ii;
+                        }
+                        ii = indexOf.call(this._minWeekdaysParse, llc);
+                        return ii !== -1 ? ii : null;
+                    } else if (format === 'ddd') {
+                        ii = indexOf.call(this._shortWeekdaysParse, llc);
+                        if (ii !== -1) {
+                            return ii;
+                        }
+                        ii = indexOf.call(this._weekdaysParse, llc);
+                        if (ii !== -1) {
+                            return ii;
+                        }
+                        ii = indexOf.call(this._minWeekdaysParse, llc);
+                        return ii !== -1 ? ii : null;
+                    } else {
+                        ii = indexOf.call(this._minWeekdaysParse, llc);
+                        if (ii !== -1) {
+                            return ii;
+                        }
+                        ii = indexOf.call(this._weekdaysParse, llc);
+                        if (ii !== -1) {
+                            return ii;
+                        }
+                        ii = indexOf.call(this._shortWeekdaysParse, llc);
+                        return ii !== -1 ? ii : null;
+                    }
+                }
+            }
+
+            function localeWeekdaysParse(weekdayName, format, strict) {
+                var i, mom, regex;
+
+                if (this._weekdaysParseExact) {
+                    return handleStrictParse$1.call(this, weekdayName, format, strict);
+                }
+
+                if (!this._weekdaysParse) {
+                    this._weekdaysParse = [];
+                    this._minWeekdaysParse = [];
+                    this._shortWeekdaysParse = [];
+                    this._fullWeekdaysParse = [];
+                }
+
+                for (i = 0; i < 7; i++) {
+                    // make the regex if we don't have it already
+
+                    mom = createUTC([2000, 1]).day(i);
+                    if (strict && !this._fullWeekdaysParse[i]) {
+                        this._fullWeekdaysParse[i] = new RegExp('^' + this.weekdays(mom, '').replace('.', '\\.?') + '$', 'i');
+                        this._shortWeekdaysParse[i] = new RegExp('^' + this.weekdaysShort(mom, '').replace('.', '\\.?') + '$', 'i');
+                        this._minWeekdaysParse[i] = new RegExp('^' + this.weekdaysMin(mom, '').replace('.', '\\.?') + '$', 'i');
+                    }
+                    if (!this._weekdaysParse[i]) {
+                        regex = '^' + this.weekdays(mom, '') + '|^' + this.weekdaysShort(mom, '') + '|^' + this.weekdaysMin(mom, '');
+                        this._weekdaysParse[i] = new RegExp(regex.replace('.', ''), 'i');
+                    }
+                    // test the regex
+                    if (strict && format === 'dddd' && this._fullWeekdaysParse[i].test(weekdayName)) {
+                        return i;
+                    } else if (strict && format === 'ddd' && this._shortWeekdaysParse[i].test(weekdayName)) {
+                        return i;
+                    } else if (strict && format === 'dd' && this._minWeekdaysParse[i].test(weekdayName)) {
+                        return i;
+                    } else if (!strict && this._weekdaysParse[i].test(weekdayName)) {
+                        return i;
+                    }
+                }
+            }
+
+            // MOMENTS
+
+            function getSetDayOfWeek(input) {
+                if (!this.isValid()) {
+                    return input != null ? this : NaN;
+                }
+                var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
+                if (input != null) {
+                    input = parseWeekday(input, this.localeData());
+                    return this.add(input - day, 'd');
+                } else {
+                    return day;
+                }
+            }
+
+            function getSetLocaleDayOfWeek(input) {
+                if (!this.isValid()) {
+                    return input != null ? this : NaN;
+                }
+                var weekday = (this.day() + 7 - this.localeData()._week.dow) % 7;
+                return input == null ? weekday : this.add(input - weekday, 'd');
+            }
+
+            function getSetISODayOfWeek(input) {
+                if (!this.isValid()) {
+                    return input != null ? this : NaN;
+                }
+
+                // behaves the same as moment#day except
+                // as a getter, returns 7 instead of 0 (1-7 range instead of 0-6)
+                // as a setter, sunday should belong to the previous week.
+
+                if (input != null) {
+                    var weekday = parseIsoWeekday(input, this.localeData());
+                    return this.day(this.day() % 7 ? weekday : weekday - 7);
+                } else {
+                    return this.day() || 7;
+                }
+            }
+
+            var defaultWeekdaysRegex = matchWord;
+
+            function weekdaysRegex(isStrict) {
+                if (this._weekdaysParseExact) {
+                    if (!hasOwnProp(this, '_weekdaysRegex')) {
+                        computeWeekdaysParse.call(this);
+                    }
+                    if (isStrict) {
+                        return this._weekdaysStrictRegex;
+                    } else {
+                        return this._weekdaysRegex;
+                    }
+                } else {
+                    if (!hasOwnProp(this, '_weekdaysRegex')) {
+                        this._weekdaysRegex = defaultWeekdaysRegex;
+                    }
+                    return this._weekdaysStrictRegex && isStrict ?
+                        this._weekdaysStrictRegex : this._weekdaysRegex;
+                }
+            }
+
+            var defaultWeekdaysShortRegex = matchWord;
+
+            function weekdaysShortRegex(isStrict) {
+                if (this._weekdaysParseExact) {
+                    if (!hasOwnProp(this, '_weekdaysRegex')) {
+                        computeWeekdaysParse.call(this);
+                    }
+                    if (isStrict) {
+                        return this._weekdaysShortStrictRegex;
+                    } else {
+                        return this._weekdaysShortRegex;
+                    }
+                } else {
+                    if (!hasOwnProp(this, '_weekdaysShortRegex')) {
+                        this._weekdaysShortRegex = defaultWeekdaysShortRegex;
+                    }
+                    return this._weekdaysShortStrictRegex && isStrict ?
+                        this._weekdaysShortStrictRegex : this._weekdaysShortRegex;
+                }
+            }
+
+            var defaultWeekdaysMinRegex = matchWord;
+
+            function weekdaysMinRegex(isStrict) {
+                if (this._weekdaysParseExact) {
+                    if (!hasOwnProp(this, '_weekdaysRegex')) {
+                        computeWeekdaysParse.call(this);
+                    }
+                    if (isStrict) {
+                        return this._weekdaysMinStrictRegex;
+                    } else {
+                        return this._weekdaysMinRegex;
+                    }
+                } else {
+                    if (!hasOwnProp(this, '_weekdaysMinRegex')) {
+                        this._weekdaysMinRegex = defaultWeekdaysMinRegex;
+                    }
+                    return this._weekdaysMinStrictRegex && isStrict ?
+                        this._weekdaysMinStrictRegex : this._weekdaysMinRegex;
+                }
+            }
+
+
+            function computeWeekdaysParse() {
+                function cmpLenRev(a, b) {
+                    return b.length - a.length;
+                }
+
+                var minPieces = [],
+                    shortPieces = [],
+                    longPieces = [],
+                    mixedPieces = [],
+                    i, mom, minp, shortp, longp;
+                for (i = 0; i < 7; i++) {
+                    // make the regex if we don't have it already
+                    mom = createUTC([2000, 1]).day(i);
+                    minp = this.weekdaysMin(mom, '');
+                    shortp = this.weekdaysShort(mom, '');
+                    longp = this.weekdays(mom, '');
+                    minPieces.push(minp);
+                    shortPieces.push(shortp);
+                    longPieces.push(longp);
+                    mixedPieces.push(minp);
+                    mixedPieces.push(shortp);
+                    mixedPieces.push(longp);
+                }
+                // Sorting makes sure if one weekday (or abbr) is a prefix of another it
+                // will match the longer piece.
+                minPieces.sort(cmpLenRev);
+                shortPieces.sort(cmpLenRev);
+                longPieces.sort(cmpLenRev);
+                mixedPieces.sort(cmpLenRev);
+                for (i = 0; i < 7; i++) {
+                    shortPieces[i] = regexEscape(shortPieces[i]);
+                    longPieces[i] = regexEscape(longPieces[i]);
+                    mixedPieces[i] = regexEscape(mixedPieces[i]);
+                }
+
+                this._weekdaysRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
+                this._weekdaysShortRegex = this._weekdaysRegex;
+                this._weekdaysMinRegex = this._weekdaysRegex;
+
+                this._weekdaysStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
+                this._weekdaysShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
+                this._weekdaysMinStrictRegex = new RegExp('^(' + minPieces.join('|') + ')', 'i');
+            }
+
+            // FORMATTING
+
+            function hFormat() {
+                return this.hours() % 12 || 12;
+            }
+
+            function kFormat() {
+                return this.hours() || 24;
+            }
+
+            addFormatToken('H', ['HH', 2], 0, 'hour');
+            addFormatToken('h', ['hh', 2], 0, hFormat);
+            addFormatToken('k', ['kk', 2], 0, kFormat);
+
+            addFormatToken('hmm', 0, 0, function () {
+                return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2);
+            });
+
+            addFormatToken('hmmss', 0, 0, function () {
+                return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2) +
+                    zeroFill(this.seconds(), 2);
+            });
+
+            addFormatToken('Hmm', 0, 0, function () {
+                return '' + this.hours() + zeroFill(this.minutes(), 2);
+            });
+
+            addFormatToken('Hmmss', 0, 0, function () {
+                return '' + this.hours() + zeroFill(this.minutes(), 2) +
+                    zeroFill(this.seconds(), 2);
+            });
+
+            function meridiem(token, lowercase) {
+                addFormatToken(token, 0, 0, function () {
+                    return this.localeData().meridiem(this.hours(), this.minutes(), lowercase);
+                });
+            }
+
+            meridiem('a', true);
+            meridiem('A', false);
+
+            // ALIASES
+
+            addUnitAlias('hour', 'h');
+
+            // PRIORITY
+            addUnitPriority('hour', 13);
+
+            // PARSING
+
+            function matchMeridiem(isStrict, locale) {
+                return locale._meridiemParse;
+            }
+
+            addRegexToken('a', matchMeridiem);
+            addRegexToken('A', matchMeridiem);
+            addRegexToken('H', match1to2);
+            addRegexToken('h', match1to2);
+            addRegexToken('k', match1to2);
+            addRegexToken('HH', match1to2, match2);
+            addRegexToken('hh', match1to2, match2);
+            addRegexToken('kk', match1to2, match2);
+
+            addRegexToken('hmm', match3to4);
+            addRegexToken('hmmss', match5to6);
+            addRegexToken('Hmm', match3to4);
+            addRegexToken('Hmmss', match5to6);
+
+            addParseToken(['H', 'HH'], HOUR);
+            addParseToken(['k', 'kk'], function (input, array, config) {
+                var kInput = toInt(input);
+                array[HOUR] = kInput === 24 ? 0 : kInput;
+            });
+            addParseToken(['a', 'A'], function (input, array, config) {
+                config._isPm = config._locale.isPM(input);
+                config._meridiem = input;
+            });
+            addParseToken(['h', 'hh'], function (input, array, config) {
+                array[HOUR] = toInt(input);
+                getParsingFlags(config).bigHour = true;
+            });
+            addParseToken('hmm', function (input, array, config) {
+                var pos = input.length - 2;
+                array[HOUR] = toInt(input.substr(0, pos));
+                array[MINUTE] = toInt(input.substr(pos));
+                getParsingFlags(config).bigHour = true;
+            });
+            addParseToken('hmmss', function (input, array, config) {
+                var pos1 = input.length - 4;
+                var pos2 = input.length - 2;
+                array[HOUR] = toInt(input.substr(0, pos1));
+                array[MINUTE] = toInt(input.substr(pos1, 2));
+                array[SECOND] = toInt(input.substr(pos2));
+                getParsingFlags(config).bigHour = true;
+            });
+            addParseToken('Hmm', function (input, array, config) {
+                var pos = input.length - 2;
+                array[HOUR] = toInt(input.substr(0, pos));
+                array[MINUTE] = toInt(input.substr(pos));
+            });
+            addParseToken('Hmmss', function (input, array, config) {
+                var pos1 = input.length - 4;
+                var pos2 = input.length - 2;
+                array[HOUR] = toInt(input.substr(0, pos1));
+                array[MINUTE] = toInt(input.substr(pos1, 2));
+                array[SECOND] = toInt(input.substr(pos2));
+            });
+
+            // LOCALES
+
+            function localeIsPM(input) {
+                // IE8 Quirks Mode & IE7 Standards Mode do not allow accessing strings like arrays
+                // Using charAt should be more compatible.
+                return ((input + '').toLowerCase().charAt(0) === 'p');
+            }
+
+            var defaultLocaleMeridiemParse = /[ap]\.?m?\.?/i;
+
+            function localeMeridiem(hours, minutes, isLower) {
+                if (hours > 11) {
+                    return isLower ? 'pm' : 'PM';
+                } else {
+                    return isLower ? 'am' : 'AM';
+                }
+            }
+
+
+            // MOMENTS
+
+            // Setting the hour should keep the time, because the user explicitly
+            // specified which hour they want. So trying to maintain the same hour (in
+            // a new timezone) makes sense. Adding/subtracting hours does not follow
+            // this rule.
+            var getSetHour = makeGetSet('Hours', true);
+
+            var baseConfig = {
+                calendar: defaultCalendar,
+                longDateFormat: defaultLongDateFormat,
+                invalidDate: defaultInvalidDate,
+                ordinal: defaultOrdinal,
+                dayOfMonthOrdinalParse: defaultDayOfMonthOrdinalParse,
+                relativeTime: defaultRelativeTime,
+
+                months: defaultLocaleMonths,
+                monthsShort: defaultLocaleMonthsShort,
+
+                week: defaultLocaleWeek,
+
+                weekdays: defaultLocaleWeekdays,
+                weekdaysMin: defaultLocaleWeekdaysMin,
+                weekdaysShort: defaultLocaleWeekdaysShort,
+
+                meridiemParse: defaultLocaleMeridiemParse
+            };
+
+            // internal storage for locale config files
+            var locales = {};
+            var localeFamilies = {};
+            var globalLocale;
+
+            function normalizeLocale(key) {
+                return key ? key.toLowerCase().replace('_', '-') : key;
+            }
+
+            // pick the locale from the array
+            // try ['en-au', 'en-gb'] as 'en-au', 'en-gb', 'en', as in move through the list trying each
+            // substring from most specific to least, but move to the next array item if it's a more specific variant than the current root
+            function chooseLocale(names) {
+                var i = 0,
+                    j, next, locale, split;
+
+                while (i < names.length) {
+                    split = normalizeLocale(names[i]).split('-');
+                    j = split.length;
+                    next = normalizeLocale(names[i + 1]);
+                    next = next ? next.split('-') : null;
+                    while (j > 0) {
+                        locale = loadLocale(split.slice(0, j).join('-'));
+                        if (locale) {
+                            return locale;
+                        }
+                        if (next && next.length >= j && compareArrays(split, next, true) >= j - 1) {
+                            //the next array item is better than a shallower substring of this one
+                            break;
+                        }
+                        j--;
+                    }
+                    i++;
+                }
+                return globalLocale;
+            }
+
+            function loadLocale(name) {
+                var oldLocale = null;
+                // TODO: Find a better way to register and load all the locales in Node
+                if (!locales[name] && (typeof module !== 'undefined') &&
+                    module && module.exports) {
+                    try {
+                        oldLocale = globalLocale._abbr;
+                        var aliasedRequire = require;
+                        aliasedRequire('./locale/' + name);
+                        getSetGlobalLocale(oldLocale);
+                    } catch (e) {}
+                }
+                return locales[name];
+            }
+
+            // This function will load locale and then set the global locale.  If
+            // no arguments are passed in, it will simply return the current global
+            // locale key.
+            function getSetGlobalLocale(key, values) {
+                var data;
+                if (key) {
+                    if (isUndefined(values)) {
+                        data = getLocale(key);
+                    } else {
+                        data = defineLocale(key, values);
+                    }
+
+                    if (data) {
+                        // moment.duration._locale = moment._locale = data;
+                        globalLocale = data;
+                    } else {
+                        if ((typeof console !== 'undefined') && console.warn) {
+                            //warn user if arguments are passed but the locale could not be set
+                            console.warn('Locale ' + key + ' not found. Did you forget to load it?');
+                        }
+                    }
+                }
+
+                return globalLocale._abbr;
+            }
+
+            function defineLocale(name, config) {
+                if (config !== null) {
+                    var locale, parentConfig = baseConfig;
+                    config.abbr = name;
+                    if (locales[name] != null) {
+                        deprecateSimple('defineLocaleOverride',
+                            'use moment.updateLocale(localeName, config) to change ' +
+                            'an existing locale. moment.defineLocale(localeName, ' +
+                            'config) should only be used for creating a new locale ' +
+                            'See http://momentjs.com/guides/#/warnings/define-locale/ for more info.');
+                        parentConfig = locales[name]._config;
+                    } else if (config.parentLocale != null) {
+                        if (locales[config.parentLocale] != null) {
+                            parentConfig = locales[config.parentLocale]._config;
+                        } else {
+                            locale = loadLocale(config.parentLocale);
+                            if (locale != null) {
+                                parentConfig = locale._config;
+                            } else {
+                                if (!localeFamilies[config.parentLocale]) {
+                                    localeFamilies[config.parentLocale] = [];
+                                }
+                                localeFamilies[config.parentLocale].push({
+                                    name: name,
+                                    config: config
+                                });
+                                return null;
+                            }
+                        }
+                    }
+                    locales[name] = new Locale(mergeConfigs(parentConfig, config));
+
+                    if (localeFamilies[name]) {
+                        localeFamilies[name].forEach(function (x) {
+                            defineLocale(x.name, x.config);
+                        });
+                    }
+
+                    // backwards compat for now: also set the locale
+                    // make sure we set the locale AFTER all child locales have been
+                    // created, so we won't end up with the child locale set.
+                    getSetGlobalLocale(name);
+
+
+                    return locales[name];
+                } else {
+                    // useful for testing
+                    delete locales[name];
+                    return null;
+                }
+            }
+
+            function updateLocale(name, config) {
+                if (config != null) {
+                    var locale, tmpLocale, parentConfig = baseConfig;
+                    // MERGE
+                    tmpLocale = loadLocale(name);
+                    if (tmpLocale != null) {
+                        parentConfig = tmpLocale._config;
+                    }
+                    config = mergeConfigs(parentConfig, config);
+                    locale = new Locale(config);
+                    locale.parentLocale = locales[name];
+                    locales[name] = locale;
+
+                    // backwards compat for now: also set the locale
+                    getSetGlobalLocale(name);
+                } else {
+                    // pass null for config to unupdate, useful for tests
+                    if (locales[name] != null) {
+                        if (locales[name].parentLocale != null) {
+                            locales[name] = locales[name].parentLocale;
+                        } else if (locales[name] != null) {
+                            delete locales[name];
+                        }
+                    }
+                }
+                return locales[name];
+            }
+
+            // returns locale data
+            function getLocale(key) {
+                var locale;
+
+                if (key && key._locale && key._locale._abbr) {
+                    key = key._locale._abbr;
+                }
+
+                if (!key) {
+                    return globalLocale;
+                }
+
+                if (!isArray(key)) {
+                    //short-circuit everything else
+                    locale = loadLocale(key);
+                    if (locale) {
+                        return locale;
+                    }
+                    key = [key];
+                }
+
+                return chooseLocale(key);
+            }
+
+            function listLocales() {
+                return keys(locales);
+            }
+
+            function checkOverflow(m) {
+                var overflow;
+                var a = m._a;
+
+                if (a && getParsingFlags(m).overflow === -2) {
+                    overflow =
+                        a[MONTH] < 0 || a[MONTH] > 11 ? MONTH :
+                        a[DATE] < 1 || a[DATE] > daysInMonth(a[YEAR], a[MONTH]) ? DATE :
+                        a[HOUR] < 0 || a[HOUR] > 24 || (a[HOUR] === 24 && (a[MINUTE] !== 0 || a[SECOND] !== 0 || a[MILLISECOND] !== 0)) ? HOUR :
+                        a[MINUTE] < 0 || a[MINUTE] > 59 ? MINUTE :
+                        a[SECOND] < 0 || a[SECOND] > 59 ? SECOND :
+                        a[MILLISECOND] < 0 || a[MILLISECOND] > 999 ? MILLISECOND :
+                        -1;
+
+                    if (getParsingFlags(m)._overflowDayOfYear && (overflow < YEAR || overflow > DATE)) {
+                        overflow = DATE;
+                    }
+                    if (getParsingFlags(m)._overflowWeeks && overflow === -1) {
+                        overflow = WEEK;
+                    }
+                    if (getParsingFlags(m)._overflowWeekday && overflow === -1) {
+                        overflow = WEEKDAY;
+                    }
+
+                    getParsingFlags(m).overflow = overflow;
+                }
+
+                return m;
+            }
+
+            // Pick the first defined of two or three arguments.
+            function defaults(a, b, c) {
+                if (a != null) {
+                    return a;
+                }
+                if (b != null) {
+                    return b;
+                }
+                return c;
+            }
+
+            function currentDateArray(config) {
+                // hooks is actually the exported moment object
+                var nowValue = new Date(hooks.now());
+                if (config._useUTC) {
+                    return [nowValue.getUTCFullYear(), nowValue.getUTCMonth(), nowValue.getUTCDate()];
+                }
+                return [nowValue.getFullYear(), nowValue.getMonth(), nowValue.getDate()];
+            }
+
+            // convert an array to a date.
+            // the array should mirror the parameters below
+            // note: all values past the year are optional and will default to the lowest possible value.
+            // [year, month, day , hour, minute, second, millisecond]
+            function configFromArray(config) {
+                var i, date, input = [],
+                    currentDate, expectedWeekday, yearToUse;
+
+                if (config._d) {
+                    return;
+                }
+
+                currentDate = currentDateArray(config);
+
+                //compute day of the year from weeks and weekdays
+                if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
+                    dayOfYearFromWeekInfo(config);
+                }
+
+                //if the day of the year is set, figure out what it is
+                if (config._dayOfYear != null) {
+                    yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
+
+                    if (config._dayOfYear > daysInYear(yearToUse) || config._dayOfYear === 0) {
+                        getParsingFlags(config)._overflowDayOfYear = true;
+                    }
+
+                    date = createUTCDate(yearToUse, 0, config._dayOfYear);
+                    config._a[MONTH] = date.getUTCMonth();
+                    config._a[DATE] = date.getUTCDate();
+                }
+
+                // Default to current date.
+                // * if no year, month, day of month are given, default to today
+                // * if day of month is given, default month and year
+                // * if month is given, default only year
+                // * if year is given, don't default anything
+                for (i = 0; i < 3 && config._a[i] == null; ++i) {
+                    config._a[i] = input[i] = currentDate[i];
+                }
+
+                // Zero out whatever was not defaulted, including time
+                for (; i < 7; i++) {
+                    config._a[i] = input[i] = (config._a[i] == null) ? (i === 2 ? 1 : 0) : config._a[i];
+                }
+
+                // Check for 24:00:00.000
+                if (config._a[HOUR] === 24 &&
+                    config._a[MINUTE] === 0 &&
+                    config._a[SECOND] === 0 &&
+                    config._a[MILLISECOND] === 0) {
+                    config._nextDay = true;
+                    config._a[HOUR] = 0;
+                }
+
+                config._d = (config._useUTC ? createUTCDate : createDate).apply(null, input);
+                expectedWeekday = config._useUTC ? config._d.getUTCDay() : config._d.getDay();
+
+                // Apply timezone offset from input. The actual utcOffset can be changed
+                // with parseZone.
+                if (config._tzm != null) {
+                    config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
+                }
+
+                if (config._nextDay) {
+                    config._a[HOUR] = 24;
+                }
+
+                // check for mismatching day of week
+                if (config._w && typeof config._w.d !== 'undefined' && config._w.d !== expectedWeekday) {
+                    getParsingFlags(config).weekdayMismatch = true;
+                }
+            }
+
+            function dayOfYearFromWeekInfo(config) {
+                var w, weekYear, week, weekday, dow, doy, temp, weekdayOverflow;
+
+                w = config._w;
+                if (w.GG != null || w.W != null || w.E != null) {
+                    dow = 1;
+                    doy = 4;
+
+                    // TODO: We need to take the current isoWeekYear, but that depends on
+                    // how we interpret now (local, utc, fixed offset). So create
+                    // a now version of current config (take local/utc/offset flags, and
+                    // create now).
+                    weekYear = defaults(w.GG, config._a[YEAR], weekOfYear(createLocal(), 1, 4).year);
+                    week = defaults(w.W, 1);
+                    weekday = defaults(w.E, 1);
+                    if (weekday < 1 || weekday > 7) {
+                        weekdayOverflow = true;
+                    }
+                } else {
+                    dow = config._locale._week.dow;
+                    doy = config._locale._week.doy;
+
+                    var curWeek = weekOfYear(createLocal(), dow, doy);
+
+                    weekYear = defaults(w.gg, config._a[YEAR], curWeek.year);
+
+                    // Default to current week.
+                    week = defaults(w.w, curWeek.week);
+
+                    if (w.d != null) {
+                        // weekday -- low day numbers are considered next week
+                        weekday = w.d;
+                        if (weekday < 0 || weekday > 6) {
+                            weekdayOverflow = true;
+                        }
+                    } else if (w.e != null) {
+                        // local weekday -- counting starts from begining of week
+                        weekday = w.e + dow;
+                        if (w.e < 0 || w.e > 6) {
+                            weekdayOverflow = true;
+                        }
+                    } else {
+                        // default to begining of week
+                        weekday = dow;
+                    }
+                }
+                if (week < 1 || week > weeksInYear(weekYear, dow, doy)) {
+                    getParsingFlags(config)._overflowWeeks = true;
+                } else if (weekdayOverflow != null) {
+                    getParsingFlags(config)._overflowWeekday = true;
+                } else {
+                    temp = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy);
+                    config._a[YEAR] = temp.year;
+                    config._dayOfYear = temp.dayOfYear;
+                }
+            }
+
+            // iso 8601 regex
+            // 0000-00-00 0000-W00 or 0000-W00-0 + T + 00 or 00:00 or 00:00:00 or 00:00:00.000 + +00:00 or +0000 or +00)
+            var extendedIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/;
+            var basicIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/;
+
+            var tzRegex = /Z|[+-]\d\d(?::?\d\d)?/;
+
+            var isoDates = [
         ['YYYYYY-MM-DD', /[+-]\d{6}-\d\d-\d\d/],
         ['YYYY-MM-DD', /\d{4}-\d\d-\d\d/],
         ['GGGG-[W]WW-E', /\d{4}-W\d\d-\d/],
@@ -3398,8 +3459,8 @@ moment.tz.load(require('./data/packed/latest.json'));
         ['YYYYDDD', /\d{7}/]
     ];
 
-    // iso time formats and regexes
-    var isoTimes = [
+            // iso time formats and regexes
+            var isoTimes = [
         ['HH:mm:ss.SSSS', /\d\d:\d\d:\d\d\.\d+/],
         ['HH:mm:ss,SSSS', /\d\d:\d\d:\d\d,\d+/],
         ['HH:mm:ss', /\d\d:\d\d:\d\d/],
@@ -3411,66 +3472,66 @@ moment.tz.load(require('./data/packed/latest.json'));
         ['HH', /\d\d/]
     ];
 
-    var aspNetJsonRegex = /^\/?Date\((\-?\d+)/i;
+            var aspNetJsonRegex = /^\/?Date\((\-?\d+)/i;
 
-    // date from iso format
-    function configFromISO(config) {
-        var i, l,
-            string = config._i,
-            match = extendedIsoRegex.exec(string) || basicIsoRegex.exec(string),
-            allowTime, dateFormat, timeFormat, tzFormat;
+            // date from iso format
+            function configFromISO(config) {
+                var i, l,
+                    string = config._i,
+                    match = extendedIsoRegex.exec(string) || basicIsoRegex.exec(string),
+                    allowTime, dateFormat, timeFormat, tzFormat;
 
-        if (match) {
-            getParsingFlags(config).iso = true;
+                if (match) {
+                    getParsingFlags(config).iso = true;
 
-            for (i = 0, l = isoDates.length; i < l; i++) {
-                if (isoDates[i][1].exec(match[1])) {
-                    dateFormat = isoDates[i][0];
-                    allowTime = isoDates[i][2] !== false;
-                    break;
-                }
-            }
-            if (dateFormat == null) {
-                config._isValid = false;
-                return;
-            }
-            if (match[3]) {
-                for (i = 0, l = isoTimes.length; i < l; i++) {
-                    if (isoTimes[i][1].exec(match[3])) {
-                        // match[2] should be 'T' or space
-                        timeFormat = (match[2] || ' ') + isoTimes[i][0];
-                        break;
+                    for (i = 0, l = isoDates.length; i < l; i++) {
+                        if (isoDates[i][1].exec(match[1])) {
+                            dateFormat = isoDates[i][0];
+                            allowTime = isoDates[i][2] !== false;
+                            break;
+                        }
                     }
-                }
-                if (timeFormat == null) {
-                    config._isValid = false;
-                    return;
-                }
-            }
-            if (!allowTime && timeFormat != null) {
-                config._isValid = false;
-                return;
-            }
-            if (match[4]) {
-                if (tzRegex.exec(match[4])) {
-                    tzFormat = 'Z';
+                    if (dateFormat == null) {
+                        config._isValid = false;
+                        return;
+                    }
+                    if (match[3]) {
+                        for (i = 0, l = isoTimes.length; i < l; i++) {
+                            if (isoTimes[i][1].exec(match[3])) {
+                                // match[2] should be 'T' or space
+                                timeFormat = (match[2] || ' ') + isoTimes[i][0];
+                                break;
+                            }
+                        }
+                        if (timeFormat == null) {
+                            config._isValid = false;
+                            return;
+                        }
+                    }
+                    if (!allowTime && timeFormat != null) {
+                        config._isValid = false;
+                        return;
+                    }
+                    if (match[4]) {
+                        if (tzRegex.exec(match[4])) {
+                            tzFormat = 'Z';
+                        } else {
+                            config._isValid = false;
+                            return;
+                        }
+                    }
+                    config._f = dateFormat + (timeFormat || '') + (tzFormat || '');
+                    configFromStringAndFormat(config);
                 } else {
                     config._isValid = false;
-                    return;
                 }
             }
-            config._f = dateFormat + (timeFormat || '') + (tzFormat || '');
-            configFromStringAndFormat(config);
-        } else {
-            config._isValid = false;
-        }
-    }
 
-    // RFC 2822 regex: For details see https://tools.ietf.org/html/rfc2822#section-3.3
-    var rfc2822 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/;
+            // RFC 2822 regex: For details see https://tools.ietf.org/html/rfc2822#section-3.3
+            var rfc2822 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/;
 
-    function extractFromRFC2822Strings(yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr) {
-        var result = [
+            function extractFromRFC2822Strings(yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr) {
+                var result = [
             untruncateYear(yearStr),
             defaultLocaleMonthsShort.indexOf(monthStr),
             parseInt(dayStr, 10),
@@ -3478,5192 +3539,5530 @@ moment.tz.load(require('./data/packed/latest.json'));
             parseInt(minuteStr, 10)
         ];
 
-        if (secondStr) {
-            result.push(parseInt(secondStr, 10));
-        }
-
-        return result;
-    }
-
-    function untruncateYear(yearStr) {
-        var year = parseInt(yearStr, 10);
-        if (year <= 49) {
-            return 2000 + year;
-        } else if (year <= 999) {
-            return 1900 + year;
-        }
-        return year;
-    }
-
-    function preprocessRFC2822(s) {
-        // Remove comments and folding whitespace and replace multiple-spaces with a single space
-        return s.replace(/\([^)]*\)|[\n\t]/g, ' ').replace(/(\s\s+)/g, ' ').replace(/^\s\s*/, '').replace(/\s\s*$/, '');
-    }
-
-    function checkWeekday(weekdayStr, parsedInput, config) {
-        if (weekdayStr) {
-            // TODO: Replace the vanilla JS Date object with an indepentent day-of-week check.
-            var weekdayProvided = defaultLocaleWeekdaysShort.indexOf(weekdayStr),
-                weekdayActual = new Date(parsedInput[0], parsedInput[1], parsedInput[2]).getDay();
-            if (weekdayProvided !== weekdayActual) {
-                getParsingFlags(config).weekdayMismatch = true;
-                config._isValid = false;
-                return false;
-            }
-        }
-        return true;
-    }
-
-    var obsOffsets = {
-        UT: 0,
-        GMT: 0,
-        EDT: -4 * 60,
-        EST: -5 * 60,
-        CDT: -5 * 60,
-        CST: -6 * 60,
-        MDT: -6 * 60,
-        MST: -7 * 60,
-        PDT: -7 * 60,
-        PST: -8 * 60
-    };
-
-    function calculateOffset(obsOffset, militaryOffset, numOffset) {
-        if (obsOffset) {
-            return obsOffsets[obsOffset];
-        } else if (militaryOffset) {
-            // the only allowed military tz is Z
-            return 0;
-        } else {
-            var hm = parseInt(numOffset, 10);
-            var m = hm % 100, h = (hm - m) / 100;
-            return h * 60 + m;
-        }
-    }
-
-    // date and time from ref 2822 format
-    function configFromRFC2822(config) {
-        var match = rfc2822.exec(preprocessRFC2822(config._i));
-        if (match) {
-            var parsedArray = extractFromRFC2822Strings(match[4], match[3], match[2], match[5], match[6], match[7]);
-            if (!checkWeekday(match[1], parsedArray, config)) {
-                return;
-            }
-
-            config._a = parsedArray;
-            config._tzm = calculateOffset(match[8], match[9], match[10]);
-
-            config._d = createUTCDate.apply(null, config._a);
-            config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
-
-            getParsingFlags(config).rfc2822 = true;
-        } else {
-            config._isValid = false;
-        }
-    }
-
-    // date from iso format or fallback
-    function configFromString(config) {
-        var matched = aspNetJsonRegex.exec(config._i);
-
-        if (matched !== null) {
-            config._d = new Date(+matched[1]);
-            return;
-        }
-
-        configFromISO(config);
-        if (config._isValid === false) {
-            delete config._isValid;
-        } else {
-            return;
-        }
-
-        configFromRFC2822(config);
-        if (config._isValid === false) {
-            delete config._isValid;
-        } else {
-            return;
-        }
-
-        // Final attempt, use Input Fallback
-        hooks.createFromInputFallback(config);
-    }
-
-    hooks.createFromInputFallback = deprecate(
-        'value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), ' +
-        'which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are ' +
-        'discouraged and will be removed in an upcoming major release. Please refer to ' +
-        'http://momentjs.com/guides/#/warnings/js-date/ for more info.',
-        function (config) {
-            config._d = new Date(config._i + (config._useUTC ? ' UTC' : ''));
-        }
-    );
-
-    // constant that refers to the ISO standard
-    hooks.ISO_8601 = function () {};
-
-    // constant that refers to the RFC 2822 form
-    hooks.RFC_2822 = function () {};
-
-    // date from string and format string
-    function configFromStringAndFormat(config) {
-        // TODO: Move this to another part of the creation flow to prevent circular deps
-        if (config._f === hooks.ISO_8601) {
-            configFromISO(config);
-            return;
-        }
-        if (config._f === hooks.RFC_2822) {
-            configFromRFC2822(config);
-            return;
-        }
-        config._a = [];
-        getParsingFlags(config).empty = true;
-
-        // This array is used to make a Date, either with `new Date` or `Date.UTC`
-        var string = '' + config._i,
-            i, parsedInput, tokens, token, skipped,
-            stringLength = string.length,
-            totalParsedInputLength = 0;
-
-        tokens = expandFormat(config._f, config._locale).match(formattingTokens) || [];
-
-        for (i = 0; i < tokens.length; i++) {
-            token = tokens[i];
-            parsedInput = (string.match(getParseRegexForToken(token, config)) || [])[0];
-            // console.log('token', token, 'parsedInput', parsedInput,
-            //         'regex', getParseRegexForToken(token, config));
-            if (parsedInput) {
-                skipped = string.substr(0, string.indexOf(parsedInput));
-                if (skipped.length > 0) {
-                    getParsingFlags(config).unusedInput.push(skipped);
+                if (secondStr) {
+                    result.push(parseInt(secondStr, 10));
                 }
-                string = string.slice(string.indexOf(parsedInput) + parsedInput.length);
-                totalParsedInputLength += parsedInput.length;
+
+                return result;
             }
-            // don't parse if it's not a known token
-            if (formatTokenFunctions[token]) {
-                if (parsedInput) {
-                    getParsingFlags(config).empty = false;
+
+            function untruncateYear(yearStr) {
+                var year = parseInt(yearStr, 10);
+                if (year <= 49) {
+                    return 2000 + year;
+                } else if (year <= 999) {
+                    return 1900 + year;
                 }
-                else {
-                    getParsingFlags(config).unusedTokens.push(token);
+                return year;
+            }
+
+            function preprocessRFC2822(s) {
+                // Remove comments and folding whitespace and replace multiple-spaces with a single space
+                return s.replace(/\([^)]*\)|[\n\t]/g, ' ').replace(/(\s\s+)/g, ' ').replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+            }
+
+            function checkWeekday(weekdayStr, parsedInput, config) {
+                if (weekdayStr) {
+                    // TODO: Replace the vanilla JS Date object with an indepentent day-of-week check.
+                    var weekdayProvided = defaultLocaleWeekdaysShort.indexOf(weekdayStr),
+                        weekdayActual = new Date(parsedInput[0], parsedInput[1], parsedInput[2]).getDay();
+                    if (weekdayProvided !== weekdayActual) {
+                        getParsingFlags(config).weekdayMismatch = true;
+                        config._isValid = false;
+                        return false;
+                    }
                 }
-                addTimeToArrayFromToken(token, parsedInput, config);
-            }
-            else if (config._strict && !parsedInput) {
-                getParsingFlags(config).unusedTokens.push(token);
-            }
-        }
-
-        // add remaining unparsed input length to the string
-        getParsingFlags(config).charsLeftOver = stringLength - totalParsedInputLength;
-        if (string.length > 0) {
-            getParsingFlags(config).unusedInput.push(string);
-        }
-
-        // clear _12h flag if hour is <= 12
-        if (config._a[HOUR] <= 12 &&
-            getParsingFlags(config).bigHour === true &&
-            config._a[HOUR] > 0) {
-            getParsingFlags(config).bigHour = undefined;
-        }
-
-        getParsingFlags(config).parsedDateParts = config._a.slice(0);
-        getParsingFlags(config).meridiem = config._meridiem;
-        // handle meridiem
-        config._a[HOUR] = meridiemFixWrap(config._locale, config._a[HOUR], config._meridiem);
-
-        configFromArray(config);
-        checkOverflow(config);
-    }
-
-
-    function meridiemFixWrap (locale, hour, meridiem) {
-        var isPm;
-
-        if (meridiem == null) {
-            // nothing to do
-            return hour;
-        }
-        if (locale.meridiemHour != null) {
-            return locale.meridiemHour(hour, meridiem);
-        } else if (locale.isPM != null) {
-            // Fallback
-            isPm = locale.isPM(meridiem);
-            if (isPm && hour < 12) {
-                hour += 12;
-            }
-            if (!isPm && hour === 12) {
-                hour = 0;
-            }
-            return hour;
-        } else {
-            // this is not supposed to happen
-            return hour;
-        }
-    }
-
-    // date from string and array of format strings
-    function configFromStringAndArray(config) {
-        var tempConfig,
-            bestMoment,
-
-            scoreToBeat,
-            i,
-            currentScore;
-
-        if (config._f.length === 0) {
-            getParsingFlags(config).invalidFormat = true;
-            config._d = new Date(NaN);
-            return;
-        }
-
-        for (i = 0; i < config._f.length; i++) {
-            currentScore = 0;
-            tempConfig = copyConfig({}, config);
-            if (config._useUTC != null) {
-                tempConfig._useUTC = config._useUTC;
-            }
-            tempConfig._f = config._f[i];
-            configFromStringAndFormat(tempConfig);
-
-            if (!isValid(tempConfig)) {
-                continue;
+                return true;
             }
 
-            // if there is any input that was not parsed add a penalty for that format
-            currentScore += getParsingFlags(tempConfig).charsLeftOver;
+            var obsOffsets = {
+                UT: 0,
+                GMT: 0,
+                EDT: -4 * 60,
+                EST: -5 * 60,
+                CDT: -5 * 60,
+                CST: -6 * 60,
+                MDT: -6 * 60,
+                MST: -7 * 60,
+                PDT: -7 * 60,
+                PST: -8 * 60
+            };
 
-            //or tokens
-            currentScore += getParsingFlags(tempConfig).unusedTokens.length * 10;
-
-            getParsingFlags(tempConfig).score = currentScore;
-
-            if (scoreToBeat == null || currentScore < scoreToBeat) {
-                scoreToBeat = currentScore;
-                bestMoment = tempConfig;
+            function calculateOffset(obsOffset, militaryOffset, numOffset) {
+                if (obsOffset) {
+                    return obsOffsets[obsOffset];
+                } else if (militaryOffset) {
+                    // the only allowed military tz is Z
+                    return 0;
+                } else {
+                    var hm = parseInt(numOffset, 10);
+                    var m = hm % 100,
+                        h = (hm - m) / 100;
+                    return h * 60 + m;
+                }
             }
-        }
 
-        extend(config, bestMoment || tempConfig);
-    }
+            // date and time from ref 2822 format
+            function configFromRFC2822(config) {
+                var match = rfc2822.exec(preprocessRFC2822(config._i));
+                if (match) {
+                    var parsedArray = extractFromRFC2822Strings(match[4], match[3], match[2], match[5], match[6], match[7]);
+                    if (!checkWeekday(match[1], parsedArray, config)) {
+                        return;
+                    }
 
-    function configFromObject(config) {
-        if (config._d) {
-            return;
-        }
+                    config._a = parsedArray;
+                    config._tzm = calculateOffset(match[8], match[9], match[10]);
 
-        var i = normalizeObjectUnits(config._i);
-        config._a = map([i.year, i.month, i.day || i.date, i.hour, i.minute, i.second, i.millisecond], function (obj) {
-            return obj && parseInt(obj, 10);
-        });
+                    config._d = createUTCDate.apply(null, config._a);
+                    config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
 
-        configFromArray(config);
-    }
+                    getParsingFlags(config).rfc2822 = true;
+                } else {
+                    config._isValid = false;
+                }
+            }
 
-    function createFromConfig (config) {
-        var res = new Moment(checkOverflow(prepareConfig(config)));
-        if (res._nextDay) {
-            // Adding is smart enough around DST
-            res.add(1, 'd');
-            res._nextDay = undefined;
-        }
+            // date from iso format or fallback
+            function configFromString(config) {
+                var matched = aspNetJsonRegex.exec(config._i);
 
-        return res;
-    }
+                if (matched !== null) {
+                    config._d = new Date(+matched[1]);
+                    return;
+                }
 
-    function prepareConfig (config) {
-        var input = config._i,
-            format = config._f;
+                configFromISO(config);
+                if (config._isValid === false) {
+                    delete config._isValid;
+                } else {
+                    return;
+                }
 
-        config._locale = config._locale || getLocale(config._l);
+                configFromRFC2822(config);
+                if (config._isValid === false) {
+                    delete config._isValid;
+                } else {
+                    return;
+                }
 
-        if (input === null || (format === undefined && input === '')) {
-            return createInvalid({nullInput: true});
-        }
+                // Final attempt, use Input Fallback
+                hooks.createFromInputFallback(config);
+            }
 
-        if (typeof input === 'string') {
-            config._i = input = config._locale.preparse(input);
-        }
+            hooks.createFromInputFallback = deprecate(
+                'value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), ' +
+                'which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are ' +
+                'discouraged and will be removed in an upcoming major release. Please refer to ' +
+                'http://momentjs.com/guides/#/warnings/js-date/ for more info.',
+                function (config) {
+                    config._d = new Date(config._i + (config._useUTC ? ' UTC' : ''));
+                }
+            );
 
-        if (isMoment(input)) {
-            return new Moment(checkOverflow(input));
-        } else if (isDate(input)) {
-            config._d = input;
-        } else if (isArray(format)) {
-            configFromStringAndArray(config);
-        } else if (format) {
-            configFromStringAndFormat(config);
-        }  else {
-            configFromInput(config);
-        }
+            // constant that refers to the ISO standard
+            hooks.ISO_8601 = function () {};
 
-        if (!isValid(config)) {
-            config._d = null;
-        }
+            // constant that refers to the RFC 2822 form
+            hooks.RFC_2822 = function () {};
 
-        return config;
-    }
+            // date from string and format string
+            function configFromStringAndFormat(config) {
+                // TODO: Move this to another part of the creation flow to prevent circular deps
+                if (config._f === hooks.ISO_8601) {
+                    configFromISO(config);
+                    return;
+                }
+                if (config._f === hooks.RFC_2822) {
+                    configFromRFC2822(config);
+                    return;
+                }
+                config._a = [];
+                getParsingFlags(config).empty = true;
 
-    function configFromInput(config) {
-        var input = config._i;
-        if (isUndefined(input)) {
-            config._d = new Date(hooks.now());
-        } else if (isDate(input)) {
-            config._d = new Date(input.valueOf());
-        } else if (typeof input === 'string') {
-            configFromString(config);
-        } else if (isArray(input)) {
-            config._a = map(input.slice(0), function (obj) {
-                return parseInt(obj, 10);
+                // This array is used to make a Date, either with `new Date` or `Date.UTC`
+                var string = '' + config._i,
+                    i, parsedInput, tokens, token, skipped,
+                    stringLength = string.length,
+                    totalParsedInputLength = 0;
+
+                tokens = expandFormat(config._f, config._locale).match(formattingTokens) || [];
+
+                for (i = 0; i < tokens.length; i++) {
+                    token = tokens[i];
+                    parsedInput = (string.match(getParseRegexForToken(token, config)) || [])[0];
+                    // console.log('token', token, 'parsedInput', parsedInput,
+                    //         'regex', getParseRegexForToken(token, config));
+                    if (parsedInput) {
+                        skipped = string.substr(0, string.indexOf(parsedInput));
+                        if (skipped.length > 0) {
+                            getParsingFlags(config).unusedInput.push(skipped);
+                        }
+                        string = string.slice(string.indexOf(parsedInput) + parsedInput.length);
+                        totalParsedInputLength += parsedInput.length;
+                    }
+                    // don't parse if it's not a known token
+                    if (formatTokenFunctions[token]) {
+                        if (parsedInput) {
+                            getParsingFlags(config).empty = false;
+                        } else {
+                            getParsingFlags(config).unusedTokens.push(token);
+                        }
+                        addTimeToArrayFromToken(token, parsedInput, config);
+                    } else if (config._strict && !parsedInput) {
+                        getParsingFlags(config).unusedTokens.push(token);
+                    }
+                }
+
+                // add remaining unparsed input length to the string
+                getParsingFlags(config).charsLeftOver = stringLength - totalParsedInputLength;
+                if (string.length > 0) {
+                    getParsingFlags(config).unusedInput.push(string);
+                }
+
+                // clear _12h flag if hour is <= 12
+                if (config._a[HOUR] <= 12 &&
+                    getParsingFlags(config).bigHour === true &&
+                    config._a[HOUR] > 0) {
+                    getParsingFlags(config).bigHour = undefined;
+                }
+
+                getParsingFlags(config).parsedDateParts = config._a.slice(0);
+                getParsingFlags(config).meridiem = config._meridiem;
+                // handle meridiem
+                config._a[HOUR] = meridiemFixWrap(config._locale, config._a[HOUR], config._meridiem);
+
+                configFromArray(config);
+                checkOverflow(config);
+            }
+
+
+            function meridiemFixWrap(locale, hour, meridiem) {
+                var isPm;
+
+                if (meridiem == null) {
+                    // nothing to do
+                    return hour;
+                }
+                if (locale.meridiemHour != null) {
+                    return locale.meridiemHour(hour, meridiem);
+                } else if (locale.isPM != null) {
+                    // Fallback
+                    isPm = locale.isPM(meridiem);
+                    if (isPm && hour < 12) {
+                        hour += 12;
+                    }
+                    if (!isPm && hour === 12) {
+                        hour = 0;
+                    }
+                    return hour;
+                } else {
+                    // this is not supposed to happen
+                    return hour;
+                }
+            }
+
+            // date from string and array of format strings
+            function configFromStringAndArray(config) {
+                var tempConfig,
+                    bestMoment,
+
+                    scoreToBeat,
+                    i,
+                    currentScore;
+
+                if (config._f.length === 0) {
+                    getParsingFlags(config).invalidFormat = true;
+                    config._d = new Date(NaN);
+                    return;
+                }
+
+                for (i = 0; i < config._f.length; i++) {
+                    currentScore = 0;
+                    tempConfig = copyConfig({}, config);
+                    if (config._useUTC != null) {
+                        tempConfig._useUTC = config._useUTC;
+                    }
+                    tempConfig._f = config._f[i];
+                    configFromStringAndFormat(tempConfig);
+
+                    if (!isValid(tempConfig)) {
+                        continue;
+                    }
+
+                    // if there is any input that was not parsed add a penalty for that format
+                    currentScore += getParsingFlags(tempConfig).charsLeftOver;
+
+                    //or tokens
+                    currentScore += getParsingFlags(tempConfig).unusedTokens.length * 10;
+
+                    getParsingFlags(tempConfig).score = currentScore;
+
+                    if (scoreToBeat == null || currentScore < scoreToBeat) {
+                        scoreToBeat = currentScore;
+                        bestMoment = tempConfig;
+                    }
+                }
+
+                extend(config, bestMoment || tempConfig);
+            }
+
+            function configFromObject(config) {
+                if (config._d) {
+                    return;
+                }
+
+                var i = normalizeObjectUnits(config._i);
+                config._a = map([i.year, i.month, i.day || i.date, i.hour, i.minute, i.second, i.millisecond], function (obj) {
+                    return obj && parseInt(obj, 10);
+                });
+
+                configFromArray(config);
+            }
+
+            function createFromConfig(config) {
+                var res = new Moment(checkOverflow(prepareConfig(config)));
+                if (res._nextDay) {
+                    // Adding is smart enough around DST
+                    res.add(1, 'd');
+                    res._nextDay = undefined;
+                }
+
+                return res;
+            }
+
+            function prepareConfig(config) {
+                var input = config._i,
+                    format = config._f;
+
+                config._locale = config._locale || getLocale(config._l);
+
+                if (input === null || (format === undefined && input === '')) {
+                    return createInvalid({
+                        nullInput: true
+                    });
+                }
+
+                if (typeof input === 'string') {
+                    config._i = input = config._locale.preparse(input);
+                }
+
+                if (isMoment(input)) {
+                    return new Moment(checkOverflow(input));
+                } else if (isDate(input)) {
+                    config._d = input;
+                } else if (isArray(format)) {
+                    configFromStringAndArray(config);
+                } else if (format) {
+                    configFromStringAndFormat(config);
+                } else {
+                    configFromInput(config);
+                }
+
+                if (!isValid(config)) {
+                    config._d = null;
+                }
+
+                return config;
+            }
+
+            function configFromInput(config) {
+                var input = config._i;
+                if (isUndefined(input)) {
+                    config._d = new Date(hooks.now());
+                } else if (isDate(input)) {
+                    config._d = new Date(input.valueOf());
+                } else if (typeof input === 'string') {
+                    configFromString(config);
+                } else if (isArray(input)) {
+                    config._a = map(input.slice(0), function (obj) {
+                        return parseInt(obj, 10);
+                    });
+                    configFromArray(config);
+                } else if (isObject(input)) {
+                    configFromObject(config);
+                } else if (isNumber(input)) {
+                    // from milliseconds
+                    config._d = new Date(input);
+                } else {
+                    hooks.createFromInputFallback(config);
+                }
+            }
+
+            function createLocalOrUTC(input, format, locale, strict, isUTC) {
+                var c = {};
+
+                if (locale === true || locale === false) {
+                    strict = locale;
+                    locale = undefined;
+                }
+
+                if ((isObject(input) && isObjectEmpty(input)) ||
+                    (isArray(input) && input.length === 0)) {
+                    input = undefined;
+                }
+                // object construction must be done this way.
+                // https://github.com/moment/moment/issues/1423
+                c._isAMomentObject = true;
+                c._useUTC = c._isUTC = isUTC;
+                c._l = locale;
+                c._i = input;
+                c._f = format;
+                c._strict = strict;
+
+                return createFromConfig(c);
+            }
+
+            function createLocal(input, format, locale, strict) {
+                return createLocalOrUTC(input, format, locale, strict, false);
+            }
+
+            var prototypeMin = deprecate(
+                'moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/',
+                function () {
+                    var other = createLocal.apply(null, arguments);
+                    if (this.isValid() && other.isValid()) {
+                        return other < this ? this : other;
+                    } else {
+                        return createInvalid();
+                    }
+                }
+            );
+
+            var prototypeMax = deprecate(
+                'moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/',
+                function () {
+                    var other = createLocal.apply(null, arguments);
+                    if (this.isValid() && other.isValid()) {
+                        return other > this ? this : other;
+                    } else {
+                        return createInvalid();
+                    }
+                }
+            );
+
+            // Pick a moment m from moments so that m[fn](other) is true for all
+            // other. This relies on the function fn to be transitive.
+            //
+            // moments should either be an array of moment objects or an array, whose
+            // first element is an array of moment objects.
+            function pickBy(fn, moments) {
+                var res, i;
+                if (moments.length === 1 && isArray(moments[0])) {
+                    moments = moments[0];
+                }
+                if (!moments.length) {
+                    return createLocal();
+                }
+                res = moments[0];
+                for (i = 1; i < moments.length; ++i) {
+                    if (!moments[i].isValid() || moments[i][fn](res)) {
+                        res = moments[i];
+                    }
+                }
+                return res;
+            }
+
+            // TODO: Use [].sort instead?
+            function min() {
+                var args = [].slice.call(arguments, 0);
+
+                return pickBy('isBefore', args);
+            }
+
+            function max() {
+                var args = [].slice.call(arguments, 0);
+
+                return pickBy('isAfter', args);
+            }
+
+            var now = function () {
+                return Date.now ? Date.now() : +(new Date());
+            };
+
+            var ordering = ['year', 'quarter', 'month', 'week', 'day', 'hour', 'minute', 'second', 'millisecond'];
+
+            function isDurationValid(m) {
+                for (var key in m) {
+                    if (!(indexOf.call(ordering, key) !== -1 && (m[key] == null || !isNaN(m[key])))) {
+                        return false;
+                    }
+                }
+
+                var unitHasDecimal = false;
+                for (var i = 0; i < ordering.length; ++i) {
+                    if (m[ordering[i]]) {
+                        if (unitHasDecimal) {
+                            return false; // only allow non-integers for smallest unit
+                        }
+                        if (parseFloat(m[ordering[i]]) !== toInt(m[ordering[i]])) {
+                            unitHasDecimal = true;
+                        }
+                    }
+                }
+
+                return true;
+            }
+
+            function isValid$1() {
+                return this._isValid;
+            }
+
+            function createInvalid$1() {
+                return createDuration(NaN);
+            }
+
+            function Duration(duration) {
+                var normalizedInput = normalizeObjectUnits(duration),
+                    years = normalizedInput.year || 0,
+                    quarters = normalizedInput.quarter || 0,
+                    months = normalizedInput.month || 0,
+                    weeks = normalizedInput.week || 0,
+                    days = normalizedInput.day || 0,
+                    hours = normalizedInput.hour || 0,
+                    minutes = normalizedInput.minute || 0,
+                    seconds = normalizedInput.second || 0,
+                    milliseconds = normalizedInput.millisecond || 0;
+
+                this._isValid = isDurationValid(normalizedInput);
+
+                // representation for dateAddRemove
+                this._milliseconds = +milliseconds +
+                    seconds * 1e3 + // 1000
+                    minutes * 6e4 + // 1000 * 60
+                    hours * 1000 * 60 * 60; //using 1000 * 60 * 60 instead of 36e5 to avoid floating point rounding errors https://github.com/moment/moment/issues/2978
+                // Because of dateAddRemove treats 24 hours as different from a
+                // day when working around DST, we need to store them separately
+                this._days = +days +
+                    weeks * 7;
+                // It is impossible to translate months into days without knowing
+                // which months you are are talking about, so we have to store
+                // it separately.
+                this._months = +months +
+                    quarters * 3 +
+                    years * 12;
+
+                this._data = {};
+
+                this._locale = getLocale();
+
+                this._bubble();
+            }
+
+            function isDuration(obj) {
+                return obj instanceof Duration;
+            }
+
+            function absRound(number) {
+                if (number < 0) {
+                    return Math.round(-1 * number) * -1;
+                } else {
+                    return Math.round(number);
+                }
+            }
+
+            // FORMATTING
+
+            function offset(token, separator) {
+                addFormatToken(token, 0, 0, function () {
+                    var offset = this.utcOffset();
+                    var sign = '+';
+                    if (offset < 0) {
+                        offset = -offset;
+                        sign = '-';
+                    }
+                    return sign + zeroFill(~~(offset / 60), 2) + separator + zeroFill(~~(offset) % 60, 2);
+                });
+            }
+
+            offset('Z', ':');
+            offset('ZZ', '');
+
+            // PARSING
+
+            addRegexToken('Z', matchShortOffset);
+            addRegexToken('ZZ', matchShortOffset);
+            addParseToken(['Z', 'ZZ'], function (input, array, config) {
+                config._useUTC = true;
+                config._tzm = offsetFromString(matchShortOffset, input);
             });
-            configFromArray(config);
-        } else if (isObject(input)) {
-            configFromObject(config);
-        } else if (isNumber(input)) {
-            // from milliseconds
-            config._d = new Date(input);
-        } else {
-            hooks.createFromInputFallback(config);
-        }
-    }
 
-    function createLocalOrUTC (input, format, locale, strict, isUTC) {
-        var c = {};
+            // HELPERS
 
-        if (locale === true || locale === false) {
-            strict = locale;
-            locale = undefined;
-        }
+            // timezone chunker
+            // '+10:00' > ['10',  '00']
+            // '-1530'  > ['-15', '30']
+            var chunkOffset = /([\+\-]|\d\d)/gi;
 
-        if ((isObject(input) && isObjectEmpty(input)) ||
-                (isArray(input) && input.length === 0)) {
-            input = undefined;
-        }
-        // object construction must be done this way.
-        // https://github.com/moment/moment/issues/1423
-        c._isAMomentObject = true;
-        c._useUTC = c._isUTC = isUTC;
-        c._l = locale;
-        c._i = input;
-        c._f = format;
-        c._strict = strict;
+            function offsetFromString(matcher, string) {
+                var matches = (string || '').match(matcher);
 
-        return createFromConfig(c);
-    }
-
-    function createLocal (input, format, locale, strict) {
-        return createLocalOrUTC(input, format, locale, strict, false);
-    }
-
-    var prototypeMin = deprecate(
-        'moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/',
-        function () {
-            var other = createLocal.apply(null, arguments);
-            if (this.isValid() && other.isValid()) {
-                return other < this ? this : other;
-            } else {
-                return createInvalid();
-            }
-        }
-    );
-
-    var prototypeMax = deprecate(
-        'moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/',
-        function () {
-            var other = createLocal.apply(null, arguments);
-            if (this.isValid() && other.isValid()) {
-                return other > this ? this : other;
-            } else {
-                return createInvalid();
-            }
-        }
-    );
-
-    // Pick a moment m from moments so that m[fn](other) is true for all
-    // other. This relies on the function fn to be transitive.
-    //
-    // moments should either be an array of moment objects or an array, whose
-    // first element is an array of moment objects.
-    function pickBy(fn, moments) {
-        var res, i;
-        if (moments.length === 1 && isArray(moments[0])) {
-            moments = moments[0];
-        }
-        if (!moments.length) {
-            return createLocal();
-        }
-        res = moments[0];
-        for (i = 1; i < moments.length; ++i) {
-            if (!moments[i].isValid() || moments[i][fn](res)) {
-                res = moments[i];
-            }
-        }
-        return res;
-    }
-
-    // TODO: Use [].sort instead?
-    function min () {
-        var args = [].slice.call(arguments, 0);
-
-        return pickBy('isBefore', args);
-    }
-
-    function max () {
-        var args = [].slice.call(arguments, 0);
-
-        return pickBy('isAfter', args);
-    }
-
-    var now = function () {
-        return Date.now ? Date.now() : +(new Date());
-    };
-
-    var ordering = ['year', 'quarter', 'month', 'week', 'day', 'hour', 'minute', 'second', 'millisecond'];
-
-    function isDurationValid(m) {
-        for (var key in m) {
-            if (!(indexOf.call(ordering, key) !== -1 && (m[key] == null || !isNaN(m[key])))) {
-                return false;
-            }
-        }
-
-        var unitHasDecimal = false;
-        for (var i = 0; i < ordering.length; ++i) {
-            if (m[ordering[i]]) {
-                if (unitHasDecimal) {
-                    return false; // only allow non-integers for smallest unit
+                if (matches === null) {
+                    return null;
                 }
-                if (parseFloat(m[ordering[i]]) !== toInt(m[ordering[i]])) {
-                    unitHasDecimal = true;
+
+                var chunk = matches[matches.length - 1] || [];
+                var parts = (chunk + '').match(chunkOffset) || ['-', 0, 0];
+                var minutes = +(parts[1] * 60) + toInt(parts[2]);
+
+                return minutes === 0 ?
+                    0 :
+                    parts[0] === '+' ? minutes : -minutes;
+            }
+
+            // Return a moment from input, that is local/utc/zone equivalent to model.
+            function cloneWithOffset(input, model) {
+                var res, diff;
+                if (model._isUTC) {
+                    res = model.clone();
+                    diff = (isMoment(input) || isDate(input) ? input.valueOf() : createLocal(input).valueOf()) - res.valueOf();
+                    // Use low-level api, because this fn is low-level api.
+                    res._d.setTime(res._d.valueOf() + diff);
+                    hooks.updateOffset(res, false);
+                    return res;
+                } else {
+                    return createLocal(input).local();
                 }
             }
-        }
 
-        return true;
-    }
-
-    function isValid$1() {
-        return this._isValid;
-    }
-
-    function createInvalid$1() {
-        return createDuration(NaN);
-    }
-
-    function Duration (duration) {
-        var normalizedInput = normalizeObjectUnits(duration),
-            years = normalizedInput.year || 0,
-            quarters = normalizedInput.quarter || 0,
-            months = normalizedInput.month || 0,
-            weeks = normalizedInput.week || 0,
-            days = normalizedInput.day || 0,
-            hours = normalizedInput.hour || 0,
-            minutes = normalizedInput.minute || 0,
-            seconds = normalizedInput.second || 0,
-            milliseconds = normalizedInput.millisecond || 0;
-
-        this._isValid = isDurationValid(normalizedInput);
-
-        // representation for dateAddRemove
-        this._milliseconds = +milliseconds +
-            seconds * 1e3 + // 1000
-            minutes * 6e4 + // 1000 * 60
-            hours * 1000 * 60 * 60; //using 1000 * 60 * 60 instead of 36e5 to avoid floating point rounding errors https://github.com/moment/moment/issues/2978
-        // Because of dateAddRemove treats 24 hours as different from a
-        // day when working around DST, we need to store them separately
-        this._days = +days +
-            weeks * 7;
-        // It is impossible to translate months into days without knowing
-        // which months you are are talking about, so we have to store
-        // it separately.
-        this._months = +months +
-            quarters * 3 +
-            years * 12;
-
-        this._data = {};
-
-        this._locale = getLocale();
-
-        this._bubble();
-    }
-
-    function isDuration (obj) {
-        return obj instanceof Duration;
-    }
-
-    function absRound (number) {
-        if (number < 0) {
-            return Math.round(-1 * number) * -1;
-        } else {
-            return Math.round(number);
-        }
-    }
-
-    // FORMATTING
-
-    function offset (token, separator) {
-        addFormatToken(token, 0, 0, function () {
-            var offset = this.utcOffset();
-            var sign = '+';
-            if (offset < 0) {
-                offset = -offset;
-                sign = '-';
+            function getDateOffset(m) {
+                // On Firefox.24 Date#getTimezoneOffset returns a floating point.
+                // https://github.com/moment/moment/pull/1871
+                return -Math.round(m._d.getTimezoneOffset() / 15) * 15;
             }
-            return sign + zeroFill(~~(offset / 60), 2) + separator + zeroFill(~~(offset) % 60, 2);
-        });
-    }
 
-    offset('Z', ':');
-    offset('ZZ', '');
+            // HOOKS
 
-    // PARSING
+            // This function will be called whenever a moment is mutated.
+            // It is intended to keep the offset in sync with the timezone.
+            hooks.updateOffset = function () {};
 
-    addRegexToken('Z',  matchShortOffset);
-    addRegexToken('ZZ', matchShortOffset);
-    addParseToken(['Z', 'ZZ'], function (input, array, config) {
-        config._useUTC = true;
-        config._tzm = offsetFromString(matchShortOffset, input);
-    });
+            // MOMENTS
 
-    // HELPERS
+            // keepLocalTime = true means only change the timezone, without
+            // affecting the local hour. So 5:31:26 +0300 --[utcOffset(2, true)]-->
+            // 5:31:26 +0200 It is possible that 5:31:26 doesn't exist with offset
+            // +0200, so we adjust the time as needed, to be valid.
+            //
+            // Keeping the time actually adds/subtracts (one hour)
+            // from the actual represented time. That is why we call updateOffset
+            // a second time. In case it wants us to change the offset again
+            // _changeInProgress == true case, then we have to adjust, because
+            // there is no such time in the given timezone.
+            function getSetOffset(input, keepLocalTime, keepMinutes) {
+                var offset = this._offset || 0,
+                    localAdjust;
+                if (!this.isValid()) {
+                    return input != null ? this : NaN;
+                }
+                if (input != null) {
+                    if (typeof input === 'string') {
+                        input = offsetFromString(matchShortOffset, input);
+                        if (input === null) {
+                            return this;
+                        }
+                    } else if (Math.abs(input) < 16 && !keepMinutes) {
+                        input = input * 60;
+                    }
+                    if (!this._isUTC && keepLocalTime) {
+                        localAdjust = getDateOffset(this);
+                    }
+                    this._offset = input;
+                    this._isUTC = true;
+                    if (localAdjust != null) {
+                        this.add(localAdjust, 'm');
+                    }
+                    if (offset !== input) {
+                        if (!keepLocalTime || this._changeInProgress) {
+                            addSubtract(this, createDuration(input - offset, 'm'), 1, false);
+                        } else if (!this._changeInProgress) {
+                            this._changeInProgress = true;
+                            hooks.updateOffset(this, true);
+                            this._changeInProgress = null;
+                        }
+                    }
+                    return this;
+                } else {
+                    return this._isUTC ? offset : getDateOffset(this);
+                }
+            }
 
-    // timezone chunker
-    // '+10:00' > ['10',  '00']
-    // '-1530'  > ['-15', '30']
-    var chunkOffset = /([\+\-]|\d\d)/gi;
+            function getSetZone(input, keepLocalTime) {
+                if (input != null) {
+                    if (typeof input !== 'string') {
+                        input = -input;
+                    }
 
-    function offsetFromString(matcher, string) {
-        var matches = (string || '').match(matcher);
+                    this.utcOffset(input, keepLocalTime);
 
-        if (matches === null) {
-            return null;
-        }
+                    return this;
+                } else {
+                    return -this.utcOffset();
+                }
+            }
 
-        var chunk   = matches[matches.length - 1] || [];
-        var parts   = (chunk + '').match(chunkOffset) || ['-', 0, 0];
-        var minutes = +(parts[1] * 60) + toInt(parts[2]);
+            function setOffsetToUTC(keepLocalTime) {
+                return this.utcOffset(0, keepLocalTime);
+            }
 
-        return minutes === 0 ?
-          0 :
-          parts[0] === '+' ? minutes : -minutes;
-    }
+            function setOffsetToLocal(keepLocalTime) {
+                if (this._isUTC) {
+                    this.utcOffset(0, keepLocalTime);
+                    this._isUTC = false;
 
-    // Return a moment from input, that is local/utc/zone equivalent to model.
-    function cloneWithOffset(input, model) {
-        var res, diff;
-        if (model._isUTC) {
-            res = model.clone();
-            diff = (isMoment(input) || isDate(input) ? input.valueOf() : createLocal(input).valueOf()) - res.valueOf();
-            // Use low-level api, because this fn is low-level api.
-            res._d.setTime(res._d.valueOf() + diff);
-            hooks.updateOffset(res, false);
-            return res;
-        } else {
-            return createLocal(input).local();
-        }
-    }
+                    if (keepLocalTime) {
+                        this.subtract(getDateOffset(this), 'm');
+                    }
+                }
+                return this;
+            }
 
-    function getDateOffset (m) {
-        // On Firefox.24 Date#getTimezoneOffset returns a floating point.
-        // https://github.com/moment/moment/pull/1871
-        return -Math.round(m._d.getTimezoneOffset() / 15) * 15;
-    }
+            function setOffsetToParsedOffset() {
+                if (this._tzm != null) {
+                    this.utcOffset(this._tzm, false, true);
+                } else if (typeof this._i === 'string') {
+                    var tZone = offsetFromString(matchOffset, this._i);
+                    if (tZone != null) {
+                        this.utcOffset(tZone);
+                    } else {
+                        this.utcOffset(0, true);
+                    }
+                }
+                return this;
+            }
 
-    // HOOKS
+            function hasAlignedHourOffset(input) {
+                if (!this.isValid()) {
+                    return false;
+                }
+                input = input ? createLocal(input).utcOffset() : 0;
 
-    // This function will be called whenever a moment is mutated.
-    // It is intended to keep the offset in sync with the timezone.
-    hooks.updateOffset = function () {};
+                return (this.utcOffset() - input) % 60 === 0;
+            }
 
-    // MOMENTS
+            function isDaylightSavingTime() {
+                return (
+                    this.utcOffset() > this.clone().month(0).utcOffset() ||
+                    this.utcOffset() > this.clone().month(5).utcOffset()
+                );
+            }
 
-    // keepLocalTime = true means only change the timezone, without
-    // affecting the local hour. So 5:31:26 +0300 --[utcOffset(2, true)]-->
-    // 5:31:26 +0200 It is possible that 5:31:26 doesn't exist with offset
-    // +0200, so we adjust the time as needed, to be valid.
-    //
-    // Keeping the time actually adds/subtracts (one hour)
-    // from the actual represented time. That is why we call updateOffset
-    // a second time. In case it wants us to change the offset again
-    // _changeInProgress == true case, then we have to adjust, because
-    // there is no such time in the given timezone.
-    function getSetOffset (input, keepLocalTime, keepMinutes) {
-        var offset = this._offset || 0,
-            localAdjust;
-        if (!this.isValid()) {
-            return input != null ? this : NaN;
-        }
-        if (input != null) {
-            if (typeof input === 'string') {
-                input = offsetFromString(matchShortOffset, input);
-                if (input === null) {
+            function isDaylightSavingTimeShifted() {
+                if (!isUndefined(this._isDSTShifted)) {
+                    return this._isDSTShifted;
+                }
+
+                var c = {};
+
+                copyConfig(c, this);
+                c = prepareConfig(c);
+
+                if (c._a) {
+                    var other = c._isUTC ? createUTC(c._a) : createLocal(c._a);
+                    this._isDSTShifted = this.isValid() &&
+                        compareArrays(c._a, other.toArray()) > 0;
+                } else {
+                    this._isDSTShifted = false;
+                }
+
+                return this._isDSTShifted;
+            }
+
+            function isLocal() {
+                return this.isValid() ? !this._isUTC : false;
+            }
+
+            function isUtcOffset() {
+                return this.isValid() ? this._isUTC : false;
+            }
+
+            function isUtc() {
+                return this.isValid() ? this._isUTC && this._offset === 0 : false;
+            }
+
+            // ASP.NET json date format regex
+            var aspNetRegex = /^(\-|\+)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/;
+
+            // from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
+            // somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
+            // and further modified to allow for strings containing both week and day
+            var isoRegex = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
+
+            function createDuration(input, key) {
+                var duration = input,
+                    // matching against regexp is expensive, do it on demand
+                    match = null,
+                    sign,
+                    ret,
+                    diffRes;
+
+                if (isDuration(input)) {
+                    duration = {
+                        ms: input._milliseconds,
+                        d: input._days,
+                        M: input._months
+                    };
+                } else if (isNumber(input)) {
+                    duration = {};
+                    if (key) {
+                        duration[key] = input;
+                    } else {
+                        duration.milliseconds = input;
+                    }
+                } else if (!!(match = aspNetRegex.exec(input))) {
+                    sign = (match[1] === '-') ? -1 : 1;
+                    duration = {
+                        y: 0,
+                        d: toInt(match[DATE]) * sign,
+                        h: toInt(match[HOUR]) * sign,
+                        m: toInt(match[MINUTE]) * sign,
+                        s: toInt(match[SECOND]) * sign,
+                        ms: toInt(absRound(match[MILLISECOND] * 1000)) * sign // the millisecond decimal point is included in the match
+                    };
+                } else if (!!(match = isoRegex.exec(input))) {
+                    sign = (match[1] === '-') ? -1 : (match[1] === '+') ? 1 : 1;
+                    duration = {
+                        y: parseIso(match[2], sign),
+                        M: parseIso(match[3], sign),
+                        w: parseIso(match[4], sign),
+                        d: parseIso(match[5], sign),
+                        h: parseIso(match[6], sign),
+                        m: parseIso(match[7], sign),
+                        s: parseIso(match[8], sign)
+                    };
+                } else if (duration == null) { // checks for null or undefined
+                    duration = {};
+                } else if (typeof duration === 'object' && ('from' in duration || 'to' in duration)) {
+                    diffRes = momentsDifference(createLocal(duration.from), createLocal(duration.to));
+
+                    duration = {};
+                    duration.ms = diffRes.milliseconds;
+                    duration.M = diffRes.months;
+                }
+
+                ret = new Duration(duration);
+
+                if (isDuration(input) && hasOwnProp(input, '_locale')) {
+                    ret._locale = input._locale;
+                }
+
+                return ret;
+            }
+
+            createDuration.fn = Duration.prototype;
+            createDuration.invalid = createInvalid$1;
+
+            function parseIso(inp, sign) {
+                // We'd normally use ~~inp for this, but unfortunately it also
+                // converts floats to ints.
+                // inp may be undefined, so careful calling replace on it.
+                var res = inp && parseFloat(inp.replace(',', '.'));
+                // apply sign while we're at it
+                return (isNaN(res) ? 0 : res) * sign;
+            }
+
+            function positiveMomentsDifference(base, other) {
+                var res = {
+                    milliseconds: 0,
+                    months: 0
+                };
+
+                res.months = other.month() - base.month() +
+                    (other.year() - base.year()) * 12;
+                if (base.clone().add(res.months, 'M').isAfter(other)) {
+                    --res.months;
+                }
+
+                res.milliseconds = +other - +(base.clone().add(res.months, 'M'));
+
+                return res;
+            }
+
+            function momentsDifference(base, other) {
+                var res;
+                if (!(base.isValid() && other.isValid())) {
+                    return {
+                        milliseconds: 0,
+                        months: 0
+                    };
+                }
+
+                other = cloneWithOffset(other, base);
+                if (base.isBefore(other)) {
+                    res = positiveMomentsDifference(base, other);
+                } else {
+                    res = positiveMomentsDifference(other, base);
+                    res.milliseconds = -res.milliseconds;
+                    res.months = -res.months;
+                }
+
+                return res;
+            }
+
+            // TODO: remove 'name' arg after deprecation is removed
+            function createAdder(direction, name) {
+                return function (val, period) {
+                    var dur, tmp;
+                    //invert the arguments, but complain about it
+                    if (period !== null && !isNaN(+period)) {
+                        deprecateSimple(name, 'moment().' + name + '(period, number) is deprecated. Please use moment().' + name + '(number, period). ' +
+                            'See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info.');
+                        tmp = val;
+                        val = period;
+                        period = tmp;
+                    }
+
+                    val = typeof val === 'string' ? +val : val;
+                    dur = createDuration(val, period);
+                    addSubtract(this, dur, direction);
+                    return this;
+                };
+            }
+
+            function addSubtract(mom, duration, isAdding, updateOffset) {
+                var milliseconds = duration._milliseconds,
+                    days = absRound(duration._days),
+                    months = absRound(duration._months);
+
+                if (!mom.isValid()) {
+                    // No op
+                    return;
+                }
+
+                updateOffset = updateOffset == null ? true : updateOffset;
+
+                if (months) {
+                    setMonth(mom, get(mom, 'Month') + months * isAdding);
+                }
+                if (days) {
+                    set$1(mom, 'Date', get(mom, 'Date') + days * isAdding);
+                }
+                if (milliseconds) {
+                    mom._d.setTime(mom._d.valueOf() + milliseconds * isAdding);
+                }
+                if (updateOffset) {
+                    hooks.updateOffset(mom, days || months);
+                }
+            }
+
+            var add = createAdder(1, 'add');
+            var subtract = createAdder(-1, 'subtract');
+
+            function getCalendarFormat(myMoment, now) {
+                var diff = myMoment.diff(now, 'days', true);
+                return diff < -6 ? 'sameElse' :
+                    diff < -1 ? 'lastWeek' :
+                    diff < 0 ? 'lastDay' :
+                    diff < 1 ? 'sameDay' :
+                    diff < 2 ? 'nextDay' :
+                    diff < 7 ? 'nextWeek' : 'sameElse';
+            }
+
+            function calendar$1(time, formats) {
+                // We want to compare the start of today, vs this.
+                // Getting start-of-today depends on whether we're local/utc/offset or not.
+                var now = time || createLocal(),
+                    sod = cloneWithOffset(now, this).startOf('day'),
+                    format = hooks.calendarFormat(this, sod) || 'sameElse';
+
+                var output = formats && (isFunction(formats[format]) ? formats[format].call(this, now) : formats[format]);
+
+                return this.format(output || this.localeData().calendar(format, this, createLocal(now)));
+            }
+
+            function clone() {
+                return new Moment(this);
+            }
+
+            function isAfter(input, units) {
+                var localInput = isMoment(input) ? input : createLocal(input);
+                if (!(this.isValid() && localInput.isValid())) {
+                    return false;
+                }
+                units = normalizeUnits(!isUndefined(units) ? units : 'millisecond');
+                if (units === 'millisecond') {
+                    return this.valueOf() > localInput.valueOf();
+                } else {
+                    return localInput.valueOf() < this.clone().startOf(units).valueOf();
+                }
+            }
+
+            function isBefore(input, units) {
+                var localInput = isMoment(input) ? input : createLocal(input);
+                if (!(this.isValid() && localInput.isValid())) {
+                    return false;
+                }
+                units = normalizeUnits(!isUndefined(units) ? units : 'millisecond');
+                if (units === 'millisecond') {
+                    return this.valueOf() < localInput.valueOf();
+                } else {
+                    return this.clone().endOf(units).valueOf() < localInput.valueOf();
+                }
+            }
+
+            function isBetween(from, to, units, inclusivity) {
+                inclusivity = inclusivity || '()';
+                return (inclusivity[0] === '(' ? this.isAfter(from, units) : !this.isBefore(from, units)) &&
+                    (inclusivity[1] === ')' ? this.isBefore(to, units) : !this.isAfter(to, units));
+            }
+
+            function isSame(input, units) {
+                var localInput = isMoment(input) ? input : createLocal(input),
+                    inputMs;
+                if (!(this.isValid() && localInput.isValid())) {
+                    return false;
+                }
+                units = normalizeUnits(units || 'millisecond');
+                if (units === 'millisecond') {
+                    return this.valueOf() === localInput.valueOf();
+                } else {
+                    inputMs = localInput.valueOf();
+                    return this.clone().startOf(units).valueOf() <= inputMs && inputMs <= this.clone().endOf(units).valueOf();
+                }
+            }
+
+            function isSameOrAfter(input, units) {
+                return this.isSame(input, units) || this.isAfter(input, units);
+            }
+
+            function isSameOrBefore(input, units) {
+                return this.isSame(input, units) || this.isBefore(input, units);
+            }
+
+            function diff(input, units, asFloat) {
+                var that,
+                    zoneDelta,
+                    output;
+
+                if (!this.isValid()) {
+                    return NaN;
+                }
+
+                that = cloneWithOffset(input, this);
+
+                if (!that.isValid()) {
+                    return NaN;
+                }
+
+                zoneDelta = (that.utcOffset() - this.utcOffset()) * 6e4;
+
+                units = normalizeUnits(units);
+
+                switch (units) {
+                    case 'year':
+                        output = monthDiff(this, that) / 12;
+                        break;
+                    case 'month':
+                        output = monthDiff(this, that);
+                        break;
+                    case 'quarter':
+                        output = monthDiff(this, that) / 3;
+                        break;
+                    case 'second':
+                        output = (this - that) / 1e3;
+                        break; // 1000
+                    case 'minute':
+                        output = (this - that) / 6e4;
+                        break; // 1000 * 60
+                    case 'hour':
+                        output = (this - that) / 36e5;
+                        break; // 1000 * 60 * 60
+                    case 'day':
+                        output = (this - that - zoneDelta) / 864e5;
+                        break; // 1000 * 60 * 60 * 24, negate dst
+                    case 'week':
+                        output = (this - that - zoneDelta) / 6048e5;
+                        break; // 1000 * 60 * 60 * 24 * 7, negate dst
+                    default:
+                        output = this - that;
+                }
+
+                return asFloat ? output : absFloor(output);
+            }
+
+            function monthDiff(a, b) {
+                // difference in months
+                var wholeMonthDiff = ((b.year() - a.year()) * 12) + (b.month() - a.month()),
+                    // b is in (anchor - 1 month, anchor + 1 month)
+                    anchor = a.clone().add(wholeMonthDiff, 'months'),
+                    anchor2, adjust;
+
+                if (b - anchor < 0) {
+                    anchor2 = a.clone().add(wholeMonthDiff - 1, 'months');
+                    // linear across the month
+                    adjust = (b - anchor) / (anchor - anchor2);
+                } else {
+                    anchor2 = a.clone().add(wholeMonthDiff + 1, 'months');
+                    // linear across the month
+                    adjust = (b - anchor) / (anchor2 - anchor);
+                }
+
+                //check for negative zero, return zero if negative zero
+                return -(wholeMonthDiff + adjust) || 0;
+            }
+
+            hooks.defaultFormat = 'YYYY-MM-DDTHH:mm:ssZ';
+            hooks.defaultFormatUtc = 'YYYY-MM-DDTHH:mm:ss[Z]';
+
+            function toString() {
+                return this.clone().locale('en').format('ddd MMM DD YYYY HH:mm:ss [GMT]ZZ');
+            }
+
+            function toISOString(keepOffset) {
+                if (!this.isValid()) {
+                    return null;
+                }
+                var utc = keepOffset !== true;
+                var m = utc ? this.clone().utc() : this;
+                if (m.year() < 0 || m.year() > 9999) {
+                    return formatMoment(m, utc ? 'YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYYYY-MM-DD[T]HH:mm:ss.SSSZ');
+                }
+                if (isFunction(Date.prototype.toISOString)) {
+                    // native implementation is ~50x faster, use it when we can
+                    if (utc) {
+                        return this.toDate().toISOString();
+                    } else {
+                        return new Date(this.valueOf() + this.utcOffset() * 60 * 1000).toISOString().replace('Z', formatMoment(m, 'Z'));
+                    }
+                }
+                return formatMoment(m, utc ? 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYY-MM-DD[T]HH:mm:ss.SSSZ');
+            }
+
+            /**
+             * Return a human readable representation of a moment that can
+             * also be evaluated to get a new moment which is the same
+             *
+             * @link https://nodejs.org/dist/latest/docs/api/util.html#util_custom_inspect_function_on_objects
+             */
+            function inspect() {
+                if (!this.isValid()) {
+                    return 'moment.invalid(/* ' + this._i + ' */)';
+                }
+                var func = 'moment';
+                var zone = '';
+                if (!this.isLocal()) {
+                    func = this.utcOffset() === 0 ? 'moment.utc' : 'moment.parseZone';
+                    zone = 'Z';
+                }
+                var prefix = '[' + func + '("]';
+                var year = (0 <= this.year() && this.year() <= 9999) ? 'YYYY' : 'YYYYYY';
+                var datetime = '-MM-DD[T]HH:mm:ss.SSS';
+                var suffix = zone + '[")]';
+
+                return this.format(prefix + year + datetime + suffix);
+            }
+
+            function format(inputString) {
+                if (!inputString) {
+                    inputString = this.isUtc() ? hooks.defaultFormatUtc : hooks.defaultFormat;
+                }
+                var output = formatMoment(this, inputString);
+                return this.localeData().postformat(output);
+            }
+
+            function from(time, withoutSuffix) {
+                if (this.isValid() &&
+                    ((isMoment(time) && time.isValid()) ||
+                        createLocal(time).isValid())) {
+                    return createDuration({
+                        to: this,
+                        from: time
+                    }).locale(this.locale()).humanize(!withoutSuffix);
+                } else {
+                    return this.localeData().invalidDate();
+                }
+            }
+
+            function fromNow(withoutSuffix) {
+                return this.from(createLocal(), withoutSuffix);
+            }
+
+            function to(time, withoutSuffix) {
+                if (this.isValid() &&
+                    ((isMoment(time) && time.isValid()) ||
+                        createLocal(time).isValid())) {
+                    return createDuration({
+                        from: this,
+                        to: time
+                    }).locale(this.locale()).humanize(!withoutSuffix);
+                } else {
+                    return this.localeData().invalidDate();
+                }
+            }
+
+            function toNow(withoutSuffix) {
+                return this.to(createLocal(), withoutSuffix);
+            }
+
+            // If passed a locale key, it will set the locale for this
+            // instance.  Otherwise, it will return the locale configuration
+            // variables for this instance.
+            function locale(key) {
+                var newLocaleData;
+
+                if (key === undefined) {
+                    return this._locale._abbr;
+                } else {
+                    newLocaleData = getLocale(key);
+                    if (newLocaleData != null) {
+                        this._locale = newLocaleData;
+                    }
                     return this;
                 }
-            } else if (Math.abs(input) < 16 && !keepMinutes) {
-                input = input * 60;
             }
-            if (!this._isUTC && keepLocalTime) {
-                localAdjust = getDateOffset(this);
+
+            var lang = deprecate(
+                'moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.',
+                function (key) {
+                    if (key === undefined) {
+                        return this.localeData();
+                    } else {
+                        return this.locale(key);
+                    }
+                }
+            );
+
+            function localeData() {
+                return this._locale;
             }
-            this._offset = input;
-            this._isUTC = true;
-            if (localAdjust != null) {
-                this.add(localAdjust, 'm');
+
+            function startOf(units) {
+                units = normalizeUnits(units);
+                // the following switch intentionally omits break keywords
+                // to utilize falling through the cases.
+                switch (units) {
+                    case 'year':
+                        this.month(0);
+                        /* falls through */
+                    case 'quarter':
+                    case 'month':
+                        this.date(1);
+                        /* falls through */
+                    case 'week':
+                    case 'isoWeek':
+                    case 'day':
+                    case 'date':
+                        this.hours(0);
+                        /* falls through */
+                    case 'hour':
+                        this.minutes(0);
+                        /* falls through */
+                    case 'minute':
+                        this.seconds(0);
+                        /* falls through */
+                    case 'second':
+                        this.milliseconds(0);
+                }
+
+                // weeks are a special case
+                if (units === 'week') {
+                    this.weekday(0);
+                }
+                if (units === 'isoWeek') {
+                    this.isoWeekday(1);
+                }
+
+                // quarters are also special
+                if (units === 'quarter') {
+                    this.month(Math.floor(this.month() / 3) * 3);
+                }
+
+                return this;
             }
-            if (offset !== input) {
-                if (!keepLocalTime || this._changeInProgress) {
-                    addSubtract(this, createDuration(input - offset, 'm'), 1, false);
-                } else if (!this._changeInProgress) {
-                    this._changeInProgress = true;
-                    hooks.updateOffset(this, true);
-                    this._changeInProgress = null;
+
+            function endOf(units) {
+                units = normalizeUnits(units);
+                if (units === undefined || units === 'millisecond') {
+                    return this;
+                }
+
+                // 'date' is an alias for 'day', so it should be considered as such.
+                if (units === 'date') {
+                    units = 'day';
+                }
+
+                return this.startOf(units).add(1, (units === 'isoWeek' ? 'week' : units)).subtract(1, 'ms');
+            }
+
+            function valueOf() {
+                return this._d.valueOf() - ((this._offset || 0) * 60000);
+            }
+
+            function unix() {
+                return Math.floor(this.valueOf() / 1000);
+            }
+
+            function toDate() {
+                return new Date(this.valueOf());
+            }
+
+            function toArray() {
+                var m = this;
+                return [m.year(), m.month(), m.date(), m.hour(), m.minute(), m.second(), m.millisecond()];
+            }
+
+            function toObject() {
+                var m = this;
+                return {
+                    years: m.year(),
+                    months: m.month(),
+                    date: m.date(),
+                    hours: m.hours(),
+                    minutes: m.minutes(),
+                    seconds: m.seconds(),
+                    milliseconds: m.milliseconds()
+                };
+            }
+
+            function toJSON() {
+                // new Date(NaN).toJSON() === null
+                return this.isValid() ? this.toISOString() : null;
+            }
+
+            function isValid$2() {
+                return isValid(this);
+            }
+
+            function parsingFlags() {
+                return extend({}, getParsingFlags(this));
+            }
+
+            function invalidAt() {
+                return getParsingFlags(this).overflow;
+            }
+
+            function creationData() {
+                return {
+                    input: this._i,
+                    format: this._f,
+                    locale: this._locale,
+                    isUTC: this._isUTC,
+                    strict: this._strict
+                };
+            }
+
+            // FORMATTING
+
+            addFormatToken(0, ['gg', 2], 0, function () {
+                return this.weekYear() % 100;
+            });
+
+            addFormatToken(0, ['GG', 2], 0, function () {
+                return this.isoWeekYear() % 100;
+            });
+
+            function addWeekYearFormatToken(token, getter) {
+                addFormatToken(0, [token, token.length], 0, getter);
+            }
+
+            addWeekYearFormatToken('gggg', 'weekYear');
+            addWeekYearFormatToken('ggggg', 'weekYear');
+            addWeekYearFormatToken('GGGG', 'isoWeekYear');
+            addWeekYearFormatToken('GGGGG', 'isoWeekYear');
+
+            // ALIASES
+
+            addUnitAlias('weekYear', 'gg');
+            addUnitAlias('isoWeekYear', 'GG');
+
+            // PRIORITY
+
+            addUnitPriority('weekYear', 1);
+            addUnitPriority('isoWeekYear', 1);
+
+
+            // PARSING
+
+            addRegexToken('G', matchSigned);
+            addRegexToken('g', matchSigned);
+            addRegexToken('GG', match1to2, match2);
+            addRegexToken('gg', match1to2, match2);
+            addRegexToken('GGGG', match1to4, match4);
+            addRegexToken('gggg', match1to4, match4);
+            addRegexToken('GGGGG', match1to6, match6);
+            addRegexToken('ggggg', match1to6, match6);
+
+            addWeekParseToken(['gggg', 'ggggg', 'GGGG', 'GGGGG'], function (input, week, config, token) {
+                week[token.substr(0, 2)] = toInt(input);
+            });
+
+            addWeekParseToken(['gg', 'GG'], function (input, week, config, token) {
+                week[token] = hooks.parseTwoDigitYear(input);
+            });
+
+            // MOMENTS
+
+            function getSetWeekYear(input) {
+                return getSetWeekYearHelper.call(this,
+                    input,
+                    this.week(),
+                    this.weekday(),
+                    this.localeData()._week.dow,
+                    this.localeData()._week.doy);
+            }
+
+            function getSetISOWeekYear(input) {
+                return getSetWeekYearHelper.call(this,
+                    input, this.isoWeek(), this.isoWeekday(), 1, 4);
+            }
+
+            function getISOWeeksInYear() {
+                return weeksInYear(this.year(), 1, 4);
+            }
+
+            function getWeeksInYear() {
+                var weekInfo = this.localeData()._week;
+                return weeksInYear(this.year(), weekInfo.dow, weekInfo.doy);
+            }
+
+            function getSetWeekYearHelper(input, week, weekday, dow, doy) {
+                var weeksTarget;
+                if (input == null) {
+                    return weekOfYear(this, dow, doy).year;
+                } else {
+                    weeksTarget = weeksInYear(input, dow, doy);
+                    if (week > weeksTarget) {
+                        week = weeksTarget;
+                    }
+                    return setWeekAll.call(this, input, week, weekday, dow, doy);
                 }
             }
-            return this;
-        } else {
-            return this._isUTC ? offset : getDateOffset(this);
-        }
-    }
 
-    function getSetZone (input, keepLocalTime) {
-        if (input != null) {
-            if (typeof input !== 'string') {
-                input = -input;
+            function setWeekAll(weekYear, week, weekday, dow, doy) {
+                var dayOfYearData = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy),
+                    date = createUTCDate(dayOfYearData.year, 0, dayOfYearData.dayOfYear);
+
+                this.year(date.getUTCFullYear());
+                this.month(date.getUTCMonth());
+                this.date(date.getUTCDate());
+                return this;
             }
 
-            this.utcOffset(input, keepLocalTime);
+            // FORMATTING
 
-            return this;
-        } else {
-            return -this.utcOffset();
-        }
-    }
+            addFormatToken('Q', 0, 'Qo', 'quarter');
 
-    function setOffsetToUTC (keepLocalTime) {
-        return this.utcOffset(0, keepLocalTime);
-    }
+            // ALIASES
 
-    function setOffsetToLocal (keepLocalTime) {
-        if (this._isUTC) {
-            this.utcOffset(0, keepLocalTime);
-            this._isUTC = false;
+            addUnitAlias('quarter', 'Q');
 
-            if (keepLocalTime) {
-                this.subtract(getDateOffset(this), 'm');
+            // PRIORITY
+
+            addUnitPriority('quarter', 7);
+
+            // PARSING
+
+            addRegexToken('Q', match1);
+            addParseToken('Q', function (input, array) {
+                array[MONTH] = (toInt(input) - 1) * 3;
+            });
+
+            // MOMENTS
+
+            function getSetQuarter(input) {
+                return input == null ? Math.ceil((this.month() + 1) / 3) : this.month((input - 1) * 3 + this.month() % 3);
             }
-        }
-        return this;
-    }
 
-    function setOffsetToParsedOffset () {
-        if (this._tzm != null) {
-            this.utcOffset(this._tzm, false, true);
-        } else if (typeof this._i === 'string') {
-            var tZone = offsetFromString(matchOffset, this._i);
-            if (tZone != null) {
-                this.utcOffset(tZone);
+            // FORMATTING
+
+            addFormatToken('D', ['DD', 2], 'Do', 'date');
+
+            // ALIASES
+
+            addUnitAlias('date', 'D');
+
+            // PRIORITY
+            addUnitPriority('date', 9);
+
+            // PARSING
+
+            addRegexToken('D', match1to2);
+            addRegexToken('DD', match1to2, match2);
+            addRegexToken('Do', function (isStrict, locale) {
+                // TODO: Remove "ordinalParse" fallback in next major release.
+                return isStrict ?
+                    (locale._dayOfMonthOrdinalParse || locale._ordinalParse) :
+                    locale._dayOfMonthOrdinalParseLenient;
+            });
+
+            addParseToken(['D', 'DD'], DATE);
+            addParseToken('Do', function (input, array) {
+                array[DATE] = toInt(input.match(match1to2)[0]);
+            });
+
+            // MOMENTS
+
+            var getSetDayOfMonth = makeGetSet('Date', true);
+
+            // FORMATTING
+
+            addFormatToken('DDD', ['DDDD', 3], 'DDDo', 'dayOfYear');
+
+            // ALIASES
+
+            addUnitAlias('dayOfYear', 'DDD');
+
+            // PRIORITY
+            addUnitPriority('dayOfYear', 4);
+
+            // PARSING
+
+            addRegexToken('DDD', match1to3);
+            addRegexToken('DDDD', match3);
+            addParseToken(['DDD', 'DDDD'], function (input, array, config) {
+                config._dayOfYear = toInt(input);
+            });
+
+            // HELPERS
+
+            // MOMENTS
+
+            function getSetDayOfYear(input) {
+                var dayOfYear = Math.round((this.clone().startOf('day') - this.clone().startOf('year')) / 864e5) + 1;
+                return input == null ? dayOfYear : this.add((input - dayOfYear), 'd');
             }
-            else {
-                this.utcOffset(0, true);
+
+            // FORMATTING
+
+            addFormatToken('m', ['mm', 2], 0, 'minute');
+
+            // ALIASES
+
+            addUnitAlias('minute', 'm');
+
+            // PRIORITY
+
+            addUnitPriority('minute', 14);
+
+            // PARSING
+
+            addRegexToken('m', match1to2);
+            addRegexToken('mm', match1to2, match2);
+            addParseToken(['m', 'mm'], MINUTE);
+
+            // MOMENTS
+
+            var getSetMinute = makeGetSet('Minutes', false);
+
+            // FORMATTING
+
+            addFormatToken('s', ['ss', 2], 0, 'second');
+
+            // ALIASES
+
+            addUnitAlias('second', 's');
+
+            // PRIORITY
+
+            addUnitPriority('second', 15);
+
+            // PARSING
+
+            addRegexToken('s', match1to2);
+            addRegexToken('ss', match1to2, match2);
+            addParseToken(['s', 'ss'], SECOND);
+
+            // MOMENTS
+
+            var getSetSecond = makeGetSet('Seconds', false);
+
+            // FORMATTING
+
+            addFormatToken('S', 0, 0, function () {
+                return ~~(this.millisecond() / 100);
+            });
+
+            addFormatToken(0, ['SS', 2], 0, function () {
+                return ~~(this.millisecond() / 10);
+            });
+
+            addFormatToken(0, ['SSS', 3], 0, 'millisecond');
+            addFormatToken(0, ['SSSS', 4], 0, function () {
+                return this.millisecond() * 10;
+            });
+            addFormatToken(0, ['SSSSS', 5], 0, function () {
+                return this.millisecond() * 100;
+            });
+            addFormatToken(0, ['SSSSSS', 6], 0, function () {
+                return this.millisecond() * 1000;
+            });
+            addFormatToken(0, ['SSSSSSS', 7], 0, function () {
+                return this.millisecond() * 10000;
+            });
+            addFormatToken(0, ['SSSSSSSS', 8], 0, function () {
+                return this.millisecond() * 100000;
+            });
+            addFormatToken(0, ['SSSSSSSSS', 9], 0, function () {
+                return this.millisecond() * 1000000;
+            });
+
+
+            // ALIASES
+
+            addUnitAlias('millisecond', 'ms');
+
+            // PRIORITY
+
+            addUnitPriority('millisecond', 16);
+
+            // PARSING
+
+            addRegexToken('S', match1to3, match1);
+            addRegexToken('SS', match1to3, match2);
+            addRegexToken('SSS', match1to3, match3);
+
+            var token;
+            for (token = 'SSSS'; token.length <= 9; token += 'S') {
+                addRegexToken(token, matchUnsigned);
             }
-        }
-        return this;
-    }
 
-    function hasAlignedHourOffset (input) {
-        if (!this.isValid()) {
-            return false;
-        }
-        input = input ? createLocal(input).utcOffset() : 0;
+            function parseMs(input, array) {
+                array[MILLISECOND] = toInt(('0.' + input) * 1000);
+            }
 
-        return (this.utcOffset() - input) % 60 === 0;
-    }
+            for (token = 'S'; token.length <= 9; token += 'S') {
+                addParseToken(token, parseMs);
+            }
+            // MOMENTS
 
-    function isDaylightSavingTime () {
-        return (
-            this.utcOffset() > this.clone().month(0).utcOffset() ||
-            this.utcOffset() > this.clone().month(5).utcOffset()
-        );
-    }
+            var getSetMillisecond = makeGetSet('Milliseconds', false);
 
-    function isDaylightSavingTimeShifted () {
-        if (!isUndefined(this._isDSTShifted)) {
-            return this._isDSTShifted;
-        }
+            // FORMATTING
 
-        var c = {};
+            addFormatToken('z', 0, 0, 'zoneAbbr');
+            addFormatToken('zz', 0, 0, 'zoneName');
 
-        copyConfig(c, this);
-        c = prepareConfig(c);
+            // MOMENTS
 
-        if (c._a) {
-            var other = c._isUTC ? createUTC(c._a) : createLocal(c._a);
-            this._isDSTShifted = this.isValid() &&
-                compareArrays(c._a, other.toArray()) > 0;
-        } else {
-            this._isDSTShifted = false;
-        }
+            function getZoneAbbr() {
+                return this._isUTC ? 'UTC' : '';
+            }
 
-        return this._isDSTShifted;
-    }
+            function getZoneName() {
+                return this._isUTC ? 'Coordinated Universal Time' : '';
+            }
 
-    function isLocal () {
-        return this.isValid() ? !this._isUTC : false;
-    }
+            var proto = Moment.prototype;
 
-    function isUtcOffset () {
-        return this.isValid() ? this._isUTC : false;
-    }
+            proto.add = add;
+            proto.calendar = calendar$1;
+            proto.clone = clone;
+            proto.diff = diff;
+            proto.endOf = endOf;
+            proto.format = format;
+            proto.from = from;
+            proto.fromNow = fromNow;
+            proto.to = to;
+            proto.toNow = toNow;
+            proto.get = stringGet;
+            proto.invalidAt = invalidAt;
+            proto.isAfter = isAfter;
+            proto.isBefore = isBefore;
+            proto.isBetween = isBetween;
+            proto.isSame = isSame;
+            proto.isSameOrAfter = isSameOrAfter;
+            proto.isSameOrBefore = isSameOrBefore;
+            proto.isValid = isValid$2;
+            proto.lang = lang;
+            proto.locale = locale;
+            proto.localeData = localeData;
+            proto.max = prototypeMax;
+            proto.min = prototypeMin;
+            proto.parsingFlags = parsingFlags;
+            proto.set = stringSet;
+            proto.startOf = startOf;
+            proto.subtract = subtract;
+            proto.toArray = toArray;
+            proto.toObject = toObject;
+            proto.toDate = toDate;
+            proto.toISOString = toISOString;
+            proto.inspect = inspect;
+            proto.toJSON = toJSON;
+            proto.toString = toString;
+            proto.unix = unix;
+            proto.valueOf = valueOf;
+            proto.creationData = creationData;
+            proto.year = getSetYear;
+            proto.isLeapYear = getIsLeapYear;
+            proto.weekYear = getSetWeekYear;
+            proto.isoWeekYear = getSetISOWeekYear;
+            proto.quarter = proto.quarters = getSetQuarter;
+            proto.month = getSetMonth;
+            proto.daysInMonth = getDaysInMonth;
+            proto.week = proto.weeks = getSetWeek;
+            proto.isoWeek = proto.isoWeeks = getSetISOWeek;
+            proto.weeksInYear = getWeeksInYear;
+            proto.isoWeeksInYear = getISOWeeksInYear;
+            proto.date = getSetDayOfMonth;
+            proto.day = proto.days = getSetDayOfWeek;
+            proto.weekday = getSetLocaleDayOfWeek;
+            proto.isoWeekday = getSetISODayOfWeek;
+            proto.dayOfYear = getSetDayOfYear;
+            proto.hour = proto.hours = getSetHour;
+            proto.minute = proto.minutes = getSetMinute;
+            proto.second = proto.seconds = getSetSecond;
+            proto.millisecond = proto.milliseconds = getSetMillisecond;
+            proto.utcOffset = getSetOffset;
+            proto.utc = setOffsetToUTC;
+            proto.local = setOffsetToLocal;
+            proto.parseZone = setOffsetToParsedOffset;
+            proto.hasAlignedHourOffset = hasAlignedHourOffset;
+            proto.isDST = isDaylightSavingTime;
+            proto.isLocal = isLocal;
+            proto.isUtcOffset = isUtcOffset;
+            proto.isUtc = isUtc;
+            proto.isUTC = isUtc;
+            proto.zoneAbbr = getZoneAbbr;
+            proto.zoneName = getZoneName;
+            proto.dates = deprecate('dates accessor is deprecated. Use date instead.', getSetDayOfMonth);
+            proto.months = deprecate('months accessor is deprecated. Use month instead', getSetMonth);
+            proto.years = deprecate('years accessor is deprecated. Use year instead', getSetYear);
+            proto.zone = deprecate('moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/', getSetZone);
+            proto.isDSTShifted = deprecate('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', isDaylightSavingTimeShifted);
 
-    function isUtc () {
-        return this.isValid() ? this._isUTC && this._offset === 0 : false;
-    }
+            function createUnix(input) {
+                return createLocal(input * 1000);
+            }
 
-    // ASP.NET json date format regex
-    var aspNetRegex = /^(\-|\+)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/;
+            function createInZone() {
+                return createLocal.apply(null, arguments).parseZone();
+            }
 
-    // from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
-    // somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
-    // and further modified to allow for strings containing both week and day
-    var isoRegex = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
+            function preParsePostFormat(string) {
+                return string;
+            }
 
-    function createDuration (input, key) {
-        var duration = input,
-            // matching against regexp is expensive, do it on demand
-            match = null,
-            sign,
-            ret,
-            diffRes;
+            var proto$1 = Locale.prototype;
 
-        if (isDuration(input)) {
-            duration = {
-                ms : input._milliseconds,
-                d  : input._days,
-                M  : input._months
+            proto$1.calendar = calendar;
+            proto$1.longDateFormat = longDateFormat;
+            proto$1.invalidDate = invalidDate;
+            proto$1.ordinal = ordinal;
+            proto$1.preparse = preParsePostFormat;
+            proto$1.postformat = preParsePostFormat;
+            proto$1.relativeTime = relativeTime;
+            proto$1.pastFuture = pastFuture;
+            proto$1.set = set;
+
+            proto$1.months = localeMonths;
+            proto$1.monthsShort = localeMonthsShort;
+            proto$1.monthsParse = localeMonthsParse;
+            proto$1.monthsRegex = monthsRegex;
+            proto$1.monthsShortRegex = monthsShortRegex;
+            proto$1.week = localeWeek;
+            proto$1.firstDayOfYear = localeFirstDayOfYear;
+            proto$1.firstDayOfWeek = localeFirstDayOfWeek;
+
+            proto$1.weekdays = localeWeekdays;
+            proto$1.weekdaysMin = localeWeekdaysMin;
+            proto$1.weekdaysShort = localeWeekdaysShort;
+            proto$1.weekdaysParse = localeWeekdaysParse;
+
+            proto$1.weekdaysRegex = weekdaysRegex;
+            proto$1.weekdaysShortRegex = weekdaysShortRegex;
+            proto$1.weekdaysMinRegex = weekdaysMinRegex;
+
+            proto$1.isPM = localeIsPM;
+            proto$1.meridiem = localeMeridiem;
+
+            function get$1(format, index, field, setter) {
+                var locale = getLocale();
+                var utc = createUTC().set(setter, index);
+                return locale[field](utc, format);
+            }
+
+            function listMonthsImpl(format, index, field) {
+                if (isNumber(format)) {
+                    index = format;
+                    format = undefined;
+                }
+
+                format = format || '';
+
+                if (index != null) {
+                    return get$1(format, index, field, 'month');
+                }
+
+                var i;
+                var out = [];
+                for (i = 0; i < 12; i++) {
+                    out[i] = get$1(format, i, field, 'month');
+                }
+                return out;
+            }
+
+            // ()
+            // (5)
+            // (fmt, 5)
+            // (fmt)
+            // (true)
+            // (true, 5)
+            // (true, fmt, 5)
+            // (true, fmt)
+            function listWeekdaysImpl(localeSorted, format, index, field) {
+                if (typeof localeSorted === 'boolean') {
+                    if (isNumber(format)) {
+                        index = format;
+                        format = undefined;
+                    }
+
+                    format = format || '';
+                } else {
+                    format = localeSorted;
+                    index = format;
+                    localeSorted = false;
+
+                    if (isNumber(format)) {
+                        index = format;
+                        format = undefined;
+                    }
+
+                    format = format || '';
+                }
+
+                var locale = getLocale(),
+                    shift = localeSorted ? locale._week.dow : 0;
+
+                if (index != null) {
+                    return get$1(format, (index + shift) % 7, field, 'day');
+                }
+
+                var i;
+                var out = [];
+                for (i = 0; i < 7; i++) {
+                    out[i] = get$1(format, (i + shift) % 7, field, 'day');
+                }
+                return out;
+            }
+
+            function listMonths(format, index) {
+                return listMonthsImpl(format, index, 'months');
+            }
+
+            function listMonthsShort(format, index) {
+                return listMonthsImpl(format, index, 'monthsShort');
+            }
+
+            function listWeekdays(localeSorted, format, index) {
+                return listWeekdaysImpl(localeSorted, format, index, 'weekdays');
+            }
+
+            function listWeekdaysShort(localeSorted, format, index) {
+                return listWeekdaysImpl(localeSorted, format, index, 'weekdaysShort');
+            }
+
+            function listWeekdaysMin(localeSorted, format, index) {
+                return listWeekdaysImpl(localeSorted, format, index, 'weekdaysMin');
+            }
+
+            getSetGlobalLocale('en', {
+                dayOfMonthOrdinalParse: /\d{1,2}(th|st|nd|rd)/,
+                ordinal: function (number) {
+                    var b = number % 10,
+                        output = (toInt(number % 100 / 10) === 1) ? 'th' :
+                        (b === 1) ? 'st' :
+                        (b === 2) ? 'nd' :
+                        (b === 3) ? 'rd' : 'th';
+                    return number + output;
+                }
+            });
+
+            // Side effect imports
+
+            hooks.lang = deprecate('moment.lang is deprecated. Use moment.locale instead.', getSetGlobalLocale);
+            hooks.langData = deprecate('moment.langData is deprecated. Use moment.localeData instead.', getLocale);
+
+            var mathAbs = Math.abs;
+
+            function abs() {
+                var data = this._data;
+
+                this._milliseconds = mathAbs(this._milliseconds);
+                this._days = mathAbs(this._days);
+                this._months = mathAbs(this._months);
+
+                data.milliseconds = mathAbs(data.milliseconds);
+                data.seconds = mathAbs(data.seconds);
+                data.minutes = mathAbs(data.minutes);
+                data.hours = mathAbs(data.hours);
+                data.months = mathAbs(data.months);
+                data.years = mathAbs(data.years);
+
+                return this;
+            }
+
+            function addSubtract$1(duration, input, value, direction) {
+                var other = createDuration(input, value);
+
+                duration._milliseconds += direction * other._milliseconds;
+                duration._days += direction * other._days;
+                duration._months += direction * other._months;
+
+                return duration._bubble();
+            }
+
+            // supports only 2.0-style add(1, 's') or add(duration)
+            function add$1(input, value) {
+                return addSubtract$1(this, input, value, 1);
+            }
+
+            // supports only 2.0-style subtract(1, 's') or subtract(duration)
+            function subtract$1(input, value) {
+                return addSubtract$1(this, input, value, -1);
+            }
+
+            function absCeil(number) {
+                if (number < 0) {
+                    return Math.floor(number);
+                } else {
+                    return Math.ceil(number);
+                }
+            }
+
+            function bubble() {
+                var milliseconds = this._milliseconds;
+                var days = this._days;
+                var months = this._months;
+                var data = this._data;
+                var seconds, minutes, hours, years, monthsFromDays;
+
+                // if we have a mix of positive and negative values, bubble down first
+                // check: https://github.com/moment/moment/issues/2166
+                if (!((milliseconds >= 0 && days >= 0 && months >= 0) ||
+                        (milliseconds <= 0 && days <= 0 && months <= 0))) {
+                    milliseconds += absCeil(monthsToDays(months) + days) * 864e5;
+                    days = 0;
+                    months = 0;
+                }
+
+                // The following code bubbles up values, see the tests for
+                // examples of what that means.
+                data.milliseconds = milliseconds % 1000;
+
+                seconds = absFloor(milliseconds / 1000);
+                data.seconds = seconds % 60;
+
+                minutes = absFloor(seconds / 60);
+                data.minutes = minutes % 60;
+
+                hours = absFloor(minutes / 60);
+                data.hours = hours % 24;
+
+                days += absFloor(hours / 24);
+
+                // convert days to months
+                monthsFromDays = absFloor(daysToMonths(days));
+                months += monthsFromDays;
+                days -= absCeil(monthsToDays(monthsFromDays));
+
+                // 12 months -> 1 year
+                years = absFloor(months / 12);
+                months %= 12;
+
+                data.days = days;
+                data.months = months;
+                data.years = years;
+
+                return this;
+            }
+
+            function daysToMonths(days) {
+                // 400 years have 146097 days (taking into account leap year rules)
+                // 400 years have 12 months === 4800
+                return days * 4800 / 146097;
+            }
+
+            function monthsToDays(months) {
+                // the reverse of daysToMonths
+                return months * 146097 / 4800;
+            }
+
+            function as(units) {
+                if (!this.isValid()) {
+                    return NaN;
+                }
+                var days;
+                var months;
+                var milliseconds = this._milliseconds;
+
+                units = normalizeUnits(units);
+
+                if (units === 'month' || units === 'year') {
+                    days = this._days + milliseconds / 864e5;
+                    months = this._months + daysToMonths(days);
+                    return units === 'month' ? months : months / 12;
+                } else {
+                    // handle milliseconds separately because of floating point math errors (issue #1867)
+                    days = this._days + Math.round(monthsToDays(this._months));
+                    switch (units) {
+                        case 'week':
+                            return days / 7 + milliseconds / 6048e5;
+                        case 'day':
+                            return days + milliseconds / 864e5;
+                        case 'hour':
+                            return days * 24 + milliseconds / 36e5;
+                        case 'minute':
+                            return days * 1440 + milliseconds / 6e4;
+                        case 'second':
+                            return days * 86400 + milliseconds / 1000;
+                            // Math.floor prevents floating point math errors here
+                        case 'millisecond':
+                            return Math.floor(days * 864e5) + milliseconds;
+                        default:
+                            throw new Error('Unknown unit ' + units);
+                    }
+                }
+            }
+
+            // TODO: Use this.as('ms')?
+            function valueOf$1() {
+                if (!this.isValid()) {
+                    return NaN;
+                }
+                return (
+                    this._milliseconds +
+                    this._days * 864e5 +
+                    (this._months % 12) * 2592e6 +
+                    toInt(this._months / 12) * 31536e6
+                );
+            }
+
+            function makeAs(alias) {
+                return function () {
+                    return this.as(alias);
+                };
+            }
+
+            var asMilliseconds = makeAs('ms');
+            var asSeconds = makeAs('s');
+            var asMinutes = makeAs('m');
+            var asHours = makeAs('h');
+            var asDays = makeAs('d');
+            var asWeeks = makeAs('w');
+            var asMonths = makeAs('M');
+            var asYears = makeAs('y');
+
+            function clone$1() {
+                return createDuration(this);
+            }
+
+            function get$2(units) {
+                units = normalizeUnits(units);
+                return this.isValid() ? this[units + 's']() : NaN;
+            }
+
+            function makeGetter(name) {
+                return function () {
+                    return this.isValid() ? this._data[name] : NaN;
+                };
+            }
+
+            var milliseconds = makeGetter('milliseconds');
+            var seconds = makeGetter('seconds');
+            var minutes = makeGetter('minutes');
+            var hours = makeGetter('hours');
+            var days = makeGetter('days');
+            var months = makeGetter('months');
+            var years = makeGetter('years');
+
+            function weeks() {
+                return absFloor(this.days() / 7);
+            }
+
+            var round = Math.round;
+            var thresholds = {
+                ss: 44, // a few seconds to seconds
+                s: 45, // seconds to minute
+                m: 45, // minutes to hour
+                h: 22, // hours to day
+                d: 26, // days to month
+                M: 11 // months to year
             };
-        } else if (isNumber(input)) {
-            duration = {};
-            if (key) {
-                duration[key] = input;
-            } else {
-                duration.milliseconds = input;
+
+            // helper function for moment.fn.from, moment.fn.fromNow, and moment.duration.fn.humanize
+            function substituteTimeAgo(string, number, withoutSuffix, isFuture, locale) {
+                return locale.relativeTime(number || 1, !!withoutSuffix, string, isFuture);
             }
-        } else if (!!(match = aspNetRegex.exec(input))) {
-            sign = (match[1] === '-') ? -1 : 1;
-            duration = {
-                y  : 0,
-                d  : toInt(match[DATE])                         * sign,
-                h  : toInt(match[HOUR])                         * sign,
-                m  : toInt(match[MINUTE])                       * sign,
-                s  : toInt(match[SECOND])                       * sign,
-                ms : toInt(absRound(match[MILLISECOND] * 1000)) * sign // the millisecond decimal point is included in the match
+
+            function relativeTime$1(posNegDuration, withoutSuffix, locale) {
+                var duration = createDuration(posNegDuration).abs();
+                var seconds = round(duration.as('s'));
+                var minutes = round(duration.as('m'));
+                var hours = round(duration.as('h'));
+                var days = round(duration.as('d'));
+                var months = round(duration.as('M'));
+                var years = round(duration.as('y'));
+
+                var a = seconds <= thresholds.ss && ['s', seconds] ||
+                    seconds < thresholds.s && ['ss', seconds] ||
+                    minutes <= 1 && ['m'] ||
+                    minutes < thresholds.m && ['mm', minutes] ||
+                    hours <= 1 && ['h'] ||
+                    hours < thresholds.h && ['hh', hours] ||
+                    days <= 1 && ['d'] ||
+                    days < thresholds.d && ['dd', days] ||
+                    months <= 1 && ['M'] ||
+                    months < thresholds.M && ['MM', months] ||
+                    years <= 1 && ['y'] || ['yy', years];
+
+                a[2] = withoutSuffix;
+                a[3] = +posNegDuration > 0;
+                a[4] = locale;
+                return substituteTimeAgo.apply(null, a);
+            }
+
+            // This function allows you to set the rounding function for relative time strings
+            function getSetRelativeTimeRounding(roundingFunction) {
+                if (roundingFunction === undefined) {
+                    return round;
+                }
+                if (typeof (roundingFunction) === 'function') {
+                    round = roundingFunction;
+                    return true;
+                }
+                return false;
+            }
+
+            // This function allows you to set a threshold for relative time strings
+            function getSetRelativeTimeThreshold(threshold, limit) {
+                if (thresholds[threshold] === undefined) {
+                    return false;
+                }
+                if (limit === undefined) {
+                    return thresholds[threshold];
+                }
+                thresholds[threshold] = limit;
+                if (threshold === 's') {
+                    thresholds.ss = limit - 1;
+                }
+                return true;
+            }
+
+            function humanize(withSuffix) {
+                if (!this.isValid()) {
+                    return this.localeData().invalidDate();
+                }
+
+                var locale = this.localeData();
+                var output = relativeTime$1(this, !withSuffix, locale);
+
+                if (withSuffix) {
+                    output = locale.pastFuture(+this, output);
+                }
+
+                return locale.postformat(output);
+            }
+
+            var abs$1 = Math.abs;
+
+            function sign(x) {
+                return ((x > 0) - (x < 0)) || +x;
+            }
+
+            function toISOString$1() {
+                // for ISO strings we do not use the normal bubbling rules:
+                //  * milliseconds bubble up until they become hours
+                //  * days do not bubble at all
+                //  * months bubble up until they become years
+                // This is because there is no context-free conversion between hours and days
+                // (think of clock changes)
+                // and also not between days and months (28-31 days per month)
+                if (!this.isValid()) {
+                    return this.localeData().invalidDate();
+                }
+
+                var seconds = abs$1(this._milliseconds) / 1000;
+                var days = abs$1(this._days);
+                var months = abs$1(this._months);
+                var minutes, hours, years;
+
+                // 3600 seconds -> 60 minutes -> 1 hour
+                minutes = absFloor(seconds / 60);
+                hours = absFloor(minutes / 60);
+                seconds %= 60;
+                minutes %= 60;
+
+                // 12 months -> 1 year
+                years = absFloor(months / 12);
+                months %= 12;
+
+
+                // inspired by https://github.com/dordille/moment-isoduration/blob/master/moment.isoduration.js
+                var Y = years;
+                var M = months;
+                var D = days;
+                var h = hours;
+                var m = minutes;
+                var s = seconds ? seconds.toFixed(3).replace(/\.?0+$/, '') : '';
+                var total = this.asSeconds();
+
+                if (!total) {
+                    // this is the same as C#'s (Noda) and python (isodate)...
+                    // but not other JS (goog.date)
+                    return 'P0D';
+                }
+
+                var totalSign = total < 0 ? '-' : '';
+                var ymSign = sign(this._months) !== sign(total) ? '-' : '';
+                var daysSign = sign(this._days) !== sign(total) ? '-' : '';
+                var hmsSign = sign(this._milliseconds) !== sign(total) ? '-' : '';
+
+                return totalSign + 'P' +
+                    (Y ? ymSign + Y + 'Y' : '') +
+                    (M ? ymSign + M + 'M' : '') +
+                    (D ? daysSign + D + 'D' : '') +
+                    ((h || m || s) ? 'T' : '') +
+                    (h ? hmsSign + h + 'H' : '') +
+                    (m ? hmsSign + m + 'M' : '') +
+                    (s ? hmsSign + s + 'S' : '');
+            }
+
+            var proto$2 = Duration.prototype;
+
+            proto$2.isValid = isValid$1;
+            proto$2.abs = abs;
+            proto$2.add = add$1;
+            proto$2.subtract = subtract$1;
+            proto$2.as = as;
+            proto$2.asMilliseconds = asMilliseconds;
+            proto$2.asSeconds = asSeconds;
+            proto$2.asMinutes = asMinutes;
+            proto$2.asHours = asHours;
+            proto$2.asDays = asDays;
+            proto$2.asWeeks = asWeeks;
+            proto$2.asMonths = asMonths;
+            proto$2.asYears = asYears;
+            proto$2.valueOf = valueOf$1;
+            proto$2._bubble = bubble;
+            proto$2.clone = clone$1;
+            proto$2.get = get$2;
+            proto$2.milliseconds = milliseconds;
+            proto$2.seconds = seconds;
+            proto$2.minutes = minutes;
+            proto$2.hours = hours;
+            proto$2.days = days;
+            proto$2.weeks = weeks;
+            proto$2.months = months;
+            proto$2.years = years;
+            proto$2.humanize = humanize;
+            proto$2.toISOString = toISOString$1;
+            proto$2.toString = toISOString$1;
+            proto$2.toJSON = toISOString$1;
+            proto$2.locale = locale;
+            proto$2.localeData = localeData;
+
+            proto$2.toIsoString = deprecate('toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)', toISOString$1);
+            proto$2.lang = lang;
+
+            // Side effect imports
+
+            // FORMATTING
+
+            addFormatToken('X', 0, 0, 'unix');
+            addFormatToken('x', 0, 0, 'valueOf');
+
+            // PARSING
+
+            addRegexToken('x', matchSigned);
+            addRegexToken('X', matchTimestamp);
+            addParseToken('X', function (input, array, config) {
+                config._d = new Date(parseFloat(input, 10) * 1000);
+            });
+            addParseToken('x', function (input, array, config) {
+                config._d = new Date(toInt(input));
+            });
+
+            // Side effect imports
+
+
+            hooks.version = '2.22.2';
+
+            setHookCallback(createLocal);
+
+            hooks.fn = proto;
+            hooks.min = min;
+            hooks.max = max;
+            hooks.now = now;
+            hooks.utc = createUTC;
+            hooks.unix = createUnix;
+            hooks.months = listMonths;
+            hooks.isDate = isDate;
+            hooks.locale = getSetGlobalLocale;
+            hooks.invalid = createInvalid;
+            hooks.duration = createDuration;
+            hooks.isMoment = isMoment;
+            hooks.weekdays = listWeekdays;
+            hooks.parseZone = createInZone;
+            hooks.localeData = getLocale;
+            hooks.isDuration = isDuration;
+            hooks.monthsShort = listMonthsShort;
+            hooks.weekdaysMin = listWeekdaysMin;
+            hooks.defineLocale = defineLocale;
+            hooks.updateLocale = updateLocale;
+            hooks.locales = listLocales;
+            hooks.weekdaysShort = listWeekdaysShort;
+            hooks.normalizeUnits = normalizeUnits;
+            hooks.relativeTimeRounding = getSetRelativeTimeRounding;
+            hooks.relativeTimeThreshold = getSetRelativeTimeThreshold;
+            hooks.calendarFormat = getCalendarFormat;
+            hooks.prototype = proto;
+
+            // currently HTML5 input type only supports 24-hour formats
+            hooks.HTML5_FMT = {
+                DATETIME_LOCAL: 'YYYY-MM-DDTHH:mm', // <input type="datetime-local" />
+                DATETIME_LOCAL_SECONDS: 'YYYY-MM-DDTHH:mm:ss', // <input type="datetime-local" step="1" />
+                DATETIME_LOCAL_MS: 'YYYY-MM-DDTHH:mm:ss.SSS', // <input type="datetime-local" step="0.001" />
+                DATE: 'YYYY-MM-DD', // <input type="date" />
+                TIME: 'HH:mm', // <input type="time" />
+                TIME_SECONDS: 'HH:mm:ss', // <input type="time" step="1" />
+                TIME_MS: 'HH:mm:ss.SSS', // <input type="time" step="0.001" />
+                WEEK: 'YYYY-[W]WW', // <input type="week" />
+                MONTH: 'YYYY-MM' // <input type="month" />
             };
-        } else if (!!(match = isoRegex.exec(input))) {
-            sign = (match[1] === '-') ? -1 : (match[1] === '+') ? 1 : 1;
-            duration = {
-                y : parseIso(match[2], sign),
-                M : parseIso(match[3], sign),
-                w : parseIso(match[4], sign),
-                d : parseIso(match[5], sign),
-                h : parseIso(match[6], sign),
-                m : parseIso(match[7], sign),
-                s : parseIso(match[8], sign)
+
+            return hooks;
+
+        })));
+
+}, {}],
+    5: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var assign, isArray, isEmpty, isFunction, isObject, isPlainObject,
+                slice = [].slice,
+                hasProp = {}.hasOwnProperty;
+
+            assign = function () {
+                var i, key, len, source, sources, target;
+                target = arguments[0], sources = 2 <= arguments.length ? slice.call(arguments, 1) : [];
+                if (isFunction(Object.assign)) {
+                    Object.assign.apply(null, arguments);
+                } else {
+                    for (i = 0, len = sources.length; i < len; i++) {
+                        source = sources[i];
+                        if (source != null) {
+                            for (key in source) {
+                                if (!hasProp.call(source, key)) continue;
+                                target[key] = source[key];
+                            }
+                        }
+                    }
+                }
+                return target;
             };
-        } else if (duration == null) {// checks for null or undefined
-            duration = {};
-        } else if (typeof duration === 'object' && ('from' in duration || 'to' in duration)) {
-            diffRes = momentsDifference(createLocal(duration.from), createLocal(duration.to));
 
-            duration = {};
-            duration.ms = diffRes.milliseconds;
-            duration.M = diffRes.months;
-        }
+            isFunction = function (val) {
+                return !!val && Object.prototype.toString.call(val) === '[object Function]';
+            };
 
-        ret = new Duration(duration);
+            isObject = function (val) {
+                var ref;
+                return !!val && ((ref = typeof val) === 'function' || ref === 'object');
+            };
 
-        if (isDuration(input) && hasOwnProp(input, '_locale')) {
-            ret._locale = input._locale;
-        }
+            isArray = function (val) {
+                if (isFunction(Array.isArray)) {
+                    return Array.isArray(val);
+                } else {
+                    return Object.prototype.toString.call(val) === '[object Array]';
+                }
+            };
 
-        return ret;
-    }
+            isEmpty = function (val) {
+                var key;
+                if (isArray(val)) {
+                    return !val.length;
+                } else {
+                    for (key in val) {
+                        if (!hasProp.call(val, key)) continue;
+                        return false;
+                    }
+                    return true;
+                }
+            };
 
-    createDuration.fn = Duration.prototype;
-    createDuration.invalid = createInvalid$1;
+            isPlainObject = function (val) {
+                var ctor, proto;
+                return isObject(val) && (proto = Object.getPrototypeOf(val)) && (ctor = proto.constructor) && (typeof ctor === 'function') && (ctor instanceof ctor) && (Function.prototype.toString.call(ctor) === Function.prototype.toString.call(Object));
+            };
 
-    function parseIso (inp, sign) {
-        // We'd normally use ~~inp for this, but unfortunately it also
-        // converts floats to ints.
-        // inp may be undefined, so careful calling replace on it.
-        var res = inp && parseFloat(inp.replace(',', '.'));
-        // apply sign while we're at it
-        return (isNaN(res) ? 0 : res) * sign;
-    }
+            module.exports.assign = assign;
 
-    function positiveMomentsDifference(base, other) {
-        var res = {milliseconds: 0, months: 0};
+            module.exports.isFunction = isFunction;
 
-        res.months = other.month() - base.month() +
-            (other.year() - base.year()) * 12;
-        if (base.clone().add(res.months, 'M').isAfter(other)) {
-            --res.months;
-        }
+            module.exports.isObject = isObject;
 
-        res.milliseconds = +other - +(base.clone().add(res.months, 'M'));
+            module.exports.isArray = isArray;
 
-        return res;
-    }
+            module.exports.isEmpty = isEmpty;
 
-    function momentsDifference(base, other) {
-        var res;
-        if (!(base.isValid() && other.isValid())) {
-            return {milliseconds: 0, months: 0};
-        }
+            module.exports.isPlainObject = isPlainObject;
 
-        other = cloneWithOffset(other, base);
-        if (base.isBefore(other)) {
-            res = positiveMomentsDifference(base, other);
-        } else {
-            res = positiveMomentsDifference(other, base);
-            res.milliseconds = -res.milliseconds;
-            res.months = -res.months;
-        }
-
-        return res;
-    }
-
-    // TODO: remove 'name' arg after deprecation is removed
-    function createAdder(direction, name) {
-        return function (val, period) {
-            var dur, tmp;
-            //invert the arguments, but complain about it
-            if (period !== null && !isNaN(+period)) {
-                deprecateSimple(name, 'moment().' + name  + '(period, number) is deprecated. Please use moment().' + name + '(number, period). ' +
-                'See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info.');
-                tmp = val; val = period; period = tmp;
-            }
-
-            val = typeof val === 'string' ? +val : val;
-            dur = createDuration(val, period);
-            addSubtract(this, dur, direction);
-            return this;
-        };
-    }
-
-    function addSubtract (mom, duration, isAdding, updateOffset) {
-        var milliseconds = duration._milliseconds,
-            days = absRound(duration._days),
-            months = absRound(duration._months);
-
-        if (!mom.isValid()) {
-            // No op
-            return;
-        }
-
-        updateOffset = updateOffset == null ? true : updateOffset;
-
-        if (months) {
-            setMonth(mom, get(mom, 'Month') + months * isAdding);
-        }
-        if (days) {
-            set$1(mom, 'Date', get(mom, 'Date') + days * isAdding);
-        }
-        if (milliseconds) {
-            mom._d.setTime(mom._d.valueOf() + milliseconds * isAdding);
-        }
-        if (updateOffset) {
-            hooks.updateOffset(mom, days || months);
-        }
-    }
-
-    var add      = createAdder(1, 'add');
-    var subtract = createAdder(-1, 'subtract');
-
-    function getCalendarFormat(myMoment, now) {
-        var diff = myMoment.diff(now, 'days', true);
-        return diff < -6 ? 'sameElse' :
-                diff < -1 ? 'lastWeek' :
-                diff < 0 ? 'lastDay' :
-                diff < 1 ? 'sameDay' :
-                diff < 2 ? 'nextDay' :
-                diff < 7 ? 'nextWeek' : 'sameElse';
-    }
-
-    function calendar$1 (time, formats) {
-        // We want to compare the start of today, vs this.
-        // Getting start-of-today depends on whether we're local/utc/offset or not.
-        var now = time || createLocal(),
-            sod = cloneWithOffset(now, this).startOf('day'),
-            format = hooks.calendarFormat(this, sod) || 'sameElse';
-
-        var output = formats && (isFunction(formats[format]) ? formats[format].call(this, now) : formats[format]);
-
-        return this.format(output || this.localeData().calendar(format, this, createLocal(now)));
-    }
-
-    function clone () {
-        return new Moment(this);
-    }
-
-    function isAfter (input, units) {
-        var localInput = isMoment(input) ? input : createLocal(input);
-        if (!(this.isValid() && localInput.isValid())) {
-            return false;
-        }
-        units = normalizeUnits(!isUndefined(units) ? units : 'millisecond');
-        if (units === 'millisecond') {
-            return this.valueOf() > localInput.valueOf();
-        } else {
-            return localInput.valueOf() < this.clone().startOf(units).valueOf();
-        }
-    }
-
-    function isBefore (input, units) {
-        var localInput = isMoment(input) ? input : createLocal(input);
-        if (!(this.isValid() && localInput.isValid())) {
-            return false;
-        }
-        units = normalizeUnits(!isUndefined(units) ? units : 'millisecond');
-        if (units === 'millisecond') {
-            return this.valueOf() < localInput.valueOf();
-        } else {
-            return this.clone().endOf(units).valueOf() < localInput.valueOf();
-        }
-    }
-
-    function isBetween (from, to, units, inclusivity) {
-        inclusivity = inclusivity || '()';
-        return (inclusivity[0] === '(' ? this.isAfter(from, units) : !this.isBefore(from, units)) &&
-            (inclusivity[1] === ')' ? this.isBefore(to, units) : !this.isAfter(to, units));
-    }
-
-    function isSame (input, units) {
-        var localInput = isMoment(input) ? input : createLocal(input),
-            inputMs;
-        if (!(this.isValid() && localInput.isValid())) {
-            return false;
-        }
-        units = normalizeUnits(units || 'millisecond');
-        if (units === 'millisecond') {
-            return this.valueOf() === localInput.valueOf();
-        } else {
-            inputMs = localInput.valueOf();
-            return this.clone().startOf(units).valueOf() <= inputMs && inputMs <= this.clone().endOf(units).valueOf();
-        }
-    }
-
-    function isSameOrAfter (input, units) {
-        return this.isSame(input, units) || this.isAfter(input,units);
-    }
-
-    function isSameOrBefore (input, units) {
-        return this.isSame(input, units) || this.isBefore(input,units);
-    }
-
-    function diff (input, units, asFloat) {
-        var that,
-            zoneDelta,
-            output;
-
-        if (!this.isValid()) {
-            return NaN;
-        }
-
-        that = cloneWithOffset(input, this);
-
-        if (!that.isValid()) {
-            return NaN;
-        }
-
-        zoneDelta = (that.utcOffset() - this.utcOffset()) * 6e4;
-
-        units = normalizeUnits(units);
-
-        switch (units) {
-            case 'year': output = monthDiff(this, that) / 12; break;
-            case 'month': output = monthDiff(this, that); break;
-            case 'quarter': output = monthDiff(this, that) / 3; break;
-            case 'second': output = (this - that) / 1e3; break; // 1000
-            case 'minute': output = (this - that) / 6e4; break; // 1000 * 60
-            case 'hour': output = (this - that) / 36e5; break; // 1000 * 60 * 60
-            case 'day': output = (this - that - zoneDelta) / 864e5; break; // 1000 * 60 * 60 * 24, negate dst
-            case 'week': output = (this - that - zoneDelta) / 6048e5; break; // 1000 * 60 * 60 * 24 * 7, negate dst
-            default: output = this - that;
-        }
-
-        return asFloat ? output : absFloor(output);
-    }
-
-    function monthDiff (a, b) {
-        // difference in months
-        var wholeMonthDiff = ((b.year() - a.year()) * 12) + (b.month() - a.month()),
-            // b is in (anchor - 1 month, anchor + 1 month)
-            anchor = a.clone().add(wholeMonthDiff, 'months'),
-            anchor2, adjust;
-
-        if (b - anchor < 0) {
-            anchor2 = a.clone().add(wholeMonthDiff - 1, 'months');
-            // linear across the month
-            adjust = (b - anchor) / (anchor - anchor2);
-        } else {
-            anchor2 = a.clone().add(wholeMonthDiff + 1, 'months');
-            // linear across the month
-            adjust = (b - anchor) / (anchor2 - anchor);
-        }
-
-        //check for negative zero, return zero if negative zero
-        return -(wholeMonthDiff + adjust) || 0;
-    }
-
-    hooks.defaultFormat = 'YYYY-MM-DDTHH:mm:ssZ';
-    hooks.defaultFormatUtc = 'YYYY-MM-DDTHH:mm:ss[Z]';
-
-    function toString () {
-        return this.clone().locale('en').format('ddd MMM DD YYYY HH:mm:ss [GMT]ZZ');
-    }
-
-    function toISOString(keepOffset) {
-        if (!this.isValid()) {
-            return null;
-        }
-        var utc = keepOffset !== true;
-        var m = utc ? this.clone().utc() : this;
-        if (m.year() < 0 || m.year() > 9999) {
-            return formatMoment(m, utc ? 'YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYYYY-MM-DD[T]HH:mm:ss.SSSZ');
-        }
-        if (isFunction(Date.prototype.toISOString)) {
-            // native implementation is ~50x faster, use it when we can
-            if (utc) {
-                return this.toDate().toISOString();
-            } else {
-                return new Date(this.valueOf() + this.utcOffset() * 60 * 1000).toISOString().replace('Z', formatMoment(m, 'Z'));
-            }
-        }
-        return formatMoment(m, utc ? 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYY-MM-DD[T]HH:mm:ss.SSSZ');
-    }
-
-    /**
-     * Return a human readable representation of a moment that can
-     * also be evaluated to get a new moment which is the same
-     *
-     * @link https://nodejs.org/dist/latest/docs/api/util.html#util_custom_inspect_function_on_objects
-     */
-    function inspect () {
-        if (!this.isValid()) {
-            return 'moment.invalid(/* ' + this._i + ' */)';
-        }
-        var func = 'moment';
-        var zone = '';
-        if (!this.isLocal()) {
-            func = this.utcOffset() === 0 ? 'moment.utc' : 'moment.parseZone';
-            zone = 'Z';
-        }
-        var prefix = '[' + func + '("]';
-        var year = (0 <= this.year() && this.year() <= 9999) ? 'YYYY' : 'YYYYYY';
-        var datetime = '-MM-DD[T]HH:mm:ss.SSS';
-        var suffix = zone + '[")]';
-
-        return this.format(prefix + year + datetime + suffix);
-    }
-
-    function format (inputString) {
-        if (!inputString) {
-            inputString = this.isUtc() ? hooks.defaultFormatUtc : hooks.defaultFormat;
-        }
-        var output = formatMoment(this, inputString);
-        return this.localeData().postformat(output);
-    }
-
-    function from (time, withoutSuffix) {
-        if (this.isValid() &&
-                ((isMoment(time) && time.isValid()) ||
-                 createLocal(time).isValid())) {
-            return createDuration({to: this, from: time}).locale(this.locale()).humanize(!withoutSuffix);
-        } else {
-            return this.localeData().invalidDate();
-        }
-    }
-
-    function fromNow (withoutSuffix) {
-        return this.from(createLocal(), withoutSuffix);
-    }
-
-    function to (time, withoutSuffix) {
-        if (this.isValid() &&
-                ((isMoment(time) && time.isValid()) ||
-                 createLocal(time).isValid())) {
-            return createDuration({from: this, to: time}).locale(this.locale()).humanize(!withoutSuffix);
-        } else {
-            return this.localeData().invalidDate();
-        }
-    }
-
-    function toNow (withoutSuffix) {
-        return this.to(createLocal(), withoutSuffix);
-    }
-
-    // If passed a locale key, it will set the locale for this
-    // instance.  Otherwise, it will return the locale configuration
-    // variables for this instance.
-    function locale (key) {
-        var newLocaleData;
-
-        if (key === undefined) {
-            return this._locale._abbr;
-        } else {
-            newLocaleData = getLocale(key);
-            if (newLocaleData != null) {
-                this._locale = newLocaleData;
-            }
-            return this;
-        }
-    }
-
-    var lang = deprecate(
-        'moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.',
-        function (key) {
-            if (key === undefined) {
-                return this.localeData();
-            } else {
-                return this.locale(key);
-            }
-        }
-    );
-
-    function localeData () {
-        return this._locale;
-    }
-
-    function startOf (units) {
-        units = normalizeUnits(units);
-        // the following switch intentionally omits break keywords
-        // to utilize falling through the cases.
-        switch (units) {
-            case 'year':
-                this.month(0);
-                /* falls through */
-            case 'quarter':
-            case 'month':
-                this.date(1);
-                /* falls through */
-            case 'week':
-            case 'isoWeek':
-            case 'day':
-            case 'date':
-                this.hours(0);
-                /* falls through */
-            case 'hour':
-                this.minutes(0);
-                /* falls through */
-            case 'minute':
-                this.seconds(0);
-                /* falls through */
-            case 'second':
-                this.milliseconds(0);
-        }
-
-        // weeks are a special case
-        if (units === 'week') {
-            this.weekday(0);
-        }
-        if (units === 'isoWeek') {
-            this.isoWeekday(1);
-        }
-
-        // quarters are also special
-        if (units === 'quarter') {
-            this.month(Math.floor(this.month() / 3) * 3);
-        }
-
-        return this;
-    }
-
-    function endOf (units) {
-        units = normalizeUnits(units);
-        if (units === undefined || units === 'millisecond') {
-            return this;
-        }
-
-        // 'date' is an alias for 'day', so it should be considered as such.
-        if (units === 'date') {
-            units = 'day';
-        }
-
-        return this.startOf(units).add(1, (units === 'isoWeek' ? 'week' : units)).subtract(1, 'ms');
-    }
-
-    function valueOf () {
-        return this._d.valueOf() - ((this._offset || 0) * 60000);
-    }
-
-    function unix () {
-        return Math.floor(this.valueOf() / 1000);
-    }
-
-    function toDate () {
-        return new Date(this.valueOf());
-    }
-
-    function toArray () {
-        var m = this;
-        return [m.year(), m.month(), m.date(), m.hour(), m.minute(), m.second(), m.millisecond()];
-    }
-
-    function toObject () {
-        var m = this;
-        return {
-            years: m.year(),
-            months: m.month(),
-            date: m.date(),
-            hours: m.hours(),
-            minutes: m.minutes(),
-            seconds: m.seconds(),
-            milliseconds: m.milliseconds()
-        };
-    }
-
-    function toJSON () {
-        // new Date(NaN).toJSON() === null
-        return this.isValid() ? this.toISOString() : null;
-    }
-
-    function isValid$2 () {
-        return isValid(this);
-    }
-
-    function parsingFlags () {
-        return extend({}, getParsingFlags(this));
-    }
-
-    function invalidAt () {
-        return getParsingFlags(this).overflow;
-    }
-
-    function creationData() {
-        return {
-            input: this._i,
-            format: this._f,
-            locale: this._locale,
-            isUTC: this._isUTC,
-            strict: this._strict
-        };
-    }
-
-    // FORMATTING
-
-    addFormatToken(0, ['gg', 2], 0, function () {
-        return this.weekYear() % 100;
-    });
-
-    addFormatToken(0, ['GG', 2], 0, function () {
-        return this.isoWeekYear() % 100;
-    });
-
-    function addWeekYearFormatToken (token, getter) {
-        addFormatToken(0, [token, token.length], 0, getter);
-    }
-
-    addWeekYearFormatToken('gggg',     'weekYear');
-    addWeekYearFormatToken('ggggg',    'weekYear');
-    addWeekYearFormatToken('GGGG',  'isoWeekYear');
-    addWeekYearFormatToken('GGGGG', 'isoWeekYear');
-
-    // ALIASES
-
-    addUnitAlias('weekYear', 'gg');
-    addUnitAlias('isoWeekYear', 'GG');
-
-    // PRIORITY
-
-    addUnitPriority('weekYear', 1);
-    addUnitPriority('isoWeekYear', 1);
-
-
-    // PARSING
-
-    addRegexToken('G',      matchSigned);
-    addRegexToken('g',      matchSigned);
-    addRegexToken('GG',     match1to2, match2);
-    addRegexToken('gg',     match1to2, match2);
-    addRegexToken('GGGG',   match1to4, match4);
-    addRegexToken('gggg',   match1to4, match4);
-    addRegexToken('GGGGG',  match1to6, match6);
-    addRegexToken('ggggg',  match1to6, match6);
-
-    addWeekParseToken(['gggg', 'ggggg', 'GGGG', 'GGGGG'], function (input, week, config, token) {
-        week[token.substr(0, 2)] = toInt(input);
-    });
-
-    addWeekParseToken(['gg', 'GG'], function (input, week, config, token) {
-        week[token] = hooks.parseTwoDigitYear(input);
-    });
-
-    // MOMENTS
-
-    function getSetWeekYear (input) {
-        return getSetWeekYearHelper.call(this,
-                input,
-                this.week(),
-                this.weekday(),
-                this.localeData()._week.dow,
-                this.localeData()._week.doy);
-    }
-
-    function getSetISOWeekYear (input) {
-        return getSetWeekYearHelper.call(this,
-                input, this.isoWeek(), this.isoWeekday(), 1, 4);
-    }
-
-    function getISOWeeksInYear () {
-        return weeksInYear(this.year(), 1, 4);
-    }
-
-    function getWeeksInYear () {
-        var weekInfo = this.localeData()._week;
-        return weeksInYear(this.year(), weekInfo.dow, weekInfo.doy);
-    }
-
-    function getSetWeekYearHelper(input, week, weekday, dow, doy) {
-        var weeksTarget;
-        if (input == null) {
-            return weekOfYear(this, dow, doy).year;
-        } else {
-            weeksTarget = weeksInYear(input, dow, doy);
-            if (week > weeksTarget) {
-                week = weeksTarget;
-            }
-            return setWeekAll.call(this, input, week, weekday, dow, doy);
-        }
-    }
-
-    function setWeekAll(weekYear, week, weekday, dow, doy) {
-        var dayOfYearData = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy),
-            date = createUTCDate(dayOfYearData.year, 0, dayOfYearData.dayOfYear);
-
-        this.year(date.getUTCFullYear());
-        this.month(date.getUTCMonth());
-        this.date(date.getUTCDate());
-        return this;
-    }
-
-    // FORMATTING
-
-    addFormatToken('Q', 0, 'Qo', 'quarter');
-
-    // ALIASES
-
-    addUnitAlias('quarter', 'Q');
-
-    // PRIORITY
-
-    addUnitPriority('quarter', 7);
-
-    // PARSING
-
-    addRegexToken('Q', match1);
-    addParseToken('Q', function (input, array) {
-        array[MONTH] = (toInt(input) - 1) * 3;
-    });
-
-    // MOMENTS
-
-    function getSetQuarter (input) {
-        return input == null ? Math.ceil((this.month() + 1) / 3) : this.month((input - 1) * 3 + this.month() % 3);
-    }
-
-    // FORMATTING
-
-    addFormatToken('D', ['DD', 2], 'Do', 'date');
-
-    // ALIASES
-
-    addUnitAlias('date', 'D');
-
-    // PRIORITY
-    addUnitPriority('date', 9);
-
-    // PARSING
-
-    addRegexToken('D',  match1to2);
-    addRegexToken('DD', match1to2, match2);
-    addRegexToken('Do', function (isStrict, locale) {
-        // TODO: Remove "ordinalParse" fallback in next major release.
-        return isStrict ?
-          (locale._dayOfMonthOrdinalParse || locale._ordinalParse) :
-          locale._dayOfMonthOrdinalParseLenient;
-    });
-
-    addParseToken(['D', 'DD'], DATE);
-    addParseToken('Do', function (input, array) {
-        array[DATE] = toInt(input.match(match1to2)[0]);
-    });
-
-    // MOMENTS
-
-    var getSetDayOfMonth = makeGetSet('Date', true);
-
-    // FORMATTING
-
-    addFormatToken('DDD', ['DDDD', 3], 'DDDo', 'dayOfYear');
-
-    // ALIASES
-
-    addUnitAlias('dayOfYear', 'DDD');
-
-    // PRIORITY
-    addUnitPriority('dayOfYear', 4);
-
-    // PARSING
-
-    addRegexToken('DDD',  match1to3);
-    addRegexToken('DDDD', match3);
-    addParseToken(['DDD', 'DDDD'], function (input, array, config) {
-        config._dayOfYear = toInt(input);
-    });
-
-    // HELPERS
-
-    // MOMENTS
-
-    function getSetDayOfYear (input) {
-        var dayOfYear = Math.round((this.clone().startOf('day') - this.clone().startOf('year')) / 864e5) + 1;
-        return input == null ? dayOfYear : this.add((input - dayOfYear), 'd');
-    }
-
-    // FORMATTING
-
-    addFormatToken('m', ['mm', 2], 0, 'minute');
-
-    // ALIASES
-
-    addUnitAlias('minute', 'm');
-
-    // PRIORITY
-
-    addUnitPriority('minute', 14);
-
-    // PARSING
-
-    addRegexToken('m',  match1to2);
-    addRegexToken('mm', match1to2, match2);
-    addParseToken(['m', 'mm'], MINUTE);
-
-    // MOMENTS
-
-    var getSetMinute = makeGetSet('Minutes', false);
-
-    // FORMATTING
-
-    addFormatToken('s', ['ss', 2], 0, 'second');
-
-    // ALIASES
-
-    addUnitAlias('second', 's');
-
-    // PRIORITY
-
-    addUnitPriority('second', 15);
-
-    // PARSING
-
-    addRegexToken('s',  match1to2);
-    addRegexToken('ss', match1to2, match2);
-    addParseToken(['s', 'ss'], SECOND);
-
-    // MOMENTS
-
-    var getSetSecond = makeGetSet('Seconds', false);
-
-    // FORMATTING
-
-    addFormatToken('S', 0, 0, function () {
-        return ~~(this.millisecond() / 100);
-    });
-
-    addFormatToken(0, ['SS', 2], 0, function () {
-        return ~~(this.millisecond() / 10);
-    });
-
-    addFormatToken(0, ['SSS', 3], 0, 'millisecond');
-    addFormatToken(0, ['SSSS', 4], 0, function () {
-        return this.millisecond() * 10;
-    });
-    addFormatToken(0, ['SSSSS', 5], 0, function () {
-        return this.millisecond() * 100;
-    });
-    addFormatToken(0, ['SSSSSS', 6], 0, function () {
-        return this.millisecond() * 1000;
-    });
-    addFormatToken(0, ['SSSSSSS', 7], 0, function () {
-        return this.millisecond() * 10000;
-    });
-    addFormatToken(0, ['SSSSSSSS', 8], 0, function () {
-        return this.millisecond() * 100000;
-    });
-    addFormatToken(0, ['SSSSSSSSS', 9], 0, function () {
-        return this.millisecond() * 1000000;
-    });
-
-
-    // ALIASES
-
-    addUnitAlias('millisecond', 'ms');
-
-    // PRIORITY
-
-    addUnitPriority('millisecond', 16);
-
-    // PARSING
-
-    addRegexToken('S',    match1to3, match1);
-    addRegexToken('SS',   match1to3, match2);
-    addRegexToken('SSS',  match1to3, match3);
-
-    var token;
-    for (token = 'SSSS'; token.length <= 9; token += 'S') {
-        addRegexToken(token, matchUnsigned);
-    }
-
-    function parseMs(input, array) {
-        array[MILLISECOND] = toInt(('0.' + input) * 1000);
-    }
-
-    for (token = 'S'; token.length <= 9; token += 'S') {
-        addParseToken(token, parseMs);
-    }
-    // MOMENTS
-
-    var getSetMillisecond = makeGetSet('Milliseconds', false);
-
-    // FORMATTING
-
-    addFormatToken('z',  0, 0, 'zoneAbbr');
-    addFormatToken('zz', 0, 0, 'zoneName');
-
-    // MOMENTS
-
-    function getZoneAbbr () {
-        return this._isUTC ? 'UTC' : '';
-    }
-
-    function getZoneName () {
-        return this._isUTC ? 'Coordinated Universal Time' : '';
-    }
-
-    var proto = Moment.prototype;
-
-    proto.add               = add;
-    proto.calendar          = calendar$1;
-    proto.clone             = clone;
-    proto.diff              = diff;
-    proto.endOf             = endOf;
-    proto.format            = format;
-    proto.from              = from;
-    proto.fromNow           = fromNow;
-    proto.to                = to;
-    proto.toNow             = toNow;
-    proto.get               = stringGet;
-    proto.invalidAt         = invalidAt;
-    proto.isAfter           = isAfter;
-    proto.isBefore          = isBefore;
-    proto.isBetween         = isBetween;
-    proto.isSame            = isSame;
-    proto.isSameOrAfter     = isSameOrAfter;
-    proto.isSameOrBefore    = isSameOrBefore;
-    proto.isValid           = isValid$2;
-    proto.lang              = lang;
-    proto.locale            = locale;
-    proto.localeData        = localeData;
-    proto.max               = prototypeMax;
-    proto.min               = prototypeMin;
-    proto.parsingFlags      = parsingFlags;
-    proto.set               = stringSet;
-    proto.startOf           = startOf;
-    proto.subtract          = subtract;
-    proto.toArray           = toArray;
-    proto.toObject          = toObject;
-    proto.toDate            = toDate;
-    proto.toISOString       = toISOString;
-    proto.inspect           = inspect;
-    proto.toJSON            = toJSON;
-    proto.toString          = toString;
-    proto.unix              = unix;
-    proto.valueOf           = valueOf;
-    proto.creationData      = creationData;
-    proto.year       = getSetYear;
-    proto.isLeapYear = getIsLeapYear;
-    proto.weekYear    = getSetWeekYear;
-    proto.isoWeekYear = getSetISOWeekYear;
-    proto.quarter = proto.quarters = getSetQuarter;
-    proto.month       = getSetMonth;
-    proto.daysInMonth = getDaysInMonth;
-    proto.week           = proto.weeks        = getSetWeek;
-    proto.isoWeek        = proto.isoWeeks     = getSetISOWeek;
-    proto.weeksInYear    = getWeeksInYear;
-    proto.isoWeeksInYear = getISOWeeksInYear;
-    proto.date       = getSetDayOfMonth;
-    proto.day        = proto.days             = getSetDayOfWeek;
-    proto.weekday    = getSetLocaleDayOfWeek;
-    proto.isoWeekday = getSetISODayOfWeek;
-    proto.dayOfYear  = getSetDayOfYear;
-    proto.hour = proto.hours = getSetHour;
-    proto.minute = proto.minutes = getSetMinute;
-    proto.second = proto.seconds = getSetSecond;
-    proto.millisecond = proto.milliseconds = getSetMillisecond;
-    proto.utcOffset            = getSetOffset;
-    proto.utc                  = setOffsetToUTC;
-    proto.local                = setOffsetToLocal;
-    proto.parseZone            = setOffsetToParsedOffset;
-    proto.hasAlignedHourOffset = hasAlignedHourOffset;
-    proto.isDST                = isDaylightSavingTime;
-    proto.isLocal              = isLocal;
-    proto.isUtcOffset          = isUtcOffset;
-    proto.isUtc                = isUtc;
-    proto.isUTC                = isUtc;
-    proto.zoneAbbr = getZoneAbbr;
-    proto.zoneName = getZoneName;
-    proto.dates  = deprecate('dates accessor is deprecated. Use date instead.', getSetDayOfMonth);
-    proto.months = deprecate('months accessor is deprecated. Use month instead', getSetMonth);
-    proto.years  = deprecate('years accessor is deprecated. Use year instead', getSetYear);
-    proto.zone   = deprecate('moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/', getSetZone);
-    proto.isDSTShifted = deprecate('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', isDaylightSavingTimeShifted);
-
-    function createUnix (input) {
-        return createLocal(input * 1000);
-    }
-
-    function createInZone () {
-        return createLocal.apply(null, arguments).parseZone();
-    }
-
-    function preParsePostFormat (string) {
-        return string;
-    }
-
-    var proto$1 = Locale.prototype;
-
-    proto$1.calendar        = calendar;
-    proto$1.longDateFormat  = longDateFormat;
-    proto$1.invalidDate     = invalidDate;
-    proto$1.ordinal         = ordinal;
-    proto$1.preparse        = preParsePostFormat;
-    proto$1.postformat      = preParsePostFormat;
-    proto$1.relativeTime    = relativeTime;
-    proto$1.pastFuture      = pastFuture;
-    proto$1.set             = set;
-
-    proto$1.months            =        localeMonths;
-    proto$1.monthsShort       =        localeMonthsShort;
-    proto$1.monthsParse       =        localeMonthsParse;
-    proto$1.monthsRegex       = monthsRegex;
-    proto$1.monthsShortRegex  = monthsShortRegex;
-    proto$1.week = localeWeek;
-    proto$1.firstDayOfYear = localeFirstDayOfYear;
-    proto$1.firstDayOfWeek = localeFirstDayOfWeek;
-
-    proto$1.weekdays       =        localeWeekdays;
-    proto$1.weekdaysMin    =        localeWeekdaysMin;
-    proto$1.weekdaysShort  =        localeWeekdaysShort;
-    proto$1.weekdaysParse  =        localeWeekdaysParse;
-
-    proto$1.weekdaysRegex       =        weekdaysRegex;
-    proto$1.weekdaysShortRegex  =        weekdaysShortRegex;
-    proto$1.weekdaysMinRegex    =        weekdaysMinRegex;
-
-    proto$1.isPM = localeIsPM;
-    proto$1.meridiem = localeMeridiem;
-
-    function get$1 (format, index, field, setter) {
-        var locale = getLocale();
-        var utc = createUTC().set(setter, index);
-        return locale[field](utc, format);
-    }
-
-    function listMonthsImpl (format, index, field) {
-        if (isNumber(format)) {
-            index = format;
-            format = undefined;
-        }
-
-        format = format || '';
-
-        if (index != null) {
-            return get$1(format, index, field, 'month');
-        }
-
-        var i;
-        var out = [];
-        for (i = 0; i < 12; i++) {
-            out[i] = get$1(format, i, field, 'month');
-        }
-        return out;
-    }
-
-    // ()
-    // (5)
-    // (fmt, 5)
-    // (fmt)
-    // (true)
-    // (true, 5)
-    // (true, fmt, 5)
-    // (true, fmt)
-    function listWeekdaysImpl (localeSorted, format, index, field) {
-        if (typeof localeSorted === 'boolean') {
-            if (isNumber(format)) {
-                index = format;
-                format = undefined;
-            }
-
-            format = format || '';
-        } else {
-            format = localeSorted;
-            index = format;
-            localeSorted = false;
-
-            if (isNumber(format)) {
-                index = format;
-                format = undefined;
-            }
-
-            format = format || '';
-        }
-
-        var locale = getLocale(),
-            shift = localeSorted ? locale._week.dow : 0;
-
-        if (index != null) {
-            return get$1(format, (index + shift) % 7, field, 'day');
-        }
-
-        var i;
-        var out = [];
-        for (i = 0; i < 7; i++) {
-            out[i] = get$1(format, (i + shift) % 7, field, 'day');
-        }
-        return out;
-    }
-
-    function listMonths (format, index) {
-        return listMonthsImpl(format, index, 'months');
-    }
-
-    function listMonthsShort (format, index) {
-        return listMonthsImpl(format, index, 'monthsShort');
-    }
-
-    function listWeekdays (localeSorted, format, index) {
-        return listWeekdaysImpl(localeSorted, format, index, 'weekdays');
-    }
-
-    function listWeekdaysShort (localeSorted, format, index) {
-        return listWeekdaysImpl(localeSorted, format, index, 'weekdaysShort');
-    }
-
-    function listWeekdaysMin (localeSorted, format, index) {
-        return listWeekdaysImpl(localeSorted, format, index, 'weekdaysMin');
-    }
-
-    getSetGlobalLocale('en', {
-        dayOfMonthOrdinalParse: /\d{1,2}(th|st|nd|rd)/,
-        ordinal : function (number) {
-            var b = number % 10,
-                output = (toInt(number % 100 / 10) === 1) ? 'th' :
-                (b === 1) ? 'st' :
-                (b === 2) ? 'nd' :
-                (b === 3) ? 'rd' : 'th';
-            return number + output;
-        }
-    });
-
-    // Side effect imports
-
-    hooks.lang = deprecate('moment.lang is deprecated. Use moment.locale instead.', getSetGlobalLocale);
-    hooks.langData = deprecate('moment.langData is deprecated. Use moment.localeData instead.', getLocale);
-
-    var mathAbs = Math.abs;
-
-    function abs () {
-        var data           = this._data;
-
-        this._milliseconds = mathAbs(this._milliseconds);
-        this._days         = mathAbs(this._days);
-        this._months       = mathAbs(this._months);
-
-        data.milliseconds  = mathAbs(data.milliseconds);
-        data.seconds       = mathAbs(data.seconds);
-        data.minutes       = mathAbs(data.minutes);
-        data.hours         = mathAbs(data.hours);
-        data.months        = mathAbs(data.months);
-        data.years         = mathAbs(data.years);
-
-        return this;
-    }
-
-    function addSubtract$1 (duration, input, value, direction) {
-        var other = createDuration(input, value);
-
-        duration._milliseconds += direction * other._milliseconds;
-        duration._days         += direction * other._days;
-        duration._months       += direction * other._months;
-
-        return duration._bubble();
-    }
-
-    // supports only 2.0-style add(1, 's') or add(duration)
-    function add$1 (input, value) {
-        return addSubtract$1(this, input, value, 1);
-    }
-
-    // supports only 2.0-style subtract(1, 's') or subtract(duration)
-    function subtract$1 (input, value) {
-        return addSubtract$1(this, input, value, -1);
-    }
-
-    function absCeil (number) {
-        if (number < 0) {
-            return Math.floor(number);
-        } else {
-            return Math.ceil(number);
-        }
-    }
-
-    function bubble () {
-        var milliseconds = this._milliseconds;
-        var days         = this._days;
-        var months       = this._months;
-        var data         = this._data;
-        var seconds, minutes, hours, years, monthsFromDays;
-
-        // if we have a mix of positive and negative values, bubble down first
-        // check: https://github.com/moment/moment/issues/2166
-        if (!((milliseconds >= 0 && days >= 0 && months >= 0) ||
-                (milliseconds <= 0 && days <= 0 && months <= 0))) {
-            milliseconds += absCeil(monthsToDays(months) + days) * 864e5;
-            days = 0;
-            months = 0;
-        }
-
-        // The following code bubbles up values, see the tests for
-        // examples of what that means.
-        data.milliseconds = milliseconds % 1000;
-
-        seconds           = absFloor(milliseconds / 1000);
-        data.seconds      = seconds % 60;
-
-        minutes           = absFloor(seconds / 60);
-        data.minutes      = minutes % 60;
-
-        hours             = absFloor(minutes / 60);
-        data.hours        = hours % 24;
-
-        days += absFloor(hours / 24);
-
-        // convert days to months
-        monthsFromDays = absFloor(daysToMonths(days));
-        months += monthsFromDays;
-        days -= absCeil(monthsToDays(monthsFromDays));
-
-        // 12 months -> 1 year
-        years = absFloor(months / 12);
-        months %= 12;
-
-        data.days   = days;
-        data.months = months;
-        data.years  = years;
-
-        return this;
-    }
-
-    function daysToMonths (days) {
-        // 400 years have 146097 days (taking into account leap year rules)
-        // 400 years have 12 months === 4800
-        return days * 4800 / 146097;
-    }
-
-    function monthsToDays (months) {
-        // the reverse of daysToMonths
-        return months * 146097 / 4800;
-    }
-
-    function as (units) {
-        if (!this.isValid()) {
-            return NaN;
-        }
-        var days;
-        var months;
-        var milliseconds = this._milliseconds;
-
-        units = normalizeUnits(units);
-
-        if (units === 'month' || units === 'year') {
-            days   = this._days   + milliseconds / 864e5;
-            months = this._months + daysToMonths(days);
-            return units === 'month' ? months : months / 12;
-        } else {
-            // handle milliseconds separately because of floating point math errors (issue #1867)
-            days = this._days + Math.round(monthsToDays(this._months));
-            switch (units) {
-                case 'week'   : return days / 7     + milliseconds / 6048e5;
-                case 'day'    : return days         + milliseconds / 864e5;
-                case 'hour'   : return days * 24    + milliseconds / 36e5;
-                case 'minute' : return days * 1440  + milliseconds / 6e4;
-                case 'second' : return days * 86400 + milliseconds / 1000;
-                // Math.floor prevents floating point math errors here
-                case 'millisecond': return Math.floor(days * 864e5) + milliseconds;
-                default: throw new Error('Unknown unit ' + units);
-            }
-        }
-    }
-
-    // TODO: Use this.as('ms')?
-    function valueOf$1 () {
-        if (!this.isValid()) {
-            return NaN;
-        }
-        return (
-            this._milliseconds +
-            this._days * 864e5 +
-            (this._months % 12) * 2592e6 +
-            toInt(this._months / 12) * 31536e6
-        );
-    }
-
-    function makeAs (alias) {
-        return function () {
-            return this.as(alias);
-        };
-    }
-
-    var asMilliseconds = makeAs('ms');
-    var asSeconds      = makeAs('s');
-    var asMinutes      = makeAs('m');
-    var asHours        = makeAs('h');
-    var asDays         = makeAs('d');
-    var asWeeks        = makeAs('w');
-    var asMonths       = makeAs('M');
-    var asYears        = makeAs('y');
-
-    function clone$1 () {
-        return createDuration(this);
-    }
-
-    function get$2 (units) {
-        units = normalizeUnits(units);
-        return this.isValid() ? this[units + 's']() : NaN;
-    }
-
-    function makeGetter(name) {
-        return function () {
-            return this.isValid() ? this._data[name] : NaN;
-        };
-    }
-
-    var milliseconds = makeGetter('milliseconds');
-    var seconds      = makeGetter('seconds');
-    var minutes      = makeGetter('minutes');
-    var hours        = makeGetter('hours');
-    var days         = makeGetter('days');
-    var months       = makeGetter('months');
-    var years        = makeGetter('years');
-
-    function weeks () {
-        return absFloor(this.days() / 7);
-    }
-
-    var round = Math.round;
-    var thresholds = {
-        ss: 44,         // a few seconds to seconds
-        s : 45,         // seconds to minute
-        m : 45,         // minutes to hour
-        h : 22,         // hours to day
-        d : 26,         // days to month
-        M : 11          // months to year
-    };
-
-    // helper function for moment.fn.from, moment.fn.fromNow, and moment.duration.fn.humanize
-    function substituteTimeAgo(string, number, withoutSuffix, isFuture, locale) {
-        return locale.relativeTime(number || 1, !!withoutSuffix, string, isFuture);
-    }
-
-    function relativeTime$1 (posNegDuration, withoutSuffix, locale) {
-        var duration = createDuration(posNegDuration).abs();
-        var seconds  = round(duration.as('s'));
-        var minutes  = round(duration.as('m'));
-        var hours    = round(duration.as('h'));
-        var days     = round(duration.as('d'));
-        var months   = round(duration.as('M'));
-        var years    = round(duration.as('y'));
-
-        var a = seconds <= thresholds.ss && ['s', seconds]  ||
-                seconds < thresholds.s   && ['ss', seconds] ||
-                minutes <= 1             && ['m']           ||
-                minutes < thresholds.m   && ['mm', minutes] ||
-                hours   <= 1             && ['h']           ||
-                hours   < thresholds.h   && ['hh', hours]   ||
-                days    <= 1             && ['d']           ||
-                days    < thresholds.d   && ['dd', days]    ||
-                months  <= 1             && ['M']           ||
-                months  < thresholds.M   && ['MM', months]  ||
-                years   <= 1             && ['y']           || ['yy', years];
-
-        a[2] = withoutSuffix;
-        a[3] = +posNegDuration > 0;
-        a[4] = locale;
-        return substituteTimeAgo.apply(null, a);
-    }
-
-    // This function allows you to set the rounding function for relative time strings
-    function getSetRelativeTimeRounding (roundingFunction) {
-        if (roundingFunction === undefined) {
-            return round;
-        }
-        if (typeof(roundingFunction) === 'function') {
-            round = roundingFunction;
-            return true;
-        }
-        return false;
-    }
-
-    // This function allows you to set a threshold for relative time strings
-    function getSetRelativeTimeThreshold (threshold, limit) {
-        if (thresholds[threshold] === undefined) {
-            return false;
-        }
-        if (limit === undefined) {
-            return thresholds[threshold];
-        }
-        thresholds[threshold] = limit;
-        if (threshold === 's') {
-            thresholds.ss = limit - 1;
-        }
-        return true;
-    }
-
-    function humanize (withSuffix) {
-        if (!this.isValid()) {
-            return this.localeData().invalidDate();
-        }
-
-        var locale = this.localeData();
-        var output = relativeTime$1(this, !withSuffix, locale);
-
-        if (withSuffix) {
-            output = locale.pastFuture(+this, output);
-        }
-
-        return locale.postformat(output);
-    }
-
-    var abs$1 = Math.abs;
-
-    function sign(x) {
-        return ((x > 0) - (x < 0)) || +x;
-    }
-
-    function toISOString$1() {
-        // for ISO strings we do not use the normal bubbling rules:
-        //  * milliseconds bubble up until they become hours
-        //  * days do not bubble at all
-        //  * months bubble up until they become years
-        // This is because there is no context-free conversion between hours and days
-        // (think of clock changes)
-        // and also not between days and months (28-31 days per month)
-        if (!this.isValid()) {
-            return this.localeData().invalidDate();
-        }
-
-        var seconds = abs$1(this._milliseconds) / 1000;
-        var days         = abs$1(this._days);
-        var months       = abs$1(this._months);
-        var minutes, hours, years;
-
-        // 3600 seconds -> 60 minutes -> 1 hour
-        minutes           = absFloor(seconds / 60);
-        hours             = absFloor(minutes / 60);
-        seconds %= 60;
-        minutes %= 60;
-
-        // 12 months -> 1 year
-        years  = absFloor(months / 12);
-        months %= 12;
-
-
-        // inspired by https://github.com/dordille/moment-isoduration/blob/master/moment.isoduration.js
-        var Y = years;
-        var M = months;
-        var D = days;
-        var h = hours;
-        var m = minutes;
-        var s = seconds ? seconds.toFixed(3).replace(/\.?0+$/, '') : '';
-        var total = this.asSeconds();
-
-        if (!total) {
-            // this is the same as C#'s (Noda) and python (isodate)...
-            // but not other JS (goog.date)
-            return 'P0D';
-        }
-
-        var totalSign = total < 0 ? '-' : '';
-        var ymSign = sign(this._months) !== sign(total) ? '-' : '';
-        var daysSign = sign(this._days) !== sign(total) ? '-' : '';
-        var hmsSign = sign(this._milliseconds) !== sign(total) ? '-' : '';
-
-        return totalSign + 'P' +
-            (Y ? ymSign + Y + 'Y' : '') +
-            (M ? ymSign + M + 'M' : '') +
-            (D ? daysSign + D + 'D' : '') +
-            ((h || m || s) ? 'T' : '') +
-            (h ? hmsSign + h + 'H' : '') +
-            (m ? hmsSign + m + 'M' : '') +
-            (s ? hmsSign + s + 'S' : '');
-    }
-
-    var proto$2 = Duration.prototype;
-
-    proto$2.isValid        = isValid$1;
-    proto$2.abs            = abs;
-    proto$2.add            = add$1;
-    proto$2.subtract       = subtract$1;
-    proto$2.as             = as;
-    proto$2.asMilliseconds = asMilliseconds;
-    proto$2.asSeconds      = asSeconds;
-    proto$2.asMinutes      = asMinutes;
-    proto$2.asHours        = asHours;
-    proto$2.asDays         = asDays;
-    proto$2.asWeeks        = asWeeks;
-    proto$2.asMonths       = asMonths;
-    proto$2.asYears        = asYears;
-    proto$2.valueOf        = valueOf$1;
-    proto$2._bubble        = bubble;
-    proto$2.clone          = clone$1;
-    proto$2.get            = get$2;
-    proto$2.milliseconds   = milliseconds;
-    proto$2.seconds        = seconds;
-    proto$2.minutes        = minutes;
-    proto$2.hours          = hours;
-    proto$2.days           = days;
-    proto$2.weeks          = weeks;
-    proto$2.months         = months;
-    proto$2.years          = years;
-    proto$2.humanize       = humanize;
-    proto$2.toISOString    = toISOString$1;
-    proto$2.toString       = toISOString$1;
-    proto$2.toJSON         = toISOString$1;
-    proto$2.locale         = locale;
-    proto$2.localeData     = localeData;
-
-    proto$2.toIsoString = deprecate('toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)', toISOString$1);
-    proto$2.lang = lang;
-
-    // Side effect imports
-
-    // FORMATTING
-
-    addFormatToken('X', 0, 0, 'unix');
-    addFormatToken('x', 0, 0, 'valueOf');
-
-    // PARSING
-
-    addRegexToken('x', matchSigned);
-    addRegexToken('X', matchTimestamp);
-    addParseToken('X', function (input, array, config) {
-        config._d = new Date(parseFloat(input, 10) * 1000);
-    });
-    addParseToken('x', function (input, array, config) {
-        config._d = new Date(toInt(input));
-    });
-
-    // Side effect imports
-
-
-    hooks.version = '2.22.2';
-
-    setHookCallback(createLocal);
-
-    hooks.fn                    = proto;
-    hooks.min                   = min;
-    hooks.max                   = max;
-    hooks.now                   = now;
-    hooks.utc                   = createUTC;
-    hooks.unix                  = createUnix;
-    hooks.months                = listMonths;
-    hooks.isDate                = isDate;
-    hooks.locale                = getSetGlobalLocale;
-    hooks.invalid               = createInvalid;
-    hooks.duration              = createDuration;
-    hooks.isMoment              = isMoment;
-    hooks.weekdays              = listWeekdays;
-    hooks.parseZone             = createInZone;
-    hooks.localeData            = getLocale;
-    hooks.isDuration            = isDuration;
-    hooks.monthsShort           = listMonthsShort;
-    hooks.weekdaysMin           = listWeekdaysMin;
-    hooks.defineLocale          = defineLocale;
-    hooks.updateLocale          = updateLocale;
-    hooks.locales               = listLocales;
-    hooks.weekdaysShort         = listWeekdaysShort;
-    hooks.normalizeUnits        = normalizeUnits;
-    hooks.relativeTimeRounding  = getSetRelativeTimeRounding;
-    hooks.relativeTimeThreshold = getSetRelativeTimeThreshold;
-    hooks.calendarFormat        = getCalendarFormat;
-    hooks.prototype             = proto;
-
-    // currently HTML5 input type only supports 24-hour formats
-    hooks.HTML5_FMT = {
-        DATETIME_LOCAL: 'YYYY-MM-DDTHH:mm',             // <input type="datetime-local" />
-        DATETIME_LOCAL_SECONDS: 'YYYY-MM-DDTHH:mm:ss',  // <input type="datetime-local" step="1" />
-        DATETIME_LOCAL_MS: 'YYYY-MM-DDTHH:mm:ss.SSS',   // <input type="datetime-local" step="0.001" />
-        DATE: 'YYYY-MM-DD',                             // <input type="date" />
-        TIME: 'HH:mm',                                  // <input type="time" />
-        TIME_SECONDS: 'HH:mm:ss',                       // <input type="time" step="1" />
-        TIME_MS: 'HH:mm:ss.SSS',                        // <input type="time" step="0.001" />
-        WEEK: 'YYYY-[W]WW',                             // <input type="week" />
-        MONTH: 'YYYY-MM'                                // <input type="month" />
-    };
-
-    return hooks;
-
-})));
-
-},{}],5:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var assign, isArray, isEmpty, isFunction, isObject, isPlainObject,
-    slice = [].slice,
-    hasProp = {}.hasOwnProperty;
-
-  assign = function() {
-    var i, key, len, source, sources, target;
-    target = arguments[0], sources = 2 <= arguments.length ? slice.call(arguments, 1) : [];
-    if (isFunction(Object.assign)) {
-      Object.assign.apply(null, arguments);
-    } else {
-      for (i = 0, len = sources.length; i < len; i++) {
-        source = sources[i];
-        if (source != null) {
-          for (key in source) {
-            if (!hasProp.call(source, key)) continue;
-            target[key] = source[key];
-          }
-        }
-      }
-    }
-    return target;
-  };
-
-  isFunction = function(val) {
-    return !!val && Object.prototype.toString.call(val) === '[object Function]';
-  };
-
-  isObject = function(val) {
-    var ref;
-    return !!val && ((ref = typeof val) === 'function' || ref === 'object');
-  };
-
-  isArray = function(val) {
-    if (isFunction(Array.isArray)) {
-      return Array.isArray(val);
-    } else {
-      return Object.prototype.toString.call(val) === '[object Array]';
-    }
-  };
-
-  isEmpty = function(val) {
-    var key;
-    if (isArray(val)) {
-      return !val.length;
-    } else {
-      for (key in val) {
-        if (!hasProp.call(val, key)) continue;
-        return false;
-      }
-      return true;
-    }
-  };
-
-  isPlainObject = function(val) {
-    var ctor, proto;
-    return isObject(val) && (proto = Object.getPrototypeOf(val)) && (ctor = proto.constructor) && (typeof ctor === 'function') && (ctor instanceof ctor) && (Function.prototype.toString.call(ctor) === Function.prototype.toString.call(Object));
-  };
-
-  module.exports.assign = assign;
-
-  module.exports.isFunction = isFunction;
-
-  module.exports.isObject = isObject;
-
-  module.exports.isArray = isArray;
-
-  module.exports.isEmpty = isEmpty;
-
-  module.exports.isPlainObject = isPlainObject;
-
-}).call(this);
-
-},{}],6:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLAttribute;
-
-  module.exports = XMLAttribute = (function() {
-    function XMLAttribute(parent, name, value) {
-      this.options = parent.options;
-      this.stringify = parent.stringify;
-      if (name == null) {
-        throw new Error("Missing attribute name of element " + parent.name);
-      }
-      if (value == null) {
-        throw new Error("Missing attribute value for attribute " + name + " of element " + parent.name);
-      }
-      this.name = this.stringify.attName(name);
-      this.value = this.stringify.attValue(value);
-    }
-
-    XMLAttribute.prototype.clone = function() {
-      return Object.create(this);
-    };
-
-    XMLAttribute.prototype.toString = function(options) {
-      return this.options.writer.set(options).attribute(this);
-    };
-
-    return XMLAttribute;
-
-  })();
-
-}).call(this);
-
-},{}],7:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLCData, XMLNode,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  XMLNode = require('./XMLNode');
-
-  module.exports = XMLCData = (function(superClass) {
-    extend(XMLCData, superClass);
-
-    function XMLCData(parent, text) {
-      XMLCData.__super__.constructor.call(this, parent);
-      if (text == null) {
-        throw new Error("Missing CDATA text");
-      }
-      this.text = this.stringify.cdata(text);
-    }
-
-    XMLCData.prototype.clone = function() {
-      return Object.create(this);
-    };
-
-    XMLCData.prototype.toString = function(options) {
-      return this.options.writer.set(options).cdata(this);
-    };
-
-    return XMLCData;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./XMLNode":18}],8:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLComment, XMLNode,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  XMLNode = require('./XMLNode');
-
-  module.exports = XMLComment = (function(superClass) {
-    extend(XMLComment, superClass);
-
-    function XMLComment(parent, text) {
-      XMLComment.__super__.constructor.call(this, parent);
-      if (text == null) {
-        throw new Error("Missing comment text");
-      }
-      this.text = this.stringify.comment(text);
-    }
-
-    XMLComment.prototype.clone = function() {
-      return Object.create(this);
-    };
-
-    XMLComment.prototype.toString = function(options) {
-      return this.options.writer.set(options).comment(this);
-    };
-
-    return XMLComment;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./XMLNode":18}],9:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLDTDAttList, XMLNode,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  XMLNode = require('./XMLNode');
-
-  module.exports = XMLDTDAttList = (function(superClass) {
-    extend(XMLDTDAttList, superClass);
-
-    function XMLDTDAttList(parent, elementName, attributeName, attributeType, defaultValueType, defaultValue) {
-      XMLDTDAttList.__super__.constructor.call(this, parent);
-      if (elementName == null) {
-        throw new Error("Missing DTD element name");
-      }
-      if (attributeName == null) {
-        throw new Error("Missing DTD attribute name");
-      }
-      if (!attributeType) {
-        throw new Error("Missing DTD attribute type");
-      }
-      if (!defaultValueType) {
-        throw new Error("Missing DTD attribute default");
-      }
-      if (defaultValueType.indexOf('#') !== 0) {
-        defaultValueType = '#' + defaultValueType;
-      }
-      if (!defaultValueType.match(/^(#REQUIRED|#IMPLIED|#FIXED|#DEFAULT)$/)) {
-        throw new Error("Invalid default value type; expected: #REQUIRED, #IMPLIED, #FIXED or #DEFAULT");
-      }
-      if (defaultValue && !defaultValueType.match(/^(#FIXED|#DEFAULT)$/)) {
-        throw new Error("Default value only applies to #FIXED or #DEFAULT");
-      }
-      this.elementName = this.stringify.eleName(elementName);
-      this.attributeName = this.stringify.attName(attributeName);
-      this.attributeType = this.stringify.dtdAttType(attributeType);
-      this.defaultValue = this.stringify.dtdAttDefault(defaultValue);
-      this.defaultValueType = defaultValueType;
-    }
-
-    XMLDTDAttList.prototype.toString = function(options) {
-      return this.options.writer.set(options).dtdAttList(this);
-    };
-
-    return XMLDTDAttList;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./XMLNode":18}],10:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLDTDElement, XMLNode,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  XMLNode = require('./XMLNode');
-
-  module.exports = XMLDTDElement = (function(superClass) {
-    extend(XMLDTDElement, superClass);
-
-    function XMLDTDElement(parent, name, value) {
-      XMLDTDElement.__super__.constructor.call(this, parent);
-      if (name == null) {
-        throw new Error("Missing DTD element name");
-      }
-      if (!value) {
-        value = '(#PCDATA)';
-      }
-      if (Array.isArray(value)) {
-        value = '(' + value.join(',') + ')';
-      }
-      this.name = this.stringify.eleName(name);
-      this.value = this.stringify.dtdElementValue(value);
-    }
-
-    XMLDTDElement.prototype.toString = function(options) {
-      return this.options.writer.set(options).dtdElement(this);
-    };
-
-    return XMLDTDElement;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./XMLNode":18}],11:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLDTDEntity, XMLNode, isObject,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  isObject = require('./Utility').isObject;
-
-  XMLNode = require('./XMLNode');
-
-  module.exports = XMLDTDEntity = (function(superClass) {
-    extend(XMLDTDEntity, superClass);
-
-    function XMLDTDEntity(parent, pe, name, value) {
-      XMLDTDEntity.__super__.constructor.call(this, parent);
-      if (name == null) {
-        throw new Error("Missing entity name");
-      }
-      if (value == null) {
-        throw new Error("Missing entity value");
-      }
-      this.pe = !!pe;
-      this.name = this.stringify.eleName(name);
-      if (!isObject(value)) {
-        this.value = this.stringify.dtdEntityValue(value);
-      } else {
-        if (!value.pubID && !value.sysID) {
-          throw new Error("Public and/or system identifiers are required for an external entity");
-        }
-        if (value.pubID && !value.sysID) {
-          throw new Error("System identifier is required for a public external entity");
-        }
-        if (value.pubID != null) {
-          this.pubID = this.stringify.dtdPubID(value.pubID);
-        }
-        if (value.sysID != null) {
-          this.sysID = this.stringify.dtdSysID(value.sysID);
-        }
-        if (value.nData != null) {
-          this.nData = this.stringify.dtdNData(value.nData);
-        }
-        if (this.pe && this.nData) {
-          throw new Error("Notation declaration is not allowed in a parameter entity");
-        }
-      }
-    }
-
-    XMLDTDEntity.prototype.toString = function(options) {
-      return this.options.writer.set(options).dtdEntity(this);
-    };
-
-    return XMLDTDEntity;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./Utility":5,"./XMLNode":18}],12:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLDTDNotation, XMLNode,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  XMLNode = require('./XMLNode');
-
-  module.exports = XMLDTDNotation = (function(superClass) {
-    extend(XMLDTDNotation, superClass);
-
-    function XMLDTDNotation(parent, name, value) {
-      XMLDTDNotation.__super__.constructor.call(this, parent);
-      if (name == null) {
-        throw new Error("Missing notation name");
-      }
-      if (!value.pubID && !value.sysID) {
-        throw new Error("Public or system identifiers are required for an external entity");
-      }
-      this.name = this.stringify.eleName(name);
-      if (value.pubID != null) {
-        this.pubID = this.stringify.dtdPubID(value.pubID);
-      }
-      if (value.sysID != null) {
-        this.sysID = this.stringify.dtdSysID(value.sysID);
-      }
-    }
-
-    XMLDTDNotation.prototype.toString = function(options) {
-      return this.options.writer.set(options).dtdNotation(this);
-    };
-
-    return XMLDTDNotation;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./XMLNode":18}],13:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLDeclaration, XMLNode, isObject,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  isObject = require('./Utility').isObject;
-
-  XMLNode = require('./XMLNode');
-
-  module.exports = XMLDeclaration = (function(superClass) {
-    extend(XMLDeclaration, superClass);
-
-    function XMLDeclaration(parent, version, encoding, standalone) {
-      var ref;
-      XMLDeclaration.__super__.constructor.call(this, parent);
-      if (isObject(version)) {
-        ref = version, version = ref.version, encoding = ref.encoding, standalone = ref.standalone;
-      }
-      if (!version) {
-        version = '1.0';
-      }
-      this.version = this.stringify.xmlVersion(version);
-      if (encoding != null) {
-        this.encoding = this.stringify.xmlEncoding(encoding);
-      }
-      if (standalone != null) {
-        this.standalone = this.stringify.xmlStandalone(standalone);
-      }
-    }
-
-    XMLDeclaration.prototype.toString = function(options) {
-      return this.options.writer.set(options).declaration(this);
-    };
-
-    return XMLDeclaration;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./Utility":5,"./XMLNode":18}],14:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDocType, XMLNode, isObject,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  isObject = require('./Utility').isObject;
-
-  XMLNode = require('./XMLNode');
-
-  XMLDTDAttList = require('./XMLDTDAttList');
-
-  XMLDTDEntity = require('./XMLDTDEntity');
-
-  XMLDTDElement = require('./XMLDTDElement');
-
-  XMLDTDNotation = require('./XMLDTDNotation');
-
-  module.exports = XMLDocType = (function(superClass) {
-    extend(XMLDocType, superClass);
-
-    function XMLDocType(parent, pubID, sysID) {
-      var ref, ref1;
-      XMLDocType.__super__.constructor.call(this, parent);
-      this.documentObject = parent;
-      if (isObject(pubID)) {
-        ref = pubID, pubID = ref.pubID, sysID = ref.sysID;
-      }
-      if (sysID == null) {
-        ref1 = [pubID, sysID], sysID = ref1[0], pubID = ref1[1];
-      }
-      if (pubID != null) {
-        this.pubID = this.stringify.dtdPubID(pubID);
-      }
-      if (sysID != null) {
-        this.sysID = this.stringify.dtdSysID(sysID);
-      }
-    }
-
-    XMLDocType.prototype.element = function(name, value) {
-      var child;
-      child = new XMLDTDElement(this, name, value);
-      this.children.push(child);
-      return this;
-    };
-
-    XMLDocType.prototype.attList = function(elementName, attributeName, attributeType, defaultValueType, defaultValue) {
-      var child;
-      child = new XMLDTDAttList(this, elementName, attributeName, attributeType, defaultValueType, defaultValue);
-      this.children.push(child);
-      return this;
-    };
-
-    XMLDocType.prototype.entity = function(name, value) {
-      var child;
-      child = new XMLDTDEntity(this, false, name, value);
-      this.children.push(child);
-      return this;
-    };
-
-    XMLDocType.prototype.pEntity = function(name, value) {
-      var child;
-      child = new XMLDTDEntity(this, true, name, value);
-      this.children.push(child);
-      return this;
-    };
-
-    XMLDocType.prototype.notation = function(name, value) {
-      var child;
-      child = new XMLDTDNotation(this, name, value);
-      this.children.push(child);
-      return this;
-    };
-
-    XMLDocType.prototype.toString = function(options) {
-      return this.options.writer.set(options).docType(this);
-    };
-
-    XMLDocType.prototype.ele = function(name, value) {
-      return this.element(name, value);
-    };
-
-    XMLDocType.prototype.att = function(elementName, attributeName, attributeType, defaultValueType, defaultValue) {
-      return this.attList(elementName, attributeName, attributeType, defaultValueType, defaultValue);
-    };
-
-    XMLDocType.prototype.ent = function(name, value) {
-      return this.entity(name, value);
-    };
-
-    XMLDocType.prototype.pent = function(name, value) {
-      return this.pEntity(name, value);
-    };
-
-    XMLDocType.prototype.not = function(name, value) {
-      return this.notation(name, value);
-    };
-
-    XMLDocType.prototype.up = function() {
-      return this.root() || this.documentObject;
-    };
-
-    return XMLDocType;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./Utility":5,"./XMLDTDAttList":9,"./XMLDTDElement":10,"./XMLDTDEntity":11,"./XMLDTDNotation":12,"./XMLNode":18}],15:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLDocument, XMLNode, XMLStringWriter, XMLStringifier, isPlainObject,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  isPlainObject = require('./Utility').isPlainObject;
-
-  XMLNode = require('./XMLNode');
-
-  XMLStringifier = require('./XMLStringifier');
-
-  XMLStringWriter = require('./XMLStringWriter');
-
-  module.exports = XMLDocument = (function(superClass) {
-    extend(XMLDocument, superClass);
-
-    function XMLDocument(options) {
-      XMLDocument.__super__.constructor.call(this, null);
-      options || (options = {});
-      if (!options.writer) {
-        options.writer = new XMLStringWriter();
-      }
-      this.options = options;
-      this.stringify = new XMLStringifier(options);
-      this.isDocument = true;
-    }
-
-    XMLDocument.prototype.end = function(writer) {
-      var writerOptions;
-      if (!writer) {
-        writer = this.options.writer;
-      } else if (isPlainObject(writer)) {
-        writerOptions = writer;
-        writer = this.options.writer.set(writerOptions);
-      }
-      return writer.document(this);
-    };
-
-    XMLDocument.prototype.toString = function(options) {
-      return this.options.writer.set(options).document(this);
-    };
-
-    return XMLDocument;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./Utility":5,"./XMLNode":18,"./XMLStringWriter":22,"./XMLStringifier":23}],16:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLAttribute, XMLCData, XMLComment, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDeclaration, XMLDocType, XMLDocumentCB, XMLElement, XMLProcessingInstruction, XMLRaw, XMLStringWriter, XMLStringifier, XMLText, isFunction, isObject, isPlainObject, ref,
-    hasProp = {}.hasOwnProperty;
-
-  ref = require('./Utility'), isObject = ref.isObject, isFunction = ref.isFunction, isPlainObject = ref.isPlainObject;
-
-  XMLElement = require('./XMLElement');
-
-  XMLCData = require('./XMLCData');
-
-  XMLComment = require('./XMLComment');
-
-  XMLRaw = require('./XMLRaw');
-
-  XMLText = require('./XMLText');
-
-  XMLProcessingInstruction = require('./XMLProcessingInstruction');
-
-  XMLDeclaration = require('./XMLDeclaration');
-
-  XMLDocType = require('./XMLDocType');
-
-  XMLDTDAttList = require('./XMLDTDAttList');
-
-  XMLDTDEntity = require('./XMLDTDEntity');
-
-  XMLDTDElement = require('./XMLDTDElement');
-
-  XMLDTDNotation = require('./XMLDTDNotation');
-
-  XMLAttribute = require('./XMLAttribute');
-
-  XMLStringifier = require('./XMLStringifier');
-
-  XMLStringWriter = require('./XMLStringWriter');
-
-  module.exports = XMLDocumentCB = (function() {
-    function XMLDocumentCB(options, onData, onEnd) {
-      var writerOptions;
-      options || (options = {});
-      if (!options.writer) {
-        options.writer = new XMLStringWriter(options);
-      } else if (isPlainObject(options.writer)) {
-        writerOptions = options.writer;
-        options.writer = new XMLStringWriter(writerOptions);
-      }
-      this.options = options;
-      this.writer = options.writer;
-      this.stringify = new XMLStringifier(options);
-      this.onDataCallback = onData || function() {};
-      this.onEndCallback = onEnd || function() {};
-      this.currentNode = null;
-      this.currentLevel = -1;
-      this.openTags = {};
-      this.documentStarted = false;
-      this.documentCompleted = false;
-      this.root = null;
-    }
-
-    XMLDocumentCB.prototype.node = function(name, attributes, text) {
-      var ref1;
-      if (name == null) {
-        throw new Error("Missing node name");
-      }
-      if (this.root && this.currentLevel === -1) {
-        throw new Error("Document can only have one root node");
-      }
-      this.openCurrent();
-      name = name.valueOf();
-      if (attributes == null) {
-        attributes = {};
-      }
-      attributes = attributes.valueOf();
-      if (!isObject(attributes)) {
-        ref1 = [attributes, text], text = ref1[0], attributes = ref1[1];
-      }
-      this.currentNode = new XMLElement(this, name, attributes);
-      this.currentNode.children = false;
-      this.currentLevel++;
-      this.openTags[this.currentLevel] = this.currentNode;
-      if (text != null) {
-        this.text(text);
-      }
-      return this;
-    };
-
-    XMLDocumentCB.prototype.element = function(name, attributes, text) {
-      if (this.currentNode && this.currentNode instanceof XMLDocType) {
-        return this.dtdElement.apply(this, arguments);
-      } else {
-        return this.node(name, attributes, text);
-      }
-    };
-
-    XMLDocumentCB.prototype.attribute = function(name, value) {
-      var attName, attValue;
-      if (!this.currentNode || this.currentNode.children) {
-        throw new Error("att() can only be used immediately after an ele() call in callback mode");
-      }
-      if (name != null) {
-        name = name.valueOf();
-      }
-      if (isObject(name)) {
-        for (attName in name) {
-          if (!hasProp.call(name, attName)) continue;
-          attValue = name[attName];
-          this.attribute(attName, attValue);
-        }
-      } else {
-        if (isFunction(value)) {
-          value = value.apply();
-        }
-        if (!this.options.skipNullAttributes || (value != null)) {
-          this.currentNode.attributes[name] = new XMLAttribute(this, name, value);
-        }
-      }
-      return this;
-    };
-
-    XMLDocumentCB.prototype.text = function(value) {
-      var node;
-      this.openCurrent();
-      node = new XMLText(this, value);
-      this.onData(this.writer.text(node, this.currentLevel + 1));
-      return this;
-    };
-
-    XMLDocumentCB.prototype.cdata = function(value) {
-      var node;
-      this.openCurrent();
-      node = new XMLCData(this, value);
-      this.onData(this.writer.cdata(node, this.currentLevel + 1));
-      return this;
-    };
-
-    XMLDocumentCB.prototype.comment = function(value) {
-      var node;
-      this.openCurrent();
-      node = new XMLComment(this, value);
-      this.onData(this.writer.comment(node, this.currentLevel + 1));
-      return this;
-    };
-
-    XMLDocumentCB.prototype.raw = function(value) {
-      var node;
-      this.openCurrent();
-      node = new XMLRaw(this, value);
-      this.onData(this.writer.raw(node, this.currentLevel + 1));
-      return this;
-    };
-
-    XMLDocumentCB.prototype.instruction = function(target, value) {
-      var i, insTarget, insValue, len, node;
-      this.openCurrent();
-      if (target != null) {
-        target = target.valueOf();
-      }
-      if (value != null) {
-        value = value.valueOf();
-      }
-      if (Array.isArray(target)) {
-        for (i = 0, len = target.length; i < len; i++) {
-          insTarget = target[i];
-          this.instruction(insTarget);
-        }
-      } else if (isObject(target)) {
-        for (insTarget in target) {
-          if (!hasProp.call(target, insTarget)) continue;
-          insValue = target[insTarget];
-          this.instruction(insTarget, insValue);
-        }
-      } else {
-        if (isFunction(value)) {
-          value = value.apply();
-        }
-        node = new XMLProcessingInstruction(this, target, value);
-        this.onData(this.writer.processingInstruction(node, this.currentLevel + 1));
-      }
-      return this;
-    };
-
-    XMLDocumentCB.prototype.declaration = function(version, encoding, standalone) {
-      var node;
-      this.openCurrent();
-      if (this.documentStarted) {
-        throw new Error("declaration() must be the first node");
-      }
-      node = new XMLDeclaration(this, version, encoding, standalone);
-      this.onData(this.writer.declaration(node, this.currentLevel + 1));
-      return this;
-    };
-
-    XMLDocumentCB.prototype.doctype = function(root, pubID, sysID) {
-      this.openCurrent();
-      if (root == null) {
-        throw new Error("Missing root node name");
-      }
-      if (this.root) {
-        throw new Error("dtd() must come before the root node");
-      }
-      this.currentNode = new XMLDocType(this, pubID, sysID);
-      this.currentNode.rootNodeName = root;
-      this.currentNode.children = false;
-      this.currentLevel++;
-      this.openTags[this.currentLevel] = this.currentNode;
-      return this;
-    };
-
-    XMLDocumentCB.prototype.dtdElement = function(name, value) {
-      var node;
-      this.openCurrent();
-      node = new XMLDTDElement(this, name, value);
-      this.onData(this.writer.dtdElement(node, this.currentLevel + 1));
-      return this;
-    };
-
-    XMLDocumentCB.prototype.attList = function(elementName, attributeName, attributeType, defaultValueType, defaultValue) {
-      var node;
-      this.openCurrent();
-      node = new XMLDTDAttList(this, elementName, attributeName, attributeType, defaultValueType, defaultValue);
-      this.onData(this.writer.dtdAttList(node, this.currentLevel + 1));
-      return this;
-    };
-
-    XMLDocumentCB.prototype.entity = function(name, value) {
-      var node;
-      this.openCurrent();
-      node = new XMLDTDEntity(this, false, name, value);
-      this.onData(this.writer.dtdEntity(node, this.currentLevel + 1));
-      return this;
-    };
-
-    XMLDocumentCB.prototype.pEntity = function(name, value) {
-      var node;
-      this.openCurrent();
-      node = new XMLDTDEntity(this, true, name, value);
-      this.onData(this.writer.dtdEntity(node, this.currentLevel + 1));
-      return this;
-    };
-
-    XMLDocumentCB.prototype.notation = function(name, value) {
-      var node;
-      this.openCurrent();
-      node = new XMLDTDNotation(this, name, value);
-      this.onData(this.writer.dtdNotation(node, this.currentLevel + 1));
-      return this;
-    };
-
-    XMLDocumentCB.prototype.up = function() {
-      if (this.currentLevel < 0) {
-        throw new Error("The document node has no parent");
-      }
-      if (this.currentNode) {
-        if (this.currentNode.children) {
-          this.closeNode(this.currentNode);
-        } else {
-          this.openNode(this.currentNode);
-        }
-        this.currentNode = null;
-      } else {
-        this.closeNode(this.openTags[this.currentLevel]);
-      }
-      delete this.openTags[this.currentLevel];
-      this.currentLevel--;
-      return this;
-    };
-
-    XMLDocumentCB.prototype.end = function() {
-      while (this.currentLevel >= 0) {
-        this.up();
-      }
-      return this.onEnd();
-    };
-
-    XMLDocumentCB.prototype.openCurrent = function() {
-      if (this.currentNode) {
-        this.currentNode.children = true;
-        return this.openNode(this.currentNode);
-      }
-    };
-
-    XMLDocumentCB.prototype.openNode = function(node) {
-      if (!node.isOpen) {
-        if (!this.root && this.currentLevel === 0 && node instanceof XMLElement) {
-          this.root = node;
-        }
-        this.onData(this.writer.openNode(node, this.currentLevel));
-        return node.isOpen = true;
-      }
-    };
-
-    XMLDocumentCB.prototype.closeNode = function(node) {
-      if (!node.isClosed) {
-        this.onData(this.writer.closeNode(node, this.currentLevel));
-        return node.isClosed = true;
-      }
-    };
-
-    XMLDocumentCB.prototype.onData = function(chunk) {
-      this.documentStarted = true;
-      return this.onDataCallback(chunk);
-    };
-
-    XMLDocumentCB.prototype.onEnd = function() {
-      this.documentCompleted = true;
-      return this.onEndCallback();
-    };
-
-    XMLDocumentCB.prototype.ele = function() {
-      return this.element.apply(this, arguments);
-    };
-
-    XMLDocumentCB.prototype.nod = function(name, attributes, text) {
-      return this.node(name, attributes, text);
-    };
-
-    XMLDocumentCB.prototype.txt = function(value) {
-      return this.text(value);
-    };
-
-    XMLDocumentCB.prototype.dat = function(value) {
-      return this.cdata(value);
-    };
-
-    XMLDocumentCB.prototype.com = function(value) {
-      return this.comment(value);
-    };
-
-    XMLDocumentCB.prototype.ins = function(target, value) {
-      return this.instruction(target, value);
-    };
-
-    XMLDocumentCB.prototype.dec = function(version, encoding, standalone) {
-      return this.declaration(version, encoding, standalone);
-    };
-
-    XMLDocumentCB.prototype.dtd = function(root, pubID, sysID) {
-      return this.doctype(root, pubID, sysID);
-    };
-
-    XMLDocumentCB.prototype.e = function(name, attributes, text) {
-      return this.element(name, attributes, text);
-    };
-
-    XMLDocumentCB.prototype.n = function(name, attributes, text) {
-      return this.node(name, attributes, text);
-    };
-
-    XMLDocumentCB.prototype.t = function(value) {
-      return this.text(value);
-    };
-
-    XMLDocumentCB.prototype.d = function(value) {
-      return this.cdata(value);
-    };
-
-    XMLDocumentCB.prototype.c = function(value) {
-      return this.comment(value);
-    };
-
-    XMLDocumentCB.prototype.r = function(value) {
-      return this.raw(value);
-    };
-
-    XMLDocumentCB.prototype.i = function(target, value) {
-      return this.instruction(target, value);
-    };
-
-    XMLDocumentCB.prototype.att = function() {
-      if (this.currentNode && this.currentNode instanceof XMLDocType) {
-        return this.attList.apply(this, arguments);
-      } else {
-        return this.attribute.apply(this, arguments);
-      }
-    };
-
-    XMLDocumentCB.prototype.a = function() {
-      if (this.currentNode && this.currentNode instanceof XMLDocType) {
-        return this.attList.apply(this, arguments);
-      } else {
-        return this.attribute.apply(this, arguments);
-      }
-    };
-
-    XMLDocumentCB.prototype.ent = function(name, value) {
-      return this.entity(name, value);
-    };
-
-    XMLDocumentCB.prototype.pent = function(name, value) {
-      return this.pEntity(name, value);
-    };
-
-    XMLDocumentCB.prototype.not = function(name, value) {
-      return this.notation(name, value);
-    };
-
-    return XMLDocumentCB;
-
-  })();
-
-}).call(this);
-
-},{"./Utility":5,"./XMLAttribute":6,"./XMLCData":7,"./XMLComment":8,"./XMLDTDAttList":9,"./XMLDTDElement":10,"./XMLDTDEntity":11,"./XMLDTDNotation":12,"./XMLDeclaration":13,"./XMLDocType":14,"./XMLElement":17,"./XMLProcessingInstruction":19,"./XMLRaw":20,"./XMLStringWriter":22,"./XMLStringifier":23,"./XMLText":24}],17:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLAttribute, XMLElement, XMLNode, isFunction, isObject, ref,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  ref = require('./Utility'), isObject = ref.isObject, isFunction = ref.isFunction;
-
-  XMLNode = require('./XMLNode');
-
-  XMLAttribute = require('./XMLAttribute');
-
-  module.exports = XMLElement = (function(superClass) {
-    extend(XMLElement, superClass);
-
-    function XMLElement(parent, name, attributes) {
-      XMLElement.__super__.constructor.call(this, parent);
-      if (name == null) {
-        throw new Error("Missing element name");
-      }
-      this.name = this.stringify.eleName(name);
-      this.attributes = {};
-      if (attributes != null) {
-        this.attribute(attributes);
-      }
-      if (parent.isDocument) {
-        this.isRoot = true;
-        this.documentObject = parent;
-        parent.rootObject = this;
-      }
-    }
-
-    XMLElement.prototype.clone = function() {
-      var att, attName, clonedSelf, ref1;
-      clonedSelf = Object.create(this);
-      if (clonedSelf.isRoot) {
-        clonedSelf.documentObject = null;
-      }
-      clonedSelf.attributes = {};
-      ref1 = this.attributes;
-      for (attName in ref1) {
-        if (!hasProp.call(ref1, attName)) continue;
-        att = ref1[attName];
-        clonedSelf.attributes[attName] = att.clone();
-      }
-      clonedSelf.children = [];
-      this.children.forEach(function(child) {
-        var clonedChild;
-        clonedChild = child.clone();
-        clonedChild.parent = clonedSelf;
-        return clonedSelf.children.push(clonedChild);
-      });
-      return clonedSelf;
-    };
-
-    XMLElement.prototype.attribute = function(name, value) {
-      var attName, attValue;
-      if (name != null) {
-        name = name.valueOf();
-      }
-      if (isObject(name)) {
-        for (attName in name) {
-          if (!hasProp.call(name, attName)) continue;
-          attValue = name[attName];
-          this.attribute(attName, attValue);
-        }
-      } else {
-        if (isFunction(value)) {
-          value = value.apply();
-        }
-        if (!this.options.skipNullAttributes || (value != null)) {
-          this.attributes[name] = new XMLAttribute(this, name, value);
-        }
-      }
-      return this;
-    };
-
-    XMLElement.prototype.removeAttribute = function(name) {
-      var attName, i, len;
-      if (name == null) {
-        throw new Error("Missing attribute name");
-      }
-      name = name.valueOf();
-      if (Array.isArray(name)) {
-        for (i = 0, len = name.length; i < len; i++) {
-          attName = name[i];
-          delete this.attributes[attName];
-        }
-      } else {
-        delete this.attributes[name];
-      }
-      return this;
-    };
-
-    XMLElement.prototype.toString = function(options) {
-      return this.options.writer.set(options).element(this);
-    };
-
-    XMLElement.prototype.att = function(name, value) {
-      return this.attribute(name, value);
-    };
-
-    XMLElement.prototype.a = function(name, value) {
-      return this.attribute(name, value);
-    };
-
-    return XMLElement;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./Utility":5,"./XMLAttribute":6,"./XMLNode":18}],18:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLCData, XMLComment, XMLDeclaration, XMLDocType, XMLElement, XMLNode, XMLProcessingInstruction, XMLRaw, XMLText, isEmpty, isFunction, isObject, ref,
-    hasProp = {}.hasOwnProperty;
-
-  ref = require('./Utility'), isObject = ref.isObject, isFunction = ref.isFunction, isEmpty = ref.isEmpty;
-
-  XMLElement = null;
-
-  XMLCData = null;
-
-  XMLComment = null;
-
-  XMLDeclaration = null;
-
-  XMLDocType = null;
-
-  XMLRaw = null;
-
-  XMLText = null;
-
-  XMLProcessingInstruction = null;
-
-  module.exports = XMLNode = (function() {
-    function XMLNode(parent) {
-      this.parent = parent;
-      if (this.parent) {
-        this.options = this.parent.options;
-        this.stringify = this.parent.stringify;
-      }
-      this.children = [];
-      if (!XMLElement) {
-        XMLElement = require('./XMLElement');
-        XMLCData = require('./XMLCData');
-        XMLComment = require('./XMLComment');
-        XMLDeclaration = require('./XMLDeclaration');
-        XMLDocType = require('./XMLDocType');
-        XMLRaw = require('./XMLRaw');
-        XMLText = require('./XMLText');
-        XMLProcessingInstruction = require('./XMLProcessingInstruction');
-      }
-    }
-
-    XMLNode.prototype.element = function(name, attributes, text) {
-      var childNode, item, j, k, key, lastChild, len, len1, ref1, val;
-      lastChild = null;
-      if (attributes == null) {
-        attributes = {};
-      }
-      attributes = attributes.valueOf();
-      if (!isObject(attributes)) {
-        ref1 = [attributes, text], text = ref1[0], attributes = ref1[1];
-      }
-      if (name != null) {
-        name = name.valueOf();
-      }
-      if (Array.isArray(name)) {
-        for (j = 0, len = name.length; j < len; j++) {
-          item = name[j];
-          lastChild = this.element(item);
-        }
-      } else if (isFunction(name)) {
-        lastChild = this.element(name.apply());
-      } else if (isObject(name)) {
-        for (key in name) {
-          if (!hasProp.call(name, key)) continue;
-          val = name[key];
-          if (isFunction(val)) {
-            val = val.apply();
-          }
-          if ((isObject(val)) && (isEmpty(val))) {
-            val = null;
-          }
-          if (!this.options.ignoreDecorators && this.stringify.convertAttKey && key.indexOf(this.stringify.convertAttKey) === 0) {
-            lastChild = this.attribute(key.substr(this.stringify.convertAttKey.length), val);
-          } else if (!this.options.separateArrayItems && Array.isArray(val)) {
-            for (k = 0, len1 = val.length; k < len1; k++) {
-              item = val[k];
-              childNode = {};
-              childNode[key] = item;
-              lastChild = this.element(childNode);
-            }
-          } else if (isObject(val)) {
-            lastChild = this.element(key);
-            lastChild.element(val);
-          } else {
-            lastChild = this.element(key, val);
-          }
-        }
-      } else {
-        if (!this.options.ignoreDecorators && this.stringify.convertTextKey && name.indexOf(this.stringify.convertTextKey) === 0) {
-          lastChild = this.text(text);
-        } else if (!this.options.ignoreDecorators && this.stringify.convertCDataKey && name.indexOf(this.stringify.convertCDataKey) === 0) {
-          lastChild = this.cdata(text);
-        } else if (!this.options.ignoreDecorators && this.stringify.convertCommentKey && name.indexOf(this.stringify.convertCommentKey) === 0) {
-          lastChild = this.comment(text);
-        } else if (!this.options.ignoreDecorators && this.stringify.convertRawKey && name.indexOf(this.stringify.convertRawKey) === 0) {
-          lastChild = this.raw(text);
-        } else if (!this.options.ignoreDecorators && this.stringify.convertPIKey && name.indexOf(this.stringify.convertPIKey) === 0) {
-          lastChild = this.instruction(name.substr(this.stringify.convertPIKey.length), text);
-        } else {
-          lastChild = this.node(name, attributes, text);
-        }
-      }
-      if (lastChild == null) {
-        throw new Error("Could not create any elements with: " + name);
-      }
-      return lastChild;
-    };
-
-    XMLNode.prototype.insertBefore = function(name, attributes, text) {
-      var child, i, removed;
-      if (this.isRoot) {
-        throw new Error("Cannot insert elements at root level");
-      }
-      i = this.parent.children.indexOf(this);
-      removed = this.parent.children.splice(i);
-      child = this.parent.element(name, attributes, text);
-      Array.prototype.push.apply(this.parent.children, removed);
-      return child;
-    };
-
-    XMLNode.prototype.insertAfter = function(name, attributes, text) {
-      var child, i, removed;
-      if (this.isRoot) {
-        throw new Error("Cannot insert elements at root level");
-      }
-      i = this.parent.children.indexOf(this);
-      removed = this.parent.children.splice(i + 1);
-      child = this.parent.element(name, attributes, text);
-      Array.prototype.push.apply(this.parent.children, removed);
-      return child;
-    };
-
-    XMLNode.prototype.remove = function() {
-      var i, ref1;
-      if (this.isRoot) {
-        throw new Error("Cannot remove the root element");
-      }
-      i = this.parent.children.indexOf(this);
-      [].splice.apply(this.parent.children, [i, i - i + 1].concat(ref1 = [])), ref1;
-      return this.parent;
-    };
-
-    XMLNode.prototype.node = function(name, attributes, text) {
-      var child, ref1;
-      if (name != null) {
-        name = name.valueOf();
-      }
-      attributes || (attributes = {});
-      attributes = attributes.valueOf();
-      if (!isObject(attributes)) {
-        ref1 = [attributes, text], text = ref1[0], attributes = ref1[1];
-      }
-      child = new XMLElement(this, name, attributes);
-      if (text != null) {
-        child.text(text);
-      }
-      this.children.push(child);
-      return child;
-    };
-
-    XMLNode.prototype.text = function(value) {
-      var child;
-      child = new XMLText(this, value);
-      this.children.push(child);
-      return this;
-    };
-
-    XMLNode.prototype.cdata = function(value) {
-      var child;
-      child = new XMLCData(this, value);
-      this.children.push(child);
-      return this;
-    };
-
-    XMLNode.prototype.comment = function(value) {
-      var child;
-      child = new XMLComment(this, value);
-      this.children.push(child);
-      return this;
-    };
-
-    XMLNode.prototype.commentBefore = function(value) {
-      var child, i, removed;
-      i = this.parent.children.indexOf(this);
-      removed = this.parent.children.splice(i);
-      child = this.parent.comment(value);
-      Array.prototype.push.apply(this.parent.children, removed);
-      return this;
-    };
-
-    XMLNode.prototype.commentAfter = function(value) {
-      var child, i, removed;
-      i = this.parent.children.indexOf(this);
-      removed = this.parent.children.splice(i + 1);
-      child = this.parent.comment(value);
-      Array.prototype.push.apply(this.parent.children, removed);
-      return this;
-    };
-
-    XMLNode.prototype.raw = function(value) {
-      var child;
-      child = new XMLRaw(this, value);
-      this.children.push(child);
-      return this;
-    };
-
-    XMLNode.prototype.instruction = function(target, value) {
-      var insTarget, insValue, instruction, j, len;
-      if (target != null) {
-        target = target.valueOf();
-      }
-      if (value != null) {
-        value = value.valueOf();
-      }
-      if (Array.isArray(target)) {
-        for (j = 0, len = target.length; j < len; j++) {
-          insTarget = target[j];
-          this.instruction(insTarget);
-        }
-      } else if (isObject(target)) {
-        for (insTarget in target) {
-          if (!hasProp.call(target, insTarget)) continue;
-          insValue = target[insTarget];
-          this.instruction(insTarget, insValue);
-        }
-      } else {
-        if (isFunction(value)) {
-          value = value.apply();
-        }
-        instruction = new XMLProcessingInstruction(this, target, value);
-        this.children.push(instruction);
-      }
-      return this;
-    };
-
-    XMLNode.prototype.instructionBefore = function(target, value) {
-      var child, i, removed;
-      i = this.parent.children.indexOf(this);
-      removed = this.parent.children.splice(i);
-      child = this.parent.instruction(target, value);
-      Array.prototype.push.apply(this.parent.children, removed);
-      return this;
-    };
-
-    XMLNode.prototype.instructionAfter = function(target, value) {
-      var child, i, removed;
-      i = this.parent.children.indexOf(this);
-      removed = this.parent.children.splice(i + 1);
-      child = this.parent.instruction(target, value);
-      Array.prototype.push.apply(this.parent.children, removed);
-      return this;
-    };
-
-    XMLNode.prototype.declaration = function(version, encoding, standalone) {
-      var doc, xmldec;
-      doc = this.document();
-      xmldec = new XMLDeclaration(doc, version, encoding, standalone);
-      if (doc.children[0] instanceof XMLDeclaration) {
-        doc.children[0] = xmldec;
-      } else {
-        doc.children.unshift(xmldec);
-      }
-      return doc.root() || doc;
-    };
-
-    XMLNode.prototype.doctype = function(pubID, sysID) {
-      var child, doc, doctype, i, j, k, len, len1, ref1, ref2;
-      doc = this.document();
-      doctype = new XMLDocType(doc, pubID, sysID);
-      ref1 = doc.children;
-      for (i = j = 0, len = ref1.length; j < len; i = ++j) {
-        child = ref1[i];
-        if (child instanceof XMLDocType) {
-          doc.children[i] = doctype;
-          return doctype;
-        }
-      }
-      ref2 = doc.children;
-      for (i = k = 0, len1 = ref2.length; k < len1; i = ++k) {
-        child = ref2[i];
-        if (child.isRoot) {
-          doc.children.splice(i, 0, doctype);
-          return doctype;
-        }
-      }
-      doc.children.push(doctype);
-      return doctype;
-    };
-
-    XMLNode.prototype.up = function() {
-      if (this.isRoot) {
-        throw new Error("The root node has no parent. Use doc() if you need to get the document object.");
-      }
-      return this.parent;
-    };
-
-    XMLNode.prototype.root = function() {
-      var node;
-      node = this;
-      while (node) {
-        if (node.isDocument) {
-          return node.rootObject;
-        } else if (node.isRoot) {
-          return node;
-        } else {
-          node = node.parent;
-        }
-      }
-    };
-
-    XMLNode.prototype.document = function() {
-      var node;
-      node = this;
-      while (node) {
-        if (node.isDocument) {
-          return node;
-        } else {
-          node = node.parent;
-        }
-      }
-    };
-
-    XMLNode.prototype.end = function(options) {
-      return this.document().end(options);
-    };
-
-    XMLNode.prototype.prev = function() {
-      var i;
-      i = this.parent.children.indexOf(this);
-      if (i < 1) {
-        throw new Error("Already at the first node");
-      }
-      return this.parent.children[i - 1];
-    };
-
-    XMLNode.prototype.next = function() {
-      var i;
-      i = this.parent.children.indexOf(this);
-      if (i === -1 || i === this.parent.children.length - 1) {
-        throw new Error("Already at the last node");
-      }
-      return this.parent.children[i + 1];
-    };
-
-    XMLNode.prototype.importDocument = function(doc) {
-      var clonedRoot;
-      clonedRoot = doc.root().clone();
-      clonedRoot.parent = this;
-      clonedRoot.isRoot = false;
-      this.children.push(clonedRoot);
-      return this;
-    };
-
-    XMLNode.prototype.ele = function(name, attributes, text) {
-      return this.element(name, attributes, text);
-    };
-
-    XMLNode.prototype.nod = function(name, attributes, text) {
-      return this.node(name, attributes, text);
-    };
-
-    XMLNode.prototype.txt = function(value) {
-      return this.text(value);
-    };
-
-    XMLNode.prototype.dat = function(value) {
-      return this.cdata(value);
-    };
-
-    XMLNode.prototype.com = function(value) {
-      return this.comment(value);
-    };
-
-    XMLNode.prototype.ins = function(target, value) {
-      return this.instruction(target, value);
-    };
-
-    XMLNode.prototype.doc = function() {
-      return this.document();
-    };
-
-    XMLNode.prototype.dec = function(version, encoding, standalone) {
-      return this.declaration(version, encoding, standalone);
-    };
-
-    XMLNode.prototype.dtd = function(pubID, sysID) {
-      return this.doctype(pubID, sysID);
-    };
-
-    XMLNode.prototype.e = function(name, attributes, text) {
-      return this.element(name, attributes, text);
-    };
-
-    XMLNode.prototype.n = function(name, attributes, text) {
-      return this.node(name, attributes, text);
-    };
-
-    XMLNode.prototype.t = function(value) {
-      return this.text(value);
-    };
-
-    XMLNode.prototype.d = function(value) {
-      return this.cdata(value);
-    };
-
-    XMLNode.prototype.c = function(value) {
-      return this.comment(value);
-    };
-
-    XMLNode.prototype.r = function(value) {
-      return this.raw(value);
-    };
-
-    XMLNode.prototype.i = function(target, value) {
-      return this.instruction(target, value);
-    };
-
-    XMLNode.prototype.u = function() {
-      return this.up();
-    };
-
-    XMLNode.prototype.importXMLBuilder = function(doc) {
-      return this.importDocument(doc);
-    };
-
-    return XMLNode;
-
-  })();
-
-}).call(this);
-
-},{"./Utility":5,"./XMLCData":7,"./XMLComment":8,"./XMLDeclaration":13,"./XMLDocType":14,"./XMLElement":17,"./XMLProcessingInstruction":19,"./XMLRaw":20,"./XMLText":24}],19:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLNode, XMLProcessingInstruction,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  XMLNode = require('./XMLNode');
-
-  module.exports = XMLProcessingInstruction = (function(superClass) {
-    extend(XMLProcessingInstruction, superClass);
-
-    function XMLProcessingInstruction(parent, target, value) {
-      XMLProcessingInstruction.__super__.constructor.call(this, parent);
-      if (target == null) {
-        throw new Error("Missing instruction target");
-      }
-      this.target = this.stringify.insTarget(target);
-      if (value) {
-        this.value = this.stringify.insValue(value);
-      }
-    }
-
-    XMLProcessingInstruction.prototype.clone = function() {
-      return Object.create(this);
-    };
-
-    XMLProcessingInstruction.prototype.toString = function(options) {
-      return this.options.writer.set(options).processingInstruction(this);
-    };
-
-    return XMLProcessingInstruction;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./XMLNode":18}],20:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLNode, XMLRaw,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  XMLNode = require('./XMLNode');
-
-  module.exports = XMLRaw = (function(superClass) {
-    extend(XMLRaw, superClass);
-
-    function XMLRaw(parent, text) {
-      XMLRaw.__super__.constructor.call(this, parent);
-      if (text == null) {
-        throw new Error("Missing raw text");
-      }
-      this.value = this.stringify.raw(text);
-    }
-
-    XMLRaw.prototype.clone = function() {
-      return Object.create(this);
-    };
-
-    XMLRaw.prototype.toString = function(options) {
-      return this.options.writer.set(options).raw(this);
-    };
-
-    return XMLRaw;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./XMLNode":18}],21:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLCData, XMLComment, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDeclaration, XMLDocType, XMLElement, XMLProcessingInstruction, XMLRaw, XMLStreamWriter, XMLText, XMLWriterBase,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  XMLDeclaration = require('./XMLDeclaration');
-
-  XMLDocType = require('./XMLDocType');
-
-  XMLCData = require('./XMLCData');
-
-  XMLComment = require('./XMLComment');
-
-  XMLElement = require('./XMLElement');
-
-  XMLRaw = require('./XMLRaw');
-
-  XMLText = require('./XMLText');
-
-  XMLProcessingInstruction = require('./XMLProcessingInstruction');
-
-  XMLDTDAttList = require('./XMLDTDAttList');
-
-  XMLDTDElement = require('./XMLDTDElement');
-
-  XMLDTDEntity = require('./XMLDTDEntity');
-
-  XMLDTDNotation = require('./XMLDTDNotation');
-
-  XMLWriterBase = require('./XMLWriterBase');
-
-  module.exports = XMLStreamWriter = (function(superClass) {
-    extend(XMLStreamWriter, superClass);
-
-    function XMLStreamWriter(stream, options) {
-      XMLStreamWriter.__super__.constructor.call(this, options);
-      this.stream = stream;
-    }
-
-    XMLStreamWriter.prototype.document = function(doc) {
-      var child, i, j, len, len1, ref, ref1, results;
-      ref = doc.children;
-      for (i = 0, len = ref.length; i < len; i++) {
-        child = ref[i];
-        child.isLastRootNode = false;
-      }
-      doc.children[doc.children.length - 1].isLastRootNode = true;
-      ref1 = doc.children;
-      results = [];
-      for (j = 0, len1 = ref1.length; j < len1; j++) {
-        child = ref1[j];
-        switch (false) {
-          case !(child instanceof XMLDeclaration):
-            results.push(this.declaration(child));
-            break;
-          case !(child instanceof XMLDocType):
-            results.push(this.docType(child));
-            break;
-          case !(child instanceof XMLComment):
-            results.push(this.comment(child));
-            break;
-          case !(child instanceof XMLProcessingInstruction):
-            results.push(this.processingInstruction(child));
-            break;
-          default:
-            results.push(this.element(child));
-        }
-      }
-      return results;
-    };
-
-    XMLStreamWriter.prototype.attribute = function(att) {
-      return this.stream.write(' ' + att.name + '="' + att.value + '"');
-    };
-
-    XMLStreamWriter.prototype.cdata = function(node, level) {
-      return this.stream.write(this.space(level) + '<![CDATA[' + node.text + ']]>' + this.endline(node));
-    };
-
-    XMLStreamWriter.prototype.comment = function(node, level) {
-      return this.stream.write(this.space(level) + '<!-- ' + node.text + ' -->' + this.endline(node));
-    };
-
-    XMLStreamWriter.prototype.declaration = function(node, level) {
-      this.stream.write(this.space(level));
-      this.stream.write('<?xml version="' + node.version + '"');
-      if (node.encoding != null) {
-        this.stream.write(' encoding="' + node.encoding + '"');
-      }
-      if (node.standalone != null) {
-        this.stream.write(' standalone="' + node.standalone + '"');
-      }
-      this.stream.write(this.spacebeforeslash + '?>');
-      return this.stream.write(this.endline(node));
-    };
-
-    XMLStreamWriter.prototype.docType = function(node, level) {
-      var child, i, len, ref;
-      level || (level = 0);
-      this.stream.write(this.space(level));
-      this.stream.write('<!DOCTYPE ' + node.root().name);
-      if (node.pubID && node.sysID) {
-        this.stream.write(' PUBLIC "' + node.pubID + '" "' + node.sysID + '"');
-      } else if (node.sysID) {
-        this.stream.write(' SYSTEM "' + node.sysID + '"');
-      }
-      if (node.children.length > 0) {
-        this.stream.write(' [');
-        this.stream.write(this.endline(node));
-        ref = node.children;
-        for (i = 0, len = ref.length; i < len; i++) {
-          child = ref[i];
-          switch (false) {
-            case !(child instanceof XMLDTDAttList):
-              this.dtdAttList(child, level + 1);
-              break;
-            case !(child instanceof XMLDTDElement):
-              this.dtdElement(child, level + 1);
-              break;
-            case !(child instanceof XMLDTDEntity):
-              this.dtdEntity(child, level + 1);
-              break;
-            case !(child instanceof XMLDTDNotation):
-              this.dtdNotation(child, level + 1);
-              break;
-            case !(child instanceof XMLCData):
-              this.cdata(child, level + 1);
-              break;
-            case !(child instanceof XMLComment):
-              this.comment(child, level + 1);
-              break;
-            case !(child instanceof XMLProcessingInstruction):
-              this.processingInstruction(child, level + 1);
-              break;
-            default:
-              throw new Error("Unknown DTD node type: " + child.constructor.name);
-          }
-        }
-        this.stream.write(']');
-      }
-      this.stream.write(this.spacebeforeslash + '>');
-      return this.stream.write(this.endline(node));
-    };
-
-    XMLStreamWriter.prototype.element = function(node, level) {
-      var att, child, i, len, name, ref, ref1, space;
-      level || (level = 0);
-      space = this.space(level);
-      this.stream.write(space + '<' + node.name);
-      ref = node.attributes;
-      for (name in ref) {
-        if (!hasProp.call(ref, name)) continue;
-        att = ref[name];
-        this.attribute(att);
-      }
-      if (node.children.length === 0 || node.children.every(function(e) {
-        return e.value === '';
-      })) {
-        if (this.allowEmpty) {
-          this.stream.write('></' + node.name + '>');
-        } else {
-          this.stream.write(this.spacebeforeslash + '/>');
-        }
-      } else if (this.pretty && node.children.length === 1 && (node.children[0].value != null)) {
-        this.stream.write('>');
-        this.stream.write(node.children[0].value);
-        this.stream.write('</' + node.name + '>');
-      } else {
-        this.stream.write('>' + this.newline);
-        ref1 = node.children;
-        for (i = 0, len = ref1.length; i < len; i++) {
-          child = ref1[i];
-          switch (false) {
-            case !(child instanceof XMLCData):
-              this.cdata(child, level + 1);
-              break;
-            case !(child instanceof XMLComment):
-              this.comment(child, level + 1);
-              break;
-            case !(child instanceof XMLElement):
-              this.element(child, level + 1);
-              break;
-            case !(child instanceof XMLRaw):
-              this.raw(child, level + 1);
-              break;
-            case !(child instanceof XMLText):
-              this.text(child, level + 1);
-              break;
-            case !(child instanceof XMLProcessingInstruction):
-              this.processingInstruction(child, level + 1);
-              break;
-            default:
-              throw new Error("Unknown XML node type: " + child.constructor.name);
-          }
-        }
-        this.stream.write(space + '</' + node.name + '>');
-      }
-      return this.stream.write(this.endline(node));
-    };
-
-    XMLStreamWriter.prototype.processingInstruction = function(node, level) {
-      this.stream.write(this.space(level) + '<?' + node.target);
-      if (node.value) {
-        this.stream.write(' ' + node.value);
-      }
-      return this.stream.write(this.spacebeforeslash + '?>' + this.endline(node));
-    };
-
-    XMLStreamWriter.prototype.raw = function(node, level) {
-      return this.stream.write(this.space(level) + node.value + this.endline(node));
-    };
-
-    XMLStreamWriter.prototype.text = function(node, level) {
-      return this.stream.write(this.space(level) + node.value + this.endline(node));
-    };
-
-    XMLStreamWriter.prototype.dtdAttList = function(node, level) {
-      this.stream.write(this.space(level) + '<!ATTLIST ' + node.elementName + ' ' + node.attributeName + ' ' + node.attributeType);
-      if (node.defaultValueType !== '#DEFAULT') {
-        this.stream.write(' ' + node.defaultValueType);
-      }
-      if (node.defaultValue) {
-        this.stream.write(' "' + node.defaultValue + '"');
-      }
-      return this.stream.write(this.spacebeforeslash + '>' + this.endline(node));
-    };
-
-    XMLStreamWriter.prototype.dtdElement = function(node, level) {
-      this.stream.write(this.space(level) + '<!ELEMENT ' + node.name + ' ' + node.value);
-      return this.stream.write(this.spacebeforeslash + '>' + this.endline(node));
-    };
-
-    XMLStreamWriter.prototype.dtdEntity = function(node, level) {
-      this.stream.write(this.space(level) + '<!ENTITY');
-      if (node.pe) {
-        this.stream.write(' %');
-      }
-      this.stream.write(' ' + node.name);
-      if (node.value) {
-        this.stream.write(' "' + node.value + '"');
-      } else {
-        if (node.pubID && node.sysID) {
-          this.stream.write(' PUBLIC "' + node.pubID + '" "' + node.sysID + '"');
-        } else if (node.sysID) {
-          this.stream.write(' SYSTEM "' + node.sysID + '"');
-        }
-        if (node.nData) {
-          this.stream.write(' NDATA ' + node.nData);
-        }
-      }
-      return this.stream.write(this.spacebeforeslash + '>' + this.endline(node));
-    };
-
-    XMLStreamWriter.prototype.dtdNotation = function(node, level) {
-      this.stream.write(this.space(level) + '<!NOTATION ' + node.name);
-      if (node.pubID && node.sysID) {
-        this.stream.write(' PUBLIC "' + node.pubID + '" "' + node.sysID + '"');
-      } else if (node.pubID) {
-        this.stream.write(' PUBLIC "' + node.pubID + '"');
-      } else if (node.sysID) {
-        this.stream.write(' SYSTEM "' + node.sysID + '"');
-      }
-      return this.stream.write(this.spacebeforeslash + '>' + this.endline(node));
-    };
-
-    XMLStreamWriter.prototype.endline = function(node) {
-      if (!node.isLastRootNode) {
-        return this.newline;
-      } else {
-        return '';
-      }
-    };
-
-    return XMLStreamWriter;
-
-  })(XMLWriterBase);
-
-}).call(this);
-
-},{"./XMLCData":7,"./XMLComment":8,"./XMLDTDAttList":9,"./XMLDTDElement":10,"./XMLDTDEntity":11,"./XMLDTDNotation":12,"./XMLDeclaration":13,"./XMLDocType":14,"./XMLElement":17,"./XMLProcessingInstruction":19,"./XMLRaw":20,"./XMLText":24,"./XMLWriterBase":25}],22:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLCData, XMLComment, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDeclaration, XMLDocType, XMLElement, XMLProcessingInstruction, XMLRaw, XMLStringWriter, XMLText, XMLWriterBase,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  XMLDeclaration = require('./XMLDeclaration');
-
-  XMLDocType = require('./XMLDocType');
-
-  XMLCData = require('./XMLCData');
-
-  XMLComment = require('./XMLComment');
-
-  XMLElement = require('./XMLElement');
-
-  XMLRaw = require('./XMLRaw');
-
-  XMLText = require('./XMLText');
-
-  XMLProcessingInstruction = require('./XMLProcessingInstruction');
-
-  XMLDTDAttList = require('./XMLDTDAttList');
-
-  XMLDTDElement = require('./XMLDTDElement');
-
-  XMLDTDEntity = require('./XMLDTDEntity');
-
-  XMLDTDNotation = require('./XMLDTDNotation');
-
-  XMLWriterBase = require('./XMLWriterBase');
-
-  module.exports = XMLStringWriter = (function(superClass) {
-    extend(XMLStringWriter, superClass);
-
-    function XMLStringWriter(options) {
-      XMLStringWriter.__super__.constructor.call(this, options);
-    }
-
-    XMLStringWriter.prototype.document = function(doc) {
-      var child, i, len, r, ref;
-      this.textispresent = false;
-      r = '';
-      ref = doc.children;
-      for (i = 0, len = ref.length; i < len; i++) {
-        child = ref[i];
-        r += (function() {
-          switch (false) {
-            case !(child instanceof XMLDeclaration):
-              return this.declaration(child);
-            case !(child instanceof XMLDocType):
-              return this.docType(child);
-            case !(child instanceof XMLComment):
-              return this.comment(child);
-            case !(child instanceof XMLProcessingInstruction):
-              return this.processingInstruction(child);
-            default:
-              return this.element(child, 0);
-          }
         }).call(this);
-      }
-      if (this.pretty && r.slice(-this.newline.length) === this.newline) {
-        r = r.slice(0, -this.newline.length);
-      }
-      return r;
-    };
 
-    XMLStringWriter.prototype.attribute = function(att) {
-      return ' ' + att.name + '="' + att.value + '"';
-    };
+}, {}],
+    6: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLAttribute;
 
-    XMLStringWriter.prototype.cdata = function(node, level) {
-      return this.space(level) + '<![CDATA[' + node.text + ']]>' + this.newline;
-    };
+            module.exports = XMLAttribute = (function () {
+                function XMLAttribute(parent, name, value) {
+                    this.options = parent.options;
+                    this.stringify = parent.stringify;
+                    if (name == null) {
+                        throw new Error("Missing attribute name of element " + parent.name);
+                    }
+                    if (value == null) {
+                        throw new Error("Missing attribute value for attribute " + name + " of element " + parent.name);
+                    }
+                    this.name = this.stringify.attName(name);
+                    this.value = this.stringify.attValue(value);
+                }
 
-    XMLStringWriter.prototype.comment = function(node, level) {
-      return this.space(level) + '<!-- ' + node.text + ' -->' + this.newline;
-    };
+                XMLAttribute.prototype.clone = function () {
+                    return Object.create(this);
+                };
 
-    XMLStringWriter.prototype.declaration = function(node, level) {
-      var r;
-      r = this.space(level);
-      r += '<?xml version="' + node.version + '"';
-      if (node.encoding != null) {
-        r += ' encoding="' + node.encoding + '"';
-      }
-      if (node.standalone != null) {
-        r += ' standalone="' + node.standalone + '"';
-      }
-      r += this.spacebeforeslash + '?>';
-      r += this.newline;
-      return r;
-    };
+                XMLAttribute.prototype.toString = function (options) {
+                    return this.options.writer.set(options).attribute(this);
+                };
 
-    XMLStringWriter.prototype.docType = function(node, level) {
-      var child, i, len, r, ref;
-      level || (level = 0);
-      r = this.space(level);
-      r += '<!DOCTYPE ' + node.root().name;
-      if (node.pubID && node.sysID) {
-        r += ' PUBLIC "' + node.pubID + '" "' + node.sysID + '"';
-      } else if (node.sysID) {
-        r += ' SYSTEM "' + node.sysID + '"';
-      }
-      if (node.children.length > 0) {
-        r += ' [';
-        r += this.newline;
-        ref = node.children;
-        for (i = 0, len = ref.length; i < len; i++) {
-          child = ref[i];
-          r += (function() {
-            switch (false) {
-              case !(child instanceof XMLDTDAttList):
-                return this.dtdAttList(child, level + 1);
-              case !(child instanceof XMLDTDElement):
-                return this.dtdElement(child, level + 1);
-              case !(child instanceof XMLDTDEntity):
-                return this.dtdEntity(child, level + 1);
-              case !(child instanceof XMLDTDNotation):
-                return this.dtdNotation(child, level + 1);
-              case !(child instanceof XMLCData):
-                return this.cdata(child, level + 1);
-              case !(child instanceof XMLComment):
-                return this.comment(child, level + 1);
-              case !(child instanceof XMLProcessingInstruction):
-                return this.processingInstruction(child, level + 1);
-              default:
-                throw new Error("Unknown DTD node type: " + child.constructor.name);
+                return XMLAttribute;
+
+            })();
+
+        }).call(this);
+
+}, {}],
+    7: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLCData, XMLNode,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            XMLNode = require('./XMLNode');
+
+            module.exports = XMLCData = (function (superClass) {
+                extend(XMLCData, superClass);
+
+                function XMLCData(parent, text) {
+                    XMLCData.__super__.constructor.call(this, parent);
+                    if (text == null) {
+                        throw new Error("Missing CDATA text");
+                    }
+                    this.text = this.stringify.cdata(text);
+                }
+
+                XMLCData.prototype.clone = function () {
+                    return Object.create(this);
+                };
+
+                XMLCData.prototype.toString = function (options) {
+                    return this.options.writer.set(options).cdata(this);
+                };
+
+                return XMLCData;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./XMLNode": 18
+    }],
+    8: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLComment, XMLNode,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            XMLNode = require('./XMLNode');
+
+            module.exports = XMLComment = (function (superClass) {
+                extend(XMLComment, superClass);
+
+                function XMLComment(parent, text) {
+                    XMLComment.__super__.constructor.call(this, parent);
+                    if (text == null) {
+                        throw new Error("Missing comment text");
+                    }
+                    this.text = this.stringify.comment(text);
+                }
+
+                XMLComment.prototype.clone = function () {
+                    return Object.create(this);
+                };
+
+                XMLComment.prototype.toString = function (options) {
+                    return this.options.writer.set(options).comment(this);
+                };
+
+                return XMLComment;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./XMLNode": 18
+    }],
+    9: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLDTDAttList, XMLNode,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            XMLNode = require('./XMLNode');
+
+            module.exports = XMLDTDAttList = (function (superClass) {
+                extend(XMLDTDAttList, superClass);
+
+                function XMLDTDAttList(parent, elementName, attributeName, attributeType, defaultValueType, defaultValue) {
+                    XMLDTDAttList.__super__.constructor.call(this, parent);
+                    if (elementName == null) {
+                        throw new Error("Missing DTD element name");
+                    }
+                    if (attributeName == null) {
+                        throw new Error("Missing DTD attribute name");
+                    }
+                    if (!attributeType) {
+                        throw new Error("Missing DTD attribute type");
+                    }
+                    if (!defaultValueType) {
+                        throw new Error("Missing DTD attribute default");
+                    }
+                    if (defaultValueType.indexOf('#') !== 0) {
+                        defaultValueType = '#' + defaultValueType;
+                    }
+                    if (!defaultValueType.match(/^(#REQUIRED|#IMPLIED|#FIXED|#DEFAULT)$/)) {
+                        throw new Error("Invalid default value type; expected: #REQUIRED, #IMPLIED, #FIXED or #DEFAULT");
+                    }
+                    if (defaultValue && !defaultValueType.match(/^(#FIXED|#DEFAULT)$/)) {
+                        throw new Error("Default value only applies to #FIXED or #DEFAULT");
+                    }
+                    this.elementName = this.stringify.eleName(elementName);
+                    this.attributeName = this.stringify.attName(attributeName);
+                    this.attributeType = this.stringify.dtdAttType(attributeType);
+                    this.defaultValue = this.stringify.dtdAttDefault(defaultValue);
+                    this.defaultValueType = defaultValueType;
+                }
+
+                XMLDTDAttList.prototype.toString = function (options) {
+                    return this.options.writer.set(options).dtdAttList(this);
+                };
+
+                return XMLDTDAttList;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./XMLNode": 18
+    }],
+    10: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLDTDElement, XMLNode,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            XMLNode = require('./XMLNode');
+
+            module.exports = XMLDTDElement = (function (superClass) {
+                extend(XMLDTDElement, superClass);
+
+                function XMLDTDElement(parent, name, value) {
+                    XMLDTDElement.__super__.constructor.call(this, parent);
+                    if (name == null) {
+                        throw new Error("Missing DTD element name");
+                    }
+                    if (!value) {
+                        value = '(#PCDATA)';
+                    }
+                    if (Array.isArray(value)) {
+                        value = '(' + value.join(',') + ')';
+                    }
+                    this.name = this.stringify.eleName(name);
+                    this.value = this.stringify.dtdElementValue(value);
+                }
+
+                XMLDTDElement.prototype.toString = function (options) {
+                    return this.options.writer.set(options).dtdElement(this);
+                };
+
+                return XMLDTDElement;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./XMLNode": 18
+    }],
+    11: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLDTDEntity, XMLNode, isObject,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            isObject = require('./Utility').isObject;
+
+            XMLNode = require('./XMLNode');
+
+            module.exports = XMLDTDEntity = (function (superClass) {
+                extend(XMLDTDEntity, superClass);
+
+                function XMLDTDEntity(parent, pe, name, value) {
+                    XMLDTDEntity.__super__.constructor.call(this, parent);
+                    if (name == null) {
+                        throw new Error("Missing entity name");
+                    }
+                    if (value == null) {
+                        throw new Error("Missing entity value");
+                    }
+                    this.pe = !!pe;
+                    this.name = this.stringify.eleName(name);
+                    if (!isObject(value)) {
+                        this.value = this.stringify.dtdEntityValue(value);
+                    } else {
+                        if (!value.pubID && !value.sysID) {
+                            throw new Error("Public and/or system identifiers are required for an external entity");
+                        }
+                        if (value.pubID && !value.sysID) {
+                            throw new Error("System identifier is required for a public external entity");
+                        }
+                        if (value.pubID != null) {
+                            this.pubID = this.stringify.dtdPubID(value.pubID);
+                        }
+                        if (value.sysID != null) {
+                            this.sysID = this.stringify.dtdSysID(value.sysID);
+                        }
+                        if (value.nData != null) {
+                            this.nData = this.stringify.dtdNData(value.nData);
+                        }
+                        if (this.pe && this.nData) {
+                            throw new Error("Notation declaration is not allowed in a parameter entity");
+                        }
+                    }
+                }
+
+                XMLDTDEntity.prototype.toString = function (options) {
+                    return this.options.writer.set(options).dtdEntity(this);
+                };
+
+                return XMLDTDEntity;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./Utility": 5,
+        "./XMLNode": 18
+    }],
+    12: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLDTDNotation, XMLNode,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            XMLNode = require('./XMLNode');
+
+            module.exports = XMLDTDNotation = (function (superClass) {
+                extend(XMLDTDNotation, superClass);
+
+                function XMLDTDNotation(parent, name, value) {
+                    XMLDTDNotation.__super__.constructor.call(this, parent);
+                    if (name == null) {
+                        throw new Error("Missing notation name");
+                    }
+                    if (!value.pubID && !value.sysID) {
+                        throw new Error("Public or system identifiers are required for an external entity");
+                    }
+                    this.name = this.stringify.eleName(name);
+                    if (value.pubID != null) {
+                        this.pubID = this.stringify.dtdPubID(value.pubID);
+                    }
+                    if (value.sysID != null) {
+                        this.sysID = this.stringify.dtdSysID(value.sysID);
+                    }
+                }
+
+                XMLDTDNotation.prototype.toString = function (options) {
+                    return this.options.writer.set(options).dtdNotation(this);
+                };
+
+                return XMLDTDNotation;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./XMLNode": 18
+    }],
+    13: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLDeclaration, XMLNode, isObject,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            isObject = require('./Utility').isObject;
+
+            XMLNode = require('./XMLNode');
+
+            module.exports = XMLDeclaration = (function (superClass) {
+                extend(XMLDeclaration, superClass);
+
+                function XMLDeclaration(parent, version, encoding, standalone) {
+                    var ref;
+                    XMLDeclaration.__super__.constructor.call(this, parent);
+                    if (isObject(version)) {
+                        ref = version, version = ref.version, encoding = ref.encoding, standalone = ref.standalone;
+                    }
+                    if (!version) {
+                        version = '1.0';
+                    }
+                    this.version = this.stringify.xmlVersion(version);
+                    if (encoding != null) {
+                        this.encoding = this.stringify.xmlEncoding(encoding);
+                    }
+                    if (standalone != null) {
+                        this.standalone = this.stringify.xmlStandalone(standalone);
+                    }
+                }
+
+                XMLDeclaration.prototype.toString = function (options) {
+                    return this.options.writer.set(options).declaration(this);
+                };
+
+                return XMLDeclaration;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./Utility": 5,
+        "./XMLNode": 18
+    }],
+    14: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDocType, XMLNode, isObject,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            isObject = require('./Utility').isObject;
+
+            XMLNode = require('./XMLNode');
+
+            XMLDTDAttList = require('./XMLDTDAttList');
+
+            XMLDTDEntity = require('./XMLDTDEntity');
+
+            XMLDTDElement = require('./XMLDTDElement');
+
+            XMLDTDNotation = require('./XMLDTDNotation');
+
+            module.exports = XMLDocType = (function (superClass) {
+                extend(XMLDocType, superClass);
+
+                function XMLDocType(parent, pubID, sysID) {
+                    var ref, ref1;
+                    XMLDocType.__super__.constructor.call(this, parent);
+                    this.documentObject = parent;
+                    if (isObject(pubID)) {
+                        ref = pubID, pubID = ref.pubID, sysID = ref.sysID;
+                    }
+                    if (sysID == null) {
+                        ref1 = [pubID, sysID], sysID = ref1[0], pubID = ref1[1];
+                    }
+                    if (pubID != null) {
+                        this.pubID = this.stringify.dtdPubID(pubID);
+                    }
+                    if (sysID != null) {
+                        this.sysID = this.stringify.dtdSysID(sysID);
+                    }
+                }
+
+                XMLDocType.prototype.element = function (name, value) {
+                    var child;
+                    child = new XMLDTDElement(this, name, value);
+                    this.children.push(child);
+                    return this;
+                };
+
+                XMLDocType.prototype.attList = function (elementName, attributeName, attributeType, defaultValueType, defaultValue) {
+                    var child;
+                    child = new XMLDTDAttList(this, elementName, attributeName, attributeType, defaultValueType, defaultValue);
+                    this.children.push(child);
+                    return this;
+                };
+
+                XMLDocType.prototype.entity = function (name, value) {
+                    var child;
+                    child = new XMLDTDEntity(this, false, name, value);
+                    this.children.push(child);
+                    return this;
+                };
+
+                XMLDocType.prototype.pEntity = function (name, value) {
+                    var child;
+                    child = new XMLDTDEntity(this, true, name, value);
+                    this.children.push(child);
+                    return this;
+                };
+
+                XMLDocType.prototype.notation = function (name, value) {
+                    var child;
+                    child = new XMLDTDNotation(this, name, value);
+                    this.children.push(child);
+                    return this;
+                };
+
+                XMLDocType.prototype.toString = function (options) {
+                    return this.options.writer.set(options).docType(this);
+                };
+
+                XMLDocType.prototype.ele = function (name, value) {
+                    return this.element(name, value);
+                };
+
+                XMLDocType.prototype.att = function (elementName, attributeName, attributeType, defaultValueType, defaultValue) {
+                    return this.attList(elementName, attributeName, attributeType, defaultValueType, defaultValue);
+                };
+
+                XMLDocType.prototype.ent = function (name, value) {
+                    return this.entity(name, value);
+                };
+
+                XMLDocType.prototype.pent = function (name, value) {
+                    return this.pEntity(name, value);
+                };
+
+                XMLDocType.prototype.not = function (name, value) {
+                    return this.notation(name, value);
+                };
+
+                XMLDocType.prototype.up = function () {
+                    return this.root() || this.documentObject;
+                };
+
+                return XMLDocType;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./Utility": 5,
+        "./XMLDTDAttList": 9,
+        "./XMLDTDElement": 10,
+        "./XMLDTDEntity": 11,
+        "./XMLDTDNotation": 12,
+        "./XMLNode": 18
+    }],
+    15: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLDocument, XMLNode, XMLStringWriter, XMLStringifier, isPlainObject,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            isPlainObject = require('./Utility').isPlainObject;
+
+            XMLNode = require('./XMLNode');
+
+            XMLStringifier = require('./XMLStringifier');
+
+            XMLStringWriter = require('./XMLStringWriter');
+
+            module.exports = XMLDocument = (function (superClass) {
+                extend(XMLDocument, superClass);
+
+                function XMLDocument(options) {
+                    XMLDocument.__super__.constructor.call(this, null);
+                    options || (options = {});
+                    if (!options.writer) {
+                        options.writer = new XMLStringWriter();
+                    }
+                    this.options = options;
+                    this.stringify = new XMLStringifier(options);
+                    this.isDocument = true;
+                }
+
+                XMLDocument.prototype.end = function (writer) {
+                    var writerOptions;
+                    if (!writer) {
+                        writer = this.options.writer;
+                    } else if (isPlainObject(writer)) {
+                        writerOptions = writer;
+                        writer = this.options.writer.set(writerOptions);
+                    }
+                    return writer.document(this);
+                };
+
+                XMLDocument.prototype.toString = function (options) {
+                    return this.options.writer.set(options).document(this);
+                };
+
+                return XMLDocument;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./Utility": 5,
+        "./XMLNode": 18,
+        "./XMLStringWriter": 22,
+        "./XMLStringifier": 23
+    }],
+    16: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLAttribute, XMLCData, XMLComment, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDeclaration, XMLDocType, XMLDocumentCB, XMLElement, XMLProcessingInstruction, XMLRaw, XMLStringWriter, XMLStringifier, XMLText, isFunction, isObject, isPlainObject, ref,
+                hasProp = {}.hasOwnProperty;
+
+            ref = require('./Utility'), isObject = ref.isObject, isFunction = ref.isFunction, isPlainObject = ref.isPlainObject;
+
+            XMLElement = require('./XMLElement');
+
+            XMLCData = require('./XMLCData');
+
+            XMLComment = require('./XMLComment');
+
+            XMLRaw = require('./XMLRaw');
+
+            XMLText = require('./XMLText');
+
+            XMLProcessingInstruction = require('./XMLProcessingInstruction');
+
+            XMLDeclaration = require('./XMLDeclaration');
+
+            XMLDocType = require('./XMLDocType');
+
+            XMLDTDAttList = require('./XMLDTDAttList');
+
+            XMLDTDEntity = require('./XMLDTDEntity');
+
+            XMLDTDElement = require('./XMLDTDElement');
+
+            XMLDTDNotation = require('./XMLDTDNotation');
+
+            XMLAttribute = require('./XMLAttribute');
+
+            XMLStringifier = require('./XMLStringifier');
+
+            XMLStringWriter = require('./XMLStringWriter');
+
+            module.exports = XMLDocumentCB = (function () {
+                function XMLDocumentCB(options, onData, onEnd) {
+                    var writerOptions;
+                    options || (options = {});
+                    if (!options.writer) {
+                        options.writer = new XMLStringWriter(options);
+                    } else if (isPlainObject(options.writer)) {
+                        writerOptions = options.writer;
+                        options.writer = new XMLStringWriter(writerOptions);
+                    }
+                    this.options = options;
+                    this.writer = options.writer;
+                    this.stringify = new XMLStringifier(options);
+                    this.onDataCallback = onData || function () {};
+                    this.onEndCallback = onEnd || function () {};
+                    this.currentNode = null;
+                    this.currentLevel = -1;
+                    this.openTags = {};
+                    this.documentStarted = false;
+                    this.documentCompleted = false;
+                    this.root = null;
+                }
+
+                XMLDocumentCB.prototype.node = function (name, attributes, text) {
+                    var ref1;
+                    if (name == null) {
+                        throw new Error("Missing node name");
+                    }
+                    if (this.root && this.currentLevel === -1) {
+                        throw new Error("Document can only have one root node");
+                    }
+                    this.openCurrent();
+                    name = name.valueOf();
+                    if (attributes == null) {
+                        attributes = {};
+                    }
+                    attributes = attributes.valueOf();
+                    if (!isObject(attributes)) {
+                        ref1 = [attributes, text], text = ref1[0], attributes = ref1[1];
+                    }
+                    this.currentNode = new XMLElement(this, name, attributes);
+                    this.currentNode.children = false;
+                    this.currentLevel++;
+                    this.openTags[this.currentLevel] = this.currentNode;
+                    if (text != null) {
+                        this.text(text);
+                    }
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.element = function (name, attributes, text) {
+                    if (this.currentNode && this.currentNode instanceof XMLDocType) {
+                        return this.dtdElement.apply(this, arguments);
+                    } else {
+                        return this.node(name, attributes, text);
+                    }
+                };
+
+                XMLDocumentCB.prototype.attribute = function (name, value) {
+                    var attName, attValue;
+                    if (!this.currentNode || this.currentNode.children) {
+                        throw new Error("att() can only be used immediately after an ele() call in callback mode");
+                    }
+                    if (name != null) {
+                        name = name.valueOf();
+                    }
+                    if (isObject(name)) {
+                        for (attName in name) {
+                            if (!hasProp.call(name, attName)) continue;
+                            attValue = name[attName];
+                            this.attribute(attName, attValue);
+                        }
+                    } else {
+                        if (isFunction(value)) {
+                            value = value.apply();
+                        }
+                        if (!this.options.skipNullAttributes || (value != null)) {
+                            this.currentNode.attributes[name] = new XMLAttribute(this, name, value);
+                        }
+                    }
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.text = function (value) {
+                    var node;
+                    this.openCurrent();
+                    node = new XMLText(this, value);
+                    this.onData(this.writer.text(node, this.currentLevel + 1));
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.cdata = function (value) {
+                    var node;
+                    this.openCurrent();
+                    node = new XMLCData(this, value);
+                    this.onData(this.writer.cdata(node, this.currentLevel + 1));
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.comment = function (value) {
+                    var node;
+                    this.openCurrent();
+                    node = new XMLComment(this, value);
+                    this.onData(this.writer.comment(node, this.currentLevel + 1));
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.raw = function (value) {
+                    var node;
+                    this.openCurrent();
+                    node = new XMLRaw(this, value);
+                    this.onData(this.writer.raw(node, this.currentLevel + 1));
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.instruction = function (target, value) {
+                    var i, insTarget, insValue, len, node;
+                    this.openCurrent();
+                    if (target != null) {
+                        target = target.valueOf();
+                    }
+                    if (value != null) {
+                        value = value.valueOf();
+                    }
+                    if (Array.isArray(target)) {
+                        for (i = 0, len = target.length; i < len; i++) {
+                            insTarget = target[i];
+                            this.instruction(insTarget);
+                        }
+                    } else if (isObject(target)) {
+                        for (insTarget in target) {
+                            if (!hasProp.call(target, insTarget)) continue;
+                            insValue = target[insTarget];
+                            this.instruction(insTarget, insValue);
+                        }
+                    } else {
+                        if (isFunction(value)) {
+                            value = value.apply();
+                        }
+                        node = new XMLProcessingInstruction(this, target, value);
+                        this.onData(this.writer.processingInstruction(node, this.currentLevel + 1));
+                    }
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.declaration = function (version, encoding, standalone) {
+                    var node;
+                    this.openCurrent();
+                    if (this.documentStarted) {
+                        throw new Error("declaration() must be the first node");
+                    }
+                    node = new XMLDeclaration(this, version, encoding, standalone);
+                    this.onData(this.writer.declaration(node, this.currentLevel + 1));
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.doctype = function (root, pubID, sysID) {
+                    this.openCurrent();
+                    if (root == null) {
+                        throw new Error("Missing root node name");
+                    }
+                    if (this.root) {
+                        throw new Error("dtd() must come before the root node");
+                    }
+                    this.currentNode = new XMLDocType(this, pubID, sysID);
+                    this.currentNode.rootNodeName = root;
+                    this.currentNode.children = false;
+                    this.currentLevel++;
+                    this.openTags[this.currentLevel] = this.currentNode;
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.dtdElement = function (name, value) {
+                    var node;
+                    this.openCurrent();
+                    node = new XMLDTDElement(this, name, value);
+                    this.onData(this.writer.dtdElement(node, this.currentLevel + 1));
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.attList = function (elementName, attributeName, attributeType, defaultValueType, defaultValue) {
+                    var node;
+                    this.openCurrent();
+                    node = new XMLDTDAttList(this, elementName, attributeName, attributeType, defaultValueType, defaultValue);
+                    this.onData(this.writer.dtdAttList(node, this.currentLevel + 1));
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.entity = function (name, value) {
+                    var node;
+                    this.openCurrent();
+                    node = new XMLDTDEntity(this, false, name, value);
+                    this.onData(this.writer.dtdEntity(node, this.currentLevel + 1));
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.pEntity = function (name, value) {
+                    var node;
+                    this.openCurrent();
+                    node = new XMLDTDEntity(this, true, name, value);
+                    this.onData(this.writer.dtdEntity(node, this.currentLevel + 1));
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.notation = function (name, value) {
+                    var node;
+                    this.openCurrent();
+                    node = new XMLDTDNotation(this, name, value);
+                    this.onData(this.writer.dtdNotation(node, this.currentLevel + 1));
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.up = function () {
+                    if (this.currentLevel < 0) {
+                        throw new Error("The document node has no parent");
+                    }
+                    if (this.currentNode) {
+                        if (this.currentNode.children) {
+                            this.closeNode(this.currentNode);
+                        } else {
+                            this.openNode(this.currentNode);
+                        }
+                        this.currentNode = null;
+                    } else {
+                        this.closeNode(this.openTags[this.currentLevel]);
+                    }
+                    delete this.openTags[this.currentLevel];
+                    this.currentLevel--;
+                    return this;
+                };
+
+                XMLDocumentCB.prototype.end = function () {
+                    while (this.currentLevel >= 0) {
+                        this.up();
+                    }
+                    return this.onEnd();
+                };
+
+                XMLDocumentCB.prototype.openCurrent = function () {
+                    if (this.currentNode) {
+                        this.currentNode.children = true;
+                        return this.openNode(this.currentNode);
+                    }
+                };
+
+                XMLDocumentCB.prototype.openNode = function (node) {
+                    if (!node.isOpen) {
+                        if (!this.root && this.currentLevel === 0 && node instanceof XMLElement) {
+                            this.root = node;
+                        }
+                        this.onData(this.writer.openNode(node, this.currentLevel));
+                        return node.isOpen = true;
+                    }
+                };
+
+                XMLDocumentCB.prototype.closeNode = function (node) {
+                    if (!node.isClosed) {
+                        this.onData(this.writer.closeNode(node, this.currentLevel));
+                        return node.isClosed = true;
+                    }
+                };
+
+                XMLDocumentCB.prototype.onData = function (chunk) {
+                    this.documentStarted = true;
+                    return this.onDataCallback(chunk);
+                };
+
+                XMLDocumentCB.prototype.onEnd = function () {
+                    this.documentCompleted = true;
+                    return this.onEndCallback();
+                };
+
+                XMLDocumentCB.prototype.ele = function () {
+                    return this.element.apply(this, arguments);
+                };
+
+                XMLDocumentCB.prototype.nod = function (name, attributes, text) {
+                    return this.node(name, attributes, text);
+                };
+
+                XMLDocumentCB.prototype.txt = function (value) {
+                    return this.text(value);
+                };
+
+                XMLDocumentCB.prototype.dat = function (value) {
+                    return this.cdata(value);
+                };
+
+                XMLDocumentCB.prototype.com = function (value) {
+                    return this.comment(value);
+                };
+
+                XMLDocumentCB.prototype.ins = function (target, value) {
+                    return this.instruction(target, value);
+                };
+
+                XMLDocumentCB.prototype.dec = function (version, encoding, standalone) {
+                    return this.declaration(version, encoding, standalone);
+                };
+
+                XMLDocumentCB.prototype.dtd = function (root, pubID, sysID) {
+                    return this.doctype(root, pubID, sysID);
+                };
+
+                XMLDocumentCB.prototype.e = function (name, attributes, text) {
+                    return this.element(name, attributes, text);
+                };
+
+                XMLDocumentCB.prototype.n = function (name, attributes, text) {
+                    return this.node(name, attributes, text);
+                };
+
+                XMLDocumentCB.prototype.t = function (value) {
+                    return this.text(value);
+                };
+
+                XMLDocumentCB.prototype.d = function (value) {
+                    return this.cdata(value);
+                };
+
+                XMLDocumentCB.prototype.c = function (value) {
+                    return this.comment(value);
+                };
+
+                XMLDocumentCB.prototype.r = function (value) {
+                    return this.raw(value);
+                };
+
+                XMLDocumentCB.prototype.i = function (target, value) {
+                    return this.instruction(target, value);
+                };
+
+                XMLDocumentCB.prototype.att = function () {
+                    if (this.currentNode && this.currentNode instanceof XMLDocType) {
+                        return this.attList.apply(this, arguments);
+                    } else {
+                        return this.attribute.apply(this, arguments);
+                    }
+                };
+
+                XMLDocumentCB.prototype.a = function () {
+                    if (this.currentNode && this.currentNode instanceof XMLDocType) {
+                        return this.attList.apply(this, arguments);
+                    } else {
+                        return this.attribute.apply(this, arguments);
+                    }
+                };
+
+                XMLDocumentCB.prototype.ent = function (name, value) {
+                    return this.entity(name, value);
+                };
+
+                XMLDocumentCB.prototype.pent = function (name, value) {
+                    return this.pEntity(name, value);
+                };
+
+                XMLDocumentCB.prototype.not = function (name, value) {
+                    return this.notation(name, value);
+                };
+
+                return XMLDocumentCB;
+
+            })();
+
+        }).call(this);
+
+}, {
+        "./Utility": 5,
+        "./XMLAttribute": 6,
+        "./XMLCData": 7,
+        "./XMLComment": 8,
+        "./XMLDTDAttList": 9,
+        "./XMLDTDElement": 10,
+        "./XMLDTDEntity": 11,
+        "./XMLDTDNotation": 12,
+        "./XMLDeclaration": 13,
+        "./XMLDocType": 14,
+        "./XMLElement": 17,
+        "./XMLProcessingInstruction": 19,
+        "./XMLRaw": 20,
+        "./XMLStringWriter": 22,
+        "./XMLStringifier": 23,
+        "./XMLText": 24
+    }],
+    17: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLAttribute, XMLElement, XMLNode, isFunction, isObject, ref,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            ref = require('./Utility'), isObject = ref.isObject, isFunction = ref.isFunction;
+
+            XMLNode = require('./XMLNode');
+
+            XMLAttribute = require('./XMLAttribute');
+
+            module.exports = XMLElement = (function (superClass) {
+                extend(XMLElement, superClass);
+
+                function XMLElement(parent, name, attributes) {
+                    XMLElement.__super__.constructor.call(this, parent);
+                    if (name == null) {
+                        throw new Error("Missing element name");
+                    }
+                    this.name = this.stringify.eleName(name);
+                    this.attributes = {};
+                    if (attributes != null) {
+                        this.attribute(attributes);
+                    }
+                    if (parent.isDocument) {
+                        this.isRoot = true;
+                        this.documentObject = parent;
+                        parent.rootObject = this;
+                    }
+                }
+
+                XMLElement.prototype.clone = function () {
+                    var att, attName, clonedSelf, ref1;
+                    clonedSelf = Object.create(this);
+                    if (clonedSelf.isRoot) {
+                        clonedSelf.documentObject = null;
+                    }
+                    clonedSelf.attributes = {};
+                    ref1 = this.attributes;
+                    for (attName in ref1) {
+                        if (!hasProp.call(ref1, attName)) continue;
+                        att = ref1[attName];
+                        clonedSelf.attributes[attName] = att.clone();
+                    }
+                    clonedSelf.children = [];
+                    this.children.forEach(function (child) {
+                        var clonedChild;
+                        clonedChild = child.clone();
+                        clonedChild.parent = clonedSelf;
+                        return clonedSelf.children.push(clonedChild);
+                    });
+                    return clonedSelf;
+                };
+
+                XMLElement.prototype.attribute = function (name, value) {
+                    var attName, attValue;
+                    if (name != null) {
+                        name = name.valueOf();
+                    }
+                    if (isObject(name)) {
+                        for (attName in name) {
+                            if (!hasProp.call(name, attName)) continue;
+                            attValue = name[attName];
+                            this.attribute(attName, attValue);
+                        }
+                    } else {
+                        if (isFunction(value)) {
+                            value = value.apply();
+                        }
+                        if (!this.options.skipNullAttributes || (value != null)) {
+                            this.attributes[name] = new XMLAttribute(this, name, value);
+                        }
+                    }
+                    return this;
+                };
+
+                XMLElement.prototype.removeAttribute = function (name) {
+                    var attName, i, len;
+                    if (name == null) {
+                        throw new Error("Missing attribute name");
+                    }
+                    name = name.valueOf();
+                    if (Array.isArray(name)) {
+                        for (i = 0, len = name.length; i < len; i++) {
+                            attName = name[i];
+                            delete this.attributes[attName];
+                        }
+                    } else {
+                        delete this.attributes[name];
+                    }
+                    return this;
+                };
+
+                XMLElement.prototype.toString = function (options) {
+                    return this.options.writer.set(options).element(this);
+                };
+
+                XMLElement.prototype.att = function (name, value) {
+                    return this.attribute(name, value);
+                };
+
+                XMLElement.prototype.a = function (name, value) {
+                    return this.attribute(name, value);
+                };
+
+                return XMLElement;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./Utility": 5,
+        "./XMLAttribute": 6,
+        "./XMLNode": 18
+    }],
+    18: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLCData, XMLComment, XMLDeclaration, XMLDocType, XMLElement, XMLNode, XMLProcessingInstruction, XMLRaw, XMLText, isEmpty, isFunction, isObject, ref,
+                hasProp = {}.hasOwnProperty;
+
+            ref = require('./Utility'), isObject = ref.isObject, isFunction = ref.isFunction, isEmpty = ref.isEmpty;
+
+            XMLElement = null;
+
+            XMLCData = null;
+
+            XMLComment = null;
+
+            XMLDeclaration = null;
+
+            XMLDocType = null;
+
+            XMLRaw = null;
+
+            XMLText = null;
+
+            XMLProcessingInstruction = null;
+
+            module.exports = XMLNode = (function () {
+                function XMLNode(parent) {
+                    this.parent = parent;
+                    if (this.parent) {
+                        this.options = this.parent.options;
+                        this.stringify = this.parent.stringify;
+                    }
+                    this.children = [];
+                    if (!XMLElement) {
+                        XMLElement = require('./XMLElement');
+                        XMLCData = require('./XMLCData');
+                        XMLComment = require('./XMLComment');
+                        XMLDeclaration = require('./XMLDeclaration');
+                        XMLDocType = require('./XMLDocType');
+                        XMLRaw = require('./XMLRaw');
+                        XMLText = require('./XMLText');
+                        XMLProcessingInstruction = require('./XMLProcessingInstruction');
+                    }
+                }
+
+                XMLNode.prototype.element = function (name, attributes, text) {
+                    var childNode, item, j, k, key, lastChild, len, len1, ref1, val;
+                    lastChild = null;
+                    if (attributes == null) {
+                        attributes = {};
+                    }
+                    attributes = attributes.valueOf();
+                    if (!isObject(attributes)) {
+                        ref1 = [attributes, text], text = ref1[0], attributes = ref1[1];
+                    }
+                    if (name != null) {
+                        name = name.valueOf();
+                    }
+                    if (Array.isArray(name)) {
+                        for (j = 0, len = name.length; j < len; j++) {
+                            item = name[j];
+                            lastChild = this.element(item);
+                        }
+                    } else if (isFunction(name)) {
+                        lastChild = this.element(name.apply());
+                    } else if (isObject(name)) {
+                        for (key in name) {
+                            if (!hasProp.call(name, key)) continue;
+                            val = name[key];
+                            if (isFunction(val)) {
+                                val = val.apply();
+                            }
+                            if ((isObject(val)) && (isEmpty(val))) {
+                                val = null;
+                            }
+                            if (!this.options.ignoreDecorators && this.stringify.convertAttKey && key.indexOf(this.stringify.convertAttKey) === 0) {
+                                lastChild = this.attribute(key.substr(this.stringify.convertAttKey.length), val);
+                            } else if (!this.options.separateArrayItems && Array.isArray(val)) {
+                                for (k = 0, len1 = val.length; k < len1; k++) {
+                                    item = val[k];
+                                    childNode = {};
+                                    childNode[key] = item;
+                                    lastChild = this.element(childNode);
+                                }
+                            } else if (isObject(val)) {
+                                lastChild = this.element(key);
+                                lastChild.element(val);
+                            } else {
+                                lastChild = this.element(key, val);
+                            }
+                        }
+                    } else {
+                        if (!this.options.ignoreDecorators && this.stringify.convertTextKey && name.indexOf(this.stringify.convertTextKey) === 0) {
+                            lastChild = this.text(text);
+                        } else if (!this.options.ignoreDecorators && this.stringify.convertCDataKey && name.indexOf(this.stringify.convertCDataKey) === 0) {
+                            lastChild = this.cdata(text);
+                        } else if (!this.options.ignoreDecorators && this.stringify.convertCommentKey && name.indexOf(this.stringify.convertCommentKey) === 0) {
+                            lastChild = this.comment(text);
+                        } else if (!this.options.ignoreDecorators && this.stringify.convertRawKey && name.indexOf(this.stringify.convertRawKey) === 0) {
+                            lastChild = this.raw(text);
+                        } else if (!this.options.ignoreDecorators && this.stringify.convertPIKey && name.indexOf(this.stringify.convertPIKey) === 0) {
+                            lastChild = this.instruction(name.substr(this.stringify.convertPIKey.length), text);
+                        } else {
+                            lastChild = this.node(name, attributes, text);
+                        }
+                    }
+                    if (lastChild == null) {
+                        throw new Error("Could not create any elements with: " + name);
+                    }
+                    return lastChild;
+                };
+
+                XMLNode.prototype.insertBefore = function (name, attributes, text) {
+                    var child, i, removed;
+                    if (this.isRoot) {
+                        throw new Error("Cannot insert elements at root level");
+                    }
+                    i = this.parent.children.indexOf(this);
+                    removed = this.parent.children.splice(i);
+                    child = this.parent.element(name, attributes, text);
+                    Array.prototype.push.apply(this.parent.children, removed);
+                    return child;
+                };
+
+                XMLNode.prototype.insertAfter = function (name, attributes, text) {
+                    var child, i, removed;
+                    if (this.isRoot) {
+                        throw new Error("Cannot insert elements at root level");
+                    }
+                    i = this.parent.children.indexOf(this);
+                    removed = this.parent.children.splice(i + 1);
+                    child = this.parent.element(name, attributes, text);
+                    Array.prototype.push.apply(this.parent.children, removed);
+                    return child;
+                };
+
+                XMLNode.prototype.remove = function () {
+                    var i, ref1;
+                    if (this.isRoot) {
+                        throw new Error("Cannot remove the root element");
+                    }
+                    i = this.parent.children.indexOf(this);
+      [].splice.apply(this.parent.children, [i, i - i + 1].concat(ref1 = [])), ref1;
+                    return this.parent;
+                };
+
+                XMLNode.prototype.node = function (name, attributes, text) {
+                    var child, ref1;
+                    if (name != null) {
+                        name = name.valueOf();
+                    }
+                    attributes || (attributes = {});
+                    attributes = attributes.valueOf();
+                    if (!isObject(attributes)) {
+                        ref1 = [attributes, text], text = ref1[0], attributes = ref1[1];
+                    }
+                    child = new XMLElement(this, name, attributes);
+                    if (text != null) {
+                        child.text(text);
+                    }
+                    this.children.push(child);
+                    return child;
+                };
+
+                XMLNode.prototype.text = function (value) {
+                    var child;
+                    child = new XMLText(this, value);
+                    this.children.push(child);
+                    return this;
+                };
+
+                XMLNode.prototype.cdata = function (value) {
+                    var child;
+                    child = new XMLCData(this, value);
+                    this.children.push(child);
+                    return this;
+                };
+
+                XMLNode.prototype.comment = function (value) {
+                    var child;
+                    child = new XMLComment(this, value);
+                    this.children.push(child);
+                    return this;
+                };
+
+                XMLNode.prototype.commentBefore = function (value) {
+                    var child, i, removed;
+                    i = this.parent.children.indexOf(this);
+                    removed = this.parent.children.splice(i);
+                    child = this.parent.comment(value);
+                    Array.prototype.push.apply(this.parent.children, removed);
+                    return this;
+                };
+
+                XMLNode.prototype.commentAfter = function (value) {
+                    var child, i, removed;
+                    i = this.parent.children.indexOf(this);
+                    removed = this.parent.children.splice(i + 1);
+                    child = this.parent.comment(value);
+                    Array.prototype.push.apply(this.parent.children, removed);
+                    return this;
+                };
+
+                XMLNode.prototype.raw = function (value) {
+                    var child;
+                    child = new XMLRaw(this, value);
+                    this.children.push(child);
+                    return this;
+                };
+
+                XMLNode.prototype.instruction = function (target, value) {
+                    var insTarget, insValue, instruction, j, len;
+                    if (target != null) {
+                        target = target.valueOf();
+                    }
+                    if (value != null) {
+                        value = value.valueOf();
+                    }
+                    if (Array.isArray(target)) {
+                        for (j = 0, len = target.length; j < len; j++) {
+                            insTarget = target[j];
+                            this.instruction(insTarget);
+                        }
+                    } else if (isObject(target)) {
+                        for (insTarget in target) {
+                            if (!hasProp.call(target, insTarget)) continue;
+                            insValue = target[insTarget];
+                            this.instruction(insTarget, insValue);
+                        }
+                    } else {
+                        if (isFunction(value)) {
+                            value = value.apply();
+                        }
+                        instruction = new XMLProcessingInstruction(this, target, value);
+                        this.children.push(instruction);
+                    }
+                    return this;
+                };
+
+                XMLNode.prototype.instructionBefore = function (target, value) {
+                    var child, i, removed;
+                    i = this.parent.children.indexOf(this);
+                    removed = this.parent.children.splice(i);
+                    child = this.parent.instruction(target, value);
+                    Array.prototype.push.apply(this.parent.children, removed);
+                    return this;
+                };
+
+                XMLNode.prototype.instructionAfter = function (target, value) {
+                    var child, i, removed;
+                    i = this.parent.children.indexOf(this);
+                    removed = this.parent.children.splice(i + 1);
+                    child = this.parent.instruction(target, value);
+                    Array.prototype.push.apply(this.parent.children, removed);
+                    return this;
+                };
+
+                XMLNode.prototype.declaration = function (version, encoding, standalone) {
+                    var doc, xmldec;
+                    doc = this.document();
+                    xmldec = new XMLDeclaration(doc, version, encoding, standalone);
+                    if (doc.children[0] instanceof XMLDeclaration) {
+                        doc.children[0] = xmldec;
+                    } else {
+                        doc.children.unshift(xmldec);
+                    }
+                    return doc.root() || doc;
+                };
+
+                XMLNode.prototype.doctype = function (pubID, sysID) {
+                    var child, doc, doctype, i, j, k, len, len1, ref1, ref2;
+                    doc = this.document();
+                    doctype = new XMLDocType(doc, pubID, sysID);
+                    ref1 = doc.children;
+                    for (i = j = 0, len = ref1.length; j < len; i = ++j) {
+                        child = ref1[i];
+                        if (child instanceof XMLDocType) {
+                            doc.children[i] = doctype;
+                            return doctype;
+                        }
+                    }
+                    ref2 = doc.children;
+                    for (i = k = 0, len1 = ref2.length; k < len1; i = ++k) {
+                        child = ref2[i];
+                        if (child.isRoot) {
+                            doc.children.splice(i, 0, doctype);
+                            return doctype;
+                        }
+                    }
+                    doc.children.push(doctype);
+                    return doctype;
+                };
+
+                XMLNode.prototype.up = function () {
+                    if (this.isRoot) {
+                        throw new Error("The root node has no parent. Use doc() if you need to get the document object.");
+                    }
+                    return this.parent;
+                };
+
+                XMLNode.prototype.root = function () {
+                    var node;
+                    node = this;
+                    while (node) {
+                        if (node.isDocument) {
+                            return node.rootObject;
+                        } else if (node.isRoot) {
+                            return node;
+                        } else {
+                            node = node.parent;
+                        }
+                    }
+                };
+
+                XMLNode.prototype.document = function () {
+                    var node;
+                    node = this;
+                    while (node) {
+                        if (node.isDocument) {
+                            return node;
+                        } else {
+                            node = node.parent;
+                        }
+                    }
+                };
+
+                XMLNode.prototype.end = function (options) {
+                    return this.document().end(options);
+                };
+
+                XMLNode.prototype.prev = function () {
+                    var i;
+                    i = this.parent.children.indexOf(this);
+                    if (i < 1) {
+                        throw new Error("Already at the first node");
+                    }
+                    return this.parent.children[i - 1];
+                };
+
+                XMLNode.prototype.next = function () {
+                    var i;
+                    i = this.parent.children.indexOf(this);
+                    if (i === -1 || i === this.parent.children.length - 1) {
+                        throw new Error("Already at the last node");
+                    }
+                    return this.parent.children[i + 1];
+                };
+
+                XMLNode.prototype.importDocument = function (doc) {
+                    var clonedRoot;
+                    clonedRoot = doc.root().clone();
+                    clonedRoot.parent = this;
+                    clonedRoot.isRoot = false;
+                    this.children.push(clonedRoot);
+                    return this;
+                };
+
+                XMLNode.prototype.ele = function (name, attributes, text) {
+                    return this.element(name, attributes, text);
+                };
+
+                XMLNode.prototype.nod = function (name, attributes, text) {
+                    return this.node(name, attributes, text);
+                };
+
+                XMLNode.prototype.txt = function (value) {
+                    return this.text(value);
+                };
+
+                XMLNode.prototype.dat = function (value) {
+                    return this.cdata(value);
+                };
+
+                XMLNode.prototype.com = function (value) {
+                    return this.comment(value);
+                };
+
+                XMLNode.prototype.ins = function (target, value) {
+                    return this.instruction(target, value);
+                };
+
+                XMLNode.prototype.doc = function () {
+                    return this.document();
+                };
+
+                XMLNode.prototype.dec = function (version, encoding, standalone) {
+                    return this.declaration(version, encoding, standalone);
+                };
+
+                XMLNode.prototype.dtd = function (pubID, sysID) {
+                    return this.doctype(pubID, sysID);
+                };
+
+                XMLNode.prototype.e = function (name, attributes, text) {
+                    return this.element(name, attributes, text);
+                };
+
+                XMLNode.prototype.n = function (name, attributes, text) {
+                    return this.node(name, attributes, text);
+                };
+
+                XMLNode.prototype.t = function (value) {
+                    return this.text(value);
+                };
+
+                XMLNode.prototype.d = function (value) {
+                    return this.cdata(value);
+                };
+
+                XMLNode.prototype.c = function (value) {
+                    return this.comment(value);
+                };
+
+                XMLNode.prototype.r = function (value) {
+                    return this.raw(value);
+                };
+
+                XMLNode.prototype.i = function (target, value) {
+                    return this.instruction(target, value);
+                };
+
+                XMLNode.prototype.u = function () {
+                    return this.up();
+                };
+
+                XMLNode.prototype.importXMLBuilder = function (doc) {
+                    return this.importDocument(doc);
+                };
+
+                return XMLNode;
+
+            })();
+
+        }).call(this);
+
+}, {
+        "./Utility": 5,
+        "./XMLCData": 7,
+        "./XMLComment": 8,
+        "./XMLDeclaration": 13,
+        "./XMLDocType": 14,
+        "./XMLElement": 17,
+        "./XMLProcessingInstruction": 19,
+        "./XMLRaw": 20,
+        "./XMLText": 24
+    }],
+    19: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLNode, XMLProcessingInstruction,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            XMLNode = require('./XMLNode');
+
+            module.exports = XMLProcessingInstruction = (function (superClass) {
+                extend(XMLProcessingInstruction, superClass);
+
+                function XMLProcessingInstruction(parent, target, value) {
+                    XMLProcessingInstruction.__super__.constructor.call(this, parent);
+                    if (target == null) {
+                        throw new Error("Missing instruction target");
+                    }
+                    this.target = this.stringify.insTarget(target);
+                    if (value) {
+                        this.value = this.stringify.insValue(value);
+                    }
+                }
+
+                XMLProcessingInstruction.prototype.clone = function () {
+                    return Object.create(this);
+                };
+
+                XMLProcessingInstruction.prototype.toString = function (options) {
+                    return this.options.writer.set(options).processingInstruction(this);
+                };
+
+                return XMLProcessingInstruction;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./XMLNode": 18
+    }],
+    20: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLNode, XMLRaw,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            XMLNode = require('./XMLNode');
+
+            module.exports = XMLRaw = (function (superClass) {
+                extend(XMLRaw, superClass);
+
+                function XMLRaw(parent, text) {
+                    XMLRaw.__super__.constructor.call(this, parent);
+                    if (text == null) {
+                        throw new Error("Missing raw text");
+                    }
+                    this.value = this.stringify.raw(text);
+                }
+
+                XMLRaw.prototype.clone = function () {
+                    return Object.create(this);
+                };
+
+                XMLRaw.prototype.toString = function (options) {
+                    return this.options.writer.set(options).raw(this);
+                };
+
+                return XMLRaw;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./XMLNode": 18
+    }],
+    21: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLCData, XMLComment, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDeclaration, XMLDocType, XMLElement, XMLProcessingInstruction, XMLRaw, XMLStreamWriter, XMLText, XMLWriterBase,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            XMLDeclaration = require('./XMLDeclaration');
+
+            XMLDocType = require('./XMLDocType');
+
+            XMLCData = require('./XMLCData');
+
+            XMLComment = require('./XMLComment');
+
+            XMLElement = require('./XMLElement');
+
+            XMLRaw = require('./XMLRaw');
+
+            XMLText = require('./XMLText');
+
+            XMLProcessingInstruction = require('./XMLProcessingInstruction');
+
+            XMLDTDAttList = require('./XMLDTDAttList');
+
+            XMLDTDElement = require('./XMLDTDElement');
+
+            XMLDTDEntity = require('./XMLDTDEntity');
+
+            XMLDTDNotation = require('./XMLDTDNotation');
+
+            XMLWriterBase = require('./XMLWriterBase');
+
+            module.exports = XMLStreamWriter = (function (superClass) {
+                extend(XMLStreamWriter, superClass);
+
+                function XMLStreamWriter(stream, options) {
+                    XMLStreamWriter.__super__.constructor.call(this, options);
+                    this.stream = stream;
+                }
+
+                XMLStreamWriter.prototype.document = function (doc) {
+                    var child, i, j, len, len1, ref, ref1, results;
+                    ref = doc.children;
+                    for (i = 0, len = ref.length; i < len; i++) {
+                        child = ref[i];
+                        child.isLastRootNode = false;
+                    }
+                    doc.children[doc.children.length - 1].isLastRootNode = true;
+                    ref1 = doc.children;
+                    results = [];
+                    for (j = 0, len1 = ref1.length; j < len1; j++) {
+                        child = ref1[j];
+                        switch (false) {
+                            case !(child instanceof XMLDeclaration):
+                                results.push(this.declaration(child));
+                                break;
+                            case !(child instanceof XMLDocType):
+                                results.push(this.docType(child));
+                                break;
+                            case !(child instanceof XMLComment):
+                                results.push(this.comment(child));
+                                break;
+                            case !(child instanceof XMLProcessingInstruction):
+                                results.push(this.processingInstruction(child));
+                                break;
+                            default:
+                                results.push(this.element(child));
+                        }
+                    }
+                    return results;
+                };
+
+                XMLStreamWriter.prototype.attribute = function (att) {
+                    return this.stream.write(' ' + att.name + '="' + att.value + '"');
+                };
+
+                XMLStreamWriter.prototype.cdata = function (node, level) {
+                    return this.stream.write(this.space(level) + '<![CDATA[' + node.text + ']]>' + this.endline(node));
+                };
+
+                XMLStreamWriter.prototype.comment = function (node, level) {
+                    return this.stream.write(this.space(level) + '<!-- ' + node.text + ' -->' + this.endline(node));
+                };
+
+                XMLStreamWriter.prototype.declaration = function (node, level) {
+                    this.stream.write(this.space(level));
+                    this.stream.write('<?xml version="' + node.version + '"');
+                    if (node.encoding != null) {
+                        this.stream.write(' encoding="' + node.encoding + '"');
+                    }
+                    if (node.standalone != null) {
+                        this.stream.write(' standalone="' + node.standalone + '"');
+                    }
+                    this.stream.write(this.spacebeforeslash + '?>');
+                    return this.stream.write(this.endline(node));
+                };
+
+                XMLStreamWriter.prototype.docType = function (node, level) {
+                    var child, i, len, ref;
+                    level || (level = 0);
+                    this.stream.write(this.space(level));
+                    this.stream.write('<!DOCTYPE ' + node.root().name);
+                    if (node.pubID && node.sysID) {
+                        this.stream.write(' PUBLIC "' + node.pubID + '" "' + node.sysID + '"');
+                    } else if (node.sysID) {
+                        this.stream.write(' SYSTEM "' + node.sysID + '"');
+                    }
+                    if (node.children.length > 0) {
+                        this.stream.write(' [');
+                        this.stream.write(this.endline(node));
+                        ref = node.children;
+                        for (i = 0, len = ref.length; i < len; i++) {
+                            child = ref[i];
+                            switch (false) {
+                                case !(child instanceof XMLDTDAttList):
+                                    this.dtdAttList(child, level + 1);
+                                    break;
+                                case !(child instanceof XMLDTDElement):
+                                    this.dtdElement(child, level + 1);
+                                    break;
+                                case !(child instanceof XMLDTDEntity):
+                                    this.dtdEntity(child, level + 1);
+                                    break;
+                                case !(child instanceof XMLDTDNotation):
+                                    this.dtdNotation(child, level + 1);
+                                    break;
+                                case !(child instanceof XMLCData):
+                                    this.cdata(child, level + 1);
+                                    break;
+                                case !(child instanceof XMLComment):
+                                    this.comment(child, level + 1);
+                                    break;
+                                case !(child instanceof XMLProcessingInstruction):
+                                    this.processingInstruction(child, level + 1);
+                                    break;
+                                default:
+                                    throw new Error("Unknown DTD node type: " + child.constructor.name);
+                            }
+                        }
+                        this.stream.write(']');
+                    }
+                    this.stream.write(this.spacebeforeslash + '>');
+                    return this.stream.write(this.endline(node));
+                };
+
+                XMLStreamWriter.prototype.element = function (node, level) {
+                    var att, child, i, len, name, ref, ref1, space;
+                    level || (level = 0);
+                    space = this.space(level);
+                    this.stream.write(space + '<' + node.name);
+                    ref = node.attributes;
+                    for (name in ref) {
+                        if (!hasProp.call(ref, name)) continue;
+                        att = ref[name];
+                        this.attribute(att);
+                    }
+                    if (node.children.length === 0 || node.children.every(function (e) {
+                            return e.value === '';
+                        })) {
+                        if (this.allowEmpty) {
+                            this.stream.write('></' + node.name + '>');
+                        } else {
+                            this.stream.write(this.spacebeforeslash + '/>');
+                        }
+                    } else if (this.pretty && node.children.length === 1 && (node.children[0].value != null)) {
+                        this.stream.write('>');
+                        this.stream.write(node.children[0].value);
+                        this.stream.write('</' + node.name + '>');
+                    } else {
+                        this.stream.write('>' + this.newline);
+                        ref1 = node.children;
+                        for (i = 0, len = ref1.length; i < len; i++) {
+                            child = ref1[i];
+                            switch (false) {
+                                case !(child instanceof XMLCData):
+                                    this.cdata(child, level + 1);
+                                    break;
+                                case !(child instanceof XMLComment):
+                                    this.comment(child, level + 1);
+                                    break;
+                                case !(child instanceof XMLElement):
+                                    this.element(child, level + 1);
+                                    break;
+                                case !(child instanceof XMLRaw):
+                                    this.raw(child, level + 1);
+                                    break;
+                                case !(child instanceof XMLText):
+                                    this.text(child, level + 1);
+                                    break;
+                                case !(child instanceof XMLProcessingInstruction):
+                                    this.processingInstruction(child, level + 1);
+                                    break;
+                                default:
+                                    throw new Error("Unknown XML node type: " + child.constructor.name);
+                            }
+                        }
+                        this.stream.write(space + '</' + node.name + '>');
+                    }
+                    return this.stream.write(this.endline(node));
+                };
+
+                XMLStreamWriter.prototype.processingInstruction = function (node, level) {
+                    this.stream.write(this.space(level) + '<?' + node.target);
+                    if (node.value) {
+                        this.stream.write(' ' + node.value);
+                    }
+                    return this.stream.write(this.spacebeforeslash + '?>' + this.endline(node));
+                };
+
+                XMLStreamWriter.prototype.raw = function (node, level) {
+                    return this.stream.write(this.space(level) + node.value + this.endline(node));
+                };
+
+                XMLStreamWriter.prototype.text = function (node, level) {
+                    return this.stream.write(this.space(level) + node.value + this.endline(node));
+                };
+
+                XMLStreamWriter.prototype.dtdAttList = function (node, level) {
+                    this.stream.write(this.space(level) + '<!ATTLIST ' + node.elementName + ' ' + node.attributeName + ' ' + node.attributeType);
+                    if (node.defaultValueType !== '#DEFAULT') {
+                        this.stream.write(' ' + node.defaultValueType);
+                    }
+                    if (node.defaultValue) {
+                        this.stream.write(' "' + node.defaultValue + '"');
+                    }
+                    return this.stream.write(this.spacebeforeslash + '>' + this.endline(node));
+                };
+
+                XMLStreamWriter.prototype.dtdElement = function (node, level) {
+                    this.stream.write(this.space(level) + '<!ELEMENT ' + node.name + ' ' + node.value);
+                    return this.stream.write(this.spacebeforeslash + '>' + this.endline(node));
+                };
+
+                XMLStreamWriter.prototype.dtdEntity = function (node, level) {
+                    this.stream.write(this.space(level) + '<!ENTITY');
+                    if (node.pe) {
+                        this.stream.write(' %');
+                    }
+                    this.stream.write(' ' + node.name);
+                    if (node.value) {
+                        this.stream.write(' "' + node.value + '"');
+                    } else {
+                        if (node.pubID && node.sysID) {
+                            this.stream.write(' PUBLIC "' + node.pubID + '" "' + node.sysID + '"');
+                        } else if (node.sysID) {
+                            this.stream.write(' SYSTEM "' + node.sysID + '"');
+                        }
+                        if (node.nData) {
+                            this.stream.write(' NDATA ' + node.nData);
+                        }
+                    }
+                    return this.stream.write(this.spacebeforeslash + '>' + this.endline(node));
+                };
+
+                XMLStreamWriter.prototype.dtdNotation = function (node, level) {
+                    this.stream.write(this.space(level) + '<!NOTATION ' + node.name);
+                    if (node.pubID && node.sysID) {
+                        this.stream.write(' PUBLIC "' + node.pubID + '" "' + node.sysID + '"');
+                    } else if (node.pubID) {
+                        this.stream.write(' PUBLIC "' + node.pubID + '"');
+                    } else if (node.sysID) {
+                        this.stream.write(' SYSTEM "' + node.sysID + '"');
+                    }
+                    return this.stream.write(this.spacebeforeslash + '>' + this.endline(node));
+                };
+
+                XMLStreamWriter.prototype.endline = function (node) {
+                    if (!node.isLastRootNode) {
+                        return this.newline;
+                    } else {
+                        return '';
+                    }
+                };
+
+                return XMLStreamWriter;
+
+            })(XMLWriterBase);
+
+        }).call(this);
+
+}, {
+        "./XMLCData": 7,
+        "./XMLComment": 8,
+        "./XMLDTDAttList": 9,
+        "./XMLDTDElement": 10,
+        "./XMLDTDEntity": 11,
+        "./XMLDTDNotation": 12,
+        "./XMLDeclaration": 13,
+        "./XMLDocType": 14,
+        "./XMLElement": 17,
+        "./XMLProcessingInstruction": 19,
+        "./XMLRaw": 20,
+        "./XMLText": 24,
+        "./XMLWriterBase": 25
+    }],
+    22: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLCData, XMLComment, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDeclaration, XMLDocType, XMLElement, XMLProcessingInstruction, XMLRaw, XMLStringWriter, XMLText, XMLWriterBase,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            XMLDeclaration = require('./XMLDeclaration');
+
+            XMLDocType = require('./XMLDocType');
+
+            XMLCData = require('./XMLCData');
+
+            XMLComment = require('./XMLComment');
+
+            XMLElement = require('./XMLElement');
+
+            XMLRaw = require('./XMLRaw');
+
+            XMLText = require('./XMLText');
+
+            XMLProcessingInstruction = require('./XMLProcessingInstruction');
+
+            XMLDTDAttList = require('./XMLDTDAttList');
+
+            XMLDTDElement = require('./XMLDTDElement');
+
+            XMLDTDEntity = require('./XMLDTDEntity');
+
+            XMLDTDNotation = require('./XMLDTDNotation');
+
+            XMLWriterBase = require('./XMLWriterBase');
+
+            module.exports = XMLStringWriter = (function (superClass) {
+                extend(XMLStringWriter, superClass);
+
+                function XMLStringWriter(options) {
+                    XMLStringWriter.__super__.constructor.call(this, options);
+                }
+
+                XMLStringWriter.prototype.document = function (doc) {
+                    var child, i, len, r, ref;
+                    this.textispresent = false;
+                    r = '';
+                    ref = doc.children;
+                    for (i = 0, len = ref.length; i < len; i++) {
+                        child = ref[i];
+                        r += (function () {
+                            switch (false) {
+                                case !(child instanceof XMLDeclaration):
+                                    return this.declaration(child);
+                                case !(child instanceof XMLDocType):
+                                    return this.docType(child);
+                                case !(child instanceof XMLComment):
+                                    return this.comment(child);
+                                case !(child instanceof XMLProcessingInstruction):
+                                    return this.processingInstruction(child);
+                                default:
+                                    return this.element(child, 0);
+                            }
+                        }).call(this);
+                    }
+                    if (this.pretty && r.slice(-this.newline.length) === this.newline) {
+                        r = r.slice(0, -this.newline.length);
+                    }
+                    return r;
+                };
+
+                XMLStringWriter.prototype.attribute = function (att) {
+                    return ' ' + att.name + '="' + att.value + '"';
+                };
+
+                XMLStringWriter.prototype.cdata = function (node, level) {
+                    return this.space(level) + '<![CDATA[' + node.text + ']]>' + this.newline;
+                };
+
+                XMLStringWriter.prototype.comment = function (node, level) {
+                    return this.space(level) + '<!-- ' + node.text + ' -->' + this.newline;
+                };
+
+                XMLStringWriter.prototype.declaration = function (node, level) {
+                    var r;
+                    r = this.space(level);
+                    r += '<?xml version="' + node.version + '"';
+                    if (node.encoding != null) {
+                        r += ' encoding="' + node.encoding + '"';
+                    }
+                    if (node.standalone != null) {
+                        r += ' standalone="' + node.standalone + '"';
+                    }
+                    r += this.spacebeforeslash + '?>';
+                    r += this.newline;
+                    return r;
+                };
+
+                XMLStringWriter.prototype.docType = function (node, level) {
+                    var child, i, len, r, ref;
+                    level || (level = 0);
+                    r = this.space(level);
+                    r += '<!DOCTYPE ' + node.root().name;
+                    if (node.pubID && node.sysID) {
+                        r += ' PUBLIC "' + node.pubID + '" "' + node.sysID + '"';
+                    } else if (node.sysID) {
+                        r += ' SYSTEM "' + node.sysID + '"';
+                    }
+                    if (node.children.length > 0) {
+                        r += ' [';
+                        r += this.newline;
+                        ref = node.children;
+                        for (i = 0, len = ref.length; i < len; i++) {
+                            child = ref[i];
+                            r += (function () {
+                                switch (false) {
+                                    case !(child instanceof XMLDTDAttList):
+                                        return this.dtdAttList(child, level + 1);
+                                    case !(child instanceof XMLDTDElement):
+                                        return this.dtdElement(child, level + 1);
+                                    case !(child instanceof XMLDTDEntity):
+                                        return this.dtdEntity(child, level + 1);
+                                    case !(child instanceof XMLDTDNotation):
+                                        return this.dtdNotation(child, level + 1);
+                                    case !(child instanceof XMLCData):
+                                        return this.cdata(child, level + 1);
+                                    case !(child instanceof XMLComment):
+                                        return this.comment(child, level + 1);
+                                    case !(child instanceof XMLProcessingInstruction):
+                                        return this.processingInstruction(child, level + 1);
+                                    default:
+                                        throw new Error("Unknown DTD node type: " + child.constructor.name);
+                                }
+                            }).call(this);
+                        }
+                        r += ']';
+                    }
+                    r += this.spacebeforeslash + '>';
+                    r += this.newline;
+                    return r;
+                };
+
+                XMLStringWriter.prototype.element = function (node, level) {
+                    var att, child, i, j, len, len1, name, r, ref, ref1, ref2, space, textispresentwasset;
+                    level || (level = 0);
+                    textispresentwasset = false;
+                    if (this.textispresent) {
+                        this.newline = '';
+                        this.pretty = false;
+                    } else {
+                        this.newline = this.newlinedefault;
+                        this.pretty = this.prettydefault;
+                    }
+                    space = this.space(level);
+                    r = '';
+                    r += space + '<' + node.name;
+                    ref = node.attributes;
+                    for (name in ref) {
+                        if (!hasProp.call(ref, name)) continue;
+                        att = ref[name];
+                        r += this.attribute(att);
+                    }
+                    if (node.children.length === 0 || node.children.every(function (e) {
+                            return e.value === '';
+                        })) {
+                        if (this.allowEmpty) {
+                            r += '></' + node.name + '>' + this.newline;
+                        } else {
+                            r += this.spacebeforeslash + '/>' + this.newline;
+                        }
+                    } else if (this.pretty && node.children.length === 1 && (node.children[0].value != null)) {
+                        r += '>';
+                        r += node.children[0].value;
+                        r += '</' + node.name + '>' + this.newline;
+                    } else {
+                        if (this.dontprettytextnodes) {
+                            ref1 = node.children;
+                            for (i = 0, len = ref1.length; i < len; i++) {
+                                child = ref1[i];
+                                if (child.value != null) {
+                                    this.textispresent++;
+                                    textispresentwasset = true;
+                                    break;
+                                }
+                            }
+                        }
+                        if (this.textispresent) {
+                            this.newline = '';
+                            this.pretty = false;
+                            space = this.space(level);
+                        }
+                        r += '>' + this.newline;
+                        ref2 = node.children;
+                        for (j = 0, len1 = ref2.length; j < len1; j++) {
+                            child = ref2[j];
+                            r += (function () {
+                                switch (false) {
+                                    case !(child instanceof XMLCData):
+                                        return this.cdata(child, level + 1);
+                                    case !(child instanceof XMLComment):
+                                        return this.comment(child, level + 1);
+                                    case !(child instanceof XMLElement):
+                                        return this.element(child, level + 1);
+                                    case !(child instanceof XMLRaw):
+                                        return this.raw(child, level + 1);
+                                    case !(child instanceof XMLText):
+                                        return this.text(child, level + 1);
+                                    case !(child instanceof XMLProcessingInstruction):
+                                        return this.processingInstruction(child, level + 1);
+                                    default:
+                                        throw new Error("Unknown XML node type: " + child.constructor.name);
+                                }
+                            }).call(this);
+                        }
+                        if (textispresentwasset) {
+                            this.textispresent--;
+                        }
+                        if (!this.textispresent) {
+                            this.newline = this.newlinedefault;
+                            this.pretty = this.prettydefault;
+                        }
+                        r += space + '</' + node.name + '>' + this.newline;
+                    }
+                    return r;
+                };
+
+                XMLStringWriter.prototype.processingInstruction = function (node, level) {
+                    var r;
+                    r = this.space(level) + '<?' + node.target;
+                    if (node.value) {
+                        r += ' ' + node.value;
+                    }
+                    r += this.spacebeforeslash + '?>' + this.newline;
+                    return r;
+                };
+
+                XMLStringWriter.prototype.raw = function (node, level) {
+                    return this.space(level) + node.value + this.newline;
+                };
+
+                XMLStringWriter.prototype.text = function (node, level) {
+                    return this.space(level) + node.value + this.newline;
+                };
+
+                XMLStringWriter.prototype.dtdAttList = function (node, level) {
+                    var r;
+                    r = this.space(level) + '<!ATTLIST ' + node.elementName + ' ' + node.attributeName + ' ' + node.attributeType;
+                    if (node.defaultValueType !== '#DEFAULT') {
+                        r += ' ' + node.defaultValueType;
+                    }
+                    if (node.defaultValue) {
+                        r += ' "' + node.defaultValue + '"';
+                    }
+                    r += this.spacebeforeslash + '>' + this.newline;
+                    return r;
+                };
+
+                XMLStringWriter.prototype.dtdElement = function (node, level) {
+                    return this.space(level) + '<!ELEMENT ' + node.name + ' ' + node.value + this.spacebeforeslash + '>' + this.newline;
+                };
+
+                XMLStringWriter.prototype.dtdEntity = function (node, level) {
+                    var r;
+                    r = this.space(level) + '<!ENTITY';
+                    if (node.pe) {
+                        r += ' %';
+                    }
+                    r += ' ' + node.name;
+                    if (node.value) {
+                        r += ' "' + node.value + '"';
+                    } else {
+                        if (node.pubID && node.sysID) {
+                            r += ' PUBLIC "' + node.pubID + '" "' + node.sysID + '"';
+                        } else if (node.sysID) {
+                            r += ' SYSTEM "' + node.sysID + '"';
+                        }
+                        if (node.nData) {
+                            r += ' NDATA ' + node.nData;
+                        }
+                    }
+                    r += this.spacebeforeslash + '>' + this.newline;
+                    return r;
+                };
+
+                XMLStringWriter.prototype.dtdNotation = function (node, level) {
+                    var r;
+                    r = this.space(level) + '<!NOTATION ' + node.name;
+                    if (node.pubID && node.sysID) {
+                        r += ' PUBLIC "' + node.pubID + '" "' + node.sysID + '"';
+                    } else if (node.pubID) {
+                        r += ' PUBLIC "' + node.pubID + '"';
+                    } else if (node.sysID) {
+                        r += ' SYSTEM "' + node.sysID + '"';
+                    }
+                    r += this.spacebeforeslash + '>' + this.newline;
+                    return r;
+                };
+
+                XMLStringWriter.prototype.openNode = function (node, level) {
+                    var att, name, r, ref;
+                    level || (level = 0);
+                    if (node instanceof XMLElement) {
+                        r = this.space(level) + '<' + node.name;
+                        ref = node.attributes;
+                        for (name in ref) {
+                            if (!hasProp.call(ref, name)) continue;
+                            att = ref[name];
+                            r += this.attribute(att);
+                        }
+                        r += (node.children ? '>' : '/>') + this.newline;
+                        return r;
+                    } else {
+                        r = this.space(level) + '<!DOCTYPE ' + node.rootNodeName;
+                        if (node.pubID && node.sysID) {
+                            r += ' PUBLIC "' + node.pubID + '" "' + node.sysID + '"';
+                        } else if (node.sysID) {
+                            r += ' SYSTEM "' + node.sysID + '"';
+                        }
+                        r += (node.children ? ' [' : '>') + this.newline;
+                        return r;
+                    }
+                };
+
+                XMLStringWriter.prototype.closeNode = function (node, level) {
+                    level || (level = 0);
+                    switch (false) {
+                        case !(node instanceof XMLElement):
+                            return this.space(level) + '</' + node.name + '>' + this.newline;
+                        case !(node instanceof XMLDocType):
+                            return this.space(level) + ']>' + this.newline;
+                    }
+                };
+
+                return XMLStringWriter;
+
+            })(XMLWriterBase);
+
+        }).call(this);
+
+}, {
+        "./XMLCData": 7,
+        "./XMLComment": 8,
+        "./XMLDTDAttList": 9,
+        "./XMLDTDElement": 10,
+        "./XMLDTDEntity": 11,
+        "./XMLDTDNotation": 12,
+        "./XMLDeclaration": 13,
+        "./XMLDocType": 14,
+        "./XMLElement": 17,
+        "./XMLProcessingInstruction": 19,
+        "./XMLRaw": 20,
+        "./XMLText": 24,
+        "./XMLWriterBase": 25
+    }],
+    23: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLStringifier,
+                bind = function (fn, me) {
+                    return function () {
+                        return fn.apply(me, arguments);
+                    };
+                },
+                hasProp = {}.hasOwnProperty;
+
+            module.exports = XMLStringifier = (function () {
+                function XMLStringifier(options) {
+                    this.assertLegalChar = bind(this.assertLegalChar, this);
+                    var key, ref, value;
+                    options || (options = {});
+                    this.noDoubleEncoding = options.noDoubleEncoding;
+                    ref = options.stringify || {};
+                    for (key in ref) {
+                        if (!hasProp.call(ref, key)) continue;
+                        value = ref[key];
+                        this[key] = value;
+                    }
+                }
+
+                XMLStringifier.prototype.eleName = function (val) {
+                    val = '' + val || '';
+                    return this.assertLegalChar(val);
+                };
+
+                XMLStringifier.prototype.eleText = function (val) {
+                    val = '' + val || '';
+                    return this.assertLegalChar(this.elEscape(val));
+                };
+
+                XMLStringifier.prototype.cdata = function (val) {
+                    val = '' + val || '';
+                    val = val.replace(']]>', ']]]]><![CDATA[>');
+                    return this.assertLegalChar(val);
+                };
+
+                XMLStringifier.prototype.comment = function (val) {
+                    val = '' + val || '';
+                    if (val.match(/--/)) {
+                        throw new Error("Comment text cannot contain double-hypen: " + val);
+                    }
+                    return this.assertLegalChar(val);
+                };
+
+                XMLStringifier.prototype.raw = function (val) {
+                    return '' + val || '';
+                };
+
+                XMLStringifier.prototype.attName = function (val) {
+                    return val = '' + val || '';
+                };
+
+                XMLStringifier.prototype.attValue = function (val) {
+                    val = '' + val || '';
+                    return this.attEscape(val);
+                };
+
+                XMLStringifier.prototype.insTarget = function (val) {
+                    return '' + val || '';
+                };
+
+                XMLStringifier.prototype.insValue = function (val) {
+                    val = '' + val || '';
+                    if (val.match(/\?>/)) {
+                        throw new Error("Invalid processing instruction value: " + val);
+                    }
+                    return val;
+                };
+
+                XMLStringifier.prototype.xmlVersion = function (val) {
+                    val = '' + val || '';
+                    if (!val.match(/1\.[0-9]+/)) {
+                        throw new Error("Invalid version number: " + val);
+                    }
+                    return val;
+                };
+
+                XMLStringifier.prototype.xmlEncoding = function (val) {
+                    val = '' + val || '';
+                    if (!val.match(/^[A-Za-z](?:[A-Za-z0-9._-])*$/)) {
+                        throw new Error("Invalid encoding: " + val);
+                    }
+                    return val;
+                };
+
+                XMLStringifier.prototype.xmlStandalone = function (val) {
+                    if (val) {
+                        return "yes";
+                    } else {
+                        return "no";
+                    }
+                };
+
+                XMLStringifier.prototype.dtdPubID = function (val) {
+                    return '' + val || '';
+                };
+
+                XMLStringifier.prototype.dtdSysID = function (val) {
+                    return '' + val || '';
+                };
+
+                XMLStringifier.prototype.dtdElementValue = function (val) {
+                    return '' + val || '';
+                };
+
+                XMLStringifier.prototype.dtdAttType = function (val) {
+                    return '' + val || '';
+                };
+
+                XMLStringifier.prototype.dtdAttDefault = function (val) {
+                    if (val != null) {
+                        return '' + val || '';
+                    } else {
+                        return val;
+                    }
+                };
+
+                XMLStringifier.prototype.dtdEntityValue = function (val) {
+                    return '' + val || '';
+                };
+
+                XMLStringifier.prototype.dtdNData = function (val) {
+                    return '' + val || '';
+                };
+
+                XMLStringifier.prototype.convertAttKey = '@';
+
+                XMLStringifier.prototype.convertPIKey = '?';
+
+                XMLStringifier.prototype.convertTextKey = '#text';
+
+                XMLStringifier.prototype.convertCDataKey = '#cdata';
+
+                XMLStringifier.prototype.convertCommentKey = '#comment';
+
+                XMLStringifier.prototype.convertRawKey = '#raw';
+
+                XMLStringifier.prototype.assertLegalChar = function (str) {
+                    var res;
+                    res = str.match(/[\0\uFFFE\uFFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/);
+                    if (res) {
+                        throw new Error("Invalid character in string: " + str + " at index " + res.index);
+                    }
+                    return str;
+                };
+
+                XMLStringifier.prototype.elEscape = function (str) {
+                    var ampregex;
+                    ampregex = this.noDoubleEncoding ? /(?!&\S+;)&/g : /&/g;
+                    return str.replace(ampregex, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\r/g, '&#xD;');
+                };
+
+                XMLStringifier.prototype.attEscape = function (str) {
+                    var ampregex;
+                    ampregex = this.noDoubleEncoding ? /(?!&\S+;)&/g : /&/g;
+                    return str.replace(ampregex, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;').replace(/\t/g, '&#x9;').replace(/\n/g, '&#xA;').replace(/\r/g, '&#xD;');
+                };
+
+                return XMLStringifier;
+
+            })();
+
+        }).call(this);
+
+}, {}],
+    24: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLNode, XMLText,
+                extend = function (child, parent) {
+                    for (var key in parent) {
+                        if (hasProp.call(parent, key)) child[key] = parent[key];
+                    }
+
+                    function ctor() {
+                        this.constructor = child;
+                    }
+                    ctor.prototype = parent.prototype;
+                    child.prototype = new ctor();
+                    child.__super__ = parent.prototype;
+                    return child;
+                },
+                hasProp = {}.hasOwnProperty;
+
+            XMLNode = require('./XMLNode');
+
+            module.exports = XMLText = (function (superClass) {
+                extend(XMLText, superClass);
+
+                function XMLText(parent, text) {
+                    XMLText.__super__.constructor.call(this, parent);
+                    if (text == null) {
+                        throw new Error("Missing element text");
+                    }
+                    this.value = this.stringify.eleText(text);
+                }
+
+                XMLText.prototype.clone = function () {
+                    return Object.create(this);
+                };
+
+                XMLText.prototype.toString = function (options) {
+                    return this.options.writer.set(options).text(this);
+                };
+
+                return XMLText;
+
+            })(XMLNode);
+
+        }).call(this);
+
+}, {
+        "./XMLNode": 18
+    }],
+    25: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLWriterBase,
+                hasProp = {}.hasOwnProperty;
+
+            module.exports = XMLWriterBase = (function () {
+                function XMLWriterBase(options) {
+                    var key, ref, ref1, ref2, ref3, ref4, ref5, ref6, value;
+                    options || (options = {});
+                    this.pretty = options.pretty || false;
+                    this.allowEmpty = (ref = options.allowEmpty) != null ? ref : false;
+                    if (this.pretty) {
+                        this.indent = (ref1 = options.indent) != null ? ref1 : '  ';
+                        this.newline = (ref2 = options.newline) != null ? ref2 : '\n';
+                        this.offset = (ref3 = options.offset) != null ? ref3 : 0;
+                        this.dontprettytextnodes = (ref4 = options.dontprettytextnodes) != null ? ref4 : 0;
+                    } else {
+                        this.indent = '';
+                        this.newline = '';
+                        this.offset = 0;
+                        this.dontprettytextnodes = 0;
+                    }
+                    this.spacebeforeslash = (ref5 = options.spacebeforeslash) != null ? ref5 : '';
+                    if (this.spacebeforeslash === true) {
+                        this.spacebeforeslash = ' ';
+                    }
+                    this.newlinedefault = this.newline;
+                    this.prettydefault = this.pretty;
+                    ref6 = options.writer || {};
+                    for (key in ref6) {
+                        if (!hasProp.call(ref6, key)) continue;
+                        value = ref6[key];
+                        this[key] = value;
+                    }
+                }
+
+                XMLWriterBase.prototype.set = function (options) {
+                    var key, ref, value;
+                    options || (options = {});
+                    if ("pretty" in options) {
+                        this.pretty = options.pretty;
+                    }
+                    if ("allowEmpty" in options) {
+                        this.allowEmpty = options.allowEmpty;
+                    }
+                    if (this.pretty) {
+                        this.indent = "indent" in options ? options.indent : '  ';
+                        this.newline = "newline" in options ? options.newline : '\n';
+                        this.offset = "offset" in options ? options.offset : 0;
+                        this.dontprettytextnodes = "dontprettytextnodes" in options ? options.dontprettytextnodes : 0;
+                    } else {
+                        this.indent = '';
+                        this.newline = '';
+                        this.offset = 0;
+                        this.dontprettytextnodes = 0;
+                    }
+                    this.spacebeforeslash = "spacebeforeslash" in options ? options.spacebeforeslash : '';
+                    if (this.spacebeforeslash === true) {
+                        this.spacebeforeslash = ' ';
+                    }
+                    this.newlinedefault = this.newline;
+                    this.prettydefault = this.pretty;
+                    ref = options.writer || {};
+                    for (key in ref) {
+                        if (!hasProp.call(ref, key)) continue;
+                        value = ref[key];
+                        this[key] = value;
+                    }
+                    return this;
+                };
+
+                XMLWriterBase.prototype.space = function (level) {
+                    var indent;
+                    if (this.pretty) {
+                        indent = (level || 0) + this.offset + 1;
+                        if (indent > 0) {
+                            return new Array(indent).join(this.indent);
+                        } else {
+                            return '';
+                        }
+                    } else {
+                        return '';
+                    }
+                };
+
+                return XMLWriterBase;
+
+            })();
+
+        }).call(this);
+
+}, {}],
+    26: [function (require, module, exports) {
+        // Generated by CoffeeScript 1.12.7
+        (function () {
+            var XMLDocument, XMLDocumentCB, XMLStreamWriter, XMLStringWriter, assign, isFunction, ref;
+
+            ref = require('./Utility'), assign = ref.assign, isFunction = ref.isFunction;
+
+            XMLDocument = require('./XMLDocument');
+
+            XMLDocumentCB = require('./XMLDocumentCB');
+
+            XMLStringWriter = require('./XMLStringWriter');
+
+            XMLStreamWriter = require('./XMLStreamWriter');
+
+            module.exports.create = function (name, xmldec, doctype, options) {
+                var doc, root;
+                if (name == null) {
+                    throw new Error("Root element needs a name");
+                }
+                options = assign({}, xmldec, doctype, options);
+                doc = new XMLDocument(options);
+                root = doc.element(name);
+                if (!options.headless) {
+                    doc.declaration(options);
+                    if ((options.pubID != null) || (options.sysID != null)) {
+                        doc.doctype(options);
+                    }
+                }
+                return root;
+            };
+
+            module.exports.begin = function (options, onData, onEnd) {
+                var ref1;
+                if (isFunction(options)) {
+                    ref1 = [options, onData], onData = ref1[0], onEnd = ref1[1];
+                    options = {};
+                }
+                if (onData) {
+                    return new XMLDocumentCB(options, onData, onEnd);
+                } else {
+                    return new XMLDocument(options);
+                }
+            };
+
+            module.exports.stringWriter = function (options) {
+                return new XMLStringWriter(options);
+            };
+
+            module.exports.streamWriter = function (stream, options) {
+                return new XMLStreamWriter(stream, options);
+            };
+
+        }).call(this);
+
+}, {
+        "./Utility": 5,
+        "./XMLDocument": 15,
+        "./XMLDocumentCB": 16,
+        "./XMLStreamWriter": 21,
+        "./XMLStringWriter": 22
+    }],
+    27: [function (require, module, exports) {
+        /************
+         * popup.js *
+         ************/
+        const builder = require('xmlbuilder'),
+            moment = require('moment-timezone');
+
+        var background = chrome.extension.getBackgroundPage(),
+            twaList = [],
+            btwList = [],
+            ttwLast = "T+ 0:00",
+            twaLast = undefined,
+            btwLast = undefined;
+
+        function createCell(value, row) {
+            var cell = document.createElement("td");
+            cell.innerHTML = value;
+            row.appendChild(cell);
+        }
+
+        function ttwStyling(value, cell) {
+            cell.align = "left";
+            cell.innerHTML = value;
+        }
+
+        function dtwStyling(value, cell) {
+            cell.align = "left";
+            cell.innerHTML = value;
+        }
+
+        function dtgStyling(value, cell) {
+            cell.align = "left";
+            cell.innerHTML = value;
+        }
+
+        function twsStyling(value1, value2, cell) {
+            var tws_foil = value1.replace(" kt", ""),
+                twa_bd = value2.replace("\u00B0", "");
+            if (tws_foil >= 11.1 && tws_foil <= 39.9 && Math.abs(twa_bd) >= 71 && Math.abs(twa_bd) <= 169) {
+                cell.style.backgroundColor = "black";
+                cell.style.color = "white";
             }
-          }).call(this);
+            cell.innerHTML = tws_foil + " kt";
         }
-        r += ']';
-      }
-      r += this.spacebeforeslash + '>';
-      r += this.newline;
-      return r;
-    };
 
-    XMLStringWriter.prototype.element = function(node, level) {
-      var att, child, i, j, len, len1, name, r, ref, ref1, ref2, space, textispresentwasset;
-      level || (level = 0);
-      textispresentwasset = false;
-      if (this.textispresent) {
-        this.newline = '';
-        this.pretty = false;
-      } else {
-        this.newline = this.newlinedefault;
-        this.pretty = this.prettydefault;
-      }
-      space = this.space(level);
-      r = '';
-      r += space + '<' + node.name;
-      ref = node.attributes;
-      for (name in ref) {
-        if (!hasProp.call(ref, name)) continue;
-        att = ref[name];
-        r += this.attribute(att);
-      }
-      if (node.children.length === 0 || node.children.every(function(e) {
-        return e.value === '';
-      })) {
-        if (this.allowEmpty) {
-          r += '></' + node.name + '>' + this.newline;
-        } else {
-          r += this.spacebeforeslash + '/>' + this.newline;
-        }
-      } else if (this.pretty && node.children.length === 1 && (node.children[0].value != null)) {
-        r += '>';
-        r += node.children[0].value;
-        r += '</' + node.name + '>' + this.newline;
-      } else {
-        if (this.dontprettytextnodes) {
-          ref1 = node.children;
-          for (i = 0, len = ref1.length; i < len; i++) {
-            child = ref1[i];
-            if (child.value != null) {
-              this.textispresent++;
-              textispresentwasset = true;
-              break;
+        function twaStyling(value, cell) {
+            var twa_bd = value.replace("\u00B0", "");
+            if (twa_bd >= 0) {
+                cell.style.color = "green";
+            } else {
+                cell.style.color = "red";
             }
-          }
+            cell.innerHTML = Math.abs(twa_bd) + "\u00B0";
         }
-        if (this.textispresent) {
-          this.newline = '';
-          this.pretty = false;
-          space = this.space(level);
+
+        function btwStyling(value, cell) {
+            cell.style.color = "blue";
+            cell.innerHTML = value;
         }
-        r += '>' + this.newline;
-        ref2 = node.children;
-        for (j = 0, len1 = ref2.length; j < len1; j++) {
-          child = ref2[j];
-          r += (function() {
-            switch (false) {
-              case !(child instanceof XMLCData):
-                return this.cdata(child, level + 1);
-              case !(child instanceof XMLComment):
-                return this.comment(child, level + 1);
-              case !(child instanceof XMLElement):
-                return this.element(child, level + 1);
-              case !(child instanceof XMLRaw):
-                return this.raw(child, level + 1);
-              case !(child instanceof XMLText):
-                return this.text(child, level + 1);
-              case !(child instanceof XMLProcessingInstruction):
-                return this.processingInstruction(child, level + 1);
-              default:
-                throw new Error("Unknown XML node type: " + child.constructor.name);
+
+        function sailStyling(value, cell) {
+            switch (value.trim()) {
+                case "Jib":
+                    cell.style.backgroundColor = "#FFD479";
+                    break;
+                case "LJ":
+                    cell.style.backgroundColor = "#FFFC79";
+                    break;
+                case "Stay":
+                    cell.style.backgroundColor = "#D4FB79";
+                    break;
+                case "Spi":
+                    cell.style.backgroundColor = "#76D6FF";
+                    break;
+                case "LG":
+                    cell.style.backgroundColor = "#7A81FF";
+                    break;
+                case "HG":
+                    cell.style.backgroundColor = "#D783FF";
+                    break;
+                case "C0":
+                    cell.style.backgroundColor = "#FF7E79";
+                    break;
             }
-          }).call(this);
+            cell.innerHTML = value;
         }
-        if (textispresentwasset) {
-          this.textispresent--;
+
+        function atwaStyling(value, cell) {
+            if (value >= 0) {
+                cell.style.color = "green";
+            } else {
+                cell.style.color = "red";
+            }
+            if (value !== "-") {
+                cell.innerHTML = Math.abs(value) + "\u00B0";
+            } else {
+                cell.style.color = "black";
+                cell.innerHTML = value;
+            }
         }
-        if (!this.textispresent) {
-          this.newline = this.newlinedefault;
-          this.pretty = this.prettydefault;
+
+        function abtwStyling(value, cell) {
+            cell.style.color = "blue";
+            if (value !== "-") {
+                cell.innerHTML = value + "\u00B0";
+            } else {
+                cell.style.color = "black";
+                cell.innerHTML = value;
+            }
         }
-        r += space + '</' + node.name + '>' + this.newline;
-      }
-      return r;
-    };
 
-    XMLStringWriter.prototype.processingInstruction = function(node, level) {
-      var r;
-      r = this.space(level) + '<?' + node.target;
-      if (node.value) {
-        r += ' ' + node.value;
-      }
-      r += this.spacebeforeslash + '?>' + this.newline;
-      return r;
-    };
-
-    XMLStringWriter.prototype.raw = function(node, level) {
-      return this.space(level) + node.value + this.newline;
-    };
-
-    XMLStringWriter.prototype.text = function(node, level) {
-      return this.space(level) + node.value + this.newline;
-    };
-
-    XMLStringWriter.prototype.dtdAttList = function(node, level) {
-      var r;
-      r = this.space(level) + '<!ATTLIST ' + node.elementName + ' ' + node.attributeName + ' ' + node.attributeType;
-      if (node.defaultValueType !== '#DEFAULT') {
-        r += ' ' + node.defaultValueType;
-      }
-      if (node.defaultValue) {
-        r += ' "' + node.defaultValue + '"';
-      }
-      r += this.spacebeforeslash + '>' + this.newline;
-      return r;
-    };
-
-    XMLStringWriter.prototype.dtdElement = function(node, level) {
-      return this.space(level) + '<!ELEMENT ' + node.name + ' ' + node.value + this.spacebeforeslash + '>' + this.newline;
-    };
-
-    XMLStringWriter.prototype.dtdEntity = function(node, level) {
-      var r;
-      r = this.space(level) + '<!ENTITY';
-      if (node.pe) {
-        r += ' %';
-      }
-      r += ' ' + node.name;
-      if (node.value) {
-        r += ' "' + node.value + '"';
-      } else {
-        if (node.pubID && node.sysID) {
-          r += ' PUBLIC "' + node.pubID + '" "' + node.sysID + '"';
-        } else if (node.sysID) {
-          r += ' SYSTEM "' + node.sysID + '"';
+        function createCellWithCustomStyling(value, row, customStyling) {
+            var cell = document.createElement("td");
+            customStyling(value, cell);
+            row.appendChild(cell);
         }
-        if (node.nData) {
-          r += ' NDATA ' + node.nData;
+
+        function createCellWithCustomStyling2(value1, value2, row, customStyling) {
+            var cell = document.createElement("td");
+            customStyling(value1, value2, cell);
+            row.appendChild(cell);
         }
-      }
-      r += this.spacebeforeslash + '>' + this.newline;
-      return r;
-    };
 
-    XMLStringWriter.prototype.dtdNotation = function(node, level) {
-      var r;
-      r = this.space(level) + '<!NOTATION ' + node.name;
-      if (node.pubID && node.sysID) {
-        r += ' PUBLIC "' + node.pubID + '" "' + node.sysID + '"';
-      } else if (node.pubID) {
-        r += ' PUBLIC "' + node.pubID + '"';
-      } else if (node.sysID) {
-        r += ' SYSTEM "' + node.sysID + '"';
-      }
-      r += this.spacebeforeslash + '>' + this.newline;
-      return r;
-    };
-
-    XMLStringWriter.prototype.openNode = function(node, level) {
-      var att, name, r, ref;
-      level || (level = 0);
-      if (node instanceof XMLElement) {
-        r = this.space(level) + '<' + node.name;
-        ref = node.attributes;
-        for (name in ref) {
-          if (!hasProp.call(ref, name)) continue;
-          att = ref[name];
-          r += this.attribute(att);
+        function space(value) {
+            if (value < 10) {
+                value = " " + value;
+            }
+            return value;
         }
-        r += (node.children ? '>' : '/>') + this.newline;
-        return r;
-      } else {
-        r = this.space(level) + '<!DOCTYPE ' + node.rootNodeName;
-        if (node.pubID && node.sysID) {
-          r += ' PUBLIC "' + node.pubID + '" "' + node.sysID + '"';
-        } else if (node.sysID) {
-          r += ' SYSTEM "' + node.sysID + '"';
+
+        function zero(value) {
+            if (value < 10) {
+                value = "0" + value;
+            }
+            return value;
         }
-        r += (node.children ? ' [' : '>') + this.newline;
-        return r;
-      }
-    };
 
-    XMLStringWriter.prototype.closeNode = function(node, level) {
-      level || (level = 0);
-      switch (false) {
-        case !(node instanceof XMLElement):
-          return this.space(level) + '</' + node.name + '>' + this.newline;
-        case !(node instanceof XMLDocType):
-          return this.space(level) + ']>' + this.newline;
-      }
-    };
-
-    return XMLStringWriter;
-
-  })(XMLWriterBase);
-
-}).call(this);
-
-},{"./XMLCData":7,"./XMLComment":8,"./XMLDTDAttList":9,"./XMLDTDElement":10,"./XMLDTDEntity":11,"./XMLDTDNotation":12,"./XMLDeclaration":13,"./XMLDocType":14,"./XMLElement":17,"./XMLProcessingInstruction":19,"./XMLRaw":20,"./XMLText":24,"./XMLWriterBase":25}],23:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLStringifier,
-    bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-    hasProp = {}.hasOwnProperty;
-
-  module.exports = XMLStringifier = (function() {
-    function XMLStringifier(options) {
-      this.assertLegalChar = bind(this.assertLegalChar, this);
-      var key, ref, value;
-      options || (options = {});
-      this.noDoubleEncoding = options.noDoubleEncoding;
-      ref = options.stringify || {};
-      for (key in ref) {
-        if (!hasProp.call(ref, key)) continue;
-        value = ref[key];
-        this[key] = value;
-      }
-    }
-
-    XMLStringifier.prototype.eleName = function(val) {
-      val = '' + val || '';
-      return this.assertLegalChar(val);
-    };
-
-    XMLStringifier.prototype.eleText = function(val) {
-      val = '' + val || '';
-      return this.assertLegalChar(this.elEscape(val));
-    };
-
-    XMLStringifier.prototype.cdata = function(val) {
-      val = '' + val || '';
-      val = val.replace(']]>', ']]]]><![CDATA[>');
-      return this.assertLegalChar(val);
-    };
-
-    XMLStringifier.prototype.comment = function(val) {
-      val = '' + val || '';
-      if (val.match(/--/)) {
-        throw new Error("Comment text cannot contain double-hypen: " + val);
-      }
-      return this.assertLegalChar(val);
-    };
-
-    XMLStringifier.prototype.raw = function(val) {
-      return '' + val || '';
-    };
-
-    XMLStringifier.prototype.attName = function(val) {
-      return val = '' + val || '';
-    };
-
-    XMLStringifier.prototype.attValue = function(val) {
-      val = '' + val || '';
-      return this.attEscape(val);
-    };
-
-    XMLStringifier.prototype.insTarget = function(val) {
-      return '' + val || '';
-    };
-
-    XMLStringifier.prototype.insValue = function(val) {
-      val = '' + val || '';
-      if (val.match(/\?>/)) {
-        throw new Error("Invalid processing instruction value: " + val);
-      }
-      return val;
-    };
-
-    XMLStringifier.prototype.xmlVersion = function(val) {
-      val = '' + val || '';
-      if (!val.match(/1\.[0-9]+/)) {
-        throw new Error("Invalid version number: " + val);
-      }
-      return val;
-    };
-
-    XMLStringifier.prototype.xmlEncoding = function(val) {
-      val = '' + val || '';
-      if (!val.match(/^[A-Za-z](?:[A-Za-z0-9._-])*$/)) {
-        throw new Error("Invalid encoding: " + val);
-      }
-      return val;
-    };
-
-    XMLStringifier.prototype.xmlStandalone = function(val) {
-      if (val) {
-        return "yes";
-      } else {
-        return "no";
-      }
-    };
-
-    XMLStringifier.prototype.dtdPubID = function(val) {
-      return '' + val || '';
-    };
-
-    XMLStringifier.prototype.dtdSysID = function(val) {
-      return '' + val || '';
-    };
-
-    XMLStringifier.prototype.dtdElementValue = function(val) {
-      return '' + val || '';
-    };
-
-    XMLStringifier.prototype.dtdAttType = function(val) {
-      return '' + val || '';
-    };
-
-    XMLStringifier.prototype.dtdAttDefault = function(val) {
-      if (val != null) {
-        return '' + val || '';
-      } else {
-        return val;
-      }
-    };
-
-    XMLStringifier.prototype.dtdEntityValue = function(val) {
-      return '' + val || '';
-    };
-
-    XMLStringifier.prototype.dtdNData = function(val) {
-      return '' + val || '';
-    };
-
-    XMLStringifier.prototype.convertAttKey = '@';
-
-    XMLStringifier.prototype.convertPIKey = '?';
-
-    XMLStringifier.prototype.convertTextKey = '#text';
-
-    XMLStringifier.prototype.convertCDataKey = '#cdata';
-
-    XMLStringifier.prototype.convertCommentKey = '#comment';
-
-    XMLStringifier.prototype.convertRawKey = '#raw';
-
-    XMLStringifier.prototype.assertLegalChar = function(str) {
-      var res;
-      res = str.match(/[\0\uFFFE\uFFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/);
-      if (res) {
-        throw new Error("Invalid character in string: " + str + " at index " + res.index);
-      }
-      return str;
-    };
-
-    XMLStringifier.prototype.elEscape = function(str) {
-      var ampregex;
-      ampregex = this.noDoubleEncoding ? /(?!&\S+;)&/g : /&/g;
-      return str.replace(ampregex, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\r/g, '&#xD;');
-    };
-
-    XMLStringifier.prototype.attEscape = function(str) {
-      var ampregex;
-      ampregex = this.noDoubleEncoding ? /(?!&\S+;)&/g : /&/g;
-      return str.replace(ampregex, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;').replace(/\t/g, '&#x9;').replace(/\n/g, '&#xA;').replace(/\r/g, '&#xD;');
-    };
-
-    return XMLStringifier;
-
-  })();
-
-}).call(this);
-
-},{}],24:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLNode, XMLText,
-    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
-
-  XMLNode = require('./XMLNode');
-
-  module.exports = XMLText = (function(superClass) {
-    extend(XMLText, superClass);
-
-    function XMLText(parent, text) {
-      XMLText.__super__.constructor.call(this, parent);
-      if (text == null) {
-        throw new Error("Missing element text");
-      }
-      this.value = this.stringify.eleText(text);
-    }
-
-    XMLText.prototype.clone = function() {
-      return Object.create(this);
-    };
-
-    XMLText.prototype.toString = function(options) {
-      return this.options.writer.set(options).text(this);
-    };
-
-    return XMLText;
-
-  })(XMLNode);
-
-}).call(this);
-
-},{"./XMLNode":18}],25:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLWriterBase,
-    hasProp = {}.hasOwnProperty;
-
-  module.exports = XMLWriterBase = (function() {
-    function XMLWriterBase(options) {
-      var key, ref, ref1, ref2, ref3, ref4, ref5, ref6, value;
-      options || (options = {});
-      this.pretty = options.pretty || false;
-      this.allowEmpty = (ref = options.allowEmpty) != null ? ref : false;
-      if (this.pretty) {
-        this.indent = (ref1 = options.indent) != null ? ref1 : '  ';
-        this.newline = (ref2 = options.newline) != null ? ref2 : '\n';
-        this.offset = (ref3 = options.offset) != null ? ref3 : 0;
-        this.dontprettytextnodes = (ref4 = options.dontprettytextnodes) != null ? ref4 : 0;
-      } else {
-        this.indent = '';
-        this.newline = '';
-        this.offset = 0;
-        this.dontprettytextnodes = 0;
-      }
-      this.spacebeforeslash = (ref5 = options.spacebeforeslash) != null ? ref5 : '';
-      if (this.spacebeforeslash === true) {
-        this.spacebeforeslash = ' ';
-      }
-      this.newlinedefault = this.newline;
-      this.prettydefault = this.pretty;
-      ref6 = options.writer || {};
-      for (key in ref6) {
-        if (!hasProp.call(ref6, key)) continue;
-        value = ref6[key];
-        this[key] = value;
-      }
-    }
-
-    XMLWriterBase.prototype.set = function(options) {
-      var key, ref, value;
-      options || (options = {});
-      if ("pretty" in options) {
-        this.pretty = options.pretty;
-      }
-      if ("allowEmpty" in options) {
-        this.allowEmpty = options.allowEmpty;
-      }
-      if (this.pretty) {
-        this.indent = "indent" in options ? options.indent : '  ';
-        this.newline = "newline" in options ? options.newline : '\n';
-        this.offset = "offset" in options ? options.offset : 0;
-        this.dontprettytextnodes = "dontprettytextnodes" in options ? options.dontprettytextnodes : 0;
-      } else {
-        this.indent = '';
-        this.newline = '';
-        this.offset = 0;
-        this.dontprettytextnodes = 0;
-      }
-      this.spacebeforeslash = "spacebeforeslash" in options ? options.spacebeforeslash : '';
-      if (this.spacebeforeslash === true) {
-        this.spacebeforeslash = ' ';
-      }
-      this.newlinedefault = this.newline;
-      this.prettydefault = this.pretty;
-      ref = options.writer || {};
-      for (key in ref) {
-        if (!hasProp.call(ref, key)) continue;
-        value = ref[key];
-        this[key] = value;
-      }
-      return this;
-    };
-
-    XMLWriterBase.prototype.space = function(level) {
-      var indent;
-      if (this.pretty) {
-        indent = (level || 0) + this.offset + 1;
-        if (indent > 0) {
-          return new Array(indent).join(this.indent);
-        } else {
-          return '';
+        function dmsConv(latitude, longitude) {
+            var latAbs = Math.abs(latitude),
+                latDeg = Math.trunc(latAbs),
+                latMin = Math.trunc((latAbs - latDeg) * 60),
+                latSec = Math.trunc((((latAbs - latDeg) * 60) - latMin) * 60),
+                latCard = (latitude >= 0) ? "N" : "S",
+                lonAbs = Math.abs(longitude),
+                lonDeg = Math.trunc(lonAbs),
+                lonMin = Math.trunc((lonAbs - lonDeg) * 60),
+                lonSec = Math.trunc((((lonAbs - lonDeg) * 60) - lonMin) * 60),
+                lonCard = (longitude >= 0) ? "E" : "W";
+            return zero(latDeg) + "\u00B0" + zero(latMin) + "\u0027" + zero(latSec) + "\u0022" + latCard + " - " + zero(lonDeg) + "\u00B0" + zero(lonMin) + "\u0027" + zero(lonSec) + "\u0022" + lonCard;
         }
-      } else {
-        return '';
-      }
-    };
 
-    return XMLWriterBase;
-
-  })();
-
-}).call(this);
-
-},{}],26:[function(require,module,exports){
-// Generated by CoffeeScript 1.12.7
-(function() {
-  var XMLDocument, XMLDocumentCB, XMLStreamWriter, XMLStringWriter, assign, isFunction, ref;
-
-  ref = require('./Utility'), assign = ref.assign, isFunction = ref.isFunction;
-
-  XMLDocument = require('./XMLDocument');
-
-  XMLDocumentCB = require('./XMLDocumentCB');
-
-  XMLStringWriter = require('./XMLStringWriter');
-
-  XMLStreamWriter = require('./XMLStreamWriter');
-
-  module.exports.create = function(name, xmldec, doctype, options) {
-    var doc, root;
-    if (name == null) {
-      throw new Error("Root element needs a name");
-    }
-    options = assign({}, xmldec, doctype, options);
-    doc = new XMLDocument(options);
-    root = doc.element(name);
-    if (!options.headless) {
-      doc.declaration(options);
-      if ((options.pubID != null) || (options.sysID != null)) {
-        doc.doctype(options);
-      }
-    }
-    return root;
-  };
-
-  module.exports.begin = function(options, onData, onEnd) {
-    var ref1;
-    if (isFunction(options)) {
-      ref1 = [options, onData], onData = ref1[0], onEnd = ref1[1];
-      options = {};
-    }
-    if (onData) {
-      return new XMLDocumentCB(options, onData, onEnd);
-    } else {
-      return new XMLDocument(options);
-    }
-  };
-
-  module.exports.stringWriter = function(options) {
-    return new XMLStringWriter(options);
-  };
-
-  module.exports.streamWriter = function(stream, options) {
-    return new XMLStreamWriter(stream, options);
-  };
-
-}).call(this);
-
-},{"./Utility":5,"./XMLDocument":15,"./XMLDocumentCB":16,"./XMLStreamWriter":21,"./XMLStringWriter":22}],27:[function(require,module,exports){
-/************
- * popup.js *
- ************/
-const builder = require('xmlbuilder');
-const moment = require('moment-timezone');
-
-var background = chrome.extension.getBackgroundPage();
-
-var twaList = [];
-var btwList = [];
-var ttwLast = "T+ 0:00";
-var twaLast = undefined;
-var btwLast = undefined;
-
-function createCell(value, row) {
-    var cell = document.createElement("td");
-    cell.innerHTML = value;
-    row.appendChild(cell);
-}
-
-function ttwStyling(value, cell) {
-    cell.align = "left";
-    cell.innerHTML = value;
-}
-
-function dtwStyling(value, cell) {
-    cell.align = "left";
-    cell.innerHTML = value;
-}
-
-function dtgStyling(value, cell) {
-    cell.align = "left";
-    cell.innerHTML = value;
-}
-
-function twsStyling(value1, value2, cell) {
-    var tws_foil = value1.replace(" kt", "");
-    var twa_bd = value2.replace("\u00B0", "");
-    if (tws_foil >= 11.1 && tws_foil <= 39.9 && Math.abs(twa_bd) >= 71 && Math.abs(twa_bd) <= 169) {
-        cell.style.backgroundColor = "black";
-        cell.style.color = "white";
-    }
-    cell.innerHTML = tws_foil + " kt";
-}
-
-function twaStyling(value, cell) {
-    var twa_bd = value.replace("\u00B0", "");
-    if (twa_bd >= 0) {
-        cell.style.color = "green";
-    } else {
-        cell.style.color = "red";
-    }
-    cell.innerHTML = Math.abs(twa_bd) + "\u00B0";
-}
-
-function btwStyling(value, cell) {
-    cell.style.color = "blue";
-    cell.innerHTML = value;
-}
-
-function sailStyling(value, cell) {
-    switch (value.trim()) {
-            // Upwind sail
-        case "Jib":
-            cell.style.backgroundColor = "#FFD479";
-            break;
-        case "LJ":
-            cell.style.backgroundColor = "#FFFC79";
-            break;
-        case "Stay":
-            cell.style.backgroundColor = "#D4FB79";
-            break;
-            // Downwind sail
-        case "Spi":
-            cell.style.backgroundColor = "#76D6FF";
-            break;
-        case "LG":
-            cell.style.backgroundColor = "#7A81FF";
-            break;
-        case "HG":
-            cell.style.backgroundColor = "#D783FF";
-            break;
-            // Reaching sail
-        case "C0":
-            cell.style.backgroundColor = "#FF7E79";
-            break;
-    }
-    cell.innerHTML = value;
-}
-
-function atwaStyling(value, cell) {
-    if (value >= 0) {
-        cell.style.color = "green";
-    } else {
-        cell.style.color = "red";
-    }
-    if (value !== "-") {
-        cell.innerHTML = Math.abs(value) + "\u00B0";
-    } else {
-        cell.style.color = "black";
-        cell.innerHTML = value;
-    }
-}
-
-function abtwStyling(value, cell) {
-    cell.style.color = "blue";
-    if (value !== "-") {
-        cell.innerHTML = value + "\u00B0";
-    } else {
-        cell.style.color = "black";
-        cell.innerHTML = value;
-    }
-}
-
-function createCellWithCustomStyling(value, row, customStyling) {
-    var cell = document.createElement("td");
-    customStyling(value, cell);
-    row.appendChild(cell);
-}
-
-function createCellWithCustomStyling2(value1, value2, row, customStyling) {
-    var cell = document.createElement("td");
-    customStyling(value1, value2, cell);
-    row.appendChild(cell);
-}
-
-function space(value) {
-    if (value < 10) {
-        value = " " + value;
-    }
-    return value;
-}
-
-function zero(value) {
-    if (value < 10) {
-        value = "0" + value;
-    }
-    return value;
-}
-
-function dmsConv(latitude, longitude) {
-    var latAbs = Math.abs(latitude);
-    var latDeg = Math.trunc(latAbs);
-    var latMin = Math.trunc((latAbs - latDeg) * 60);
-    var latSec = Math.trunc((((latAbs - latDeg) * 60) - latMin ) * 60);
-    var latCard = (latitude >= 0) ? "N" : "S";
-
-    var lonAbs = Math.abs(longitude);
-    var lonDeg = Math.trunc(lonAbs);
-    var lonMin = Math.trunc((lonAbs - lonDeg) * 60);
-    var lonSec = Math.trunc((((lonAbs - lonDeg) * 60) - lonMin ) * 60);
-    var lonCard = (longitude >= 0) ? "E" : "W";
-
-    return zero(latDeg) + "\u00B0" + zero(latMin) + "\u0027" + zero(latSec) + "\u0022" + latCard + " - " + zero(lonDeg) + "\u00B0" + zero(lonMin) + "\u0027" + zero(lonSec) + "\u0022" + lonCard;
-}
-
-function atwaCalc(twaList) {
-    const
-    twaData = twaList;
-    Math.radians = function (degrees) {
-        return degrees * Math.PI / 180;
-    },
-        Math.degrees = function (radians) {
-        return radians * 180 / Math.PI;
-    };
-
-    let
-    arX = [],
-        arY = [],
-        somX = 0,
-        somY = 0,
-        avgX = 0,
-        avgY = 0,
-        atwa = 0;
-
-    for (const [i, angle] of twaData.entries()) {
-        arX[i] = Math.cos(Math.radians(angle));
-        arY[i] = Math.sin(Math.radians(angle));
-    }
-
-    for (const value of arX) {
-        somX += value;
-    }
-    avgX = somX / arX.length;
-
-    for (const value of arY) {
-        somY += value;
-    }
-    avgY = somY / arY.length;
-
-    atwa = Math.round(Math.degrees(Math.atan2(avgY, avgX)));
-    if (isNaN (atwa)) {
-        atwa = "-";
-    }
-    return atwa ;
-}
-
-function abtwCalc(btwList) {
-    const
-    btwData = btwList;
-    Math.radians = function (degrees) {
-        return degrees * Math.PI / 180;
-    },
-        Math.degrees = function (radians) {
-        return radians * 180 / Math.PI;
-    };
-
-    let
-    arX = [],
-        arY = [],
-        somX = 0,
-        somY = 0,
-        avgX = 0,
-        avgY = 0,
-        abtw = 0;
-
-    for (const [i, angle] of btwData.entries()) {
-        arX[i] = Math.cos(Math.radians(angle));
-        arY[i] = Math.sin(Math.radians(angle));
-    }
-
-    for (const value of arX) {
-        somX += value;
-    }
-    avgX = somX / arX.length;
-
-    for (const value of arY) {
-        somY += value;
-    }
-    avgY = somY / arY.length;
-
-    abtw = Math.round(Math.degrees(Math.atan2(avgY, avgX)));
-    if (isNaN (abtw)) {
-        abtw = "-";
-    } else if (abtw < 0) {
-        abtw += 360;
-    }
-    return abtw;
-}
-
-function reinitializeDisplay() {
-    document.getElementById("pointsTable").innerHTML = "";
-}
-
-function TzToLocal(date, time, timezone) {
-    var tzGuess = moment.tz.guess();
-
-    if ((timezone === "CET") || (timezone === "CEST")) {
-        var CetOrCestToUtc = moment.tz(date + " " + time, "Europe/Paris").utc();
-        var localDateTz = moment.utc(CetOrCestToUtc).tz(tzGuess);
-    } else if (timezone === "UTC") {
-        var localDateTz = moment.utc(date + " " + time).tz(tzGuess);
-    }
-
-    var offset = localDateTz.utcOffset();
-    var absOffset = Math.abs(offset);
-    var sign = (offset > 0) ? "+" : "-";
-    var hoursOffset = Math.trunc(absOffset / 60);
-    var MinutesHoursOffset = (hoursOffset === 0) ? "\u00b1" + "0" : sign + hoursOffset;
-    var minutesOffset = absOffset % 60;
-    var HoursMinutesOffset = (minutesOffset === 0) ? MinutesHoursOffset : sign + hoursOffset + ":" + minutesOffset;
-
-    var formatDate = localDateTz.format('YYYY-MM-DD');
-    var formatTime = localDateTz.format('HH:mm');
-    var formatTimeZone = "UTC" + HoursMinutesOffset;
-    return [formatDate, formatTime, formatTimeZone];
-}
-
-function displayTable(localTime) {
-    points.forEach(function (element) {
-        var row = document.createElement("tr");
-        document.getElementById("pointsTable").appendChild(row);
-        if (localTime) {
-            var localTZ = TzToLocal(element.date, element.time, element.timezone);
-            createCell(localTZ[0], row);
-            createCell(localTZ[1], row);
-            createCell(localTZ[2], row);
-        } else {
-            createCell(element.date, row);
-            createCell(element.time, row);
-            createCell(element.timezone, row);
+        function atwaCalc(twaList) {
+            const twaData = twaList;
+                Math.radians = function (degrees) {
+                    return degrees * Math.PI / 180;
+                },
+                Math.degrees = function (radians) {
+                    return radians * 180 / Math.PI;
+                };
+            let arX = [],
+                arY = [],
+                somX = 0,
+                somY = 0,
+                avgX = 0,
+                avgY = 0,
+                atwa = 0;
+            for (const [i, angle] of twaData.entries()) {
+                arX[i] = Math.cos(Math.radians(angle));
+                arY[i] = Math.sin(Math.radians(angle));
+            }
+            for (const value of arX) {
+                somX += value;
+            }
+            avgX = somX / arX.length;
+            for (const value of arY) {
+                somY += value;
+            }
+            avgY = somY / arY.length;
+            atwa = Math.round(Math.degrees(Math.atan2(avgY, avgX)));
+            /*
+            atwa = Math.round(Math.degrees(Math.atan2(avgY, avgX)) * 10) / 10;
+            */
+            if (isNaN(atwa)) {
+                atwa = "-";
+            }
+            return atwa;
         }
-        var position = dmsConv(element.latitude, element.longitude);
-        createCell(position, row);
-        createCellWithCustomStyling(element.ttw, row, ttwStyling);
-        createCellWithCustomStyling(element.dtw, row, dtwStyling);
-        createCellWithCustomStyling(element.dtg, row, dtgStyling);
-        createCell(element.twd, row);
-        createCellWithCustomStyling2(element.tws, element.twa, row, twsStyling);
-        createCellWithCustomStyling(element.twa, row, twaStyling);
-        createCellWithCustomStyling(element.btw, row, btwStyling);
-        createCellWithCustomStyling(element.sail, row, sailStyling);
-        createCell(element.stw, row);
-        createCellWithCustomStyling(element.atwa, row, atwaStyling);
-        createCellWithCustomStyling(element.abtw, row, abtwStyling);
-        var manifest = chrome.runtime.getManifest();
-        document.getElementById("version").innerHTML = manifest.version;
-    });
-    // we clone the content in "pointsTable2"
-	if( document.getElementById("pointsTable2") != null && document.getElementById("pointsTable2") != 'undefined' ) {
-		document.getElementById("pointsTable2").innerHTML = document.getElementById("pointsTable").innerHTML;
-	}
-}
 
-var displayLocal = function () {
-    reinitializeDisplay();
-    if (document.getElementById("localtime").checked) {
-        chrome.storage.local.set({"localTime" : true});
-        displayTable(true);
-    } else {
-        chrome.storage.local.set({"localTime" : false});
+        function abtwCalc(btwList) {
+            const btwData = btwList;
+                Math.radians = function (degrees) {
+                    return degrees * Math.PI / 180;
+                },
+                Math.degrees = function (radians) {
+                    return radians * 180 / Math.PI;
+                };
+            let arX = [],
+                arY = [],
+                somX = 0,
+                somY = 0,
+                avgX = 0,
+                avgY = 0,
+                abtw = 0;
+            for (const [i, angle] of btwData.entries()) {
+                arX[i] = Math.cos(Math.radians(angle));
+                arY[i] = Math.sin(Math.radians(angle));
+            }
+            for (const value of arX) {
+                somX += value;
+            }
+            avgX = somX / arX.length;
+            for (const value of arY) {
+                somY += value;
+            }
+            avgY = somY / arY.length;
+            abtw = Math.round(Math.degrees(Math.atan2(avgY, avgX)));
+            /*
+            abtw = Math.round(Math.degrees(Math.atan2(avgY, avgX)) * 10) / 10;
+            */
+            if (isNaN(abtw)) {
+                abtw = "-";
+            } else if (abtw < 0) {
+                abtw += 360;
+            }
+            return abtw;
+        }
+
+        function reinitializeDisplay() {
+            document.getElementById("pointsTable").innerHTML = "";
+        }
+
+        function TzToLocal(date, time, timezone) {
+            var tzGuess = moment.tz.guess();
+            if ((timezone === "CET") || (timezone === "CEST")) {
+                var CetOrCestToUtc = moment.tz(date + " " + time, "Europe/Paris").utc(),
+                    localDateTz = moment.utc(CetOrCestToUtc).tz(tzGuess);
+            } else if (timezone === "UTC") {
+                var localDateTz = moment.utc(date + " " + time).tz(tzGuess);
+            }
+            var offset = localDateTz.utcOffset(),
+                absOffset = Math.abs(offset),
+                sign = (offset > 0) ? "+" : "-",
+                hoursOffset = Math.trunc(absOffset / 60),
+                MinutesHoursOffset = (hoursOffset === 0) ? "\u00b1" + "0" : sign + hoursOffset,
+                minutesOffset = absOffset % 60,
+                HoursMinutesOffset = (minutesOffset === 0) ? MinutesHoursOffset : sign + hoursOffset + ":" + minutesOffset,
+                formatDate = localDateTz.format('YYYY-MM-DD'),
+                formatTime = localDateTz.format('HH:mm'),
+                formatTimeZone = "UTC" + HoursMinutesOffset;
+            return [formatDate, formatTime, formatTimeZone];
+        }
+
+        function displayTable(localTime) {
+            points.forEach(function (element) {
+                var row = document.createElement("tr");
+                document.getElementById("pointsTable").appendChild(row);
+                if (localTime) {
+                    var localTZ = TzToLocal(element.date, element.time, element.timezone);
+                    createCell(localTZ[0], row);
+                    createCell(localTZ[1], row);
+                    createCell(localTZ[2], row);
+                } else {
+                    createCell(element.date, row);
+                    createCell(element.time, row);
+                    createCell(element.timezone, row);
+                }
+                var position = dmsConv(element.latitude, element.longitude);
+                createCell(position, row);
+                createCellWithCustomStyling(element.ttw, row, ttwStyling);
+                createCellWithCustomStyling(element.dtw, row, dtwStyling);
+                createCellWithCustomStyling(element.dtg, row, dtgStyling);
+                createCell(element.twd, row);
+                createCellWithCustomStyling2(element.tws, element.twa, row, twsStyling);
+                createCellWithCustomStyling(element.twa, row, twaStyling);
+                createCellWithCustomStyling(element.btw, row, btwStyling);
+                createCellWithCustomStyling(element.sail, row, sailStyling);
+                createCell(element.stw, row);
+                createCellWithCustomStyling(element.atwa, row, atwaStyling);
+                createCellWithCustomStyling(element.abtw, row, abtwStyling);
+                var manifest = chrome.runtime.getManifest();
+                document.getElementById("version").innerHTML = manifest.version;
+            });
+            if (document.getElementById("pointsTable2") != null && document.getElementById("pointsTable2") != 'undefined') {
+                document.getElementById("pointsTable2").innerHTML = document.getElementById("pointsTable").innerHTML;
+            }
+        }
+
+        var displayLocal = function () {
+            reinitializeDisplay();
+            if (document.getElementById("localtime").checked) {
+                chrome.storage.local.set({
+                    "localTime": true
+                });
+                displayTable(true);
+            } else {
+                chrome.storage.local.set({
+                    "localTime": false
+                });
+                displayTable(false);
+            }
+        };
+        document.getElementById("localtime").addEventListener("change", displayLocal);
+
+        var exportGpx = function () {
+            let xml = builder.create('gpx');
+            xml.att('xmlns', 'http://www.topografix.com/GPX/1/1'),
+                ('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance'),
+                ('xsi:schemaLocation', 'http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd'),
+                ('version', '1.0'),
+                ('creator', 'Route Zezo.org');
+            let route = xml.ele('rte');
+            route.ele('name', 'RZ ' + points[0].race);
+            for (point of points) {
+                if (point.latitude !== undefined && point.longitude !== undefined) {
+                    let routePoint = route.ele('rtept', {
+                        lat: point.latitude,
+                        lon: point.longitude
+                    });
+                    if ((point.timezone === "CET") || (point.timezone === "CEST")) {
+                        routePoint.ele('time', moment.tz(point.date + " " + point.time, "Europe/Paris").toISOString());
+                    } else if (point.timezone === "UTC") {
+                        routePoint.ele('time', moment.utc(point.date + " " + point.time).toISOString());
+                    }
+                    routePoint.ele('name', point.ttw);
+                }
+            }
+            let xmlString = xml.end({
+                    pretty: true
+                }),
+                gpxOutput = document.getElementById("gpxOutput");
+            gpxOutput.innerText = "";
+            gpxOutput.innerText = xmlString;
+        };
+        document.getElementById("gpxExport").addEventListener("click", exportGpx);
+
+        chrome.storage.local.get("localTime", function (result) {
+            if (result.localTime === true) {
+                document.getElementById("localtime").checked = true;
+                displayLocal();
+            } else {
+                document.getElementById("localtime").checked = false;
+            }
+        });
+        reinitializeDisplay();
+        var points = background.points[background.currentTab];
+
+        function genIteNext(ttwCurr) {
+            var ttwCurr = ttwCurr.match(/.*?([0-9]{1,3}):([0-9]{2})/),
+                ttwHours = parseInt(ttwCurr[1], 10),
+                ttwMinutes = parseInt(ttwCurr[2], 10),
+                ttwNext = [];
+            if (ttwMinutes + 10 < 60) {
+                ttwNext = "T+" + space(ttwHours) + ":" + zero(ttwMinutes + 10);
+            } else {
+                ttwNext = "T+" + space(ttwHours + 1) + ":" + zero(ttwMinutes - 50);
+            }
+            return ttwNext;
+        }
+
+        for (var i = 0; i < points.length; i++) {
+            points[i].atwa = atwaCalc(twaList);
+            points[i].abtw = abtwCalc(btwList);
+            while (points[i].ttw !== ttwLast) {
+                twaList.push(parseInt(twaLast, 10));
+                btwList.push(parseInt(btwLast, 10));
+                ttwLast = genIteNext(ttwLast);
+            }
+            twaLast = parseInt(points[i].twa, 10);
+            btwLast = parseInt(points[i].btw, 10);
+            if (twaList.length === 0) {
+                twaList.push(twaLast);
+                btwList.push(btwLast);
+            } else if (twaList[0] * twaLast < 0) {
+                twaList = [twaLast];
+                btwList = [btwLast];
+            } else {
+                twaList.push(twaLast);
+                btwList.push(btwLast);
+            }
+            ttwLast = genIteNext(ttwLast);
+        }
+
         displayTable(false);
-    }
-};
-
-document.getElementById("localtime").addEventListener("change", displayLocal);
-var exportGpx = function () {
-    let xml = builder.create('gpx');
-    xml.att('xmlns','http://www.topografix.com/GPX/1/1');
-    xml.att('xmlns:xsi','http://www.w3.org/2001/XMLSchema-instance');
-    xml.att('xsi:schemaLocation','http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd');
-    xml.att('version','1.0');
-    xml.att('creator','Route Zezo.org');
-
-    let route = xml.ele('rte');
-    route.ele('name', 'RZ ' + points[0].race);
-    for (point of points) {
-        if (point.latitude !== undefined && point.longitude !== undefined) {
-            let routePoint = route.ele('rtept', {lat: point.latitude, lon: point.longitude});
-            if ((point.timezone === "CET") || (point.timezone === "CEST")) {
-                routePoint.ele('time', moment.tz(point.date + " " + point.time, "Europe/Paris").toISOString());
-            } else if (point.timezone === "UTC") {
-                routePoint.ele('time', moment.utc(point.date + " " + point.time).toISOString());
-            }
-            routePoint.ele('name', point.ttw);
-        }
-    }
-    let xmlString = xml.end({pretty: true});
-    let gpxOutput = document.getElementById("gpxOutput");
-    gpxOutput.innerText = "";
-    gpxOutput.innerText = xmlString;
-};
-document.getElementById("gpxExport").addEventListener("click", exportGpx);
-
-chrome.storage.local.get("localTime", function (result) {
-    if (result.localTime === true) {
-        document.getElementById("localtime").checked = true;
-        displayLocal();
-    } else {
-        document.getElementById("localtime").checked = false;
-    }
-});
-reinitializeDisplay();
-var points = background.points[background.currentTab];
-
-function genIteNext(ttwCurr) {
-    var ttwCurr = ttwCurr.match(/.*?([0-9]{1,3}):([0-9]{2})/);
-    var ttwHours = parseInt(ttwCurr[1], 10);
-    var ttwMinutes = parseInt(ttwCurr[2], 10);
-    var ttwNext = [];
-    if (ttwMinutes + 10 < 60) {
-        ttwNext = "T+" + space(ttwHours) + ":" + zero(ttwMinutes + 10);
-    } else {
-        ttwNext = "T+" + space(ttwHours + 1) + ":" + zero(ttwMinutes - 50);
-    }
-    return ttwNext;
-}
-
-for (var i = 0; i < points.length; i++) {
-    points[i].atwa = atwaCalc(twaList);
-    points[i].abtw = abtwCalc(btwList);
-    while (points[i].ttw !== ttwLast) {
-        twaList.push(parseInt(twaLast,10));
-        btwList.push(parseInt(btwLast,10));
-        ttwLast = genIteNext(ttwLast);
-    }
-    twaLast = parseInt(points[i].twa, 10);
-    btwLast = parseInt(points[i].btw, 10);
-    if (twaList.length === 0) {
-        twaList.push(twaLast);
-        btwList.push(btwLast);
-    } else if (twaList[0] * twaLast < 0) {
-        twaList = [twaLast];
-        btwList = [btwLast];
-    } else {
-        twaList.push(twaLast);
-        btwList.push(btwLast);
-    }
-    ttwLast = genIteNext(ttwLast);
-}
-
-displayTable(false);
-},{"moment-timezone":2,"xmlbuilder":26}]},{},[27]);
+}, {
+        "moment-timezone": 2,
+        "xmlbuilder": 26
+    }]
+}, {}, [27]);

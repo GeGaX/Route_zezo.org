@@ -1,79 +1,80 @@
 body {
-  font: Arial;
-  font-size: 11px;
-  margin: 2px;
+    font: Arial;
+    font-size: 11px;
+    margin: 2px;
 }
 
 .container {
-  width: 100%;
-  margin:0 auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .table-wrap {
-  border: 1px solid black;
+    border: 1px solid black;
 }
 
 .table-wrap table {
-  text-align: center;
-  width: 100%;
+    text-align: center;
+    width: 100%;
 }
 
-.table-wrap table th, .table-wrap table td {
+.table-wrap table th,
+.table-wrap table td {
     border: 1px solid #CCC;
     padding: 1px;
     white-space: nowrap;
 }
 
 thead {
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2) )repeat scroll 0% 0% #EEE;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2))repeat scroll 0% 0% #EEE;
     text-shadow: 1px 1px 1px #FFF;
 }
 
 tr:hover td {
-  background-color: #CDE;
+    background-color: #CDE;
 }
 
 tr {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 #localtimeDiv {
-  float: left;
+    float: left;
 }
 
 #versionDiv {
-  float: right;
+    float: right;
 }
 
 #gpxDiv {
-  margin: 0 auto;
-  text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .cssButton {
-  font-size: 11px;
+    font-size: 11px;
 }
 
 #gpxOutput {
-  width: calc(100% - 5px);
-  resize: none;
-  font-size: 11px;
+    width: calc(100% - 5px);
+    resize: none;
+    font-size: 11px;
 }
 
 .table-thead-fixed {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .theader-fixed {
-  z-index: 1;
-  position: absolute;
-  overflow: hidden;
-  background:#FFF;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    background: #FFF;
 }
 
 .tbody-scroll {
-  position: relative;
-  overflow: auto;
-  margin-bottom: 2px;
+    position: relative;
+    overflow: auto;
+    margin-bottom: 2px;
 }

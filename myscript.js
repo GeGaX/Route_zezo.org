@@ -11,14 +11,14 @@ function getLongitude(left, scale) {
     if (((left + 2 / scale) >= -180) || ((left + 2 / scale) <= 180)) {
         return (left + 2) / scale;
     } else {
-        return ((left  + 2) / scale) - 360;
+        return ((left + 2) / scale) - 360;
     }
 }
 
 try {
     let scale;
     for (const script of document.scripts) {
-        if(script.textContent.includes("var scale")) {
+        if (script.textContent.includes("var scale")) {
             scale = /var scale = ([0-9]{1,3})/.exec(script.textContent)[1];
             break;
         }
@@ -27,50 +27,45 @@ try {
     Array.prototype.slice.call(layer.getElementsByTagName("img")).forEach(function (element) {
         let event = element.getAttribute("onmouseover");
         if (event !== null) {
-
-            let style = element.getAttribute("style");
-            let cssProperties = style.split(";");
-            let left = parseInt(cssProperties[1].split(":")[1].replace("px",""),10);
-            let top =  parseInt(cssProperties[2].split(":")[1].replace("px",""),10);
-            
-            let match = pattern.exec(event);
-
-            const date = match[1];
-            const time = match[2];
-            const timezone = match[3];
-            const ttw = match[4];
-            const dtw = match[5];
-            const dtg = match[6];
-            const twd = match[7];
-            const tws = match[8];
-            const twa = match[9];
-            const btw = match[10];
-            const sail = match[11];
-            const stw = match[12];
-
+            let style = element.getAttribute("style"),
+                cssProperties = style.split(";"),
+                left = parseInt(cssProperties[1].split(":")[1].replace("px", ""), 10),
+                top = parseInt(cssProperties[2].split(":")[1].replace("px", ""), 10),
+                match = pattern.exec(event);
+            //console.log("lat: " + getLatitude(top, scale) + ",lon: " + getLongitude(left, scale));
+            const date = match[1],
+                time = match[2],
+                timezone = match[3],
+                ttw = match[4],
+                dtw = match[5],
+                dtg = match[6],
+                twd = match[7],
+                tws = match[8],
+                twa = match[9],
+                btw = match[10],
+                sail = match[11],
+                stw = match[12];
             let race = document.title;
-
             points.push({
-                race : race,
-                longitude : getLongitude(left, scale),
-                latitude : getLatitude(top, scale),
-                date : date,
-                time : time,
-                timezone : timezone,
-                ttw : ttw,
-                dtw : dtw,
-                dtg : dtg,
-                twd : twd,
-                tws : tws,
-                twa : twa,
-                btw : btw,
-                sail : sail,
-                stw : stw
+                race: race,
+                longitude: getLongitude(left, scale),
+                latitude: getLatitude(top, scale),
+                date: date,
+                time: time,
+                timezone: timezone,
+                ttw: ttw,
+                dtw: dtw,
+                dtg: dtg,
+                twd: twd,
+                tws: tws,
+                twa: twa,
+                btw: btw,
+                sail: sail,
+                stw: stw
             });
             pattern.lastIndex = 0;
         }
     });
-
     chrome.runtime.sendMessage(points);
 } catch (e) {
     console.error(e);
