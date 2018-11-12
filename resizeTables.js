@@ -46,3 +46,4 @@ window.onload = function () {
 window.onresize = function () {
     table_thead_fixed_resize();
 }
+
