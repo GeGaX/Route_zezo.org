@@ -380,3 +380,4 @@ for (var i = 0; i < points.length; i++) {
 }
 
 displayTable(false);
+
