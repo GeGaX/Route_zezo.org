@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Route zezo.org",
     "description": "Extract route for MultiRaces",
-    "version": "3.1",
+    "version": "3.0",
     "page_action": {
         "default_icon": "icon.png",
         "default_popup": "popup.html"
