@@ -230,7 +230,7 @@ function reinitializeDisplay() {
 
 function TzToLocal(date, time, timezone) {
     var tzGuess = moment.tz.guess();
-    if ((timezone === "CET") || (timezone === "CEST")) {
+    if (timezone === "CET" || timezone === "CEST") {
         var CetOrCestToUtc = moment.tz(date + " " + time, "Europe/Paris").utc(),
             localDateTz = moment.utc(CetOrCestToUtc).tz(tzGuess);
     } else if (timezone === "UTC") {
