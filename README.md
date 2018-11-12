@@ -2,11 +2,11 @@
 Extract route from zezo router on popup
 and .gpx format
 
-# Official release :
+## Official release :
 Last official release can be download here:
 [MultiRaces][m1] or [MonoRace][m2]
 
-# Notes
+## Notes
 Also **please** only modify **one file** per commit. This'll make merging easier for everyone.
 
 Please contribute by [forking][fk] and sending a [pull request][pr].
