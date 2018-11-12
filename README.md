@@ -8,6 +8,7 @@ Last official release can be download here:
 
 # Notes
 Also **please** only modify **one file** per commit. This'll make merging easier for everyone.
+
 Please contribute by [forking][fk] and sending a [pull request][pr].
 
 
