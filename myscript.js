@@ -71,4 +71,3 @@ try {
     console.error(e);
     chrome.runtime.sendMessage([]);
 }
-
