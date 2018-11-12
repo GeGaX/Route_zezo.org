@@ -21,4 +21,3 @@ chrome.tabs.onActivated.addListener(function (activeInfo) {
 });
 
 chrome.tabs.onUpdated.addListener(checkForValidUrl);
-
