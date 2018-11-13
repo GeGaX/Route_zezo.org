@@ -1,24 +1,24 @@
 "use strict";
 
 function table_thead_fixed() {
-    let tableDivWraps = document.querySelectorAll(".table-thead-fixed");
+    let tableDivWraps = document.querySelectorAll('.table-thead-fixed');
     tableDivWraps.forEach(function (tableDivWrap) {
         let tableRef = tableDivWrap.children[0],
-            tableBodyScroll = document.createElement("div");
-        tableBodyScroll.className += "tbody-scroll";
+            tableBodyScroll = document.createElement('div');
+        tableBodyScroll.className += 'tbody-scroll';
         tableDivWrap.insertBefore(tableBodyScroll, tableRef);
         tableBodyScroll.appendChild(tableRef);
-        let tableHeadFixed = document.createElement("div");
-        tableHeadFixed.className += "theader-fixed";
+        let tableHeadFixed = document.createElement('div');
+        tableHeadFixed.className += 'theader-fixed';
         tableHeadFixed.appendChild(tableRef.cloneNode(true));
         tableDivWrap.prepend(tableHeadFixed);
-        document.querySelector(".theader-fixed #pointsTable").id = "pointsTable2";
+        document.querySelector('.theader-fixed #pointsTable').id = "pointsTable2";
     });
     table_thead_fixed_resize();
 }
 
 function table_thead_fixed_resize() {
-    let tableDivWraps = document.querySelectorAll(".table-thead-fixed");
+    let tableDivWraps = document.querySelectorAll('.table-thead-fixed');
     tableDivWraps.forEach(function (tableDivWrap) {
         let nbLigne = tableDivWrap.dataset.nbreligne !== undefined ? tableDivWrap.dataset.nbreligne : 22,
             tableHeadFixed = tableDivWrap.children[0],

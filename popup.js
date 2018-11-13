@@ -12,7 +12,7 @@ var background = chrome.extension.getBackgroundPage(),
     btwLast = undefined;
 
 function createCell(value, row) {
-    var cell = document.createElement("td");
+    var cell = document.createElement('td');
     cell.innerHTML = value;
     row.appendChild(cell);
 }
@@ -109,13 +109,13 @@ function abtwStyling(value, cell) {
 }
 
 function createCellWithCustomStyling(value, row, customStyling) {
-    var cell = document.createElement("td");
+    var cell = document.createElement('td');
     customStyling(value, cell);
     row.appendChild(cell);
 }
 
 function createCellWithCustomStyling2(value1, value2, row, customStyling) {
-    var cell = document.createElement("td");
+    var cell = document.createElement('td');
     customStyling(value1, value2, cell);
     row.appendChild(cell);
 }
@@ -243,15 +243,15 @@ function TzToLocal(date, time, timezone) {
         MinutesHoursOffset = (hoursOffset === 0) ? "\u00b1" + "0" : sign + hoursOffset,
         minutesOffset = absOffset % 60,
         HoursMinutesOffset = (minutesOffset === 0) ? MinutesHoursOffset : sign + hoursOffset + ":" + minutesOffset,
-        formatDate = localDateTz.format('YYYY-MM-DD'),
-        formatTime = localDateTz.format('HH:mm'),
+        formatDate = localDateTz.format("YYYY-MM-DD"),
+        formatTime = localDateTz.format("HH:mm"),
         formatTimeZone = "UTC" + HoursMinutesOffset;
     return [formatDate, formatTime, formatTimeZone];
 }
 
 function displayTable(localTime) {
     points.forEach(function (element) {
-        var row = document.createElement("tr");
+        var row = document.createElement('tr');
         document.getElementById("pointsTable").appendChild(row);
         if (localTime) {
             var localTZ = TzToLocal(element.date, element.time, element.timezone);
@@ -302,13 +302,13 @@ document.getElementById("localtime").addEventListener("change", displayLocal);
 
 var exportGpx = function () {
     let xml = builder.create('gpx');
-    xml.att('xmlns', 'http://www.topografix.com/GPX/1/1'),
-        ('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance'),
-        ('xsi:schemaLocation', 'http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd'),
-        ('version', '1.0'),
-        ('creator', 'Route Zezo.org');
+    xml.att('xmlns', "http://www.topografix.com/GPX/1/1"),
+        ('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance"),
+        ('xsi:schemaLocation', "http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"),
+        ('version', "1.0"),
+        ('creator', "Route Zezo.org");
     let route = xml.ele('rte');
-    route.ele('name', 'RZ ' + points[0].race);
+    route.ele('name', "RZ " + points[0].race);
     for (point of points) {
         if (point.latitude !== undefined && point.longitude !== undefined) {
             let routePoint = route.ele('rtept', {
