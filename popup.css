@@ -10,7 +10,7 @@ body {
 }
 
 .table-wrap {
-    border: 1px solid black;
+    border: 1px solid #000000;
 }
 
 .table-wrap table {
@@ -20,18 +20,18 @@ body {
 
 .table-wrap table th,
 .table-wrap table td {
-    border: 1px solid #CCC;
+    border: 1px solid #CCCCCC;
     padding: 1px;
     white-space: nowrap;
 }
 
 thead {
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2))repeat scroll 0% 0% #EEE;
-    text-shadow: 1px 1px 1px #FFF;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2))repeat scroll 0% 0% #EEEEEE;
+    text-shadow: 1px 1px 1px #FFFFFF;
 }
 
 tr:hover td {
-    background-color: #CDE;
+    background-color: #CCDDEE;
 }
 
 tr {
@@ -70,7 +70,7 @@ tr {
     z-index: 1;
     position: absolute;
     overflow: hidden;
-    background: #FFF;
+    background: #FFFFFF;
 }
 
 .tbody-scroll {
