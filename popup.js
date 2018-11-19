@@ -74,14 +74,14 @@ function sailStyling(value, cell) {
     cell.innerHTML = value;
 }
 
-function stwStyling(twsValue, twaValue, stwValue, cell) {
+function stwStyling(twsValue, twaValue, value, cell) {
     var tws_foil = twsValue.replace(" kt", ""),
         twa_bd = twaValue.replace("\u00B0", "");
     if (tws_foil >= 11.1 && tws_foil <= 39.9 && Math.abs(twa_bd) >= 71 && Math.abs(twa_bd) <= 169) {
         cell.style.backgroundColor = "#000000";
         cell.style.color = "#FFFFFF";
     }
-    cell.innerHTML = stwValue;
+    cell.innerHTML = value;
 }
 
 function atwaStyling(value, cell) {
@@ -114,9 +114,9 @@ function createCellWithCustomStyling(value, row, customStyling) {
     row.appendChild(cell);
 }
 
-function createCellWithCustomStyling2(twsValue, twaValue, stwValue, row, customStyling) {
+function createCellWithCustomStyling2(twsValue, twaValue, value, row, customStyling) {
     var cell = document.createElement('td');
-    customStyling(twsValue, twaValue, stwValue, cell);
+    customStyling(twsValue, twaValue, value, cell);
     row.appendChild(cell);
 }
 
@@ -303,10 +303,10 @@ document.getElementById("localtime").addEventListener("change", displayLocal);
 var exportGpx = function () {
     let xml = builder.create("gpx");
     xml.att('xmlns', "http://www.topografix.com/GPX/1/1"),
-        ('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance"),
-        ('xsi:schemaLocation', "http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"),
-        ('version', "1.0"),
-        ('creator', "Route Zezo.org");
+    xml.att('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance"),
+    xml.att('xsi:schemaLocation', "http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"),
+    xml.att('version', "1.0"),
+    xml.att('creator', "Route Zezo.org");
     let route = xml.ele('rte');
     route.ele('name', "RZ " + points[0].race);
     for (point of points) {
