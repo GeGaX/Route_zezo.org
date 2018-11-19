@@ -1,8 +1,8 @@
 /************
  * popup.js *
  ************/
-const builder = require('xmlbuilder'),
-    moment = require('moment-timezone');
+const builder = require("xmlbuilder"),
+    moment = require("moment-timezone");
 
 var background = chrome.extension.getBackgroundPage(),
     twaList = [],
@@ -32,28 +32,18 @@ function dtgStyling(value, cell) {
     cell.innerHTML = value;
 }
 
-function twsStyling(value1, value2, cell) {
-    var tws_foil = value1.replace(" kt", ""),
-        twa_bd = value2.replace("\u00B0", "");
-    if (tws_foil >= 11.1 && tws_foil <= 39.9 && Math.abs(twa_bd) >= 71 && Math.abs(twa_bd) <= 169) {
-        cell.style.backgroundColor = "black";
-        cell.style.color = "white";
-    }
-    cell.innerHTML = tws_foil + " kt";
-}
-
 function twaStyling(value, cell) {
     var twa_bd = value.replace("\u00B0", "");
     if (twa_bd >= 0) {
-        cell.style.color = "green";
+        cell.style.color = "#008000";
     } else {
-        cell.style.color = "red";
+        cell.style.color = "#FF0000";
     }
     cell.innerHTML = Math.abs(twa_bd) + "\u00B0";
 }
 
 function btwStyling(value, cell) {
-    cell.style.color = "blue";
+    cell.style.color = "#0000FF";
     cell.innerHTML = value;
 }
 
@@ -84,26 +74,36 @@ function sailStyling(value, cell) {
     cell.innerHTML = value;
 }
 
+function stwStyling(twsValue, twaValue, stwValue, cell) {
+    var tws_foil = twsValue.replace(" kt", ""),
+        twa_bd = twaValue.replace("\u00B0", "");
+    if (tws_foil >= 11.1 && tws_foil <= 39.9 && Math.abs(twa_bd) >= 71 && Math.abs(twa_bd) <= 169) {
+        cell.style.backgroundColor = "#000000";
+        cell.style.color = "#FFFFFF";
+    }
+    cell.innerHTML = stwValue;
+}
+
 function atwaStyling(value, cell) {
     if (value >= 0) {
-        cell.style.color = "green";
+        cell.style.color = "#008000";
     } else {
-        cell.style.color = "red";
+        cell.style.color = "#FF0000";
     }
     if (value !== "-") {
         cell.innerHTML = Math.abs(value) + "\u00B0";
     } else {
-        cell.style.color = "black";
+        cell.style.color = "#000000";
         cell.innerHTML = value;
     }
 }
 
 function abtwStyling(value, cell) {
-    cell.style.color = "blue";
+    cell.style.color = "#0000FF";
     if (value !== "-") {
         cell.innerHTML = value + "\u00B0";
     } else {
-        cell.style.color = "black";
+        cell.style.color = "#000000";
         cell.innerHTML = value;
     }
 }
@@ -114,9 +114,9 @@ function createCellWithCustomStyling(value, row, customStyling) {
     row.appendChild(cell);
 }
 
-function createCellWithCustomStyling2(value1, value2, row, customStyling) {
+function createCellWithCustomStyling2(twsValue, twaValue, stwValue, row, customStyling) {
     var cell = document.createElement('td');
-    customStyling(value1, value2, cell);
+    customStyling(twsValue, twaValue, stwValue, cell);
     row.appendChild(cell);
 }
 
@@ -269,11 +269,11 @@ function displayTable(localTime) {
         createCellWithCustomStyling(element.dtw, row, dtwStyling);
         createCellWithCustomStyling(element.dtg, row, dtgStyling);
         createCell(element.twd, row);
-        createCellWithCustomStyling2(element.tws, element.twa, row, twsStyling);
+        createCell(element.tws, row);
         createCellWithCustomStyling(element.twa, row, twaStyling);
         createCellWithCustomStyling(element.btw, row, btwStyling);
         createCellWithCustomStyling(element.sail, row, sailStyling);
-        createCell(element.stw, row);
+        createCellWithCustomStyling2(element.tws, element.twa, element.stw, row, stwStyling);
         createCellWithCustomStyling(element.atwa, row, atwaStyling);
         createCellWithCustomStyling(element.abtw, row, abtwStyling);
         var manifest = chrome.runtime.getManifest();
@@ -301,7 +301,7 @@ var displayLocal = function () {
 document.getElementById("localtime").addEventListener("change", displayLocal);
 
 var exportGpx = function () {
-    let xml = builder.create('gpx');
+    let xml = builder.create("gpx");
     xml.att('xmlns', "http://www.topografix.com/GPX/1/1"),
         ('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance"),
         ('xsi:schemaLocation', "http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"),
