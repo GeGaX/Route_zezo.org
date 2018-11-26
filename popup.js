@@ -75,9 +75,9 @@ function sailStyling(value, cell) {
 }
 
 function stwStyling(twsValue, twaValue, value, cell) {
-    var tws_foil = twsValue.replace(" kt", ""),
-        twa_bd = twaValue.replace("\u00B0", "");
-    if (tws_foil >= 11.1 && tws_foil <= 39.9 && Math.abs(twa_bd) >= 71 && Math.abs(twa_bd) <= 169) {
+    var twsFoil = twsValue.replace(" kt", ""),
+        twaFoil= twaValue.replace("\u00B0", "");
+    if (twsFoil >= 11.1 && twsFoil <= 39.9 && Math.abs(twaFoil) >= 71 && Math.abs(twaFoil) <= 169) {
         cell.style.backgroundColor = "#000000";
         cell.style.color = "#FFFFFF";
     }
