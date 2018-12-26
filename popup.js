@@ -175,10 +175,10 @@ function atwaCalc(twaList) {
         somY += value;
     }
     avgY = somY / arY.length;
-    atwa = Math.round(Math.degrees(Math.atan2(avgY, avgX)));
     /*
-    atwa = Math.round(Math.degrees(Math.atan2(avgY, avgX)) * 10) / 10;
+    atwa = Math.round(Math.degrees(Math.atan2(avgY, avgX)));
     */
+    atwa = Math.round(Math.degrees(Math.atan2(avgY, avgX)) * 10) / 10;
     if (isNaN(atwa)) {
         atwa = "-";
     }
@@ -212,10 +212,10 @@ function abtwCalc(btwList) {
         somY += value;
     }
     avgY = somY / arY.length;
-    abtw = Math.round(Math.degrees(Math.atan2(avgY, avgX)));
     /*
-    abtw = Math.round(Math.degrees(Math.atan2(avgY, avgX)) * 10) / 10;
+    abtw = Math.round(Math.degrees(Math.atan2(avgY, avgX)));
     */
+    abtw = Math.round(Math.degrees(Math.atan2(avgY, avgX)) * 10) / 10;
     if (isNaN(abtw)) {
         abtw = "-";
     } else if (abtw < 0) {
