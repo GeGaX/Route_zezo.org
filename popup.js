@@ -50,26 +50,27 @@ function btwStyling(value, cell) {
 function sailStyling(value, cell) {
     switch (value.trim()) {
         case "Jib":
-            cell.style.backgroundColor = "#FFD479";
+            cell.style.backgroundColor = "#FF9999"; // redless 
             break;
         case "LJ":
-            cell.style.backgroundColor = "#FFFC79";
+            cell.style.backgroundColor = "#FFFF99"; // yellowless
             break;
         case "Stay":
-            cell.style.backgroundColor = "#D4FB79";
-            break;
-        case "Spi":
-            cell.style.backgroundColor = "#76D6FF";
-            break;
-        case "LG":
-            cell.style.backgroundColor = "#7A81FF";
-            break;
-        case "HG":
-            cell.style.backgroundColor = "#D783FF";
+            cell.style.backgroundColor = "#99FF99"; // greenless
             break;
         case "C0":
-            cell.style.backgroundColor = "#FF7E79";
+            cell.style.backgroundColor = "#99DDFF"; // blueless
             break;
+        case "HG":
+            cell.style.backgroundColor = "#FF99FF"; // violetless
+            break;
+        case "LG":
+            cell.style.backgroundColor = "#FFDD99"; // orangeless
+            break;
+        case "Spi":
+            cell.style.backgroundColor = "#9999FF"; // indigoless
+            break;
+        
     }
     cell.innerHTML = value;
 }
@@ -91,7 +92,7 @@ function atwaStyling(value, cell) {
         cell.style.color = "#FF0000";
     }
     if (value !== "-") {
-        cell.innerHTML = Math.abs(value) + "\u00B0";
+        cell.innerHTML = Math.abs(value).toFixed(1) + "\u00B0";
     } else {
         cell.style.color = "#000000";
         cell.innerHTML = value;
@@ -101,7 +102,7 @@ function atwaStyling(value, cell) {
 function abtwStyling(value, cell) {
     cell.style.color = "#0000FF";
     if (value !== "-") {
-        cell.innerHTML = value + "\u00B0";
+        cell.innerHTML = value.toFixed(1) + "\u00B0";
     } else {
         cell.style.color = "#000000";
         cell.innerHTML = value;
