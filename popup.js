@@ -50,25 +50,25 @@ function btwStyling(value, cell) {
 function sailStyling(value, cell) {
     switch (value.trim()) {
         case "Jib":
-            cell.style.backgroundColor = "#FF9999"; // redless 
+            cell.style.backgroundColor = "#FF9999"; // lightred 
             break;
         case "LJ":
-            cell.style.backgroundColor = "#FFFF99"; // yellowless
+            cell.style.backgroundColor = "#FFFF99"; // lightyellow
             break;
         case "Stay":
-            cell.style.backgroundColor = "#99FF99"; // greenless
+            cell.style.backgroundColor = "#99FF99"; // lightgreen
             break;
         case "C0":
-            cell.style.backgroundColor = "#99DDFF"; // blueless
+            cell.style.backgroundColor = "#99DDFF"; // lightblue
             break;
         case "HG":
-            cell.style.backgroundColor = "#FF99FF"; // violetless
+            cell.style.backgroundColor = "#FF99FF"; // lightviolet
             break;
         case "LG":
-            cell.style.backgroundColor = "#FFDD99"; // orangeless
+            cell.style.backgroundColor = "#FFDD99"; // lightorange
             break;
         case "Spi":
-            cell.style.backgroundColor = "#9999FF"; // indigoless
+            cell.style.backgroundColor = "#9999FF"; // lightindigo
             break;
         
     }
@@ -176,9 +176,6 @@ function atwaCalc(twaList) {
         somY += value;
     }
     avgY = somY / arY.length;
-    /*
-    atwa = Math.round(Math.degrees(Math.atan2(avgY, avgX)));
-    */
     atwa = Math.round(Math.degrees(Math.atan2(avgY, avgX)) * 10) / 10;
     if (isNaN(atwa)) {
         atwa = "-";
@@ -213,9 +210,6 @@ function abtwCalc(btwList) {
         somY += value;
     }
     avgY = somY / arY.length;
-    /*
-    abtw = Math.round(Math.degrees(Math.atan2(avgY, avgX)));
-    */
     abtw = Math.round(Math.degrees(Math.atan2(avgY, avgX)) * 10) / 10;
     if (isNaN(abtw)) {
         abtw = "-";
