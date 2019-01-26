@@ -32,7 +32,6 @@ try {
                 left = parseInt(cssProperties[1].split(":")[1].replace("px", ""), 10),
                 top = parseInt(cssProperties[2].split(":")[1].replace("px", ""), 10),
                 match = pattern.exec(event);
-            //console.log("lat: " + getLatitude(top, scale) + ", lon: " + getLongitude(left, scale));
             const date = match[1],
                 time = match[2],
                 timezone = match[3],
